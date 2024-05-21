@@ -1,0 +1,37 @@
+Un agitador al pulsar marcha arranca en 10 segundos a 35 HZ, esta 10 ssegundos mas a 35 Hz, después va a 50 Hz y cuando pulse paro pasados estos 20 segundos paso a cero en 5 seg.
+P003=2 Nivel extendido
+P010=0 Preparado
+P700=2 Terminal
+P701=1 On Derechas
+P702=15 frecuencia fija selección directa 
+P703=15 frecuencia fija selección directa
+
+P1000=3 Frecuencias fijas
+P1002=35 Hz frecuencia de entrada 2 10HZ
+P1003= 15 Hz frecuencia de entrada 3 15 Hz
+P1080= 0 Hz fr mininma 0Hz
+P1120= 10 segundos aceleración
+P1121 =5 seg tiempo de decelarcion.
+Funcionamiento:
+Para funcionar a 35 hz tiene que estar a 24Vcc  la entrada 8 y 9 (8 on/off, 9 35Hz).
+Para funcionar a 50Hz tiene que estar a 24Vcc las entradas 8,9,10  (8 on/off, 9y 10 suma 35Hz+15Hz). 
+
+OTRA SOLUCIÓN
+
+P003=2 Nivel extendido
+P010=0 Preparado
+P700=2 Terminal
+P701=1 On Derechas
+P702=15 frecuencia fija selección directa 
+P703=15 frecuencia fija selección directa
+
+P1000=3 Frecuencias fijas
+P1002=35 Hz frecuencia de entrada 2 10HZ
+P1003= 50 Hz frecuencia de entrada 3 15 Hz
+P1080= 0 Hz fr mininma 0Hz
+P1120= 10 segundos aceleración
+P1121 =5 seg tiempo de decelarcion.
+Funcionamiento:
+Para funcionar a 35 hz tiene que estar a 24Vcc  la entrada 8 y 9 (8 on/off, 9 -> 35Hz).
+Para funcionar a 50Hz tiene que estar a 24Vcc las entradas 8,10  (8 on/off, 10-> 50Hz). 
+

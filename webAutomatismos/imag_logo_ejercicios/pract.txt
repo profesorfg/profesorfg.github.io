@@ -1,0 +1,28 @@
+---------
+
+___________________________________________________________________________
+PRACT04 Entradas / Salidas Analogicas
+
+El  fluorescente se enciende a partir de una posición del potenciometro.
+
+Regulamos la luz de un fluorescente con un potenciometro y una
+reactancia regulable.
+
+
+Vemos en la pantalla LOGO. la temperatura ambiente medida con 
+una PT100
+
+____________________________________________________________________________
+
+PRACT 09
+
+Tenemos garaje con 3 plazas, un semaforo, una celula fotoeléctrica
+que controla la entrada de vehiculos al garaje y otra que controla
+la salida de vehiculos.
+
+Cuando el garaje esta vacio, el semáforo esta en verde.
+Cuando el garaje se llena, el semáforo esta en rojo y 
+baja una barrera que impide la entrada de vehiculos.
+
+El personal de mantenimiento dispone de un interruptor que
+pone a cero el contador de vehiculos del garaje.

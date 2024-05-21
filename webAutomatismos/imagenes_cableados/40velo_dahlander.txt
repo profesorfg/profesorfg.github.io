@@ -1,0 +1,7 @@
+Para la velocidad lenta alimentamos U1, V1, W1
+
+Para la velocidad rapida alimentamos por U2, V2, W3 
+y corticuitamos  U1, V1, W1.
+
+En el motor dahlender, la velocidad rapida siempre es
+el doble de la velocidad lenta.

@@ -1,0 +1,7 @@
+Con KM1 el motor gira en un sentido.
+Con KM2, el motor gira en sentido contrario.
+KM1 y KM2 llevan enclavamiento eléctrico y mecánico porque
+NUNCA pueden funcionar a la vez.
+
+El sentido de giro se selecciona con S4.
+El motor arranca con S2 y para con  S1

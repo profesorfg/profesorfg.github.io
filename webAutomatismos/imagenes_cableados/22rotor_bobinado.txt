@@ -1,0 +1,8 @@
+Arrancamos con las resistencias en el rotor, y 
+a media  que el motor acelera reducimos la resistencias
+hasta eliminarlas.
+
+Funcionamiento:
+Arrancamos con KM1, pasado un tiempo cierro KM2 y pasado
+mas tiempo cierro KM3
+

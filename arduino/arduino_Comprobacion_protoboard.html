@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+<link href="index_files/estiloarduino.css" rel="stylesheet" type="text/css">
+<link href="index_files/menu.css" rel="stylesheet" type="text/css">
+<meta charset="UTF-8">
+<title>arduino</title>
+
+<meta content="profesorfg" name="author">
+<meta content="profesorfg enlaces" name="description">
+<meta name="keywords" content="profesorfg enlaces"></head>
+<body style="margin-top: 0px; height: 598px;">
+<!-- Comentario -->
+<div id="contenedor"><!-- ............................Contendor....................... --><!-- -----------------menu superior............................................ -->
+<div id="menusuperior">
+<script language="javascript=" type="text/javascript" src="index_files/menu_general.js"></script></div>
+<!-- ........................menu izquierda.............................-->
+<div id="izquierda">
+<script language="javascript=" type="text/javascript" src="index_files/menuizq.js"></script><br>
+<br>
+<br>
+<br>
+</div>
+<!-- ............................contenido central................... -->
+<div id="derecha"><br>
+<br>
+<br>
+<br><br>
+<br>
+<ol id="mozToc"><!--mozToc h1 1 h2 2 h3 3 h4 4 h5 5 h6 6--><li><a href="#mozTocId285333">- TEST PARA
+COMPROBAR EL ESTADO LOS PULSADORES Y LED DE LA PLACA ARDUINO.</a></li><li><a href="#mozTocId677563">- COCHE FANTASTICO.</a></li></ol><br>
+<p><span style="color: rgb(255, 255, 102);"><br>
+</span></p>
+<h1><a class="mozTocH1" name="mozTocId285333"></a>TEST PARA
+COMPROBAR EL ESTADO LOS PULSADORES Y LED DE LA PLACA ARDUINO.</h1><br><p><small style="background-color: transparent; color: rgb(255, 255, 51);"><em><big style="font-weight: bold; font-style: italic;"><big><big><a href="https://www.tinkercad.com/things/kb3N0r0cHUA"><img style="border: 0px solid ; width: 751px; height: 568px;" alt="Arduino_Comprobacion_protoboard.png" src="imagenes/Arduino_Comprobacion_protoboard.png"></a></big></big></big></em></small></p>
+<p><small style="background-color: transparent; color: rgb(255, 255, 51);"><em><big style="font-weight: bold; font-style: italic;"><big><big><br>
+</big></big></big></em></small></p>
+<br>
+<span style="color: rgb(255, 204, 0);">/*Enciende todos los led al
+inicio y los apagamos<br>
+con los pulsadores 0,1,2 encendemos todos los led.<br>
+*/<br>
+<br>
+int led[]={12,11,10,9};//verde,amarillo,rojo, verde2<br>
+<br>
+int pulsador[]={5,6,7};<br>
+<br>
+<br>
+<br>
+&nbsp;&nbsp;&nbsp; boolean pul_0;<br>
+&nbsp;&nbsp;&nbsp; boolean pul_1;<br>
+&nbsp;&nbsp;&nbsp; boolean pul_2;<br>
+&nbsp;&nbsp;&nbsp; boolean ledV; //ver el estado del led<br>
+&nbsp;&nbsp;&nbsp; boolean ledA; //ver el estado del led<br>
+&nbsp;&nbsp;&nbsp; boolean ledR; //ver el estado del led<br>
+&nbsp;&nbsp;&nbsp; boolean ledV1; //ver el estado del led<br>
+&nbsp;&nbsp; <br>
+<br>
+&nbsp; <br>
+void setup(){<br>
+&nbsp;pinMode(led[0],OUTPUT);<br>
+&nbsp;pinMode(led[1],OUTPUT);<br>
+&nbsp;pinMode(led[2],OUTPUT);<br>
+&nbsp;pinMode(led[3],OUTPUT);<br>
+&nbsp;pinMode(pulsador[0],INPUT);<br>
+&nbsp;pinMode(pulsador[1],INPUT);<br>
+&nbsp;pinMode(pulsador[2],INPUT);<br>
+&nbsp;<br>
+<br>
+//comprobamos si funcionan los led<br>
+&nbsp;for (int n=0;n&lt;4;n++){<br>
+&nbsp;&nbsp; digitalWrite (led[n],HIGH);<br>
+&nbsp;&nbsp; delay (1000);<br>
+&nbsp;}<br>
+&nbsp;for (int n=0;n&lt;4;n++){<br>
+&nbsp;digitalWrite (led[n],LOW);<br>
+&nbsp;delay(1000);<br>
+&nbsp;}<br>
+}<br>
+<br>
+<br>
+&nbsp; void loop(){<br>
+&nbsp;&nbsp;&nbsp; //leemos el estado de las entradas<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp; pul_0=digitalRead(pulsador[0]);<br>
+&nbsp;&nbsp;&nbsp; pul_1=digitalRead(pulsador[1]);<br>
+&nbsp;&nbsp;&nbsp; pul_2=digitalRead(pulsador[2]);<br>
+<br>
+&nbsp;if (pul_0==1)for (int n=0;n&lt;4;n++)digitalWrite (led[n],HIGH);<br>
+&nbsp;else for (int n=0;n&lt;4;n++)digitalWrite (led[n],LOW);<br>
+&nbsp;if (pul_1==1)for (int n=0;n&lt;4;n++)digitalWrite (led[n],HIGH);<br>
+&nbsp;else for (int n=0;n&lt;4;n++)digitalWrite (led[n],LOW);<br>
+&nbsp; if (pul_2==1)for (int n=0;n&lt;4;n++)digitalWrite (led[n],HIGH);<br>
+&nbsp;else for (int n=0;n&lt;4;n++)digitalWrite (led[n],LOW);<br>
+&nbsp; }//fin de programa<br><br><br></span><h1><a class="mozTocH1" name="mozTocId677563"></a>COCHE FANTASTICO.</h1><br><a href="https://www.tinkercad.com/things/jfhm57Q3yY2%20"><img style="border: 0px solid ; width: 763px; height: 560px;" alt="coche fantastico" src="imagenes/arduino_coche_fantastico.png"></a><br style="color: rgb(255, 204, 51);"><br>
+<br>
+<br>
+</div>
+<!-- .......................................menu arduino................................ -->
+<div id="derechamenu"><br>
+<script language="javascript=" type="text/javascript" src="index_files/menuarduino.js"></script><br>
+<br>
+<br>
+<br>
+</div>
+<!-- .......................................pie................................ -->
+<div id="pie">&nbsp;&nbsp; <br>
+<div style="text-align: center;"> El fin del hombre es persiguir la
+felicidad.<br>
+</div>
+</div>
+<!-- ..................................fin contenedor..................................... -->
+</div>
+
+</body></html>

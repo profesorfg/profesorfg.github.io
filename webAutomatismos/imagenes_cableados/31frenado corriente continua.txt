@@ -1,0 +1,1 @@
+Al pulsar paro, se alimentan los bobinados con 12Vdc y el motor se frena.

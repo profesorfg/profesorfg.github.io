@@ -1,0 +1,26 @@
+Utilización de borneros.
+
+la practica se hara en dos grupos.
+
+Cada grupo montara una practica con dos contactores.
+
+PRIMER GRUPO.
+
+El primer contactor sera un circuito marcha paro y que activa el contactor, apaga la luz de 
+la practica del segundo grupo. 
+
+El segundo contactor se funciona solo cuando el piloto de su botonera este apagado
+con un circuito marcha paro.
+
+El piloto esta controlado por el contactor 1 del segundo grupo.
+
+SEGUNDO GRUPO. 
+identico al primero.
+
+El primer contactor sera un circuito marcha paro y que activa el contactor, apaga la luz de 
+la practica del primer grupo. 
+
+El segundo contactor se funciona solo cuando el piloto de su botonera este apagado
+con un circuito marcha paro.
+
+El piloto esta controlado por el contactor 1 del primer grupo.

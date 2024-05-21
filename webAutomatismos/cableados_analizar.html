@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Renovables</title>
+
+    <link href="../index_files/estilo.css" rel="stylesheet" type="text/css">
+    <script src="../index_files/menu.js"></script>
+    <script defer src="index_files/cambiocableados.js"> </script>
+
+    <meta content="profesorfg" name="author">
+    <meta content="automatizacion industrial" name="description">
+    <meta name="keywords" content="automatas electricidad">
+    <meta charset="UTF-8">
+    
+    <script type="text/javascript">
+        var mensaje0 = "RECOJE TUBOS <br><br>Al girar el interruptor a ON la plataforma empieza a girar,<br>Al pasar el interruptor a OFF y detectar que hay un tubo en frente del detector capacitivo la plataforma se para.<br><br>CUIDADO de ponerlo en marcha sin ningún tubo sobre la plataforma, no parará<br> ";
+        var mensaje1 = "Todavía nadie lo ha resuelto, se tu el primero";
+        var mensaje2 = "MOTORES CASCADA<br><br> Para la puesta en tensión de la instalación acciono el interruptor rotativo S0.<br><br>En la instalación disponemos de tres motores, dos motores estan protegidos por reles térmicos y el otro motor esta protegido por disyuntor o guardamotor.<br>En caso de la activación de alguna protección, no funciona ningún motor y se enciende el piloto que corresponde al motor que ha fallado.<br><br>Funcionamiento:<br>Al pulsar S2 se encienden los tres motores, y al pulsar S1 se para primero el motor M1, pasado el tiempo programado en KT1, se para el motor M2, pasado el tiempo de KT2 se para el motor 3<br> ";
+        var mensaje3 = "ILUMINACIÓN CICLCICA<br><br>* Al activar el pulsador de marcha<br>* pasa un segundo<br>* se enciende una bombilla<br>* pasa dos segundos se enciende otra bombilla<br>* pasa un segundo se enciende una tercera bombillar>* pasan un segundo se apagan todas<br>* y se repite el ciclo hasta que no pulsamos parada. ";
+        var mensaje4 = 'JUEGO<br><br>El presentador pulsa S1, enciende el piloto central H5, realiza una pregunta, cuando termina pulsa S6, se apaga el piloto central y el primer concursante que active su pulsador, encendera su piloto y contestara, los concursantes que hayan pulsado mas tarde no se les encenderá el piloto.<br>Los concursantes que pulsen antes del que se apague el piloto del presentador quedaran eliminados.<br><br>Para mas información <a href="http://profesorfg.blogspot.com.es/2013/04/automatismos-juego.html"target="_blank">pincha aqui </a> ';
+        var mensaje5 = "MONTACARGAS<br><br>Una instalación con tres plantas, en cada planta hay tres pulsadores para mandar el montacargas a una de las tres plantas.<br>Si el montacargas esta en marcha los pulsadores no mandan ninguna orden.<br>Para ir a la planta del medio el montacargas tiene que estar en la planta baja o en la superior.<br> ";
+        var mensaje6 = "VACIO CAVIO";
+        var mensaje7 = "ARRANQUE TEMPORIZADO <br><br>Al accionar el pulsador de marcha el motor arranca y se enciende un piloto verde.<br>Transcurrido el tiempo seleccionado en el temporiazador el motor y la señalización se desactivan.<br>En caso de sobrecarga del motor o falta de fase, se activa el rele térmico parando el motor y encendiendo un piloto de señalización rojo.<br> ";
+        var mensaje8 = "PULSACION LARGA-CORTA<br><br>Controlamos la puesta en marcha de dos motores con un solo pulsador de marcha y otro de paro.<br>Con una pulsación corta sobre el pulsador MARCHA activo un motor.<br>Con una pulsación larga sobre el pulsador MARCHA activo el otro motor.<br>Con una pulsación sobre el pulsador de PARO se paran los dos motores.<br>Un disyuntor o guardamotor, proteje al primer motor, en caso de fallo se señalizara con un piloto rojo.<br>Un rele térmico proteje al segundo motor, en caso de fallo se señaliza con otro piloto rojo.<br>Si hay fallo en algún motor, No arranca ninguno.<br> ";
+        var mensaje9 = "FRENADO OPCIONAL<br><br>Dos opciones de paro.<br>* Con el pulsador S1 se para SIN frenado de CC<br>* Con el pulsador S3 se para CON frenado de CC<br>* Si pulsamos S3 con el motor parado se activa el frenado. ";
+        var mensaje10 = "SIN FRENADO CON EL MOTOR PARADO<br><br>* El frenado solo se activa al pulsar S1 si el motor esta funcionando.<br>* El motor no se puede poner en marcha hasta que haya teminado la temporización del frenado.";
+        var mensaje11 = "CON ARRANQUE INSTANTENEO<br><br>* El frenado solo se activa al pulsar S1 si el motor esta funcionando.<br>* El motor se puede poner en marcha aunque no haya teminado la temporización del frenado. ";
+        var mensaje12 = "Utilización de borneros.<br><br>la practica se hara en dos grupos.<br>Cada grupo montara una practica con dos contactores.<br><br>PRIMER GRUPO.<br>El primer contactor sera un circuito marcha paro y que activa el contactor, apaga la luz de la practica del segundo grupo. <br>El segundo contactor se funciona solo cuando el piloto de su botonera este apagado con un circuito marcha paro.<br>El piloto esta controlado por el contactor 1 del segundo grupo.<br>SEGUNDO GRUPO. <br><br>identico al primero.<br>El primer contactor sera un circuito marcha paro y que activa el contactor, apaga la luz de la practica del primer grupo. <br>El segundo contactor se funciona solo cuando el piloto de su botonera este apagado con un circuito marcha paro.<br>El piloto esta controlado por el contactor 1 del primer grupo.<br>";
+        var mensaje13 = "Utilización de borneros.<br><br>la practica se hara en dos grupos.<br>Cada grupo montara una practica con dos contactores.<br><br>PRIMER GRUPO.<br>El primer contactor sera un circuito marcha paro y que activa el contactor, apaga la luz de la practica del segundo grupo. <br>El segundo contactor se funciona solo cuando el piloto de su botonera este apagado con un circuito marcha paro.<br>El piloto esta controlado por el contactor 1 del segundo grupo.<br>SEGUNDO GRUPO. <br><br>identico al primero.<br>El primer contactor sera un circuito marcha paro y que activa el contactor, apaga la luz de la practica del primer grupo. <br>El segundo contactor se funciona solo cuando el piloto de su botonera este apagado con un circuito marcha paro.<br>El piloto esta controlado por el contactor 1 del primer grupo.<br>";
+        var mensaje14 = "Utilización de borneros.<br><br>la practica se hara en dos grupos.<br>Cada grupo montara una practica con dos contactores.<br><br>PRIMER GRUPO.<br>El primer contactor sera un circuito marcha paro y que activa el contactor, apaga la luz de la practica del segundo grupo. <br>El segundo contactor se funciona solo cuando el piloto de su botonera este apagado con un circuito marcha paro.<br>El piloto esta controlado por el contactor 1 del segundo grupo.<br>SEGUNDO GRUPO. <br><br>identico al primero.<br>El primer contactor sera un circuito marcha paro y que activa el contactor, apaga la luz de la practica del primer grupo. <br>El segundo contactor se funciona solo cuando el piloto de su botonera este apagado con un circuito marcha paro.<br>El piloto esta controlado por el contactor 1 del primer grupo.<br>";
+        var mensaje15 = "FRENADO A CONTRACORRIENTE<br><br>Al pulsar paro S1, el motor intentar cambiar de giro.<br>Por la reducción del par por la resistencia y la desactivación del cambio de giro por el temporizador, el motor no cambia de giro.<br><br>El problema si pulsamos paro con el motor parado intenta arrancar en sentido contrario. ";
+        var mensaje16 = "ARRACADOR PROGRESIVO<br><br>FUNCIONAMIENTO.<br> Arrancador suave dispone de 3 bornes de alimentación.<br> Para que funcione debe tener tensión A1 A2, (A1 fase, A2 Neutro).<br> El led superior esta fijo.<br>Si le llega tension de fase a IN inicia un arranque progresivo en función del tiempo y tensión parametrizado. el led superior esta intermitente.<br><br>Pasado el tiempo del arranque, el led superior se apaga y se enciende el inferior.<br>Al desconectar IN, se inicia el paro progresivo en función del tiempo de desconexión parametrizado. se apaga el led inferior y se pone intermitente.<br>Pasado el tiempo de parada, se queda fijo el led superior.<br>Si se desconecta el A1, se apagan los led y el arrancador no suministra tensión.<br><br>PRÁCTICA.<br>MOTOR<br>Colocamos el material al principio de la cinta transportador.<br>Al pulsar marcha con el piloto apagado, en función de la posición del selector tenemos dos funcionamientos<br>1) El motor arranca progresivamente, hasta llegar a su velocidad nominal,al llegar al primer final de carrera, inicia un paro progresivo y al llegar al segundo final de carrera para totalmente.<br><br>2) el motor arranca a velocidad nominal y al llegar al segundo final de carrera para.<br><br>PILOTO.<br>Indica que la maquina esta en marcha.<br>Se enciende al pulsar marcha y se apaga al llegar al segundo final de carrera.<br><br>NOTA:Con el pulsador S3 puedo desconectar el paro progresivo o si el paquete no llega a la segunda posición antes de que el arrancador progresivo se pare, el operario lo debe de pulsar para desactivar el piloto y poder volver a repetir el ciclo. ";
+        var mensaje17 = "PRÁCTICA<br><br>Funcionamiento:<br>Al pulsar S1 la cinta transportadora se pone en marcha.<br>Si el detector inductivo B1,detecta metal en la caja, la cinta se para instataneamente (frenado del motor con corriente continua). <br>Si no tiene metal, al caer el paquete a la plataforma, golpea el final de carrerra S2 y la cinta se para. ";
+        var mensaje18 = ". ";
+        var mensaje19 = "Ascensor de 4 plantas.<br><br>Pulsadores:<br>Tenemos un pulsador por planta. <br>SE0: Pulsador exterior planta 0SE1: Pulsador exterior planta 1<br>SE2: Pulsador exterior planta 2<br>SE3: Pulsador exterior planta 3<br><br>En el interior de ascensor tenemos 4 pulsadores:<br>SI0: Pulsador interior para ir a la planta 0<br>SI1: Pulsador interior para ir a la planta 1<br>SI2: Pulsador interior para ir a la planta 2<br>SI3: Pulsador interior para ir a la planta 3<br><br>Finales de carrera FC:<br>SFCPA, FC puerta abierta (cerrado con la puerta cerrada)<br>FC0: FC ascensor en planta 0 ( abierto cuando esta en la planta 0)<br>FC1: FC ascensor en planta 1 ( abierto cuando esta en la planta 1)<br>FC2: FC ascensor en planta 2 ( abierto cuando esta en la planta 2)<br>FC3: FC ascensor en planta 0 ( abierto cuando esta en la planta 3)<br><br>Contactores:<br>Potencia<br>KM1: el ascensor sube<br>KM2: el ascensor baja<br>Auxiliares: (solo hay una activo)<br>KA0B: bajar a la planta 0<br>KA1B: bajar a la planta 1<br>KA2B: bajar a la planta 2<br>KA1S: subir a la planta 1<br>KA2S: subir a la planta 2<br>KA3S: subir a la planta 3<br><br>Funcionamiento: <br>Con la puerta del ascensor cerrada se activa un pulsador de una planta y el ascensor se dirige a esa planta, al llegar a ella se para. ";
+        var mensaje20 = "En este detalla observamos el ciruito de potencia con inversión de giro.<br>KM1 sube se activa con la contactos auxiliares de subida.<br>KM2 baja se activa con la contactos auxiliares de bajada.<br><br>Entre KM1 y KM2 hay un enclavamiento eléctrico.<br><br>Si KAP esta cerrado indica que el motor esta parado.<br>Si KAP esta abierto indica que el motor esta en marcha y me impedira el funcionamiento de los pulsadores.<br><br>Si hay fallo termico ó abrimos la puerta (SFCPA se abre) se para todo el cirucito de mando ";
+        var mensaje21 = "PLANTAS EXTREMAS:<br><br>Condicion de bajada a la planta cero y la desubida a la planta superior se realizan con las misma lógica.<br>El contactor auxilar KA0B bajada a la planta cero se activa al pulsar cualquiera de los pulsadores que señalados con la planta 0 (SE0, SI0) y el motor no esta parado (KAP cerrado).<br>Se desactiva al llegar a la planta 0 (FC0 se abre).<br><br>PLANTAS INTERMEDIAS:<br><br>El automatismo de la plantas intermidias tengo que tener en cuenta donde esta el ascensor y en función del pulsadoractivado el ascensor sube, si estaba en una planta inferiorbaja si estaba en una planta superior ó no hace nada si esta en la planta a la que se llama.<br>KA1S es el contacto auxilar que hace subir el ascensor a la planta 1, se activara con los pulsador de la planta 1 (SI1 ó SE1) y si estaen una planta inferior ( en este caso solo FC0 cerrado) y el motor no esta funcionando ( KAP cerrado).<br>Se desactiva al llegar a la planta 1 (FC1 se abre).<br>KA1B es el contacto auxilar que hace bajar el ascensor a la planta 1, se activara con los pulsador de la planta 1 (SI1 ó SE1) y si esta en una planta superior ( en este caso puede estar en la planta 2 (FC2 cerrado) ó en la planta 3 (FC3 cerrado) y el motor no esta funcionando ( KAP cerrado).<br>Se desactiva al llegar a la planta 1 (FC1 se abre).<br>";
+
+        function ejer00() {
+            document.getElementById('matrix').src = "imagenes_analizar/recoge_tubos.png";
+            document.getElementById("p1").innerHTML = mensaje0;
+        }
+
+        function ejer01() {
+            document.getElementById('matrix').src = "imagenes_analizar/recoge_tubos_solu.png";
+            alert(mensaje1);
+        }
+
+        function ejer02() {
+            document.getElementById('matrix').src = "imagenes_analizar/parada_motores_cascada.png";
+            document.getElementById("p1").innerHTML = mensaje2;
+        }
+
+        function ejer03() {
+            document.getElementById('matrix').src = "imagenes_analizar/iluminacion_ciclica1.png";
+            document.getElementById("p1").innerHTML = mensaje3;
+        }
+
+        function ejer04() {
+            document.getElementById('matrix').src = "imagenes_analizar/juego.png";
+            document.getElementById("p1").innerHTML = mensaje4;
+        }
+
+        function ejer05() {
+            document.getElementById('matrix').src = "imagenes_analizar/montacargas.PNG";
+            document.getElementById("p1").innerHTML = mensaje5;
+        }
+
+        function ejer06() {
+            document.getElementById('matrix').src = "imagenes_analizar/montacargas.PNG";
+            document.getElementById("p1").innerHTML = mensaje6;
+        }
+
+        function ejer07() {
+            document.getElementById('matrix').src = "imagenes_analizar/arranque_temporizado.png";
+            document.getElementById("p1").innerHTML = mensaje7;
+        }
+
+        function ejer08() {
+            document.getElementById('matrix').src = "imagenes_analizar/pulsacion larga corta.png";
+            document.getElementById("p1").innerHTML = mensaje8;
+        }
+
+        function ejer09() {
+            document.getElementById('matrix').src = "imagenes_analizar/frenado cc opcional.png";
+            document.getElementById("p1").innerHTML = mensaje9;
+        }
+
+        function ejer10() {
+            document.getElementById('matrix').src = "imagenes_analizar/frenado cc solo en marcha.png";
+            document.getElementById("p1").innerHTML = mensaje10;
+        }
+
+        function ejer11() {
+            document.getElementById('matrix').src = "imagenes_analizar/frenado cc en marcha con arran.png";
+            document.getElementById("p1").innerHTML = mensaje11;
+        }
+
+        function ejer12() {
+            document.getElementById('matrix').src = "imagenes_analizar/bornero esquema.png";
+            document.getElementById("p1").innerHTML = mensaje12;
+        }
+
+        function ejer13() {
+            document.getElementById('matrix').src = "imagenes_analizar/borneros representacion.png";
+            document.getElementById("p1").innerHTML = mensaje13;
+        }
+
+        function ejer14() {
+            document.getElementById('matrix').src = "imagenes_analizar/bornero foto.jpg";
+            document.getElementById("p1").innerHTML = mensaje14;
+        }
+
+        function ejer15() {
+            document.getElementById('matrix').src = "imagenes_analizar/frenado a contracorriente.png";
+            document.getElementById("p1").innerHTML = mensaje15;
+        }
+
+        function ejer16() {
+            document.getElementById('matrix').src = "imagenes_analizar/arrancador progresivo.png";
+            document.getElementById("p1").innerHTML = mensaje16;
+        }
+
+        function ejer17() {
+            document.getElementById('matrix').src = "imagenes_analizar/frenado a cc practica.png";
+            document.getElementById("p1").innerHTML = mensaje17;
+        }
+
+        function ejer18() {
+            document.getElementById('matrix').src = "imagenes_analizar/inicio.png";
+            document.getElementById("p1").innerHTML = mensaje18;
+        }
+
+        function ejer19() {
+            document.getElementById('matrix').src = "imagenes_analizar/ascensor todo.png";
+            document.getElementById("p1").innerHTML = mensaje19;
+        }
+
+        function ejer20() {
+            document.getElementById('matrix').src = "imagenes_analizar/ascensor potencia.png";
+            document.getElementById("p1").innerHTML = mensaje20;
+        }
+
+        function ejer21() {
+            document.getElementById('matrix').src = "imagenes_analizar/ascensor plantas.png";
+            document.getElementById("p1").innerHTML = mensaje21;
+        }
+
+    </script>
+</head>
+
+
+<body>
+
+    <div id="contenedor3">
+
+        <header>
+            <nav>
+                <menu-principal></menu-principal>
+            </nav>
+
+        </header>
+          <div id=lateral>
+          
+    <input type="checkbox" id="check_menu">
+                <label for="check_menu" id="label_check">
+                   <img class="icon_menu_lat" src="../imagenes/icono1.png"/>  
+                </label> 
+                  
+            
+          <div class="menu_lateral">
+            <a href="cableados.html">control de motores</a><br>
+            <a href="cableados_analizar.html">Analizar</a><br>
+            <a href="cableados_ejercicios.html">Ejercicios</a><br>
+            <a href="cableados_material.html">Material</a><br>
+             <a href="cableados_practicas.html">Prácticas</a><br>
+            </div>
+        </div>
+        <main>
+            <h1>AUTOMATISMO CABLEADOS: ANALIZAR</h1>
+            <br>
+          
+                 <!-- ///////////////////IMAGEN QUE DEBERIA DE CAMBIAR/////////////////// -->
+            <div style="text-align: center;"><img style="width: 900px; height: 600px;" src="imagenes_analizar/inicio.png" id="matrix">&nbsp;
+              <br>
+            <br>
+            <!-- ///////////////////TEXTO QUE DEBERIA DE CAMBIAR/////////////////// -->
+            <h3>
+                <p id="p1">SELECCIONA EN EL MENÚ DE LA DERECHA EL
+                    EJERCICIO DE AUTOMATISMOS QUE
+                    DESEAS VER<br>
+                </p>
+            </h3>
+            <br>
+           
+                <br>
+                <br>
+            </div>
+        </main>
+       <aside>
+            <a href="#" target="_blank"> Descarga
+                todos los esquemas en CADe-simu DESHABILIDO </a><br>
+            <a href="cableados_ejercicios.html">EJERCICIOS PARA HACER.</a><br>
+          
+            
+                
+               
+                EJERCICIOS DE AUTOMATISMOS. <br>
+
+                <input value="Recoge_tubos" onclick="ejer00();" type="button"> &nbsp; <input value="Solución" onclick="ejer01();" type="button"><br>
+                <input value="Motores cascada" onclick="ejer02();" type="button"> <br>
+                <input value="Iluminación ciclica1" onclick="ejer03();" type="button"><br>
+                <input value="Juego" onclick="ejer04();" type="button"><br>
+                <input value="Montacargas" onclick="ejer05();" type="button"><br>
+                <input value="Arranque temporizado" onclick="ejer07();" type="button"><br>
+                <input value="Pulsación larga-corta" onclick="ejer08();" type="button"><br>
+                <input value="----------" onclick="ejer18();" type="button"><br>
+                <br>
+                FRENANDO CON INYECCIÓN DE CORRIENTE CONTINUA
+              
+                <input value="Frenando opcional" onclick="ejer09();" type="button"><br>
+                <input value="Sin frenado con el motor parado" onclick="ejer10();" type="button"><br>
+                <input value="Con arranque instantaneo" onclick="ejer11();" type="button"><br>
+                <input value="Práctica" onclick="ejer17();" type="button"><br>
+                -----------------------------------------------------------
+               
+                <input value="Frenado a contracorriente" onclick="ejer15();" type="button"><br>
+                ARRANQUE
+                <br>
+                <input value="Arrancador progresivo" onclick="ejer16();" type="button"><br>
+                BORNERO
+                <br>
+                <input value="Esquema eléctrico" onclick="ejer12();" type="button"><br>
+                <input value="Representación de borneros" onclick="ejer13();" type="button"><br>
+                <input value="Ver resultado" onclick="ejer14();" type="button"><br>
+                ASCENSOR
+                <br>
+                <input value="Todo" onclick="ejer19();" type="button"><br>
+                <input value="Potencia" onclick="ejer20();" type="button"><br>
+                <input value="Plantas" onclick="ejer21();" type="button"><br>
+       
+      
+       </aside>
+       
+
+   
+    <footer>
+        CONSUMO MEDIO MENSUAL DE
+            UNA VIVIENDA 270 kWh
+    
+    </footer>
+        </div>
+</body>
+
+</html>

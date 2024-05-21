@@ -1,0 +1,33 @@
+ORGANIZATION_BLOCK PRINCIPAL:OB1
+TITLE=Comentario de UOP
+BEGIN
+Network 1 // Título de segmento
+// Comentario de segmento
+LD     I0.0
+S      Q0.0, 1
+Network 2 
+LD     I0.2
+LD     I0.0
+CTU    C1, +3
+Network 3 
+LD     C1
+R      Q0.0, 1
+Network 4 
+LD     I0.1
+S      Q0.1, 1
+Network 5 
+LD     I0.2
+R      Q0.1, 1
+END_ORGANIZATION_BLOCK
+SUBROUTINE_BLOCK SBR_0:SBR0
+TITLE=Comentario de UOP
+BEGIN
+Network 1 // Título de segmento
+// Comentario de segmento
+END_SUBROUTINE_BLOCK
+INTERRUPT_BLOCK INT_0:INT0
+TITLE=Comentario de UOP
+BEGIN
+Network 1 // Título de segmento
+// Comentario de segmento
+END_INTERRUPT_BLOCK

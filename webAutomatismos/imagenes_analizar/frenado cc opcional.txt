@@ -1,0 +1,6 @@
+Dos opciones de paro.
+	* Con el pulsador S1 se para SIN frenado de CC
+	* Con el pulsador S3 se para CON frenado de CC
+
+* Si pulsamos S3 con el motor parado se activa el frenado.
+

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+<link href="index_files/estiloarduino.css" rel="stylesheet" type="text/css">
+<link href="index_files/menu.css" rel="stylesheet" type="text/css">
+<meta charset="UTF-8">
+<title>arduino</title>
+
+<meta content="profesorfg" name="author">
+<meta content="profesorfg enlaces" name="description">
+<meta name="keywords" content="profesorfg enlaces"></head>
+<body style="margin-top: 0px; height: 598px;">
+<!-- Comentario -->
+<div id="contenedor"><!-- ............................Contendor....................... --><!-- -----------------menu superior............................................ -->
+<div id="menusuperior">
+<script language="javascript=" type="text/javascript" src="index_files/menu_general.js"></script></div>
+<!-- ........................menu izquierda.............................-->
+<div id="izquierda">
+<script language="javascript=" type="text/javascript" src="index_files/menuizq.js"></script><br>
+<br>
+<br>
+<br>
+</div>
+<!-- ............................contenido central................... -->
+<div id="derecha">
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<big style="font-weight: bold; color: yellow;"><big>DOBLE
+PULSACIÓN (LARGA- CORTA)</big></big><br>
+<span style="color: rgb(102, 51, 102);">Fecha:10/10/2014</span><br>
+<ul id="mozToc"><!--mozToc h1 1 h2 2 h3 3 h4 4 h5 5 h6 6--><li><a href="#mozTocId201411">PULSACION LARGA MIDIENDO LA DURACIÓN DEL PULSO
+</a></li><li></li><li><a href="#mozTocId671628">PULSACION CORTA,
+PULSACION LARGA(al superar tiempo corta)</a></li></ul>
+Interes:<br>
+<ul>
+  <li>La eliminación de rebotes se realiza esperando un tiempo(
+T_rebote) para considerar que se ha pulsado.</li>
+  <li>En el primer archivo al soltar calcula el tiempo pulsado y activa
+la pulsacion larga o corta</li>
+  <li>El segundo archivo hace lo mismo pero con un sketch mas limpio.<br>
+  </li>
+
+  <li>En el tercer archivo al superar el tiempo de la pulsacion corta,
+se activa la larga.</li>
+</ul>
+&nbsp; <br>
+&nbsp;&nbsp;&nbsp; En domótica es muy normal la utilización de
+pulsadores para encender y apagar luces, utlizando los pulsadores como
+si fueran telerruptores.<br>
+<br>
+&nbsp;&nbsp;&nbsp; También tenemos la posibilidad de utilizar un mismo
+pulsador para varias aplicaciones, <br>
+<br>
+&nbsp; &nbsp; Mediante la utilizacion de pulsaciones temporizadas,
+dando una función a la pulsacion larga y otra a la pulsación corta o
+contando el numero de pulsaciones.<br>
+<br>
+&nbsp;&nbsp;&nbsp; Ejemplo con pulsaciones cortas enciendo y apago una
+led, con
+una pulsasion larga apagamos todas las luces de la vivienda.<br>
+<br>
+&nbsp;&nbsp;&nbsp; Ejemplo de contadores con la primera pulsación
+enciendo una luz con la segunda
+enciendo otra y con la tercera apago las dos.<br>
+<br><br>
+&nbsp;<br>
+<h1><a class="mozTocH1" name="mozTocId201411"></a>PULSACION LARGA MIDIENDO LA DURACIÓN DEL PULSO<br>
+</h1>
+<br>
+<br><a href="https://www.tinkercad.com/things/h3LQKwyV0zA"><img style="border: 0px solid ; width: 710px; height: 530px;" alt="pulsacion Larga Corta" src="imagenes/arduino_pulsacionLargaCorta.png"></a><br>
+&nbsp;&nbsp;&nbsp; En el siguiente sketch damos una doble
+aplicación a un pulsador mediante la detención de pulsaciones cortas o
+largas.<br>
+<br>
+&nbsp;&nbsp;&nbsp; En este caso con una pulsacion corta de p1 enciendo
+el led verde, y con una larga le apago.<br>
+<br>
+&nbsp;&nbsp;&nbsp; El funcionamiento consiste en pulsar 1 y al soltar
+calculo el tiempo que lo he estado pulsando.<br>
+<br>
+&nbsp;&nbsp;&nbsp; Si es menor de 20ms no se considera por poderse
+haber generado por rebotes.<br>
+&nbsp;&nbsp;&nbsp; Si dura entre 20ms y&nbsp; 500ms activo pulsación
+corta.<br>
+&nbsp;&nbsp;&nbsp; Si es mayor que 500ms activo pulsación larga.<br>
+<br>
+&nbsp;&nbsp;&nbsp; En la&nbsp; zona de acciones <br>
+<br>
+&nbsp;&nbsp;&nbsp; Si hay pulsación corta enciendo el led verde.<br>
+&nbsp;&nbsp;&nbsp; Si hay pulsacion larga apago el led.<br><br>
+<br>
+<span style="color: rgb(255, 204, 0);"><br>
+</span><span style="color: rgb(255, 204, 51);">/*mido el tiempor de pulsacion 1</span><br style="color: rgb(255, 204, 51);"><span style="color: rgb(255, 204, 51);">si es menos de 500ms se activa&nbsp; P1_corta y enciendo led verde</span><br style="color: rgb(255, 204, 51);"><span style="color: rgb(255, 204, 51);">si es mas de 500 ms se activa P2_larga y apago led verde</span><br style="color: rgb(255, 204, 51);"><br style="color: rgb(255, 204, 51);"><span style="color: rgb(255, 204, 51);">En este programa se ha programado la impresion cada segundo con una funcion pulso.</span><br style="color: rgb(255, 204, 51);"><br style="color: rgb(255, 204, 51);"><span style="color: rgb(255, 204, 51);">*/</span><br style="color: rgb(255, 204, 51);"><span style="color: rgb(255, 204, 51);">int ledverde=12;</span><br style="color: rgb(255, 204, 51);"><span style="color: rgb(255, 204, 51);">int pulsador1=2;</span><br style="color: rgb(255, 204, 51);"><br style="color: rgb(255, 204, 51);"><br style="color: rgb(255, 204, 51);"><br style="color: rgb(255, 204, 51);"><span style="color: rgb(255, 204, 51);">//PULSACION</span><br style="color: rgb(255, 204, 51);"><span style="color: rgb(255, 204, 51);">boolean pul_1;</span><br style="color: rgb(255, 204, 51);"><span style="color: rgb(255, 204, 51);">boolean P1_corta;</span><br style="color: rgb(255, 204, 51);"><span style="color: rgb(255, 204, 51);">boolean P1_larga;</span><br style="color: rgb(255, 204, 51);"><span style="color: rgb(255, 204, 51);">&nbsp;</span><br style="color: rgb(255, 204, 51);"><span style="color: rgb(255, 204, 51);">//temporizacion para pulsadores</span><br style="color: rgb(255, 204, 51);"><span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp;&nbsp; </span><br style="color: rgb(255, 204, 51);"><span style="color: rgb(255, 204, 51);">unsigned long T_inicio_pulsacion=0;</span><br style="color: rgb(255, 204, 51);"><span style="color: rgb(255, 204, 51);">unsigned long T_pulsado=0;</span><br style="color: rgb(255, 204, 51);"><br style="color: rgb(255, 204, 51);"><br style="color: rgb(255, 204, 51);"><span style="color: rgb(255, 204, 51);">&nbsp;</span><br style="color: rgb(255, 204, 51);"><span style="color: rgb(255, 204, 51);">void setup(){</span><br style="color: rgb(255, 204, 51);"><span style="color: rgb(255, 204, 51);">&nbsp;pinMode(ledverde,OUTPUT);</span><br style="color: rgb(255, 204, 51);"><span style="color: rgb(255, 204, 51);">&nbsp;pinMode(pulsador1,INPUT);</span><br style="color: rgb(255, 204, 51);"><br style="color: rgb(255, 204, 51);"><br style="color: rgb(255, 204, 51);"><span style="color: rgb(255, 204, 51);">&nbsp; Serial.begin(9600); </span><br style="color: rgb(255, 204, 51);"><span style="color: rgb(255, 204, 51);">}</span><br style="color: rgb(255, 204, 51);"><br style="color: rgb(255, 204, 51);"><span style="color: rgb(255, 204, 51);">&nbsp; void loop(){</span><br style="color: rgb(255, 204, 51);"><span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp; //leo el estado de las entradas</span><br style="color: rgb(255, 204, 51);"><span style="color: rgb(255, 204, 51);">&nbsp; pul_1= digitalRead(pulsador1) ;</span><br style="color: rgb(255, 204, 51);"><span style="color: rgb(255, 204, 51);">&nbsp;</span><br style="color: rgb(255, 204, 51);"><span style="color: rgb(255, 204, 51);">&nbsp;if (pul_1==HIGH &amp;&amp; T_inicio_pulsacion==0){</span><br style="color: rgb(255, 204, 51);"><span style="color: rgb(255, 204, 51);">&nbsp;T_inicio_pulsacion=millis();//inicializo el tiempo e impido que vuelva a funcionara hasta T_actual valga cero,</span><br style="color: rgb(255, 204, 51);"><span style="color: rgb(255, 204, 51);">&nbsp; </span><br style="color: rgb(255, 204, 51);"><span style="color: rgb(255, 204, 51);">&nbsp;</span><br style="color: rgb(255, 204, 51);"><span style="color: rgb(255, 204, 51);">&nbsp;}</span><br style="color: rgb(255, 204, 51);"><span style="color: rgb(255, 204, 51);">&nbsp;//calculo de la duraccion de la pulsación (T_pulsado)T_inicio_pulsacion</span><br style="color: rgb(255, 204, 51);"><span style="color: rgb(255, 204, 51);">&nbsp; if (pul_1==LOW&amp;&amp;T_inicio_pulsacion!=0){</span><br style="color: rgb(255, 204, 51);"><br style="color: rgb(255, 204, 51);"><span style="color: rgb(255, 204, 51);">&nbsp;T_pulsado=millis()-T_inicio_pulsacion;</span><br style="color: rgb(255, 204, 51);"><span style="color: rgb(255, 204, 51);">&nbsp;T_inicio_pulsacion=0;</span><br style="color: rgb(255, 204, 51);"><span style="color: rgb(255, 204, 51);">&nbsp;}</span><br style="color: rgb(255, 204, 51);"><span style="color: rgb(255, 204, 51);">&nbsp;if (T_pulsado&lt;20) T_pulsado=0;// eliminamos pulsos de menos de 20ms para eliminar rebotes</span><br style="color: rgb(255, 204, 51);"><span style="color: rgb(255, 204, 51);">&nbsp; if (T_pulsado&gt;20 &amp;&amp; T_pulsado&lt;500) {</span><br style="color: rgb(255, 204, 51);"><span style="color: rgb(255, 204, 51);">&nbsp; P1_corta=1;</span><br style="color: rgb(255, 204, 51);"><span style="color: rgb(255, 204, 51);">&nbsp; T_pulsado=0;</span><br style="color: rgb(255, 204, 51);"><span style="color: rgb(255, 204, 51);">&nbsp;</span><br style="color: rgb(255, 204, 51);"><span style="color: rgb(255, 204, 51);">}</span><br style="color: rgb(255, 204, 51);"><span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp; if (T_pulsado&gt;=500) {</span><br style="color: rgb(255, 204, 51);"><span style="color: rgb(255, 204, 51);">&nbsp; P1_larga=1;</span><br style="color: rgb(255, 204, 51);"><span style="color: rgb(255, 204, 51);">&nbsp; T_pulsado=0;</span><br style="color: rgb(255, 204, 51);"><span style="color: rgb(255, 204, 51);">&nbsp;</span><br style="color: rgb(255, 204, 51);"><span style="color: rgb(255, 204, 51);">}</span><br style="color: rgb(255, 204, 51);"><span style="color: rgb(255, 204, 51);">&nbsp;</span><br style="color: rgb(255, 204, 51);"><span style="color: rgb(255, 204, 51);">&nbsp; if (P1_corta==1){</span><br style="color: rgb(255, 204, 51);"><span style="color: rgb(255, 204, 51);">&nbsp; digitalWrite(ledverde, HIGH);</span><br style="color: rgb(255, 204, 51);"><span style="color: rgb(255, 204, 51);">&nbsp;&nbsp; P1_corta=0;}</span><br style="color: rgb(255, 204, 51);"><span style="color: rgb(255, 204, 51);">&nbsp;&nbsp; if (P1_larga==1){</span><br style="color: rgb(255, 204, 51);"><span style="color: rgb(255, 204, 51);">&nbsp;&nbsp; digitalWrite(ledverde, LOW);</span><br style="color: rgb(255, 204, 51);"><span style="color: rgb(255, 204, 51);">&nbsp;&nbsp; P1_larga=0;}</span><br style="color: rgb(255, 204, 51);"><span style="color: rgb(255, 204, 51);">&nbsp;</span><br style="color: rgb(255, 204, 51);"><br style="color: rgb(255, 204, 51);"><span style="color: rgb(255, 204, 51);">&nbsp;</span><br style="color: rgb(255, 204, 51);"><span style="color: rgb(255, 204, 51);">&nbsp;</span><br style="color: rgb(255, 204, 51);"><span style="color: rgb(255, 204, 51);">&nbsp; }//fin de programa</span><br>
+<br>
+___________________________________________________________________<br>
+<br>
+<br>
+<h1><a class="mozTocH1" name="mozTocId671628"></a>PULSACION CORTA,
+PULSACION LARGA(al superar tiempo corta)</h1>
+&nbsp; <br>
+En este segundo programa, cambio ligeramente la programación para que
+si la pulsacion
+supera los 500 ms (pulsacion larga) se ejecuta la accion de la
+pulsacion larga sin tener que esperar a soltar el pulsador.<br>
+<br>
+________________________________________________________________________<br>
+<a href="https://www.tinkercad.com/things/ch8cZ7IMOn7"><img style="border: 0px solid ; width: 710px; height: 530px;" alt="pulsacion corta y se supera el tiempo larga." src="imagenes/arduino_pulsacionLargaCorta.png"></a><br>
+<span style="color: rgb(255, 204, 0);">/*mido el tiempor de pulsacion 1<br>si es menos de 500ms se activa&nbsp; P1_corta y enciendo led verde<br>si es mas de 500 ms se activa P2_larga y apago led verde<br><br>En este programa se ha programado la impresion cada segundo con una funcion pulso.<br><br>*/<br>int ledverde=12;<br>int pulsador1=2;<br><br><br><br>//PULSACION<br>boolean pul_1;<br>boolean P1_corta;<br>boolean P1_larga;<br>&nbsp;<br>//temporizacion para pulsadores<br>&nbsp;&nbsp;&nbsp;&nbsp; <br>unsigned long T_inicio_pulsacion=0;<br>unsigned long T_pulsado=0;<br><br><br>&nbsp;<br>void setup(){<br>&nbsp;pinMode(ledverde,OUTPUT);<br>&nbsp;pinMode(pulsador1,INPUT);<br><br><br>&nbsp; Serial.begin(9600); <br>}<br><br>&nbsp; void loop(){<br>&nbsp;&nbsp;&nbsp; //leo el estado de las entradas<br>&nbsp; pul_1= digitalRead(pulsador1) ;<br>&nbsp;<br>&nbsp;if (pul_1==HIGH &amp;&amp; T_inicio_pulsacion==0){<br>&nbsp;T_inicio_pulsacion=millis();//inicializo el tiempo e impido que vuelva a funcionara hasta T_actual valga cero,<br>&nbsp;&nbsp; }<br>&nbsp; <br>&nbsp;//calculo de la duraccion de la pulsación (T_pulsado)T_inicio_pulsacion<br>&nbsp;if (T_inicio_pulsacion!=0){<br>&nbsp; if (millis()-T_inicio_pulsacion&gt;= 500){<br>&nbsp; P1_larga=1;}<br>&nbsp; if (millis()-T_inicio_pulsacion&gt;= 500 &amp;&amp; pul_1==LOW) T_inicio_pulsacion=0;<br>&nbsp;<br>&nbsp;if (pul_1==LOW&amp;&amp; millis()-T_inicio_pulsacion&gt; 20 &amp;&amp; millis()-T_inicio_pulsacion&lt;500)&nbsp; {<br>&nbsp;&nbsp; P1_corta=1;<br>&nbsp;&nbsp; T_inicio_pulsacion=0;<br>&nbsp;}<br>&nbsp; if (pul_1==LOW&amp;&amp; millis()-T_inicio_pulsacion&lt; 20)T_inicio_pulsacion=0;<br>&nbsp;}<br><br><br><br>&nbsp;<br>&nbsp; if (P1_corta==1){<br>&nbsp; digitalWrite(ledverde, HIGH);<br>&nbsp;&nbsp; P1_corta=0;<br>}<br>&nbsp;if (P1_larga==1){<br>&nbsp;&nbsp; digitalWrite(ledverde, LOW);<br>&nbsp; P1_larga=0;<br>&nbsp;}<br>&nbsp;<br><br>&nbsp; }//fin de programa<br>
+<br></span>
+<br>
+<br>
+<br>
+___________________________________________________________________________<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+&nbsp; &nbsp; <br>
+<br>
+</div>
+<!-- .......................................menu arduino................................ -->
+<div id="derechamenu"><br>
+<script language="javascript=" type="text/javascript" src="index_files/menuarduino.js"></script><br>
+<br>
+<br>
+<br>
+</div>
+<!-- .......................................pie................................ -->
+<div id="pie">&nbsp;&nbsp; <br>
+<div style="text-align: center;"> Si los ojos sirven para ver, la
+cabeza sirve para pensar.<br>
+</div>
+</div>
+<!-- ..................................fin contenedor..................................... -->
+</div>
+
+</body></html>

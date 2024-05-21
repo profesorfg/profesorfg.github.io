@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Automatas</title>
+
+    <link href="../index_files/estilo.css" rel="stylesheet" type="text/css">
+    <script src="../index_files/menu.js"></script>
+    <script defer src="index_files/cambiocableados.js"> </script>
+
+    <meta content="profesorfg" name="author">
+    <meta content="automatizacion industrial" name="description">
+    <meta name="keywords" content="automatas electricidad">
+    <meta charset="UTF-8">
+</head>
+
+<body>
+         
+
+    <div id="contenedor3">
+ 
+        <header>
+            <nav>
+                <menu-principal></menu-principal>
+            </nav>
+ <a name="mozToc"> </a>
+ 
+        </header>
+        <div id=lateral>
+
+            <input type="checkbox" id="check_menu">
+            <label for="check_menu" id="label_check">
+                <img class="icon_menu_lat" src="../imagenes/icono1.png" />
+            </label>
+
+
+            <div class="menu_lateral">
+                <a href="programados.html">S7-200</a><br>
+                <a href="LOGO.html">LOGO</a><br>
+                <a href="Domo_logo.html">DOMÓTICA CON LOGO</a><br>
+                <a href="tiaportal.html">TIA PORTAL</a><br>
+
+            </div>
+        </div>
+        <main>
+
+            <h1>AUTÓMATAS: S7-200 </h1>
+        
+            <br>
+            <article>
+                <h2>Dibujo DXF S7-200</h2>
+                <br>
+                <div style="text-align: center;"><a href="https://drive.google.com/file/d/0B2Hb811x1P1fWV9reng0WlpTQ2VCZ0hINEdmU2dKZEJEOGxz/view?usp=sharing"><img style="border: 0px solid ; width: 529px; height: 311px;" alt="automata s7-200 dxf" src="imagenes/programados_s7-200.PNG"></a><br>
+                </div>
+                <br>
+                Graficos dibujado por Sergio Ojeda<br>
+            </article>
+            <a class="mozTocH1" name="mozTocId647113"></a>
+
+
+            <br> <br> <br> <br><br>
+            <article>
+                <h2> Cuestiones lenguaje de contactos. </h2>
+                <div style="text-align: right;"><a href="#mozToc"><img style="border: 0px solid ; width: 47px; height: 17px;" alt="índice" src="imagenes/indice.png"></a><br>
+                </div>
+                &nbsp;&nbsp;<br>
+                <a href="http://goo.gl/yvM5cB">Descarga las cuestiones en
+                    PDF</a><br>
+                <br>
+                Cuestiones tema automatismos programables:<br>
+                <br>
+                1. Dibuja el esquema eléctrico de mando de una instalación con un
+                autómata S7-200 cuya tabla<br>
+                <br>
+                de símbolos es la siguiente:<br>
+                <br>
+                <br>
+                <img alt="tabla" src="imagenes/CUESTIONES_001.png"><br>
+                <br>
+                <br>
+                2. Que sucede en la instalación si introduzco el siguiente programa y:<br>
+                <br>
+                <br>
+                <img alt="2" src="imagenes/CUESTIONES_002.png"><br>
+                <br>
+                <br>
+                a) Pulsamos solo S1<br>
+                <br>
+                b) Pulsamos solo S2<br>
+                <br>
+                c) Pulsamos S1 y S2<br>
+                <br>
+                d) No pulsamos ninguno<br>
+                <br>
+                3. Que sucede en la instalación si introduzco el siguiente programa y:<br>
+                <br>
+                <img alt="3" src="imagenes/CUESTIONES_003.png"><br>
+                <br>
+                <br>
+                a) Pulsamos solo S1<br>
+                <br>
+                b) Pulsamos solo S2<br>
+                <br>
+                c) Pulsamos S1 y S2<br>
+                <br>
+                d) No pulsamos ninguno.<br>
+                <br>
+                <br>
+                <br>
+                <br>
+                4. Que sucede en la instalación si introduzco el siguiente programa y:<br>
+                <br>
+                <img alt="4" src="imagenes/CUESTIONES_004.png"><br>
+                <br>
+                <br>
+                <br>
+                a) Pulsamos solo S1<br>
+                <br>
+                b) Pulsamos solo S2<br>
+                <br>
+                c) Pulsamos solo S3<br>
+                <br>
+                d) Pulsamos S1 y S2<br>
+                <br>
+                e) Pulsamos S2 y S3<br>
+                <br>
+                f) Pulsamos S1 y S3<br>
+                <br>
+                g) Pulsamos S1, S2 y S3<br>
+                <br>
+                h) No pulsamos ninguno.<br>
+                <br>
+                <br>
+                5. Que sucede en la instalación si introduzco el siguiente programa y:<br>
+                <br>
+                <img alt="5" src="imagenes/CUESTIONES_005.png"><br>
+                <br>
+                <br>
+                <br>
+                a) Pulsamos solo S1<br>
+                <br>
+                b) Pulsamos solo el Final de carrera FC<br>
+                <br>
+                c) Pulsamos S1 y el final de carrera FC<br>
+                <br>
+                d) No pulsamos ninguno.<br>
+                <br>
+                <br>
+                6. Que sucede en la instalación si introduzco el siguiente programa y:<br>
+                <br>
+                <img alt="cuestiones 6" src="imagenes/CUESTIONES_006.png"><br>
+                <br>
+                <br>
+                <br>
+                <br>
+                a) Pulsamos solo S1<br>
+                <br>
+                b) Pulsamos solo S2<br>
+                <br>
+                c) Pulsamos S1 y S2<br>
+                <br>
+                d) No pulsamos ninguno.<br>
+                <br>
+                <br>
+                <br>
+                7. Que sucede en la instalación si introduzco el siguiente programa y:<br>
+                <br>
+                <img alt="7" src="imagenes/CUESTIONES_007.png"><br>
+                <br>
+                a) Pulsamos solo S1<br>
+                <br>
+                b) Pulsamos solo S2<br>
+                <br>
+                c) Pulsamos S1 y S2<br>
+                <br>
+                d) No pulsamos ninguno.<br>
+                <br>
+                <br>
+                <br>
+                8. Errores:<br>
+                <br>
+                Las siguientes lineas o network del programa dan un error de
+                compilación ¿ Cual es ?<br>
+                <br>
+                <img alt="8" src="imagenes/CUESTIONES_008.png"><br>
+                <br>
+                <br>
+                <br>
+                <img alt="8b" src="imagenes/CUESTIONES_008b.png"><br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                9. Los contactores KM1 y KM2 realizan un cambio de giro de un motor
+                trifásico.<br>
+                Dibuja el esquema de potencia.<br>
+                <br>
+                10. Se ha programado el autómata con el siguiente programa.<br>
+                <br>
+                <img alt="10" src="imagenes/CUESTIONES_010.png"><br>
+                ¿Explica como va a funcionar el motor?<br>
+                ¿Que problema grave podemos provocar? ¿Como lo solucionaríamos? <br>
+                <a class="mozTocH1" name="mozTocId471006"></a>
+            </article>
+            <a class="mozTocH2" name="mozTocId195679"></a> <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <article>
+                <h1>Practicas autómatas</h1>
+                <h2>Practica 1: Cambio de giro de un motor trifasico</h2>
+
+                <div style="text-align: right;"><a href="programados.html#mozToc"><img style="border: 0px solid ; width: 47px; height: 17px;" alt="índice" src="imagenes/indice.png"></a><br>
+                </div>
+                Realiza el esquema electrico, identifica las entradas y las
+                salidas&nbsp; y&nbsp; programa el&nbsp; automáta S7-200
+                para realizar
+                un cambio de giro de un motor trifasico protegido por un rele térmico
+                pasando por paro.<br>
+                Funcionamiento:<br>
+                &nbsp; Pulso giro horario y el motor esta
+                parado,&nbsp;&nbsp; el motor
+                arranca en sentido horario.<br>
+                &nbsp; Pulso giro antihorario y&nbsp; el motor esta parado, el
+                motor
+                arranca en sentido antihorario.<br>
+                &nbsp; Si pulso paro o salta el rele térmcio o activo una seta de
+                emergencia NC el motor se para.<br>
+                <br>
+                <h2><a class="mozTocH2" name="mozTocId210327"></a>Practica
+                    2: Arranque
+                    estrella triangulo mediante un autómata.</h2>
+                <div style="text-align: right;"><a href="programados.html#mozToc"><img style="border: 0px solid ; width: 47px; height: 17px;" alt="índice" src="imagenes/indice.png"></a><br>
+                </div>
+                Realiza el esquema electrico, identifica las entradas y las
+                salidas&nbsp; y&nbsp; programa el&nbsp; automáta S7-200
+                para realizar
+                un arranque estrella triangulo.<br>
+                Estando el arranque en estrella 2 segundos.<br>
+                <br>
+                <br>
+                Monta el circuito de mando y&nbsp; comprueba el funcionamiento.<br>
+                <br>
+                Precuación: comprueba que al pulsar paro, se paran todos los
+                contactores y el temporizador se pone a cero.<br>
+                <h2><a class="mozTocH2" name="mozTocId590814"></a>Practica
+                    3: Arranque
+                    estrella triangulo con cambio de giro de un
+                    motor</h2>
+                <br>
+                <div style="text-align: right;"><a href="programados.html#mozToc"><img style="border: 0px solid ; width: 47px; height: 17px;" alt="índice" src="imagenes/indice.png"></a><br>
+                </div>
+                Realiza el esquema electrico, identifica las entradas y las
+                salidas&nbsp; y&nbsp; programa el&nbsp; automáta S7-200
+                para realizar
+                un arranque estrella triangulo con la posibilidad de cambio de giro de
+                un motor trifasico protegido por un rele térmico pasando por paro y con
+                parada de emergencia.<br>
+                Funcionamiento:<br>
+                &nbsp; Pulso giro horario y el motor esta
+                parado,&nbsp;&nbsp; el motor
+                realiza un arranque estrella-triangulo en sentido horario.<br>
+                &nbsp; Pulso giro antihorario y&nbsp; el motor esta parado, el
+                motor
+                realiza un arranque estrella-triangulo sentido antihorario.<br>
+                &nbsp; Si pulso paro o salta el rele térmcio o activo una seta de
+                emergencia NC el motor se para.<br>
+                <br>
+                <br><a class="mozTocH2" name="mozTocId794368"></a>
+                <br>
+                <br>
+                <br>
+                <br>
+                <h2>Practica 4: Instalación de una puerta de un garaje</h2>
+                <br>
+                <div style="text-align: right;"><a href="programados.html#mozToc"><img style="border: 0px solid ; width: 47px; height: 17px;" alt="índice" src="imagenes/indice.png"></a><br>
+                </div>
+                Realiza el esquema electrico, identifica las entradas y las salidas&nbsp; y&nbsp; programa el&nbsp; automáta S7-200 para realizar
+                la instalación de una puerta de un garaje que funcione de las siguientes maneras:<br>
+                a) Funcionamiento:<br>
+                &nbsp;&nbsp; -Pulso abir:&nbsp; la puerta se abre mientras
+                este pulsado
+                abrir o este abierta o pulse cerrar o salte el térmico<br>
+                &nbsp;&nbsp; -Pulso cerrar: la puerta se cierra mientras este
+                pulsado
+                cerrar o este cerrada o pulse abrir o salte el térmico<br>
+                b) Funcionamiento:<br>
+                &nbsp;&nbsp; - Pulso abrir la puerta se abre hasta llegar al
+                final de
+                carrera o salte el termico o pulse una seta de emergencia NC<br>
+                &nbsp;&nbsp; - Pulso cerrar la puerta se cierra hasta llegar al
+                final
+                de carrera puerta cerrada o salte el termico o pulse una seta de
+                emergencia NC.<br>
+                &nbsp;&nbsp; - Si pulso abrir mientras la puerta se esta
+                cerrando la
+                puerta sigue cerrandose e iviceversa.<br>
+                c) Funcionamiento:<br>
+                &nbsp;&nbsp; - Pulso abrir la puerta se abre hasta llegar al
+                final de
+                carrera o salte el termico o pulse una seta de emergencia NC<br>
+                &nbsp;&nbsp; - La puerta esta abierta 3 segundos.<br>
+                &nbsp;&nbsp; - Pasado 3 segundos de la puerta abierta se cierra
+                hasta
+                llegar al final de carrera o salte el termico o pulse una seta de
+                emergencia NC<br>
+                <div style="text-align: center;"><a href="https://drive.google.com/file/d/0B2Hb811x1P1fUXJrMmNJTllVdFU/view?usp=sharing"><img style="border: 0px solid ; width: 283px; height: 310px;" alt="Puerta garaje" src="imagenes/puerta%20garaje.png"></a><br>
+                </div>
+                <br>
+                <br>
+                <div style="text-align: center;"><iframe src="https://www.youtube.com/embed/Fq-P_wec1HA" allowfullscreen="" frameborder="0" height="315" width="420"></iframe><br>
+                </div>
+                <br>
+                <h2><a class="mozTocH2" name="mozTocId922460"></a>Practica
+                    5 Puerta de
+                    Garaje.</h2>
+                <a href="http://goo.gl/olcG4M"> Solución aportada por Fco
+                    Javier Lucas</a>
+                <br>
+                <br>
+                <div style="text-align: right;"><a href="programados.html#mozToc"><img style="border: 0px solid ; width: 47px; height: 17px;" alt="índice" src="imagenes/indice.png"></a><br>
+                </div>
+                <br>
+                Dibuja en el PC-simu la instalación&nbsp; de una puerta de garaje con<br>
+                &nbsp;&nbsp; - Dos pulsadores, un pulsador exteriror (lado de donde se encuentra el motor) y otro en el interior del garaje.<br>
+                &nbsp;&nbsp; - Un interruptor.<br>
+                &nbsp;&nbsp; - Dos finales de carrera para detectar la puerta
+                abierta y
+                otro para detectar la puerta cerrada.<br>
+                &nbsp;&nbsp; - Dos luces una&nbsp; verde y otra roja en el exterior (lado donde se encuentra el motor).<br>
+                <br>
+                Ajusta las entradas y las salidas a la maqueta.<br>
+                <br>
+                Programa el siguiente funcionamiento:<br>
+                <br>
+                - Al pulsar desde el exterior (lado del motor de la maqueta) se abre la
+                puerta para meter un coche, está 3 segundos abierta y se cierra
+                automáticamente.<br>
+                - Al pulsar desde el interior se abre la puerta para sacar un coche,
+                esta 3 segundos abierta y se cierra automáticamente.<br>
+                - La capacidad máxima del garaje es de 3 plazas, por lo que
+                si&nbsp;
+                han entrado tres coches, ya no se abre la puerta y el semaforo pasa de
+                verde a rojo.<br>
+                <br>
+                1ª mejora de la instalación, al funcionamiento anterior añade la
+                siguiente condición:<br>
+                - Si se activa el interruptor la puerta se abre para vaciar el garaje y
+                al desactivarse la puerta se cierra y el garaje esta vacio.<br>
+                <br>
+                <br>
+                Ayudas a la programación:<br>
+                ¿Quien abre la puerta?<br>
+                &nbsp;&nbsp; - Pulsador exterior si no hay tres coches en el
+                garaje, o<br>
+                &nbsp;&nbsp; - Pulsador interior o<br>
+                &nbsp;&nbsp; - Interruptor.<br>
+                ¿Quien cierra la puerta?<br>
+                Al estar la&nbsp; puerta abierta mas de 2 segundos y no tener el
+                interruptor.<br>
+                ¿Cuando se enciende la luz verde?<br>
+                Si el numero de vehiculos es inferior a 3<br>
+                ¿ Cuando se enciende la luz roja?<br>
+                Si el numero de vehiculos es igual o mayor a 3<br>
+                <br>
+                <br>
+                <br>
+                Mejoras:<br>
+                comprueba que la instalación solo cuente un coche en cada el ciclo de
+                apertura&nbsp; o cierre.<br>
+                &nbsp;¿Como puedo saber que la puerta esta funcionando?<br>
+                Mediante una marca que se active con el pulsador exterior si no hay
+                tres coches en el garaje&nbsp; o&nbsp; con Pulsador interior.<br>
+                y se desactive con un flanco de subida de final de carrera puerta
+                cerrada o con el interruptor.<br>
+                <br>
+                El contador se incrementa o decremanta si no esta esta activada la
+                marca y se dan las condiciones.<br>
+                la instrucción del contador se debe de hacer antes de activar la marca.<br>
+                <br>
+                <div style="text-align: right;"><a href="programados.html#mozToc"><img style="border: 0px solid ; width: 47px; height: 17px;" alt="índice" src="imagenes/indice.png"></a><br>
+                </div>
+                <br><a class="mozTocH1" name="mozTocId19394"></a>
+                <br>
+                <br><br>
+                <br>
+                <br>
+            </article>
+            <article>
+                <h1>Ejercicios S7-200 con cintas tranportadoras</h1>
+
+                <div style="text-align: right;"><a href="programados.html#mozToc"><img style="border: 0px solid ; width: 47px; height: 17px;" alt="índice" src="imagenes/indice.png"></a><br>
+                </div>
+                <br>
+                Ejercicios de una cinta transportadora utilizando un autómata S7-200,
+                comprobamos el funcionamiento con un&nbsp; programa simulador del
+                S7-200 y PC-simu<br>
+                <br>
+                <br>
+                <br>
+                <h2><a class="mozTocH2" name="mozTocId281639"></a>Esquema
+                    cinta 1-2-3-4</h2>
+                Teniendo en cuenta la siguiente instalación, realiza los programas para
+                el autómata S7-200, de forma que la instalación funcione según se
+                indica en los siguientes enunciados.<br>
+                <br>
+                <div style="text-align: center;"><img alt="cinta1" src="imagenes/cinta1.png"><br>
+                </div>
+                <br>
+                <br>
+                <br>
+                <h2><a class="mozTocH2" name="mozTocId108479"></a>
+                    Cinta 1:</h2>
+                &nbsp;&nbsp;&nbsp; - Pulsa el botón verde, sale una caja<br>
+                &nbsp;&nbsp;&nbsp; - Al activarse el detector I0.1, se pone
+                en marcha
+                la cinta,<br>
+                &nbsp;&nbsp;&nbsp; - Cuando llega al detector I0.2, la
+                cinta se para.<br>
+                &nbsp;&nbsp;&nbsp; - Si se pulsa I0.0 mientras este
+                funcionando la
+                cinta no salen mas cajas.<br>
+                <h2><a class="mozTocH2" name="mozTocId321130"></a>
+                    Cinta 2</h2>
+                <br>
+                &nbsp;&nbsp; - Pulsa el botón verde, salen cajas durante 2
+                segundos,<br>
+                &nbsp;&nbsp; - La cinta se pone en marcha al detectar una caja
+                y esta
+                funcionando 2 segundos<br>
+                <br>
+                <h2><a class="mozTocH2" name="mozTocId950977"></a>
+                    Cinta 3</h2>
+                &nbsp;&nbsp; -&nbsp; Al pulsar el botón verde:<br>
+                &nbsp;&nbsp; - Salen&nbsp; cajas de Q0.0 y cuando el
+                detector I0.1
+                detecta 3 cajas, dejan de salir.<br>
+                &nbsp;&nbsp; - Al detectar presencia de caja en la cinta se
+                pone marcha
+                y cuando el detector I0.2 detecta 3 cajas, la cinta se para.<br>
+                &nbsp;&nbsp; - El pulsador no vuelva a funcionar hasta que se
+                haya
+                parado la cinta.<br>
+                <br>
+                <h2><a class="mozTocH2" name="mozTocId920257"></a>
+                    Cinta 4 contador y reset condicionado a termino de contaje </h2>
+                <br>
+                Añade un interruptor a la instalación a la entrada I0.3.<br>
+                &nbsp; - Las cajas salen mientras este cerrado el
+                interruptor&nbsp; I0.3<br>
+                &nbsp; - Al caer la caja en la cinta, está se pone en marcha.<br>
+                &nbsp; - La cinta se para al abrir el interruptor y&nbsp;
+                detectar caja
+                el I0.2<br>
+                &nbsp; - Al cabo de 10 segundos de funcionamiento real de la cinta,
+                esta se para, y no puede ponerse en marcha y no saldran cajas hasta que
+                no hagamos el mantenimiento y reseteemos la instalción (pulsar I0.0).<br>
+                <br>
+                <div style="text-align: right;"><a href="programados.html#mozToc"><img style="border: 0px solid ; width: 47px; height: 17px;" alt="índice" src="imagenes/indice.png"></a><br>
+                </div>
+                <br>
+                <h2><a class="mozTocH2" name="mozTocId412190"></a>Cinta
+                    para seleccion
+                    de tipo de material 1</h2>
+                Selector 1 lógica: Si salen cajas no metálicas caen a la derecha, si
+                salen cajas metálicas caen a la izquierda.<br>
+                <br>
+                Para sacar cajas pulsar sobre el cuadrado gris o verde.<br>
+                <br>
+                <div style="text-align: center;"><img alt="cinta2" src="imagenes/cinta2.png"><br>
+                </div>
+                <br>
+                <div style="text-align: right;"><a href="programados.html#mozToc"><img style="border: 0px solid ; width: 47px; height: 17px;" alt="índice" src="imagenes/indice.png"></a><br>
+                </div>
+                <br>
+                <br>
+                <h2><a class="mozTocH2" name="mozTocId596719"></a>Cinta
+                    para seleccion
+                    de tipo de material 2<br>
+                </h2>
+                Selector 2 lógica y marcas:Si salen cajas no metálicas caen a la
+                derecha, si salen cajas metálicas caen a la izquierda. La salida de las
+                caja esta condicionada a pulsadores y que no se este moviendo la cinta.<br>
+                <br>
+                <div style="text-align: center;"><img alt="cinta3" src="imagenes/cinta3.png"><br>
+                </div>
+                <br>
+                <div style="text-align: center;">
+                    <iframe src="https://www.youtube.com/embed/iav53xxBhsM" allowfullscreen="" frameborder="0" height="315" width="560"></iframe>
+                </div>
+            </article>
+            <a class="mozTocH1" name="mozTocId488682"></a>
+            <br><br><br><br><br><br>
+
+            <article>
+                <h1>
+                    &nbsp;GRAFCET LINEAL</h1>
+                <h2><a class="mozTocH2" name="mozTocId104294"></a>Deposito
+                    de agua
+                    (resuelto)<br>
+                </h2>
+                <br>
+                <div style="text-align: right;"><a href="programados.html#mozToc"><img style="border: 0px solid ; width: 47px; height: 17px;" alt="índice" src="imagenes/indice.png"></a><br>
+                </div>
+                El funcionamiento de la instalación es de la siguiente manera.<br>
+                <br>
+                &nbsp;&nbsp; 1. Activamos el pulsador<br>
+                &nbsp;&nbsp; 2. Se llena el deposito hasta la mitad con los
+                liquidos de
+                la bomba M1 y M2<br>
+                &nbsp;&nbsp; 3. Se termina de llenar con el liquido de la bomba
+                M1<br>
+                &nbsp;&nbsp; 4. Se vacia hasta la mitad.<br>
+                &nbsp;&nbsp; 5. Se vuelve a llenar con el liquido de la bomba M2<br>
+                &nbsp;&nbsp; 6. Se vacia todo el liquido.<br>
+                &nbsp;&nbsp; 7. A volver a pulsar se repite el ciclo.<br>
+                <br>
+                <div style="text-align: center;"><img style="width: 534px; height: 417px;" alt="Grafcet lineal deposito" src="imagenes/grafcet_linealdepositosim.PNG"><br>
+                </div>
+                 <a href="https://drive.google.com/folderview?id=0B2Hb811x1P1fSUF3dEhiTXlKNkU&amp;usp=sharing">Solución
+                    aportada por Rodrigo Alonso Chico</a><br>
+                <a class="mozTocH2" name="mozTocId966762"></a>
+                <br>
+                <br>
+                <br>
+                               <br>
+                <h2>Deposito
+                    de agua 2</h2>
+                <div style="text-align: right;"><a href="programados.html#mozToc"><img style="border: 0px solid ; width: 47px; height: 17px;" alt="índice" src="imagenes/indice.png"></a><br>
+                </div>
+                Teniendo en cuenta la instalación anterior realizar el siguiente
+                funcionamiento:<br>
+                <ol>
+                    <li>Con el deposito vacio pulso marcha</li>
+                    <li>Se llena hasta la mitad con las dos bombas</li>
+                    <li>Termina de llenarse con la&nbsp; bomba M2</li>
+                    <li>Cuando esta lleno se paran la bomba y se vacia</li>
+                    <li>Cuando volvemos a pulsar marcha se repite el ciclo.<br>
+                    </li>
+                </ol>
+            </article>
+            <a class="mozTocH1" name="mozTocId38711"></a>
+            <br><br><br><br><br>
+
+            <article>
+                <h1>GRAFCET SIMULTANEO.</h1>
+                <br>
+                <div style="text-align: right;"><a href="programados.html#mozToc"><img style="border: 0px solid ; width: 47px; height: 17px;" alt="índice" src="imagenes/indice.png"></a><br>
+                </div>
+                <h2><a class="mozTocH2" name="mozTocId669398"></a>Cintas
+                    simultaneo 1
+                    (resuelto)</h2>
+                En la siguiente instalación las cajas depositadas sobre la
+                cinta se mueven de la siguiente manera:<br>
+                <br>
+                <ol>
+                    <li>&nbsp;&nbsp;&nbsp; Depositamos dos cajas sobre
+                        la cinta
+                        manualmente.</li>
+                    <li>&nbsp;&nbsp;&nbsp; Activamos el pulsador</li>
+                    <li>&nbsp;&nbsp;&nbsp; Las cajas se desplazan hacia
+                        la derecha</li>
+                    <li>&nbsp;&nbsp;&nbsp; Cuando las dos cajas estan
+                        en la derecha
+                        vuelven a su posici\u00f3n originial</li>
+                    <li>&nbsp;&nbsp;&nbsp; Cuando las dos cajas estan
+                        en su posici\u00f3n
+                        original y activamos el pulsador se repite el ciclo.</li>
+                </ol>
+                <div style="text-align: center;">Esquema de la instalación<br>
+                </div>
+                <br>
+                <div style="text-align: center;"><img style="width: 421px; height: 232px;" alt="Grafcet simultaneo" src="imagenes/grafcet_simultaneo.PNG"><br>
+                </div>
+                <br>
+                <div style="text-align: center;"><img style="width: 334px; height: 477px;" alt="Diagrama Grafcet" src="imagenes/grafcet_simultaneo_diagrama.PNG"><br>
+                </div>
+                <br>
+                <br>
+                <a href="https://drive.google.com/folderview?id=0B2Hb811x1P1fMWNEdEhyY1VOWkE&amp;usp=sharing">Solución
+                    aportada por Francisco Javier Lucas Lorenzo</a>
+                <a class="mozTocH2" name="mozTocId523371"></a>
+                <br>
+                <br>
+                <br>
+                <br>
+                <h2>Cintas simultaneo 2 (resuelto)</h2>
+                <br>
+                <div style="text-align: right;"><a href="programados.html#mozToc"><img style="border: 0px solid ; width: 47px; height: 17px;" alt="índice" src="imagenes/indice.png"></a><br>
+                </div>
+                <br>
+                <br>
+                Funcionamiento:<br>
+                <br>
+                &nbsp;&nbsp;&nbsp; Al pulsar Marcha salen dos cajas<br>
+                &nbsp;&nbsp;&nbsp; Cae una caja a la cinta 1 y&nbsp; se
+                pone en marcha
+                la cinta 2.<br>
+                &nbsp;&nbsp;&nbsp; Cae una caja a la cinta 2 y se pone en
+                marcha la
+                cinta 2<br>
+                &nbsp;&nbsp;&nbsp; La cinta 1, Se detiene al llegar al
+                cilindro<br>
+                &nbsp;&nbsp;&nbsp; El cilindro golpea la caja<br>
+                &nbsp;&nbsp;&nbsp; Cuando el cilindro este en su posición
+                original
+                se pone en marcha la cinta 1.<br>
+                &nbsp;&nbsp;&nbsp; Al caer la caja, la cinta 1 se para.<br>
+                &nbsp;&nbsp;&nbsp; Al caer la caja met\u00e1lica la cinta 2
+                se para.<br>
+                &nbsp;&nbsp;&nbsp; Cuando las dos cajas est\u00e1n en al
+                cinta 3 esta
+                se pone en marcha.<br>
+                &nbsp;&nbsp;&nbsp; Caen de la cinta 3, y si volvemos a
+                pulsar repetimos
+                el ciclo.<br>
+                <br>
+                <div style="text-align: center;"><img style="width: 637px; height: 553px;" alt="Grafcet simultaneo cajas" src="imagenes/grafcet-simultaneo-cajas.PNG"><br>
+                </div>
+                <br>
+                <br>
+                <a href="https://drive.google.com/folderview?id=0B2Hb811x1P1fTlJJTC1vYnNsaTg&amp;usp=sharing">Solución
+                    aportada por José Manuel Sanchez</a><br>
+            </article>
+            <a class="mozTocH1" name="mozTocId720771"></a>
+            <br>
+            <br> <br>
+            <br> <br>
+            <br>
+
+            <article>
+                <h1>Ejercicios:</h1>
+                <br>
+                <div style="text-align: right;"><a href="programados.html#mozToc"><img style="border: 0px solid ; width: 47px; height: 17px;" alt="índice" src="imagenes/indice.png"></a><br>
+                </div>
+                Realiza mediante grafcet la siguientes instalaciones:<br>
+                <br>
+                1.- Realiza el programa del funcionamiento automático de la grúa del
+                siguiente video, para el autómata S7-200 utilizando grafect.<br>
+                <a href="https://www.youtube.com/watch?v=BPJ0demYd2E">
+                    funcionamiento
+                    de la grúa</a><br>
+                Para conectar el autómata fijate en el <a href="#Esquema_el%E9ctrico_del_aut%F3mata_">esquema del
+                    ejercicio 5</a>,
+                donde ademas esta conectada una baliza, una fotocélula y&nbsp; una
+                parada de emergencia a mayores<br>
+                <br>
+                <br>
+                <div style="text-align: center;"><a href="https://drive.google.com/file/d/0B2Hb811x1P1fRHFjMzBGRkFVVnNmNUJGT1Y4QUN4cVlJcUJN/view?usp=sharing"><img style="border: 0px solid ; width: 582px; height: 532px;" alt="Grafcet grúa" src="imagenes/programados_grafcet_grua.PNG"></a><br>
+                </div>
+                <br>
+                Graficos dibujado por Sergio Ojeda<br>
+                <br>
+                2.- Arranque estrella triangulo, permaneciendo en estrella 2 segundos,
+                si se pulsa paro se desactivan todos los contactores tambien en
+                estrella.<br>
+                <br>
+                3.-&nbsp; Completa la instalación anterior con un arranque estrella
+                triangulo con cambio de giro.<br>
+                <br>
+                4.- Realiza el grafcet del ejemplo 2 con la siguiente secuencia.<br>
+                <br>
+                <div style="text-align: center;"><a href="https://drive.google.com/file/d/0B2Hb811x1P1fcDZQOTFvXzRwT3M/view?usp=sharing"><img style="border: 0px solid ; width: 421px; height: 232px;" alt="Grafcet simultaneo" src="imagenes/grafcet_simultaneo.PNG"></a><br>
+                </div>
+                <ul>
+                    <li>Al pulsar cae una caja a la cinta superior</li>
+                    <li>La caja se desplaza hacia la derecha.</li>
+                    <li>Al llegar a la derecha cae una caja a la cinta inferior.</li>
+                    <li>La caja de desplaza a la derecha.</li>
+                    <li>Cuando las dos cajas estan a la derecha se desplazan la dos
+                        a la
+                        vez hasta llegar a su poscion inicial.</li>
+                </ul>
+                <br>
+                <br>
+                <div style="text-align: center;"><iframe src="https://www.youtube.com/embed/7o80yzCf9YQ" allowfullscreen="" frameborder="0" height="315" width="420"></iframe><br>
+                </div>
+                <br>
+                <br>
+                Un funcionamiento alternativo para la instalación<br>
+                <br>
+                <div style="text-align: center;"><iframe src="https://www.youtube.com/embed/LJdzwJrV9K0" allowfullscreen="" frameborder="0" height="315" width="420"></iframe><br>
+                </div>
+                <br>
+                <br>
+                5.- Completa el funcionamiento automático de la grúa del
+                siguiente video, para el autómata S7-200 utilizando grafect del
+                ejercicio 1 con las siguientes condiciones.<br>
+                <ul>
+                    <li>Con la grúa parada esta encendida luz verde de la baliza.</li>
+                    <li>Con la grúa en funcionamiento esta encendida la luz roja.</li>
+                    <li>En funcionamiento, entro en la zona de peligro, se para la
+                        grua,
+                        la
+                        luz roja y la sirena se pone intermitente con una frecuencia de 0.5
+                        segundos. Para que vuelva a funcionar pulsar marcha.<br>
+                    </li>
+                    <li>Si pulso la parada de emergencia, se para la grua, la luz
+                        roja y
+                        la sirena se ponen intermitente con una
+                        frecuencia de 0.5 segundos. Para que vuela afuncionar pulsar
+                        marcha.</li>
+                </ul>
+                <a href="https://www.youtube.com/watch?v=BPJ0demYd2E">
+                    funcionamiento
+                    de la grúa</a><br>
+                <a name="Esquema_eléctrico_del_autómata_"></a>Esquema
+                eléctrico del
+                autómata<br>
+                <br>
+                <div style="text-align: center;"><a href="https://drive.google.com/file/d/0B2Hb811x1P1fSjhhaEZ6SDZ6RDRfbUl6T2kwZi1BdkRXTHVB/view?usp=sharing"><img style="border: 0px solid ; width: 560px; height: 415px;" alt="Esquema Eléctrico Grúa" src="imagenes/programados_grua.PNG"></a><br>
+                </div>
+                <br>
+                Graficos dibujado por Sergio Ojeda<br>
+                <br>
+                <br>
+                <br>
+                6.- Programa una instalacion que se encienda luces con la siguiente
+                secuencia cuando este activado un interruptor, Nota cada estado dura
+                0,4 segundos. <br>
+                <br>
+                <div style="text-align: center;"><img style="width: 452px; height: 124px;" alt="Coche fantastico" src="imagenes/cochefantisco1.gif"><br>
+                </div>
+                <br>
+                <br>
+                <div style="text-align: right;"><a href="programados.html#mozToc"><img style="border: 0px solid ; width: 47px; height: 17px;" alt="índice" src="imagenes/indice.png"></a><br>
+                </div>
+            </article>
+        </main>
+        <aside>
+    
+           <section>
+             
+
+                <a href="#mozToc">- DIBUJO DXF S7-200</a>
+                <br> 
+                <br>
+                <a href="#mozTocId647113">- CUESTIONES LENGUAJE DE CONTACTOS. </a>
+                   <br> 
+                   <br>
+                    <a href="#mozTocId471006">- PRÁCTICAS AUTÓMATAS</a> <br>
+                      
+                           <a href="#mozTocId195679">Practica 1:Cambio de giro de un motor trifasico</a> <br>
+                          <a href="#mozTocId210327">Practica 2:Arranque estrella triangulo mediante un autómata.</a> <br>
+                           <a href="#mozTocId590814">Practica 3:Arranque estrella triangulo con cambio de giro de un motor</a> <br>
+                         <a href="#mozTocId794368">Practica 4:Instalación de una puerta de un garaje</a> <br>
+                          <a href="#mozTocId922460">Practica 5:Puerta de Garaje.</a>
+                           <br>
+                       
+                     <br>
+                   <a href="#mozTocId19394">- EJERCICIOS CINTAS TRANSPORTADORAS.</a> <br>
+                       
+                         <a href="#mozTocId281639">Esquema cinta
+                                    1-2-3-4</a> <br>
+                        <a href="#mozTocId108479">Cinta 1:</a> <br>
+                        <a href="#mozTocId321130">Cinta 2</a> <br>
+                        <a href="#mozTocId950977">Cinta 3</a> <br>
+                        <a href="#mozTocId920257">Cinta 4 contador y reset condicionado a termino de contaje </a> <br>
+                          <a href="#mozTocId412190">Cinta para seleccion de tipo de material 1</a> <br>
+                          <a href="#mozTocId596719">Cinta para  seleccion de tipo de material 2 </a> 
+                                <br> 
+                                <br>
+                   
+                   <a href="#mozTocId488682">- GRAFCET LINEAL</a> <br>
+                    
+                         <a href="#mozTocId488682">Deposito de agua(resuelto) </a> <br>
+                            <a href="#mozTocId966762">Deposito de agua 2</a> 
+                                    <br> 
+                                    <br>
+                       
+                   <a href="#mozTocId38711"> - GRAFCET SIMULTANEO.</a>
+                      <br>
+                          <a href="#mozTocId38711">Cintas simultaneo 1 (resuelto)</a> <br>
+                          <a href="#mozTocId523371">Cintas simultaneo 2 (resuelto)</a> 
+                          <br> 
+                          <br>
+                      
+                  <a href="#mozTocId720771"> - Ejercicios:</a> <br>
+              
+            </section>
+        </aside>
+        <!-- ..............................pie................................ -->
+        <footer>El fin de hombre es perseguir la felicidad.</footer>
+    </div>
+
+</body>
+
+</html>

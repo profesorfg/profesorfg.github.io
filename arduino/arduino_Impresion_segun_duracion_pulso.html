@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+<link href="index_files/estiloarduino.css" rel="stylesheet" type="text/css">
+<link href="index_files/menu.css" rel="stylesheet" type="text/css">
+<meta charset="UTF-8">
+<title>arduino</title>
+
+<meta content="profesorfg" name="author">
+<meta content="profesorfg enlaces" name="description">
+<meta name="keywords" content="profesorfg enlaces"></head>
+<body style="margin-top: 0px; height: 598px;">
+<!-- Comentario -->
+<div id="contenedor"><!-- ............................Contendor....................... --><!-- -----------------menu superior............................................ -->
+<div id="menusuperior">
+<script language="javascript=" type="text/javascript" src="index_files/menu_general.js"></script></div>
+<!-- ........................menu izquierda.............................-->
+<div id="izquierda">
+<script language="javascript=" type="text/javascript" src="index_files/menuizq.js"></script><br>
+<br>
+<br>
+<br>
+</div>
+<!-- ............................contenido central................... -->
+<div id="derecha">
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<big style="font-weight: bold; color: yellow;"><big>IMPRESION
+SEGÚN TIEMPO CARGADO EN VARIABLE</big></big><br>
+<br>
+<ul id="mozToc">
+<!--mozToc h1 1 h2 2 h3 3 h4 4 h5 5 h6 6-->
+  <li><a href="#mozTocId578560">&nbsp; PULSO PARA LA IMPRESION SIN
+DELAY()</a></li>
+</ul>
+<br>
+<br>
+Archivos:<br>
+impresion_cada_segundo<br>
+<br>
+<br>
+Interes:<br>
+<ul>
+  <li>Creación de una varaible que se activa durante un ciclo programa
+en un intervalo de tiempo.<br>
+  </li>
+</ul>
+<h1><a class="mozTocH1" name="mozTocId578560"></a>&nbsp; PULSO PARA LA
+IMPRESION SIN DELAY()</h1>
+<br>
+&nbsp;&nbsp;&nbsp; En el siguiente Sketch, se produce la impresión en
+monitor Serial un intervalo de tiempo que podemos modificar modificando
+la variable&nbsp; duración pulso.<br>
+<br>
+&nbsp;&nbsp;&nbsp; En cada intervalo de tiempo almacenado en duración
+pulso, se activa la variable pulso un ciclo programa.<br>
+<br>
+&nbsp;&nbsp;&nbsp; No utilizamos la función delay() con lo que tenemos
+al micropocesor ocupandose de todos los procesos cada ciclo programa.<br><br><a href="https://www.tinkercad.com/things/0qyLGGarJkl"><img style="border: 0px solid ; width: 770px; height: 596px;" alt="Pulso" src="imagenes/arduino_pulso.png"></a><br>
+<br>
+
+<span style="color: rgb(255, 204, 0);">/*&nbsp;</span><span style="color: rgb(255, 204, 51);">El bit pulso se pone a 1 un ciclo progama.
+Cada vez que pasa los segundos almacenados en tiempo_ciclo</span>.<span style="color: rgb(255, 204, 0);">*/<br><br>
+boolean bit_pulso=0; // se activa cada segundo un ciclo programa<br><br>
+unsigned int tiempo_ciclo=3000;// la duracion en la que va a producirse el pulso,&nbsp; puede oscilar
+entre 65536 ms (65 segundos.)<br><br>
+unsigned long tiempo_inicio=0;<br>
+&nbsp; <br>
+void setup(){<br>
+<br>
+<br>
+&nbsp; Serial.begin(9600);&nbsp; <br>
+}<br>
+<br>
+&nbsp; void loop(){<br>
+&nbsp;<br>
+&nbsp;<br>
+if (tiempo_inicio==0) tiempo_inicio=millis();//si la variable tiempo_inicio vale
+cero carga el valor de tiempo actual<br>
+<br>
+if (millis()-tiempo_inicio&gt;tiempo_ciclo)// si el tiempo desde que
+cargue la variable supera el tiempo cilclo<br>
+{ <br>
+bit_pulso=1;//activo el bit bit_pulso<br>
+tiempo_inicio=0;// tiempo_inicio al ponerlo a 0, lca preparo para carga un nuevo tiempo.<br>
+&nbsp;}<br>
+else bit_pulso=0;//si el tiempo en que carge la variable es menor que
+duracion pulso, el bit bit_pulso esta a cero<br>
+<br>
+<br>
+&nbsp;//acciones que se ejecutan cada segundo <br>
+&nbsp;if (bit_pulso==1){<br>
+//impresion<br>
+<br>
+&nbsp;Serial.print ("Esta impresion se realiza cada ");<br>
+&nbsp;Serial.print(tiempo_ciclo);<br>&nbsp;</span><span style="color: rgb(255, 204, 0);">Serial.println(" milisegundos");<br></span><span style="color: rgb(255, 204, 0);">&nbsp;Serial.println("valor almacenado en tiempo ciclo");<br><br>
+&nbsp; <br>
+<br>
+&nbsp;}&nbsp;&nbsp; <br>
+&nbsp; }//fin de programa<br></span>
+<br>
+<br>
+<br>
+<br>
+&nbsp; <br>
+&nbsp; &nbsp; <br>
+<br>
+</div>
+<!-- .......................................menu arduino................................ -->
+<div id="derechamenu"><br>
+<script language="javascript=" type="text/javascript" src="index_files/menuarduino.js"></script><br>
+<br>
+<br>
+<br>
+</div>
+<!-- .......................................pie................................ -->
+<div id="pie">&nbsp;&nbsp; <br>
+<div style="text-align: center;"> Entendernos sin hablar.<br>
+</div>
+</div>
+<!-- ..................................fin contenedor..................................... -->
+</div>
+
+</body></html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <link href="index_files/estiloarduino.css" rel="stylesheet" type="text/css">
+    <link href="index_files/menu.css" rel="stylesheet" type="text/css">
+    <meta charset="UTF-8">
+    <title>arduino</title>
+
+    <meta content="profesorfg" name="author">
+    <meta content="profesorfg enlaces" name="description">
+    <meta name="keywords" content="profesorfg enlaces">
+</head>
+
+<body style="margin-top: 0px; height: 598px;">
+    <!-- Comentario -->
+    <div id="contenedor">
+        <!-- ............................Contendor....................... -->
+        <!-- -----------------menu superior............................................ -->
+        <div id="menusuperior">
+            <script language="javascript=" type="text/javascript" src="index_files/menu_general.js"></script>
+        </div>
+        <!-- ........................menu izquierda.............................-->
+        <div id="izquierda">
+            <script language="javascript=" type="text/javascript" src="index_files/menuizq.js"></script><br>
+            <br>
+            <br>
+            <br>
+        </div>
+        <!-- ............................contenido central................... -->
+        <div id="derecha"><br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <h1><a class="mozTocH1" name="mozTocId773096"></a>MANDO A DISTANCIA CON ARDUINO</h1>
+            <br>
+            <br>
+            <br>
+            <h2><a class="mozTocH2" name="mozTocId691722"></a><a name="PROTOCOLONEC"></a>&nbsp;PROTOCOLO
+                NEC
+            </h2>
+            <a href="https://geekytheory.com/protocolo-nec-receptor-ir-con-arduino/" target="_blank">Texto copiado de&nbsp;
+                https://geekytheory.com/protocolo-nec-receptor-ir-con-arduino/</a><br>
+            <br>
+            <br>
+            &nbsp;El protocolo NEC consta de 32 bits. 8 de ellos son de
+            dirección
+            y, otros 8 de longitud de comandos. Estos 16 bits, se repiten otra vez
+            para obtener una mayor fiabilidad en la comunicación. Como sabemos, un
+            bit puede ser un 0 o un 1. El protocolo NEC, utiliza 2.25 milisegundos
+            para mandar un 1 y, 1.12 milisegundos para mandar un 0. Para el 0, se
+            manda un pulso a 38 kHz durante 560 microsegundos y se deja un huevo
+            durante los otros 560 microsegundos restantes. Sin embargo, para enviar
+            un 1 lógico, se manda un pulso a 38 KHz durante 560 microsegundos y se
+            deja un hueco de 2.25 ms- 560 µs=1.69ms. Como vemos, se manda lo mismo,
+            a 38 KHz durante 560 µs, pero como el 1 lógico dura más que un 0
+            lógico, el hueco que se deja antes de mandar otro bit, tiene diferente
+            duración. <br>
+            <br>
+            <img style="width: 425px; height: 144px;" alt="" src="imagenes/protocoloNEC.png"><br>
+            <br>
+            <br>
+            En este protocolo, el LSB se transmite el primero. Un mensaje se inicia
+            mediante un pulso de 9 ms, con el fin de establecer una cierta ganancia
+            con respecto a la comunicación anterior. Este pulso, va seguido de un
+            espacio de 4.5 ms y, tras estos 13.5 ms, se transmite el mensaje.<br>
+            <br>
+            <img style="width: 583px; height: 95px;" alt="" src="imagenes/protocoloNEC1.png"><br>
+            <br>
+            <h2><a class="mozTocH2" name="mozTocId365421"></a>Receptores
+                de IR</h2>
+            Algunos&nbsp; fabricantes de receptores de infrarojos de mando a
+            distancia son:<br>
+            TFMS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            Telefunken<br>
+            SFH511X&nbsp;&nbsp; Siemens<br>
+            PNA&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            Panasonic<br>
+            TSOP17XX Vishay<br>
+            <br>
+            El recomendado en el la web es el&nbsp;&nbsp;&nbsp;
+            TSOP1738&nbsp;&nbsp;&nbsp; donde el 38 indica la frecuencia
+            de 38KHz de
+            haz de luz.<br>
+            <br>
+            <br>
+        </div>
+        <!-- .......................................menu derecha................................ -->
+        <div id="derechamenu"><br>
+            <script language="javascript=" type="text/javascript" src="index_files/menuarduino.js"></script><br>
+            <br>
+            <br>
+            <br> 
+        </div>
+      
+        <div id="pie"> <br>
+            <div style="text-align: center;"> El hombre es dueño de
+                sus
+                pensamientos pero esclavo de sus palabras
+            </div>
+        </div>
+        <!-- ..................................fin contenedor..................................... -->
+    </div>
+</body>
+
+</html>

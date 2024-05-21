@@ -1,0 +1,6 @@
+Al girar el interruptor a ON la plataforma empieza a girar,
+Al pasar el interruptor a OFF y detectar que hay un tubo en
+frente del detector capacitivo la plataforma se para.
+
+CUIDADO de ponerlo en marcha sin ningún tubo sobre la 
+plataforma, no parara

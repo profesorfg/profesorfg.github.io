@@ -1,0 +1,1 @@
+document.write('<object data="index_files/menuautomatismos.html" height="500" width="300"><embed wmode="transparent" src="index_files/menuautomatismos.html" height="500" width="300">Error: Embedded data could not be displayed.</object>');

@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+<link href="index_files/estiloarduino.css" rel="stylesheet" type="text/css">
+<link href="index_files/menu.css" rel="stylesheet" type="text/css">
+<meta charset="UTF-8">
+<title>arduino</title>
+
+<meta content="profesorfg" name="author">
+<meta content="profesorfg enlaces" name="description">
+<meta name="keywords" content="profesorfg enlaces"></head>
+<body style="margin-top: 0px; height: 598px;">
+<!-- Comentario -->
+<div id="contenedor"><!-- ............................Contendor....................... --><!-- -----------------menu superior............................................ -->
+<div id="menusuperior">
+<script language="javascript=" type="text/javascript" src="index_files/menu_general.js"></script></div>
+<!-- ........................menu izquierda.............................-->
+<div id="izquierda">
+<script language="javascript=" type="text/javascript" src="index_files/menuizq.js"></script><br>
+<br>
+<br>
+<br>
+</div>
+<!-- ............................contenido central................... -->
+<div id="derecha"><br>
+<br>
+<br>
+<br>
+<br>
+<h1><a class="mozTocH1" name="mozTocId561800"></a>ARDUINO,
+APP INVENTOR Y BLUETOOTH<br>
+</h1>
+<br>
+<ul id="mozToc">
+</ul>
+<br>
+<br>
+<h2><a class="mozTocH2" name="mozTocId122826"></a><a name="PROTOCOLONEC"></a> CONTROL DOMÓTICO DE PERSIANAS
+Y LUCES.<br>
+</h2>
+<div style="text-align: center;">&nbsp;&nbsp;&nbsp;<img style="width: 237px; height: 515px;" alt="Pantalla del smartphone" src="imagenes/bt_arduinomovil_c.jpg"> </div>
+<p style="margin-bottom: 0cm; line-height: 100%;">&nbsp;</p>
+<h3>Enlaces</h3>
+<p style="margin-bottom: 0cm; line-height: 100%;"></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><br>
+<a href="https://drive.google.com/open?id=1XjYaM0Gi9z-gUZf8fmX5u7pGvYWZlF_h">DESCARGA LA APK PARA INSTALAR
+EN TU MOVIL</a><br>
+<br>
+<a href="http://ai2.appinventor.mit.edu/?locale=es_ES#5151039014305792" target="_blank">VER EL PROYECTO EN LA WEB APPINVENTOR. (Se
+necesita una cuenta gmail)</a></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"></p>
+<h2><span style="font-weight: bold;"></span>PROGRAMA
+APP INVENTOR.</h2>
+<p style="margin-bottom: 0cm; line-height: 100%;"></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"></p>
+<p style="margin-bottom: 0cm; line-height: 100%;">En
+el proyecto, se activan y desactivan las salidas de un modulo de 8
+relés, con un smartphone utilizando el bluetooth.</p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><br>
+</p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><br>
+</p>
+<p style="margin-bottom: 0cm; line-height: 100%;">Para
+conectar el
+bluetooth del arduino con el smartphone, primero hay que emparejar el
+bluetooth del arduino en los dispositivos que bluetooth de nuestro
+smartphone.</p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><br>
+</p>
+<p style="margin-bottom: 0cm; line-height: 100%;">Después
+se pulsa en
+conectar y si la conexión es correcta, se pone en verde el botón
+conectar y el bluetooth del arduino pasa de parpadear a fijo. Si no
+consigue conectar el botón "conectar" se pone en rojo y el bluetooth
+sigue
+parpadeando.</p>
+<p style="margin-bottom: 0cm; line-height: 100%;"></p>
+<p style="margin-bottom: 0cm; line-height: 100%;">El
+programa del
+smartphone se ha realizado con app inventor, y consiste en:</p>
+<p style="margin-bottom: 0cm; line-height: 100%;"></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"></p>
+<h2>CONEXIÓN BLUETOOTH ARDUINO MOVIL</h2>
+<p style="margin-bottom: 0cm; line-height: 100%;"></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><img style="width: 733px; height: 329px;" alt="imagenes/BT_programa_conexionBT.png" src="imagenes/BT_programa_conexionBT.png"> </p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><br>
+</p>
+<p style="margin-bottom: 0cm; line-height: 100%;"></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"></p>
+<h2>PROGRAMACIÓN DE LOS PULSADORES 1,2,3,4.</h2>
+Para
+controlar las
+luces.
+<p style="margin-bottom: 0cm; line-height: 100%;">Con cada
+pulsación
+conmuta el estado de la bombilla.</p><p style="margin-bottom: 0cm; line-height: 100%;"></p><p style="margin-bottom: 0cm; line-height: 100%;">Para
+encender la bombilla 1, envío por bluetooth al arduino una A, que
+activa la salida conectada al rele 5 que controla la bombilla 1, para
+apagarla envío una a. <a href="controlPorMovil.html#Esquema_de_potencia">
+( ver esquema</a>)<br></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><br>
+</p>
+<p style="margin-bottom: 0cm; line-height: 100%;">Tabla de envío de caracteres para controlar las 4 bombillas.</p><p style="margin-bottom: 0cm; line-height: 100%;"></p><table style="text-align: left; width: 269px;" border="1" cellpadding="2" cellspacing="2"><tbody><tr><td style="width: 107px;"></td><td style="width: 75px;">Encender</td><td style="width: 73px;">Apagar</td></tr><tr><td style="width: 107px;">Bombilla
+1</td><td style="width: 75px; text-align: center;">A</td><td style="width: 73px; text-align: center;">a</td></tr><tr><td style="width: 107px;">Bombilla
+2</td><td style="width: 75px; text-align: center;">E</td><td style="width: 73px; text-align: center;">e</td></tr><tr><td style="width: 107px;">Bombilla
+3</td><td style="width: 75px; text-align: center;">I</td><td style="width: 73px; text-align: center;">i</td></tr><tr><td style="width: 107px;">Bombilla
+4</td><td style="width: 75px; text-align: center;">O</td><td style="width: 73px; text-align: center;">o</td></tr></tbody></table><p style="margin-bottom: 0cm; line-height: 100%;"></p><p style="margin-bottom: 0cm; line-height: 100%;"></p><br><p style="margin-bottom: 0cm; line-height: 100%;"></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"></p>
+<h3>PROGRAMACIÓN DE LA CONMUTACIÓN</h3>
+<p style="margin-bottom: 0cm; line-height: 100%;"></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><img style="width: 455px; height: 298px;" alt="imagenes/BT_programa_Pulsadores.png" src="imagenes/BT_programa_Pulsadores.png"></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"></p>
+Inicializo una variable "pul1" para el pulsador 1, si vale cero la
+bombilla ccnectada al rele 5 esta apagada y si esta a 1 la bombilla
+esta encendida.<br><br>
+Cuando activo el botón &nbsp;"pulsador 1" y la variable "pul1" vale
+0, <br>
+cambio el color del botón "pulsador1" a amarillo<br>
+y envío al arduino una A (que activa la salida del arduino conectada al
+rele 5,&nbsp;<a href="#Esquema_de_potencia">&nbsp;</a>)<br>
+y cambio la variable&nbsp;"pul1" a 1<br>
+Si al activar el botón "pulsador 1" la variable&nbsp;"pul1" vale 1<br>
+cambio el color del botón "pulsador 1" a gris<br>
+y envío al arduino una a ( que desactica la salida del arduino
+conectada al rele 5)<br>
+y cambio la variable "pul1" a cero<br>
+<br>
+Los pulsadores 2,3,4 se programan de forma similar.<br><br>
+<h2>PROGRAMACIÓN PULSADORES DE LA PERSIANA.</h2><br><p style="margin-bottom: 0cm; line-height: 100%;">Cada persiana tiene dos pulsadores, uno para subir y otro para bajar.</p><p style="margin-bottom: 0cm; line-height: 100%;">En el boton subir, Con una pulsación larga, la persiana sube mientras lo mantenga pulsado.</p><p style="margin-bottom: 0cm; line-height: 100%;">Con una pulsación corta la persiana sube durante 10 segundos. Si en esto 10 segundos se pulsa bajar la persiana se para.</p><p style="margin-bottom: 0cm; line-height: 100%;"></p><p style="margin-bottom: 0cm; line-height: 100%;">El&nbsp; botón bajar tiene el mismo comportamiento pero para bajar.</p><p style="margin-bottom: 0cm; line-height: 100%;"></p><p style="margin-bottom: 0cm; line-height: 100%;"></p><p style="margin-bottom: 0cm; line-height: 100%;">Para
+controlar las
+salidas de las persianas se envian los siguientes carateres por bluetooth al arduino.</p><p style="margin-bottom: 0cm; line-height: 100%;"></p><p style="margin-bottom: 0cm; line-height: 100%;"></p><table style="text-align: left; width: 371px;" border="1" cellpadding="2" cellspacing="2"><tbody><tr><td style="width: 129px;"></td><td style="width: 75px;">&nbsp;Subir</td><td style="width: 75px;"> Bajar</td><td style="width: 74px;"> Parar</td></tr><tr><td style="width: 129px;">Persiana
+1</td><td style="width: 75px; text-align: center;">S</td><td style="width: 75px; text-align: center;">B</td><td style="width: 74px; text-align: center;">P</td></tr><tr><td style="width: 129px;">Persiana
+2 </td><td style="width: 75px; text-align: center;">s</td><td style="width: 75px; text-align: center;">b</td><td style="width: 74px; text-align: center;">p</td></tr></tbody></table><br><br>
+<p style="margin-bottom: 0cm; line-height: 100%;"></p>
+<h3>PROGRAMACIÓN SUBIR, PULSACIÓN LARGA.</h3>
+<p style="margin-bottom: 0cm; line-height: 100%;"></p>
+<img style="width: 442px; height: 308px;" alt="imagenes/BT_programa_subir_pulsacion_larga.png" src="imagenes/BT_programa_subir_pulsacion_larga.png">
+<p style="margin-bottom: 0cm; line-height: 100%;">la
+variable P1=0 &nbsp;la persiona no esta funcionando.</p>
+<p style="margin-bottom: 0cm; line-height: 100%;">Cuando
+realizo una pulsación larga si la persiana no esta funcionando</p>
+<p style="margin-bottom: 0cm; line-height: 100%;">pongo el
+fondo del pulsador rojo</p>
+<p style="margin-bottom: 0cm; line-height: 100%;">y envío
+el texto S</p>
+<p style="margin-bottom: 0cm; line-height: 100%;">cuando
+dejo de pulsar&nbsp;</p>
+<p style="margin-bottom: 0cm; line-height: 100%;">Cambio
+el fondo a gris</p>
+<p style="margin-bottom: 0cm; line-height: 100%;">y envio
+al arduino el texto P</p>
+<p style="margin-bottom: 0cm; line-height: 100%;"></p>
+<p style="margin-bottom: 0cm; line-height: 100%;">para la
+bajada</p>
+<p style="margin-bottom: 0cm; line-height: 100%;"></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><img style="width: 436px; height: 270px;" alt="imagenes/BT_programa_bajar_pulsacion_larga.png" src="imagenes/BT_programa_bajar_pulsacion_larga.png"></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"></p>
+<p style="margin-bottom: 0cm; line-height: 100%;">Se
+puede enviar subir y bajar a la vez pero no provoca cortocicuito por el
+tipo de conexión eléctrica,( ver circuito de potencia)</p>
+<p style="margin-bottom: 0cm; line-height: 100%;"></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"></p>
+<h3>PULSACIÓN CORTA</h3>
+<p style="margin-bottom: 0cm; line-height: 100%;"><br>
+</p>
+<p style="margin-bottom: 0cm; line-height: 100%;">Con una
+pulsación
+corta en subir envía subir, y a los 15 segundos envía parar.</p>
+<p style="margin-bottom: 0cm; line-height: 100%;">Si en
+esos 15
+segundos, pulso subir o bajar la persiana se para.</p>
+<p style="margin-bottom: 0cm; line-height: 100%;">Con una
+pulsación
+mantenida, al pulsar envía subir y al soltar envía parar.</p>
+<p style="margin-bottom: 0cm; line-height: 100%;"></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><img style="width: 514px; height: 294px;" alt="imagenes/BT_programa_subir_pulsacion_corta.png" src="imagenes/BT_programa_subir_pulsacion_corta.png"></p>
+<p style="margin-bottom: 0cm; line-height: 100%;"></p>
+<p style="margin-bottom: 0cm; line-height: 100%;">Con una
+pulsación corta</p>
+<p style="margin-bottom: 0cm; line-height: 100%;">si la
+persiana no esta funcionando</p>
+<p style="margin-bottom: 0cm; line-height: 100%;">pongo el
+boton en &nbsp;rojo</p>
+<p style="margin-bottom: 0cm; line-height: 100%;">y enviío
+una S al arduino</p>
+<p style="margin-bottom: 0cm; line-height: 100%;">pongo la
+variable p1 a 1 indicando que la persiana va a &nbsp;estar
+funcionando un tiempo</p>
+<p style="margin-bottom: 0cm; line-height: 100%;">pongo en
+marcha un temporizador.</p>
+<p style="margin-bottom: 0cm; line-height: 100%;">" puedo
+parar la persiona antes de que finalice el temporizador pulsando bajar"</p>
+<p style="margin-bottom: 0cm; line-height: 100%;">Si al
+pulsar &nbsp; si la persiana esta funcionando ( p1=1)&nbsp;</p>
+<p style="margin-bottom: 0cm; line-height: 100%;">pongo
+&nbsp;el pulsador de bajada en gris</p>
+<p style="margin-bottom: 0cm; line-height: 100%;">y envio
+al arduino la letra P para parar el funcionamiento, y paso la variable
+P1 a 0 (persiana parada) y paro el temporizador.</p>
+<br>
+<img style="width: 521px; height: 303px;" alt="imagenes/BT_programa_bajar_pulsacion_corta.png" src="imagenes/BT_programa_bajar_pulsacion_corta.png">
+<p style="margin-bottom: 0cm; line-height: 100%;">&nbsp;</p>
+<h3>TEMPORIZADOR</h3>
+<img style="width: 450px; height: 176px;" alt="imagenes/BT_temporizador.png" src="imagenes/BT_temporizador.png">
+<p style="margin-bottom: 0cm; line-height: 100%;"></p>
+<p style="margin-bottom: 0cm; line-height: 100%;">al
+activarse el temporizador y pasar el tiempo programado</p>
+<p style="margin-bottom: 0cm; line-height: 100%;">pongo
+los pulsadores subir y bajar en gris&nbsp;</p>
+<p style="margin-bottom: 0cm; line-height: 100%;">envio
+una P de parada al arduino</p>
+<p style="margin-bottom: 0cm; line-height: 100%;">y cambio
+la variable P1 a 0 indicando que la persiana esta parada</p>
+<p style="margin-bottom: 0cm; line-height: 100%;">y
+desactivo el temporizador</p>
+<p style="margin-bottom: 0cm; line-height: 100%;"><img style="width: 682px; height: 582px;" alt="imagenes/BT_temporizador_tiempo.png" src="imagenes/BT_temporizador_tiempo.png"><br>
+</p>
+<p style="margin-bottom: 0cm; line-height: 100%;"></p>
+<h3>PROGRAMA ARDUINO</h3>
+<span style="color: rgb(255, 255, 51);">#include
+&lt;SoftwareSerial.h&gt;</span><br style="color: rgb(255, 255, 51);">
+<p style="margin-bottom: 0cm; line-height: 100%; color: rgb(255, 255, 51);">SoftwareSerial
+mySerial(3,4);//Rx&nbsp; Tx<br>
+<br>
+int rele1=12;<br>
+int rele2=11;<br>
+int rele3=10;<br>
+int rele4=9;<br>
+int rele5=8;<br>
+int rele6=7;<br>
+int rele7=6;<br>
+int rele8=5;<br>
+<br>
+<br>
+char datoBT;//dato del bluetooth<br>
+char persiana1;<br>
+char persiana2;<br>
+<br>
+void setup(){<br>
+&nbsp; Serial.begin(9600);<br>
+&nbsp; mySerial.begin(9600);<br>
+&nbsp; <br>
+&nbsp;<br>
+&nbsp; <br>
+&nbsp; pinMode(rele1,OUTPUT);//persiana1 subir<br>
+&nbsp; pinMode(rele2,OUTPUT);//persiana1 bajar<br>
+&nbsp; pinMode(rele3,OUTPUT);//persiana2 subir<br>
+&nbsp; pinMode(rele4,OUTPUT);//persiana2 bajar<br>
+&nbsp; pinMode(rele5,OUTPUT);//bombilla1<br>
+&nbsp; pinMode(rele6,OUTPUT);//bombilla2<br>
+&nbsp; pinMode(rele7,OUTPUT);//bombilla3<br>
+&nbsp; pinMode(rele8,OUTPUT);//bombilla4<br>
+digitalWrite (rele1,HIGH);<br>
+digitalWrite (rele2,HIGH);<br>
+digitalWrite (rele3,HIGH);<br>
+digitalWrite (rele4,HIGH);<br>
+digitalWrite (rele5,HIGH);<br>
+digitalWrite (rele6,HIGH);<br>
+digitalWrite (rele7,HIGH);<br>
+digitalWrite (rele8,HIGH);<br>
+&nbsp;&nbsp;&nbsp; <br>
+}<br>
+<br>
+void loop(){<br>
+&nbsp; <br>
+<br>
+&nbsp;if(mySerial.available()&gt;0){<br>
+&nbsp;datoBT = mySerial.read();<br>
+&nbsp;Serial.println(datoBT);<br>
+&nbsp;}<br>
+&nbsp;&nbsp; //PERSIANA&nbsp; 1<br>
+&nbsp;if (datoBT == 'S'&amp;&amp;
+persiana1!='bajando1'){//solicita subir y no esta activo bajar<br>
+&nbsp;&nbsp; digitalWrite(rele1,LOW);<br>
+&nbsp;&nbsp; persiana1='subiendo1';<br>
+&nbsp;&nbsp; Serial.println("subiendo1");<br>
+<br>
+&nbsp; }<br>
+&nbsp;if (datoBT =='B'&amp;&amp; persiana1!='subiendo1'){//
+Solicita bajar y no esta activo subir<br>
+&nbsp;&nbsp; digitalWrite(rele2,LOW);<br>
+&nbsp;&nbsp; persiana1='bajando1';<br>
+&nbsp;&nbsp; Serial.println("bajando");<br>
+&nbsp; }<br>
+&nbsp; <br>
+if(datoBT=='P'){<br>
+&nbsp;&nbsp; digitalWrite(rele1,HIGH);<br>
+&nbsp;&nbsp; digitalWrite(rele2 ,HIGH);<br>
+&nbsp;&nbsp; persiana1='paro1';<br>
+&nbsp;&nbsp; Serial.println("paro");<br>
+&nbsp; }<br>
+<br>
+<br>
+&nbsp;//PERSIANA&nbsp; 2<br>
+<br>
+&nbsp;if (datoBT =='s'&amp;&amp;
+persiana2!='bajando2'){//solicita subir y no esta activo bajar<br>
+&nbsp;&nbsp; digitalWrite(rele3,LOW);<br>
+&nbsp;&nbsp;&nbsp; persiana2='subiendo2';<br>
+&nbsp; <br>
+&nbsp; }<br>
+&nbsp;if (datoBT =='b'&amp;&amp; persiana2!='subiendo2'){//
+Solicita bajar y no esta activo subir<br>
+&nbsp;&nbsp; digitalWrite(rele4,LOW);<br>
+&nbsp;&nbsp;&nbsp; persiana2='bajando2';<br>
+&nbsp; <br>
+&nbsp; }<br>
+&nbsp; <br>
+if(datoBT=='p'){<br>
+&nbsp;&nbsp; digitalWrite(rele3,HIGH);<br>
+&nbsp;&nbsp; digitalWrite(rele4,HIGH);<br>
+&nbsp;&nbsp; persiana2='paro2';<br>
+&nbsp; <br>
+&nbsp; }<br>
+&nbsp;Serial.println(persiana2);<br>
+&nbsp; // BOMBILLA1<br>
+&nbsp; <br>
+if (datoBT=='A') digitalWrite (rele5,LOW);//Encender<br>
+if (datoBT=='a') digitalWrite (rele5,HIGH);//Apagar<br>
+<br>
+<br>
+&nbsp; // BOMBILLA2<br>
+&nbsp; <br>
+if (datoBT=='E') digitalWrite (rele6,LOW);//Encender<br>
+if (datoBT=='e') digitalWrite (rele6,HIGH);//Apagar<br>
+<br>
+<br>
+&nbsp; // BOMBILLA3<br>
+&nbsp; <br>
+if (datoBT=='I') digitalWrite (rele7,LOW);//Encender<br>
+if (datoBT=='i') digitalWrite (rele7,HIGH);//Apagar<br>
+<br>
+<br>
+&nbsp; // BOMBILLA4<br>
+&nbsp; <br>
+if (datoBT=='O') digitalWrite (rele8,LOW);//Encender<br>
+if (datoBT=='o') digitalWrite (rele8,HIGH);//Apagar<br>
+<br>
+delay (1000);<br>
+<br>
+<br>
+&nbsp; <br>
+}&nbsp; </p>
+<br>
+<br style="color: rgb(255, 204, 51);">
+<h2><a name="Esquema_de_potencia"></a><span style="color: rgb(255, 204, 51);">&nbsp;</span>Esquema
+de potencia</h2>
+<div style="text-align: center;"><img style="width: 534px; height: 549px;" alt="receptores" src="imagenes/bt_arduinoreceptores.jpg"></div>
+<div style="text-align: center;"><img style="width: 425px; height: 400px;" alt="" src="imagenes/BTpotencia.png"><br>
+<br>
+<img style="width: 720px; height: 571px;" alt="conexión arduino" src="imagenes/BTarduino.jpg"><br>
+</div>
+<br>
+</div>
+<!-- .......................................menu arduino................................ -->
+<div id="derechamenu"><br>
+<script language="javascript=" type="text/javascript" src="index_files/menuarduino.js"></script><br>
+<br>
+<br>
+<br>
+</div>
+<!-- .......................................pie................................ -->
+<div id="pie">&nbsp;&nbsp; <br>
+<div style="text-align: center;">Consumo eléctrico medio
+anual&nbsp; es de 3.300 kWh
+</div>
+</div>
+<!-- ..................................fin contenedor..................................... -->
+</div>
+</body></html>

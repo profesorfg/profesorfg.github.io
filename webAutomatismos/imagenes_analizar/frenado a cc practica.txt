@@ -1,0 +1,7 @@
+Funcionamiento:
+Al pulsar S1 la cinta transportadora se pone en marcha.
+Si el detector inductivo B1,detecta metal en la caja, la cinta
+se para instataneamente (frenado del motor con corriente 
+continua). 
+Si no tiene metal, al caer el paquete a la plataforma, golpea
+el final de carrerra S2 y la cinta se para.

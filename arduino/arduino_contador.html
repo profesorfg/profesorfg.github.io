@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+<link href="index_files/estiloarduino.css" rel="stylesheet" type="text/css">
+<link href="index_files/menu.css" rel="stylesheet" type="text/css">
+<meta charset="UTF-8">
+<title>arduino</title>
+
+<meta content="profesorfg" name="author">
+<meta content="profesorfg enlaces" name="description">
+<meta name="keywords" content="profesorfg enlaces"></head>
+<body style="margin-top: 0px; height: 598px;">
+<!-- Comentario -->
+<div id="contenedor"><!-- ............................Contendor....................... --><!-- -----------------menu superior............................................ -->
+<div id="menusuperior">
+<script language="javascript=" type="text/javascript" src="index_files/menu_general.js"></script></div>
+<!-- ........................menu izquierda.............................-->
+<div id="izquierda">
+<script language="javascript=" type="text/javascript" src="index_files/menuizq.js"></script><br>
+<br>
+<br>
+<br>
+</div>
+<!-- ............................contenido central................... -->
+<div id="derecha"> <small style="background-color: transparent; color: rgb(255, 255, 51);">
+<br>
+<br>
+<br><br>
+<br>
+<br>
+<em><big style="font-weight: bold; font-style: italic;"><big><big>CONTADOR</big></big></big></em></small><br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <br>
+<p>Teoria: <a href="#unsigned_long"><br>
+</a></p>
+Interes<br>
+<ul>
+  
+  <li>Utilización de array para variables</li>
+  <li>Función for</li>
+  <li>Rebotes de pulsadores</li>
+  <li>Flanco de subida</li>
+  <li>Utilizacion de una funcion<br>
+  </li>
+
+
+</ul><br>
+<br>
+<h1><a class="mozTocH1" name="mozTocId335545"></a>ENCENDIDO CON CONTADOR DE PULSOS</h1>
+<br>
+El programa consite que con una pulsacion se enciende&nbsp; un led, con
+la siguiente se enciede otro y con la tercera otro con la cuarta otro y con la quinta se apagan los cuatro, y
+vuelta a empezar.<br>
+<br>
+El pulsador solo responde 500ms tras una pulsacion<br>
+Si dejo el pulsador activado cada 500 ms considera una nueva pulsación.<br><br><br>
+<span style="color: rgb(255, 204, 102);">/*Con la primera pulsacion enciendo un led, </span><br style="color: rgb(255, 204, 102);"><span style="color: rgb(255, 204, 102);">con la segunda enciendo led 2,</span><br style="color: rgb(255, 204, 102);"><span style="color: rgb(255, 204, 102);">con la tercera el led 3</span><br style="color: rgb(255, 204, 102);"><span style="color: rgb(255, 204, 102);">con la cuarta el led 4</span><br style="color: rgb(255, 204, 102);"><span style="color: rgb(255, 204, 102);">con la quinta apago los cuatro led.</span><br style="color: rgb(255, 204, 102);"><br style="color: rgb(255, 204, 102);"><span style="color: rgb(255, 204, 102);">Si dejo pulsado cada medio segundo se enciende un led y cuando esten</span><br style="color: rgb(255, 204, 102);"><span style="color: rgb(255, 204, 102);">todos encendidos se apagan, y asi hasta soltar el pulsador.</span><br style="color: rgb(255, 204, 102);"><br style="color: rgb(255, 204, 102);"><span style="color: rgb(255, 204, 102);">los led los defino con una matriz</span><br style="color: rgb(255, 204, 102);"><span style="color: rgb(255, 204, 102);">*/</span><br style="color: rgb(255, 204, 102);"><br style="color: rgb(255, 204, 102);"><span style="color: rgb(255, 204, 102);">int led[]={12,11,10,9};//verde,amarillo,rojo, verde2</span><br style="color: rgb(255, 204, 102);"><span style="color: rgb(255, 204, 102);">int pulsador=5;</span><br style="color: rgb(255, 204, 102);"><br style="color: rgb(255, 204, 102);"><span style="color: rgb(255, 204, 102);">boolean pul_1;</span><br style="color: rgb(255, 204, 102);"><span style="color: rgb(255, 204, 102);">int contadorPulsosP1=0;</span><br style="color: rgb(255, 204, 102);"><span style="color: rgb(255, 204, 102);">boolean ledV; //ver el estado del led</span><br style="color: rgb(255, 204, 102);"><span style="color: rgb(255, 204, 102);">boolean ledA; //ver el estado del led</span><br style="color: rgb(255, 204, 102);"><span style="color: rgb(255, 204, 102);">boolean ledR; //ver el estado del led</span><br style="color: rgb(255, 204, 102);"><span style="color: rgb(255, 204, 102);">boolean ledV1; //ver el estado del led</span><br style="color: rgb(255, 204, 102);"><span style="color: rgb(255, 204, 102);">&nbsp;&nbsp; </span><br style="color: rgb(255, 204, 102);"><span style="color: rgb(255, 204, 102);">int T_ini=0;//almacena el momento de la pulsación y al pasar 500ms se pasa a 0</span><br style="color: rgb(255, 204, 102);"><br style="color: rgb(255, 204, 102);"><br style="color: rgb(255, 204, 102);"><br style="color: rgb(255, 204, 102);"><span style="color: rgb(255, 204, 102);">void setup()</span><br style="color: rgb(255, 204, 102);"><span style="color: rgb(255, 204, 102);">{</span><br style="color: rgb(255, 204, 102);"><span style="color: rgb(255, 204, 102);">&nbsp;&nbsp;&nbsp;&nbsp; pinMode(led[0],OUTPUT);</span><br style="color: rgb(255, 204, 102);"><span style="color: rgb(255, 204, 102);">&nbsp;&nbsp;&nbsp;&nbsp; pinMode(led[1],OUTPUT);</span><br style="color: rgb(255, 204, 102);"><span style="color: rgb(255, 204, 102);">&nbsp;&nbsp;&nbsp;&nbsp; pinMode(led[2],OUTPUT);</span><br style="color: rgb(255, 204, 102);"><span style="color: rgb(255, 204, 102);">&nbsp;&nbsp;&nbsp;&nbsp; pinMode(led[3],OUTPUT);</span><br style="color: rgb(255, 204, 102);"><span style="color: rgb(255, 204, 102);">&nbsp;&nbsp;&nbsp;&nbsp; pinMode(pulsador,INPUT);</span><br style="color: rgb(255, 204, 102);"><span style="color: rgb(255, 204, 102);">&nbsp; </span><br style="color: rgb(255, 204, 102);"><span style="color: rgb(255, 204, 102);">//****comprobamos si funcionan los led****</span><br style="color: rgb(255, 204, 102);"><span style="color: rgb(255, 204, 102);">&nbsp;&nbsp;&nbsp;&nbsp; for (int n=0;n&lt;4;n++)</span><br style="color: rgb(255, 204, 102);"><span style="color: rgb(255, 204, 102);">&nbsp;&nbsp;&nbsp; {</span><br style="color: rgb(255, 204, 102);"><span style="color: rgb(255, 204, 102);">&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; digitalWrite (led[n],HIGH);</span><br style="color: rgb(255, 204, 102);"><span style="color: rgb(255, 204, 102);">&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; delay (1000);</span><br style="color: rgb(255, 204, 102);"><span style="color: rgb(255, 204, 102);">&nbsp;&nbsp;&nbsp;&nbsp; }</span><br style="color: rgb(255, 204, 102);"><span style="color: rgb(255, 204, 102);">&nbsp;&nbsp;&nbsp;&nbsp; for (int n=0;n&lt;4;n++)</span><br style="color: rgb(255, 204, 102);"><span style="color: rgb(255, 204, 102);">&nbsp;&nbsp;&nbsp; {</span><br style="color: rgb(255, 204, 102);"><span style="color: rgb(255, 204, 102);">&nbsp;&nbsp;&nbsp; &nbsp; digitalWrite (led[n],LOW);</span><br style="color: rgb(255, 204, 102);"><span style="color: rgb(255, 204, 102);">&nbsp;&nbsp;&nbsp; &nbsp; delay(1000);</span><br style="color: rgb(255, 204, 102);"><span style="color: rgb(255, 204, 102);">&nbsp;&nbsp;&nbsp; }</span><br style="color: rgb(255, 204, 102);"><span style="color: rgb(255, 204, 102);">//****fin de comprobacion de led***</span><br style="color: rgb(255, 204, 102);"><span style="color: rgb(255, 204, 102);">&nbsp; </span><br style="color: rgb(255, 204, 102);"><span style="color: rgb(255, 204, 102);">}// fin de setup</span><br style="color: rgb(255, 204, 102);"><br style="color: rgb(255, 204, 102);"><span style="color: rgb(255, 204, 102);">//FUNCION que pone a cero el temporizador&nbsp;&nbsp; que le ha llamado</span><br style="color: rgb(255, 204, 102);"><span style="color: rgb(255, 204, 102);">int temporizacionPulsadores(int T_ini){</span><br style="color: rgb(255, 204, 102);"><span style="color: rgb(255, 204, 102);">int result;</span><br style="color: rgb(255, 204, 102);"><span style="color: rgb(255, 204, 102);">if (millis()-T_ini&gt;500)//cuando pase el tiempo inicializo los temporizadors</span><br style="color: rgb(255, 204, 102);"><span style="color: rgb(255, 204, 102);">&nbsp;{</span><br style="color: rgb(255, 204, 102);"><span style="color: rgb(255, 204, 102);">&nbsp;result= 0;// si llego a las 500ms pongo a cero el pulsador que me ha llamado</span><br style="color: rgb(255, 204, 102);"><span style="color: rgb(255, 204, 102);">&nbsp;}</span><br style="color: rgb(255, 204, 102);"><span style="color: rgb(255, 204, 102);">&nbsp;else result=T_ini;</span><br style="color: rgb(255, 204, 102);"><span style="color: rgb(255, 204, 102);">&nbsp;return result;</span><br style="color: rgb(255, 204, 102);"><span style="color: rgb(255, 204, 102);">&nbsp;}</span><br style="color: rgb(255, 204, 102);"><br style="color: rgb(255, 204, 102);"><span style="color: rgb(255, 204, 102);">void loop()</span><br style="color: rgb(255, 204, 102);"><span style="color: rgb(255, 204, 102);">{</span><br style="color: rgb(255, 204, 102);"><span style="color: rgb(255, 204, 102);">&nbsp;//leemos el estado de las entradas</span><br style="color: rgb(255, 204, 102);"><span style="color: rgb(255, 204, 102);">&nbsp; pul_1=digitalRead(pulsador);</span><br style="color: rgb(255, 204, 102);"><span style="color: rgb(255, 204, 102);">&nbsp;//leemos el estado de la salidas</span><br style="color: rgb(255, 204, 102);"><span style="color: rgb(255, 204, 102);">&nbsp; ledV=digitalRead(led[0]);//0 apagado 1 encendido</span><br style="color: rgb(255, 204, 102);"><span style="color: rgb(255, 204, 102);">&nbsp; ledA=digitalRead(led[1]);//0 apagado 1 encendido</span><br style="color: rgb(255, 204, 102);"><span style="color: rgb(255, 204, 102);">&nbsp; ledR=digitalRead(led[2]);//0 apagado 1 encendido</span><br style="color: rgb(255, 204, 102);"><span style="color: rgb(255, 204, 102);">&nbsp; ledV1=digitalRead(led[3]);//0 apagado 1 encendido</span><br style="color: rgb(255, 204, 102);"><span style="color: rgb(255, 204, 102);">&nbsp;</span><br style="color: rgb(255, 204, 102);"><span style="color: rgb(255, 204, 102);">&nbsp;</span><br style="color: rgb(255, 204, 102);"><span style="color: rgb(255, 204, 102);">&nbsp;if (pul_1==HIGH&amp;&amp;T_ini==0)//el T_ini es distinto de cero durante 500ms despuesde de pulsar p1</span><br style="color: rgb(255, 204, 102);"><span style="color: rgb(255, 204, 102);">&nbsp;&nbsp; {&nbsp; </span><br style="color: rgb(255, 204, 102);"><span style="color: rgb(255, 204, 102);">&nbsp;&nbsp;
+T_ini=millis();//memorizo el momento en el que pulso, pasado 500ms la
+funcion temporrizacionPulsadores me lo vuelve a poner a cero</span><br style="color: rgb(255, 204, 102);"><span style="color: rgb(255, 204, 102);">&nbsp;&nbsp; contadorPulsosP1++;</span><br style="color: rgb(255, 204, 102);"><span style="color: rgb(255, 204, 102);">&nbsp;&nbsp;
+if (contadorPulsosP1==5)contadorPulsosP1=0; //cuando llega a cinco
+pulsaciones pongo a cero. contar 0,1,2 pues si llega a 3 pone a cero</span><br style="color: rgb(255, 204, 102);"><span style="color: rgb(255, 204, 102);">&nbsp;&nbsp;&nbsp; }</span><br style="color: rgb(255, 204, 102);"><br style="color: rgb(255, 204, 102);"><span style="color: rgb(255, 204, 102);">&nbsp; /*si hay un tiempo almacenado en T_ini_V llamo a la funcion</span><br style="color: rgb(255, 204, 102);"><span style="color: rgb(255, 204, 102);">&nbsp;y mantengo el valor si el tiempo es inferior a 500ms</span><br style="color: rgb(255, 204, 102);"><span style="color: rgb(255, 204, 102);">&nbsp;pongo a cero si el tiempo es mayor que 500ms*/</span><br style="color: rgb(255, 204, 102);"><span style="color: rgb(255, 204, 102);">&nbsp;&nbsp;&nbsp;&nbsp; if (T_ini!=0) T_ini=temporizacionPulsadores(T_ini);</span><br style="color: rgb(255, 204, 102);"><span style="color: rgb(255, 204, 102);">&nbsp;</span><br style="color: rgb(255, 204, 102);"><br style="color: rgb(255, 204, 102);"><span style="color: rgb(255, 204, 102);">//encendido de leds&nbsp; </span><br style="color: rgb(255, 204, 102);"><span style="color: rgb(255, 204, 102);">&nbsp;&nbsp; if (contadorPulsosP1== 0)</span><br style="color: rgb(255, 204, 102);"><span style="color: rgb(255, 204, 102);">&nbsp;&nbsp; {</span><br style="color: rgb(255, 204, 102);"><span style="color: rgb(255, 204, 102);">&nbsp;&nbsp; for (int n=0;n&lt;3;n++)</span><br style="color: rgb(255, 204, 102);"><span style="color: rgb(255, 204, 102);">&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; {</span><br style="color: rgb(255, 204, 102);"><span style="color: rgb(255, 204, 102);">&nbsp;&nbsp; digitalWrite (led[n],LOW);</span><br style="color: rgb(255, 204, 102);"><span style="color: rgb(255, 204, 102);">&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; }</span><br style="color: rgb(255, 204, 102);"><span style="color: rgb(255, 204, 102);">&nbsp;&nbsp; }</span><br style="color: rgb(255, 204, 102);"><span style="color: rgb(255, 204, 102);">&nbsp;if (contadorPulsosP1== 1) digitalWrite (led[0],HIGH);</span><br style="color: rgb(255, 204, 102);"><span style="color: rgb(255, 204, 102);">&nbsp;if (contadorPulsosP1== 2) digitalWrite (led[1],HIGH);</span><br style="color: rgb(255, 204, 102);"><span style="color: rgb(255, 204, 102);">&nbsp;if (contadorPulsosP1== 3) digitalWrite (led[2],HIGH);</span><br style="color: rgb(255, 204, 102);"><span style="color: rgb(255, 204, 102);">&nbsp;if (contadorPulsosP1== 4) digitalWrite (led[3],HIGH);</span><br style="color: rgb(255, 204, 102);"><span style="color: rgb(255, 204, 102);">&nbsp;</span><br style="color: rgb(255, 204, 102);"><span style="color: rgb(255, 204, 102);">&nbsp;</span><br style="color: rgb(255, 204, 102);"><span style="color: rgb(255, 204, 102);">}//fin de programa</span><br style="color: rgb(255, 204, 102);"><br>
+<br>
+<ul>
+</ul>
+<span style="color: rgb(255, 204, 51);"></span><br>
+<br>
+<h1><a class="mozTocH1" name="mozTocId362129"></a>CONTADOR&nbsp; DE FLANCOS DE SUBIDA</h1>
+En este segundo sketch solo considemos los flancos de subida del pulsador. <br>
+Utilizamos la funcion temporizadorPulsador para evitar rebotes , dando
+un tiempo de espera de T_pulsar para la siguiente lectura.<br>
+<br>
+&nbsp;<span style="color: rgb(255, 204, 51);">/*Con la primera pulsacion enciendo un led, con la segunda enciendo led 2 con la tercera apago las dos</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">los led los defino con una matriz</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 255, 153);">En este segundo programa hay que volver a pulsar despues del tiempo</span><br style="color: rgb(255, 255, 153);">
+<span style="color: rgb(255, 255, 153);">almacenado en T_pulsar (para evitar rebotes)</span><br style="color: rgb(255, 255, 153);">
+<span style="color: rgb(255, 255, 153);">En el anterior si se mantenia pulsado despues de 500ms (t_pulsar</span><br style="color: rgb(255, 255, 153);">
+<span style="color: rgb(255, 255, 153);">se consiederaba una nueva pulsacion</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">*/</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">int led[]={12,11,10,9};//verde,amarillo,rojo, verde2</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">int pulsador[]={22,24,26};</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp; boolean pul_1;</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp; int contadorPulsosP1=0;</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp;<span style="color: rgb(255, 255, 204);"> boolean flancosubidaP1=0;</span></span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp; boolean pul_2;</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp; boolean pul_3;</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp; boolean ledV; //ver el estado del led</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp; boolean ledA; //ver el estado del led</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp; boolean ledR; //ver el estado del led</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp; boolean ledV1; //ver el estado del led</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp; </span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;//temporizacion para pulsadores</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 255, 51);">&nbsp;const int T_pulsar=20;</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">int T_ini_V=0; </span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">int T_ini_A=0; </span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">int T_ini_R=0; </span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">int T_ini_V1=0; </span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">int&nbsp;&nbsp; T_Impr=0;&nbsp; //temporizacion para impresion</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">int T_actual_I=0;</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp; </span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">void setup(){</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;pinMode(led[0],OUTPUT);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;pinMode(led[1],OUTPUT);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;pinMode(led[2],OUTPUT);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;pinMode(led[3],OUTPUT);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;pinMode(pulsador[0],INPUT);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;pinMode(pulsador[1],INPUT);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;pinMode(pulsador[2],INPUT);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp; Serial.begin(9600); </span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">//comprobamos si funcionan los led</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;for (int n=0;n&lt;4;n++){ </span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp; digitalWrite (led[n],HIGH);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp; delay (1000);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;}</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;for (int n=0;n&lt;4;n++){</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;digitalWrite (led[n],LOW);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;delay(1000);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;}</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">}</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;//funcion que pone a cero el temporizador&nbsp;&nbsp; que le ha llamado</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;int temporizacionPulsadores(int T_ini){ </span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">int T;</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">int result;</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;T= millis()-T_ini;</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;if (T&gt;T_pulsar)//cuando pase el tiempo inicializo los temporizadors</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;{</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">result= 0;// si llego a las 500ms pongo a cero el pulsador que me ha llamado</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;}</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;else result=T_ini;</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;return result;</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;}</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp; void loop(){</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp; //leemos el estado de las entradas</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp; pul_1=digitalRead(pulsador[0]);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp; pul_2=digitalRead(pulsador[1]);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp; pul_3=digitalRead(pulsador[2]);</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;//leemos el estado de la salidas</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp; ledV=digitalRead(led[0]);//0 apagado 1 encendido</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp; ledA=digitalRead(led[1]);//0 apagado 1 encendido</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp; ledR=digitalRead(led[2]);//0 apagado 1 encendido</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp; ledV1=digitalRead(led[3]);//0 apagado 1 encendido</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp; </span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp; </span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);"><span style="color: rgb(255, 255, 153);">&nbsp;if (pul_1==HIGH&amp;&amp;T_ini_V==0&amp;&amp;flancosubidaP1==0)</span>{//el T_ini es distinto de cero</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;
+T_ini_V=millis();//memorizo el momento en el que pulso, pasado T_pulsar
+la funcion temporrizacionPulsadores me lo vuelve a poner a cero</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;<span style="color: rgb(255, 255, 153);">&nbsp; flancosubidaP1=1;</span></span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp; ledV=!ledV; //cambio de&nbsp; estado el led</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp; contadorPulsosP1++;</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp; if
+(contadorPulsosP1==3)contadorPulsosP1=0; //cuando llega a tres
+pulsaciones pongo a cero. contar 0,1,2 pues si llega a 3 pone a cero</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp; </span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;}</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;/*si hay un tiempo almacenado en T_ini_V llamo a la funcion</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;y mantengo el valor si el tiempo es inferior a T_pulsar</span><span style="color: rgb(255, 204, 51);">*/</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;if (T_ini_V!=0) T_ini_V=temporizacionPulsadores(T_ini_V); </span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 255, 153);">&nbsp;if (T_ini_V==0&amp;&amp;pul_1==LOW) flancosubidaP1=0;</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;if (contadorPulsosP1== 0){</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;for (int n=0;n&lt;3;n++){</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;digitalWrite (led[n],LOW);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;}}</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp; if (contadorPulsosP1== 1) digitalWrite (led[0],HIGH);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;if (contadorPulsosP1== 2) digitalWrite (led[1],HIGH);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;//visulalizacionde datos</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;//seria interesante que esto se imprimiese cuando un contador en funcion del tiempo tenga un valor.</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp; //para no meter delay</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp; if (T_actual_I==0) T_actual_I=millis();</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;T_Impr= millis()-T_actual_I;</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;if (T_Impr&gt;1000){</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">T_Impr=0;</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">T_actual_I=0;</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;Serial.print ("el estado del pulsador es ");</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;Serial.println(pul_1);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;Serial.print("el estado del led es ");</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;Serial.println(ledV);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;Serial.print ("el tiempo desde que pulse el pulsador es");</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;Serial.print (T_ini_V);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp; }//fin de programa</span><br>
+<br>
+<h1><a class="mozTocH1" name="mozTocId596094"></a>DOS PULSADORES Y CUATRO LED</h1>
+
+&nbsp;&nbsp; En este ultimo programa, utilizamos la funcion, para el funcionamiento de dos pulsadores.<br>
+El funcionamiento es identico que en el programa anterior, salvo que hemos ańadido un nuevo pulsador y dos led mas.<br>
+Ademas hemos eliminado la visualizacion y mejorado el nombre de las variables.<br>
+<br>
+<span style="color: rgb(255, 204, 51);">/*Con la primera pulsacion enciendo un led, con la segunda enciendo led 2 con la tercera apago las dos</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">los led los defino con una matriz</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">En este segundo programa hay que volver a pulsar despues del tiempo</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">almacenado en T_pulsar (para evitar rebotes)</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">En el anterior si se mantenia pulsado despues de 500ms (t_pulsar</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">se consiederaba una nueva pulsacion</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">realizo la misma accion pero con dos pulsadores y cuatro led</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">He eliminado la comunicación monitor serial</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">*/</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">int led[]={12,11,10,9};//verde,amarillo,rojo, verde2</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">int pulsador[]={22,24,26};</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp; boolean pul_0;</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp; int contadorPulsosP0=0;</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp; boolean flancosubidaP0=0;</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp; boolean pul_1;</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp;&nbsp; int contadorPulsosP1=0;//NUEVO</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp; boolean flancosubidaP1=0;//NUEVO</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp; boolean pul_2;</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp; boolean ledV; //ver el estado del led</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp; boolean ledA; //ver el estado del led</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp; boolean ledR; //ver el estado del led</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp; boolean ledV1; //ver el estado del led</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp; </span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;//temporizacion para pulsadores</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;const int T_pulsar=200;</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">int T_ini_0=0; </span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">int T_ini_1=0; </span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp; </span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">void setup(){</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;pinMode(led[0],OUTPUT);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;pinMode(led[1],OUTPUT);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;pinMode(led[2],OUTPUT);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;pinMode(led[3],OUTPUT);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;pinMode(pulsador[0],INPUT);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;pinMode(pulsador[1],INPUT);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;pinMode(pulsador[2],INPUT);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">//comprobamos si funcionan los led</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;for (int n=0;n&lt;4;n++){ </span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp; digitalWrite (led[n],HIGH);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp; delay (1000);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;}</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;for (int n=0;n&lt;4;n++){</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;digitalWrite (led[n],LOW);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;delay(1000);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;}</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">}</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;//funcion que pone a cero el temporizador&nbsp;&nbsp; que le ha llamado</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;int temporizacionPulsadores(int T_ini){ </span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">int T;</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">int result;</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;T= millis()-T_ini;</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;if (T&gt;T_pulsar)//cuando pase el tiempo inicializo los temporizadors</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;{</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">result= 0;// si llego a las 500ms pongo a cero el pulsador que me ha llamado</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;}</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;else result=T_ini;</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;return result;</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;}</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp; void loop(){</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp; //leemos el estado de las entradas</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp; pul_0=digitalRead(pulsador[0]);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp; pul_1=digitalRead(pulsador[1]);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp; pul_2=digitalRead(pulsador[2]);</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;//leemos el estado de la salidas</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp; ledV=digitalRead(led[0]);//0 apagado 1 encendido</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp; ledA=digitalRead(led[1]);//0 apagado 1 encendido</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp; ledR=digitalRead(led[2]);//0 apagado 1 encendido</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp; ledV1=digitalRead(led[3]);//0 apagado 1 encendido</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp; </span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp; </span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;if
+(pul_0==HIGH&amp;&amp;T_ini_0==0&amp;&amp;flancosubidaP0==0){//el T_ini
+es distinto de cero durante 500ms despuesde de pulsar p1 </span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;
+T_ini_0=millis();//memorizo el momento en el que pulso, pasado 500ms la
+funcion temporrizacionPulsadores me lo vuelve a poner a cero</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp; flancosubidaP0=1;</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp; ledV=!ledV; //cambio de&nbsp; estado el led</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp; contadorPulsosP0++;</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp; if
+(contadorPulsosP0==3)contadorPulsosP0=0; //cuando llega a tres
+pulsaciones pongo a cero. contar 0,1,2 pues si llega a 3 pone a cero</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp; </span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;}</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;/*si hay un tiempo almacenado en T_ini_V llamo a la funcion</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;y mantengo el valor si el tiempo es inferior a 500ms</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;pongo a cero si el tiempo es mayor que 500ms*/</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;if (T_ini_0!=0) T_ini_0=temporizacionPulsadores(T_ini_0); </span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;if (T_ini_0==0&amp;&amp;pul_0==LOW) flancosubidaP0=0;</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;if (contadorPulsosP0== 0){</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;for (int n=0;n&lt;2;n++){</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;digitalWrite (led[n],LOW);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;}}</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp; if (contadorPulsosP0== 1) digitalWrite (led[0],HIGH);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;if (contadorPulsosP0== 2) digitalWrite (led[1],HIGH);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">//NUEVO NUEVO pulsador 2</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;if
+(pul_1==HIGH&amp;&amp;T_ini_1==0&amp;&amp;flancosubidaP1==0){//el T_ini
+es distinto de cero durante 500ms despuesde de pulsar p1 </span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;
+T_ini_1=millis();//memorizo el momento en el que pulso, pasado 500ms la
+funcion temporrizacionPulsadores me lo vuelve a poner a cero</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp; flancosubidaP1=1;</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp; ledV=!ledV; //cambio de&nbsp; estado el led</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp; contadorPulsosP1++;</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp; if
+(contadorPulsosP1==3)contadorPulsosP1=0; //cuando llega a tres
+pulsaciones pongo a cero. contar 0,1,2 pues si llega a 3 pone a cero</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp; </span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;}</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;if (T_ini_1!=0) T_ini_1=temporizacionPulsadores(T_ini_1); </span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;if (T_ini_1==0&amp;&amp;pul_1==LOW) flancosubidaP1=0;</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;if (contadorPulsosP1== 0){</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;for (int n=2;n&lt;4;n++){</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;digitalWrite (led[n],LOW);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;}}</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp; if (contadorPulsosP1== 1) digitalWrite (led[2],HIGH);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;if (contadorPulsosP1== 2) digitalWrite (led[3],HIGH);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp; }//fin de programa</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp; </span><br style="color: rgb(255, 204, 51);">
+<p><br>
+</p>
+&nbsp;&nbsp;&nbsp; <br>
+<br>
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp; </span><br>
+<br>
+<br>
+</div>
+<!-- .......................................menu arduino................................ -->
+div id="derechamenu"><br>
+<script language="javascript=" type="text/javascript" src="index_files/menuarduino.js"></script><br>
+<br>
+<br>
+<br>
+</div>
+<!-- .......................................pie................................ -->
+<div id="pie">&nbsp;&nbsp; <br>
+<div style="text-align: center;"> Tras cada error esta mas cerca el proximo exito.<br>
+
+</div>
+</div>
+<!-- ..................................fin contenedor..................................... -->
+</div>
+
+</body></html>

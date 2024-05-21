@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+<link href="index_files/estiloarduino.css" rel="stylesheet" type="text/css">
+<link href="index_files/menu.css" rel="stylesheet" type="text/css">
+<meta charset="UTF-8">
+<title>arduino</title>
+
+<meta content="profesorfg" name="author">
+<meta content="profesorfg enlaces" name="description">
+<meta name="keywords" content="profesorfg enlaces"></head>
+<body style="margin-top: 0px; height: 598px;">
+<!-- Comentario -->
+<div id="contenedor"><!-- ............................Contendor....................... --><!-- -----------------menu superior............................................ -->
+<div id="menusuperior">
+<script language="javascript=" type="text/javascript" src="index_files/menu_general.js"></script></div>
+<!-- ........................menu izquierda.............................-->
+<div id="izquierda">
+<script language="javascript=" type="text/javascript" src="index_files/menuizq.js"></script><br>
+<br>
+<br>
+<br>
+</div>
+<!-- ............................contenido central................... -->
+<div id="derecha"><br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<h1><a class="mozTocH1" name="mozTocId561800"></a>MANDO
+A DISTANCIA POR
+INFRAROJOS<br>
+</h1>
+<br>
+<ul id="mozToc">
+</ul>
+
+<div style="text-align: center;"><img style="width: 546px; height: 300px;" alt="IR TSOP1738" title="TSOP1738" src="imagenes/ir-arduino.png"><br>
+</div><h2><a class="mozTocH2" name="mozTocId122826"></a><a name="PROTOCOLONEC"></a>
+MANDO A DISTANCIA POR IR<br>
+</h2>
+&nbsp;&nbsp; Ahora toca algo muy chulo, manejar el encedido de
+leds,
+mediante un mando a distancia, <br>
+esto es una tarea fácil, gracias a la utilización de libreria.<br>
+&nbsp;&nbsp;&nbsp; La librería a utilizar es&nbsp;
+IRremote, esta
+biblioteca vale tanto para recibir IR como para enviar IR.<br>
+&nbsp;&nbsp;&nbsp; Antes de utilizar esta biblioteca que ha
+sido
+realizada por la comunidad de arduino y que tenemos que importar,
+encotre otra librería NERIRrec pero no conseguí compilar.<br>
+&nbsp;&nbsp;&nbsp; Para añadir una&nbsp; una librería,
+simplemente es
+poner la carpeta descargada sobre la carpeta arduino/libraries creada
+por arduino. <br>
+Aunque se recomienza instalar la carpeta descargada en formato
+zip&nbsp; mediante el menu&nbsp; Sketch/importar librería, ya
+que ella
+se encarga de comprobarla e instalarla en la carpeta anteriormente
+menciona.<br>
+&nbsp;<br>
+<br>
+&nbsp;&nbsp;&nbsp; Al instalar la librería viene con
+programas ejemplo
+que&nbsp; nos sirve&nbsp; para comprobar el funcionamiento de
+sofware y
+hardware instalado. <a href="protocoloNEC.html">Conocer
+mas acerca del protocolo NEC</a><br>
+<br>
+<br>
+&nbsp;&nbsp;&nbsp; En mi caso probe el ejemplo que me
+imprimia atraves
+de monitor serial me aparecia el codigo hexadecimal enviado por un
+mando a distancia de IR, lo unico que modifiqué el pin donde conecté el
+receptor IR.<br>
+<br>
+El sketch del archivo/ejemplos/Arduino_IRremote_master/IRrecvDemo<br>
+<br>
+<span style="color: rgb(255, 204, 51);">/*</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;*
+IRremote: IRrecvDemo -
+demonstrates receiving IR codes with IRrecv</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;* An IR
+detector/demodulator must be connected to the input RECV_PIN.</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;*
+Version 0.1 July, 2009</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;*
+Copyright 2009 Ken
+Shirriff</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;*
+http://arcfn.com</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;*/</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">#include
+&lt;IRremote.h&gt;</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">int RECV_PIN = 7;</span>//
+mi
+receptor IR esta conectado al pin 7<br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">IRrecv
+irrecv(RECV_PIN);</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">decode_results
+results;</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">void setup()</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">{</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;
+Serial.begin(9600);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;
+irrecv.enableIRIn(); //
+Start the receiver</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">}</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">void loop() {</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp; if
+(irrecv.decode(&amp;results)) {</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp;
+Serial.println(results.value, HEX);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp;
+irrecv.resume(); // Receive the next value</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp; }</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">}</span><br>
+<br>
+<irremote.h>con este programa he obtenido el codigo de mandos a
+distancia de mi casa.<br>
+dvd lauson<br>
+POWER&nbsp;&nbsp;&nbsp; 807F807F<br>
+MUTE&nbsp;&nbsp;&nbsp; 807F48B7<br>
+exit &nbsp;&nbsp;&nbsp; 807F6897<br>
+OK &nbsp;&nbsp;&nbsp;
+807FA857&nbsp;&nbsp;&nbsp; TECLA 8<br>
+ON/OFF&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;
+40BF807F&nbsp;&nbsp; CH-<br>
+MUTE&nbsp;&nbsp;&nbsp; 807F48B7<br>
+CH-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; 40BF58A7 CH
+SET<br>
+1&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; 40BF00FF
+PLAY/PAUSE<br>
+2<br>
+3&nbsp;&nbsp;&nbsp; 807F609F&nbsp;&nbsp;&nbsp;
+40BF609F +<br>
+4&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; 40BF20DF EQ<br>
+5&nbsp;&nbsp;&nbsp; <br>
+6&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; 40BF50AF NEXT<br>
+7&nbsp;&nbsp;&nbsp; 807F10EF&nbsp;&nbsp;&nbsp;
+40BF10EF&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 0<br>
+8&nbsp;&nbsp;&nbsp; 807FF00F<br>
+9&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;
+40BF708F&nbsp; 3<br>
+0<br>
+FAV&nbsp;&nbsp;&nbsp;
+807FC23D&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+RWD<br>
+SUB&nbsp;&nbsp;&nbsp; 807F906F<br>
+MENU&nbsp;&nbsp;&nbsp; 807FDA25<br>
+EPG&nbsp;&nbsp;&nbsp; 807F5AA5<br>
+INFO&nbsp;&nbsp;&nbsp; 807F728D<br>
+&lt;FLECHA&nbsp;&nbsp;&nbsp; 807F42BD<br>
+&gt;FLECHA&nbsp;&nbsp;&nbsp; 807F827D<br>
+ALT&nbsp;&nbsp;&nbsp; 807F7887<br>
+LIST&nbsp;&nbsp;&nbsp; 807F02FD<br>
+RWD Y RECORD&nbsp;&nbsp;&nbsp; 807FAA55<br>
+FWD TEXT&nbsp;&nbsp;&nbsp; 807F6A95<br>
+AUDIO&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+807FEA15<br>
+PAUSE&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+807F08F7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+TECLA 4<br>
+ZOOM&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+807F8A75<br>
+PLAY TV/RADIO&nbsp;&nbsp;&nbsp; 807F4AB5<br>
+USB/MOVE&nbsp;&nbsp;&nbsp; 807FCA35<br>
+A-SCAN /A-TIME&nbsp;&nbsp;&nbsp; 807F2AD5<br>
+VOL+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;
+40BFB04F&nbsp; 2<br>
+VOL -&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; 40BF28D7 7<br>
+<br>
+y de un mando de video que tenia por hay.<br>
+<br>
+funcion on off &nbsp;&nbsp;&nbsp; 141EBE<br>
+audioselect&nbsp;&nbsp;&nbsp; 160E9F<br>
+eject&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+16FE90<br>
+1&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 17EE81<br>
+2&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 161E9E<br>
+3&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 151EAE<br>
+4&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 171E8E<br>
+5&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 149EB6<br>
+6&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 169E96<br>
+7&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 159EA6<br>
+8&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 179E86<br>
+9&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 145EBA<br>
+0&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 165E9A<br>
+subir canal&nbsp;&nbsp;&nbsp; 142EBD<br>
+bajar canal&nbsp;&nbsp;&nbsp; 144EBB<br>
+menu&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 16AE95<br>
+display&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+158EA7<br>
+tape counter reset&nbsp;&nbsp;&nbsp; 17CB83<br>
+tape cou memory&nbsp;&nbsp;&nbsp; 14AEB5<br>
+play&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 154EAB<br>
+rew&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 14CEB3<br>
+fwd&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 148EB7<br>
+stop&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 14EEB1<br>
+record&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+156EA9<br>
+speed&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+377C88<br>
+pause&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+174E8B<br>
+quick-find&nbsp;&nbsp;&nbsp; 174E8B<br>
+search time&nbsp;&nbsp;&nbsp; 15CEA3<br>
+search index&nbsp;&nbsp;&nbsp; 178E87<br>
+<br>
+El siguiente programa es una modificación de uno decargado de internet
+para controlar un led de mi arduino.<br>
+<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: rgb(255, 204, 51);"> //incluimos la librería
+de IR</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+//los valores del mando son los cuatro ultimos digitos del HEX pasado a
+decimal</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+#include &lt;IRremote.h&gt;</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+#include &lt;IRremoteInt.h&gt;</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+//poner IR en marcha</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+int RECV_PIN = 7; //Definimos el pin donde tiene que esta el IR</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+IRrecv irrecv(RECV_PIN);</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+decode_results results;</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+//declaramos contante</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+int pinLed=12;</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+//declaramos variable</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+int ValorIR=0; //declramos variable almacen valor ir</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+int estadoLed=0;</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+//Preparamos el setup</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+void setup()</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+{</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Serial.begin(9600); //Ponemos el puerto serie a 9600</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+irrecv.enableIRIn(); // el receptor ir en marcha</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+pinMode(pinLed, OUTPUT); //definimos el pin del led como de salida</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+}</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+//definimos una función llamada "leerIR" esto nos ayuda a que en el
+futuro podamos reutilizarla.</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+//no tiene parámetros de entra y devuelve un INT</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+int leerIR(){</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+if (irrecv.decode(&amp;results)) { // si recibe señal IR</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+int lectura = results.value; //Guarda el valor de la señal en la
+variable lectura</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+irrecv.resume(); // Recive siguiente valor IR</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Serial.println(lectura);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+return lectura; //devuelve lectura</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+}</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+}</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+void loop() {</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ValorIR=leerIR(); //asignamos a esa variable el valor que devuelve lerIR</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+if (ValorIR==7870){ //comprobamos el codigo recibido</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+if (estadoLed==0){ //comprobamos si el led está encendido</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+digitalWrite(pinLed,HIGH); //lo encendemos</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+estadoLed=1; //marcamos como que está encendido</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+}</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+else{ //si no está apgado es que esta endendico</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+digitalWrite(pinLed,LOW); //lo apagamo</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+estadoLed=0; //marcamos como apagado</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+}</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+}</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+}</span><br>
+<br>
+<br>
+y un mejora donde añadimos el control de varios led con el mando a
+distancia del video.<br>
+<br>
+<span style="color: rgb(255, 204, 51);">//incluimos la
+librería de IR</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+//los valores del mando son los cuatro ultimos digitos del HEX pasado a
+decimal</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+#include &lt;IRremote.h&gt;</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+#include &lt;IRremoteInt.h&gt;</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+//poner IR en marcha</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+int RECV_PIN = 7; //Definimos el pin donde tiene que esta el IR</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+IRrecv irrecv(RECV_PIN);</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+decode_results results;</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+//declaramos contante</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+int ledverde=12;</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">int ledamarillo=11;</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">int ledrojo=10;</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">int ledverde2=9;</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+//declaramos variable</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+int ValorIR=0; //declramos variable almacen valor ir</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+int estadoLed=0;</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+int estadoLed4=0;</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+//Preparamos el setup</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+void setup()</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+{</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Serial.begin(9600); //Ponemos el puerto serie a 9600</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+irrecv.enableIRIn(); // el receptor ir en marcha</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+pinMode(ledverde,OUTPUT);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+pinMode(ledamarillo,OUTPUT);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+pinMode(ledrojo,OUTPUT);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+pinMode(ledverde2,OUTPUT);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+}</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+//definimos una función llamada "leerIR" esto nos ayuda a que en el
+futuro podamos reutilizarla.</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+//no tiene parámetros de entra y devuelve un INT</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+int leerIR(){</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+if (irrecv.decode(&amp;results)) { // si recibe señal IR</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+int lectura = results.value; //Guarda el valor de la señal en la
+variable lectura</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+irrecv.resume(); // Recive siguiente valor IR</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Serial.println(lectura);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+return lectura; //devuelve lectura</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+}</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+}</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+void loop() {</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ValorIR=leerIR(); //asignamos a esa variable el valor que devuelve lerIR</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+if (ValorIR==7870){ //comprobamos el codigo recibido</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+if (estadoLed==0){ //comprobamos si el led está encendido</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+digitalWrite(ledverde,HIGH); //lo encendemos</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+estadoLed=1; //marcamos como que está encendido</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+}</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+else{ //si no está apgado es que esta endendico</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+digitalWrite(ledverde,LOW); //lo apagamo</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+estadoLed=0; //marcamos como apagado</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+}</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+}</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+if (ValorIR==7822){ //comprobamos el codigo recibido numero 4</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+if (estadoLed4==0){ //comprobamos si el led está encendido</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+digitalWrite(ledverde,HIGH); //lo encendemos</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+digitalWrite(ledamarillo,HIGH); //lo encendemos</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+digitalWrite(ledrojo,HIGH); //lo encendemos</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+digitalWrite(ledverde2,HIGH); //lo encendemos</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+estadoLed4=1; //marcamos como que está encendido</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+estadoLed=1; //cambia el estado del verde que funciona
+independientemente tb</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;
+</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+}</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+else{ //si no está apgado es que esta endendico</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+digitalWrite(ledverde,LOW); //lo apagamo</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+digitalWrite(ledamarillo,LOW); //lo apagamo</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+digitalWrite(ledrojo,LOW); //lo apagamo</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+digitalWrite(ledverde2,LOW); //lo apagamo</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+estadoLed4=0; //marcamos como apagado</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+estadoLed=0; //marcamos como apagado</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+}</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+}</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+}</span><br>
+<br>
+<br>
+<br>
+<br>
+<br>
+</irremote.h></div>
+<!-- .......................................menu arduino................................ -->
+<div id="derechamenu"><br>
+<script language="javascript=" type="text/javascript" src="index_files/menuarduino.js"></script><br>
+<br>
+<br>
+<br>
+</div>
+<!-- .......................................pie................................ -->
+<div id="pie">&nbsp;&nbsp; <br>
+<div style="text-align: center;"> El hombre es dueño de
+sus pensamiento
+y esclavo de sus palabras.
+</div>
+</div>
+<!-- ..................................fin contenedor..................................... -->
+</div>
+</body></html>

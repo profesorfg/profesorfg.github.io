@@ -1,0 +1,8 @@
+Limitación de corriente en el arranque un motor CC SHUNT.
+
+Arrancamos con resistencias en el rotor, y a medida que el 
+motor acelera, la eliminamos.
+
+Funcionamiento:
+En el momento del arranque cerramos KM1, pasado un tiempor 
+cerramos KM2 y pasado un tiempo cerramos KM3

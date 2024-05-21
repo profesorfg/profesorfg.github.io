@@ -1,0 +1,29 @@
+1)QUE PILOTOS ESTAN ENCENDIDOS SI: 
+
+	a) Esta funcionando KM2 y pulso S2.
+
+	b) Esta funcionando KM1 y pulso S3.
+
+	c) No esta funcionando KM2 y pulso S1.
+
+	d) No esta funcionando KM1 y pulso S3.
+	
+	e) Esta funcionando KM2 y pulso S1.
+
+	f) Esta funcionando KM2 y pulso S4.
+
+	g) Con KM1 y KM2 desactivados, primero pulso S2 y luego pulso S3.
+
+	h) Con KM1 y KM2 desactivados, primero pulso S3 y luego pulso S2.
+
+	i) Con KM1 y KM2 desactivados, pulso S3 y sin soltar pulso S2.
+
+	j) Con KM1 y KM2 desactivados, pulso S2 y sin soltar pulso S3.
+
+	k) Con KM2 activado y S2 pulsado, pulso S4
+
+2) ¿PUEDEN ESTAR ENCENDIDOS LOS PILOTOS H1 Y H2 A LA VEZ?
+Si es posible explica como se debe de hacer.
+
+
+

@@ -1,0 +1,15 @@
+Para la puesta en tensión de la instalación acciono el interruptor rotativo S0.
+
+En un instalación disponemos de dos motores protegidos por rele térmico
+y un motor protegido por disyuntor o guardamotor.
+En caso de la activación de alguna protección, no funciona ningún motor y 
+se enciende el piloto que corresponde al motor que ha fallado.
+
+Funcionamiento:
+Al pulsar S2 se encienden los tres motores, y al pulsar S1 se para primero el motor M1, 
+pasado el tiempo programado en KT1, se para el motor M2, pasado el tiempo de KT2 se para
+el motor 3
+
+
+
+

@@ -1,0 +1,2 @@
+El circuito de arranque se desconecta automaticamente 
+con un interruptor centrifugo

@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Automatismos</title>
+
+    <link href="../index_files/estilo.css" rel="stylesheet" type="text/css">
+    <script src="../index_files/menu.js"></script>
+    <script defer src="index_files/cambiocableados.js"> </script>
+
+    <meta content="profesorfg" name="author">
+    <meta content="automatizacion industrial" name="description">
+    <meta name="keywords" content="automatas electricidad">
+    <meta charset="UTF-8">
+    <script type="text/javascript">
+        function ejer00() {
+            document.getElementById('matrix').src = "imagenes_ejercicios/arranque_condicionado.png";
+            document.getElementById('texto').data = "imagenes_ejercicios/arranque_condicionado.txt";
+        }
+
+        function ejer01() {
+            document.getElementById('matrix').src = "imagenes_ejercicios/iluminacion_ciclica.png";
+            document.getElementById('texto').data = "imagenes_ejercicios/iluminacion_ciclica.txt";
+        }
+
+        function ejer02() {
+            document.getElementById('matrix').src = "imagenes_ejercicios/cuando paro KM.png";
+            document.getElementById('texto').data = "imagenes_ejercicios/cuando paro KM.txt";
+        }
+
+        function ejer03() {
+            document.getElementById('matrix').src = "imagenes_ejercicios/iluminacion_ciclica1.png";
+            document.getElementById('texto').data = "imagenes_ejercicios/iluminacion_ciclica1.txt";
+        }
+
+        function ejer04() {
+            document.getElementById('matrix').src = "imagenes_ejercicios/juego.png";
+            document.getElementById('texto').data = "imagenes_ejercicios/juego.txt";
+        }
+
+        function ejer05() {
+            document.getElementById('matrix').src = "imagenes_ejercicios/montacargas.PNG";
+            document.getElementById('texto').data = "imagenes_ejercicios/montacargas.txt";
+        }
+
+        function ejer06() {
+            document.getElementById('matrix').src = "imagenes_ejercicios/montacargas.PNG";
+            document.getElementById('texto').data = "imagenes_ejercicios/montacargas.txt";
+        }
+
+        function ejer07() {
+            document.getElementById('matrix').src = "imagenes_ejercicios/arranque_temporizado.png";
+            document.getElementById('texto').data = "imagenes_ejercicios/arranque_temporizado.txt";
+        }
+
+        function ejer08() {
+            document.getElementById('matrix').src = "imagenes_ejercicios/pulsacion larga corta.png";
+            document.getElementById('texto').data = "imagenes_ejercicios/pulsacion larga corta.txt";
+        }
+
+        function ejer09() {
+            document.getElementById('matrix').src = "imagenes_ejercicios/frenado cc opcional.png";
+            document.getElementById('texto').data = "imagenes_ejercicios/frenado cc opcional.txt";
+        }
+
+        function ejer10() {
+            document.getElementById('matrix').src = "imagenes_ejercicios/frenado cc solo en marcha.png";
+            document.getElementById('texto').data = "imagenes_ejercicios/frenado cc solo en marcha.txt";
+        }
+
+        function ejer11() {
+            document.getElementById('matrix').src = "imagenes_ejercicios/frenado cc en marcha con arran.png";
+            document.getElementById('texto').data = "imagenes_ejercicios/frenado cc en marcha con arran.txt";
+        }
+
+        function ejer12() {
+            document.getElementById('matrix').src = "imagenes_ejercicios/bornero esquema.png";
+            document.getElementById('texto').data = "imagenes_ejercicios/bornero esquema.txt";
+        }
+
+        function ejer13() {
+            document.getElementById('matrix').src = "imagenes_ejercicios/borneros representacion.png";
+            document.getElementById('texto').data = "imagenes_ejercicios/borneros representacion.txt";
+        }
+
+        function ejer14() {
+            document.getElementById('matrix').src = "imagenes_ejercicios/bornero foto.jpg";
+            document.getElementById('texto').data = "imagenes_ejercicios/bornero foto.txt";
+        }
+
+        function ejer15() {
+            document.getElementById('matrix').src = "imagenes_ejercicios/frenado a contracorriente.png";
+            document.getElementById('texto').data = "imagenes_ejercicios/frenado a contracorriente.txt";
+        }
+
+        function ejer16() {
+            document.getElementById('matrix').src = "imagenes_ejercicios/arrancador progresivo.png";
+            document.getElementById('texto').data = "imagenes_ejercicios/arrancador progresivo.txt";
+        }
+
+        function ejer17() {
+            document.getElementById('matrix').src = "imagenes_ejercicios/frenado a cc practica.png";
+            document.getElementById('texto').data = "imagenes_ejercicios/frenado a cc practica.txt";
+        }
+
+        function ejer18() {
+            document.getElementById('matrix').src = "imagenes_ejercicios/cuando paro KM.png";
+            document.getElementById('texto').data = "imagenes_ejercicios/cuando paro KM.txt";
+        }
+
+        function ejer19() {
+            document.getElementById('matrix').src = "imagenes_ejercicios/ascensor todo.png";
+            document.getElementById('texto').data = "imagenes_ejercicios/ascensor todo.txt";
+        }
+
+        function ejer20() {
+            document.getElementById('matrix').src = "imagenes_ejercicios/ascensor potencia.png";
+            document.getElementById('texto').data = "imagenes_ejercicios/ascensor potencia.txt";
+        }
+
+        function ejer21() {
+            document.getElementById('matrix').src = "imagenes_ejercicios/ascensor plantas.png";
+            document.getElementById('texto').data = "imagenes_ejercicios/ascensor plantas.txt";
+        }
+
+    </script>
+</head>
+
+<body>
+
+    <div id="contenedor3">
+
+        <header>
+            <nav>
+                <menu-principal></menu-principal>
+            </nav>
+
+        </header>
+        <div id=lateral>
+
+            <input type="checkbox" id="check_menu">
+            <label for="check_menu" id="label_check">
+                <img class="icon_menu_lat" src="../imagenes/icono1.png" />
+            </label>
+
+
+            <div class="menu_lateral">
+                <a href="cableados.html">control de motores</a><br>
+                <a href="cableados_analizar.html">Analizar</a><br>
+                <a href="cableados_ejercicios.html">Ejercicios</a><br>
+                <a href="cableados_material.html">Material</a><br>
+                 <a href="cableados_practicas.html">Prácticas</a><br>
+            </div>
+        </div>
+        <main>
+            <br>
+            <h1>AUTOMATISMOS CABLEADOS: EJERCICOS.</h1>
+          
+            <!-- ///////////////////TEXTO QUE DEBERIA DE CAMBIAR/////////////////// -->
+            <h5>
+                <div style="text-align: center;"><object data="imagenes_ejercicios/arranque_condicionado.TXT" id="texto" height="150" width="80%"></object></div>
+            </h5>
+         
+            <!-- ///////////////////IMAGEN QUE DEBERIA DE CAMBIAR/////////////////// -->
+            <div style="text-align: center;"><img style="width: 900px; height: 600px;" src="imagenes_ejercicios/arranque_condicionado.png" id="matrix"></div>
+            <br>
+            
+            <h2>BARRERA FOTOELECTRICA.</h2>
+            La maquina del interior del recinto se pone en marcha con el pulsador
+            verde, se para con el pulsador rojo.<br>
+            <span style="font-weight: bold;">Si cuando la maquina esta
+                en funcionamiento entramos en el recinto,</span>
+            la maquina se para, y se enciende el piloto rojo, no se podra poner en
+            marcha hasta rearmar la instalación activando el pulsador azul.<br>
+            Al rearmar la instalción se apagara la luz roja y estara dispuesta para
+            el funcionamiento normal. <br>
+            <div style="text-align: center;"><img style="width: 218px; height: 275px;" alt="Barrera fotoeléctica" src="imagenes_ejercicios/e_barreraFotocelula.png"><br>
+            </div>
+            <br>
+            <h2>DETECTOR DE METALES.</h2>
+            Al
+            &nbsp;colocar un objeto sobre el final de carrera, si es metálico
+            se
+            enciende la luz verde, si no lo es se enciende la luz roja.<br>
+            El final de carrera dispone de dos camara de contacto una abierta y
+            otra cerrada.<br>
+            El sensor inductivo es de 2 hilos que deja para la corriente al
+            aproximarle un objeto metalico.<br>
+            <br>
+            <div style="text-align: center;"><img style="width: 108px; height: 121px;" alt="Detector de metales" src="imagenes_ejercicios/e_detectorMetales.png"></div>
+            <br>
+            <h2>FUNCIÓN PULSO.</h2>
+            <br>
+            Al pulsar marcha, se activa el contactor KM1 durante 20 segundos se
+            para.<br>
+            <br>
+            <h2>PARADA DE EMERGENCIA.</h2>
+            <br>
+            Dibuja &nbsp;y simula el ciruito marcha paro de un contactor,
+            tambien pueda pararse con una parada de emergencia. <br>
+            <br>
+            <h2>PARADA DE EMERGENCIA Y REARME.</h2>
+            <br>
+            Dibuja &nbsp;y simula el ciruito marcha paro de un contactor,
+            tambien pueda pararse con una parada de emergencia, pero si se ha
+            desconectado desde la parada de emergencia el contactor solo se podra
+            volver a poner en marcha mediante la pulsador de rearme. <br>
+            La parada de emergencia utiliza un contacto NC.<br>
+            (posiblemente se necesite un contactor auxiliar).<br>
+            <br>
+            <a href="https://drive.google.com/drive/folders/0B2Hb811x1P1fZHBqaW9yR0ZDWlE?usp=sharing">SOLUCIONES</a>
+            EJERCICIOS RESUELTOS. APORTADAS POR LOS ALUMNOS.
+            <br>
+            <h1><a class="mozTocH1" name="mozTocId23604"></a><a name="PRACTICAS_1ª_EVALUACIÓN"></a>PRACTICAS o
+                EJERCICIOS
+                1ª PARTE</h1>
+            <h2><a class="mozTocH2" name="mozTocId324104"></a>Práctica1</h2>
+            <p class="western" style="margin-bottom: 0cm; line-height: 100%;">Montar
+                la
+                puesta en marcha de un contactor con un pulsador.</p>
+            <h2><a class="mozTocH2" name="mozTocId568512"></a>Práctica
+                2 </h2>
+            <p class="western" style="margin-bottom: 0cm; line-height: 100%;">Montar
+                un circuito marcha &#8211; paro.</p>
+            <h2><a class="mozTocH2" name="mozTocId815339"></a>Práctica
+                3</h2>
+            <p class="western" style="margin-bottom: 0cm; line-height: 100%;">Montar
+                la puesta en marcha de un contactor con dos pulsadores de marcha y
+                dos de paro.</p>
+            <h2><a class="mozTocH2" name="mozTocId9885"></a>Práctica
+                4 &nbsp; </h2>
+            Montar&nbsp; la puesta en marcha de un contactor con los dos
+            pulsadores de marcha a vez, y dos de&nbsp;paro.
+            <h2><a class="mozTocH2" name="mozTocId61408"></a>Práctica
+                5</h2>
+            Realiza el circuito de mando de una &nbsp;puerta de garaje, con dos
+            finales de carrera, dos pulsadores y un pilloto rojo.<br>
+            Funcionamiento:<br>
+            <ul>
+                <li>La puerta sube mientras este pulsado subir y no este arriba.</li>
+                <li>La puerta baja mientras este pulsado bajar y no este abajo.</li>
+                <li>Si pulso subir y bajar &nbsp;a la vez la puerta se para
+                    y se enciende el piloto rojo.</li>
+            </ul>
+            <h2><a class="mozTocH2" name="mozTocId361116"></a>Práctica
+                6</h2>
+            Realiza
+            el circuito de mando de una instalacion con dos cofres elécrtricos con
+            dos contactores, 4 pulsadores&nbsp;y un piloto rojo cada
+            uno&nbsp;.<br>
+            <br>
+            Funcionamiento.<br>
+            Cofre 1<br>
+            El contactor KM1 se activa con un circuito marcha paro.<br>
+            El
+            contactor KM2&nbsp;se activa con otro circuito marcha paro pero
+            condicionado a que esta activado el KM1 del&nbsp; cofre eléctrico 2.<br>
+            Mientras el contactor KM2 no tenga la condiciones de activación, el
+            piloto rojo estara encendido.<br>
+            <br>
+            <br>
+            En el cofre 2:<br>
+            El contactor KM1 se activa con un circuito marcha paro.<br>
+            El contactor KM2&nbsp;se activa con otro circuito marcha paro pero
+            condicionado a que esta activado el KM1 del cofre eléctrico 1.<br>
+            Mientras el contactor KM2 no tenga la condiciones de activación, el
+            piloto rojo estara encendido.<br>
+            <h2><a class="mozTocH2" name="mozTocId284910"></a>Practica
+                7<br>
+            </h2>
+            Realiza un circuito marcha -paro, en el que la marcha se efectua con
+            una pulsación de 5 segundos sobre el pulsador de marcha.<br>
+            <h2><a class="mozTocH2" name="mozTocId288541"></a>Práctica
+                8</h2>
+            Realiza
+            el circuito de mando de un contactor, que se activa mediante un
+            pulsador de marcha y se desactiva 5 segundos despues de
+            pulsar&nbsp;
+            paro.<br>
+            <br>
+            Nota: se necesitan 2 contactores auxiliares.<br>
+            <h2><a class="mozTocH2" name="mozTocId914763"></a>Practica
+                9</h2>
+            La puesta en marcha de una maquina
+            mediante un pulsador bimanual consiste &nbsp;en la
+            pulsación&nbsp;simultanea con las dos manos de los dos pulsadores ,
+            para
+            asegurar que durante la puesta en marcha el operario este fuera de la
+            zona de peligro.<br>
+            <br>
+            Para
+            evitar que el operario realize un mal uso
+            del bimanual. Al pulsar un pulsador, el siguiente se debe de pulsar
+            antes de un tiempo limitado. Pasado ese tiempo si se pulsa el otro
+            pulsador, no se pone en marcha, con lo que hay volver a repetir la
+            maniobra.<br>
+            <br>
+            <br>
+            Realiza
+            la puesta en marcha de un contactor con un bimanual, con un tiempo
+            máximo de diferencia entre&nbsp;&nbsp;pulsadores de 1
+            segundo&nbsp;,&nbsp; la parada se realiza con un pulsador de
+            paro.
+            <h2><a class="mozTocH2" name="mozTocId793536"></a>Practica
+                10</h2>
+            Realiza
+            un circuito marcha paro, de un contactor conectado a un rele termico,
+            de forma que si se produce una falta de fase o sobreintensidad, el
+            motor se para y se enciende un piloto rojo. <br>
+            Comprueba el funcionamiento de la practica utilizado el boton de test,
+            paro &nbsp;y rearme manual o automático.
+            <h2><a class="mozTocH2" name="mozTocId539648"></a>Practica
+                11</h2>
+            Realiza el circutio de mando y potencia de una instalación de una
+            prensa eléctrica.<br>
+            <br>
+            Funcionamiento:<br>
+            Para
+            poner en marcha la prensa, esta debe estar subida, y pulsar un bimanual
+            (dos pulsadores, con una diferencia maxima de 0,5 segundos entre
+            pulsaciones).<br>
+            La prensa baja y al llegar al final de carrera inferior, se para y sube
+            hasta llegar al final de carrera superior.<br>
+            <br>
+            Para
+            evitar posibles cortocircuitos en el circuito de potencia, ponemos un
+            enclavamiento mecanico entre los contactores de potencia.<br>
+            <br>
+            Ademas la prensa se parara en caso de &nbsp;fallo de los reles
+            termicos, o con la parada de emergencia.
+            &nbsp;<br>
+            <br>
+            <h1><a class="mozTocH1" name="mozTocId525703"></a><a name="PRACTICAS_2ª_EVALUACIÓN"></a>PRACTICAS o
+                EJERCICIOS 2ª PARTE</h1>
+            <h2><a class="mozTocH2" name="mozTocId531622"></a>Práctica
+                1</h2>
+            Circuito
+            de potencia y mando del arranque de un motor trifásico mediante Marcha
+            paro, con parada de emergencia, protección térmica, señalización verde
+            (funcionando), rojo (activación del térmico o parada de emergencia).<br>
+            <h2><a class="mozTocH2" name="mozTocId685452"></a>Práctica
+                2</h2>
+            Circuito de potencia y mando del cambio de giro&nbsp; de un
+            motor trifásico con selector, mediante Marcha paro, con parada de
+            emergencia,
+            protección térmica, señalización verde (funcionando ), rojo (activación
+            del térmico o parada de emergencia).
+            <h2><a class="mozTocH2" name="mozTocId759895"></a>Práctica
+                3</h2>
+            Circuito de potencia y mando, del cambio de giro pasando por paro de un
+            motor trifásico&nbsp;, mediante&nbsp; pulsadores marcha paro,
+            con parada de emergencia,
+            protección térmica, señalización verde (funcionando ), rojo (activación
+            del térmico o parada de emergencia).<br>
+            <h2><a class="mozTocH2" name="mozTocId311737"></a>Práctica
+                4</h2>
+            Circuito de potencia y mando, del cambio de giro sin pasar por paro de
+            un
+            motor trifásico&nbsp;, mediante&nbsp; pulsadores marcha paro,
+            con parada de emergencia,
+            protección térmica, señalización verde (funcionando ), rojo (activación
+            del térmico o parada de emergencia).<br>
+            <h2><a class="mozTocH2" name="mozTocId583517"></a>Práctica
+                5</h2>
+            Movimiento
+            continuo, al activar un interruptor el motor realiza un movimiento
+            continuo, girando 6 segundos en un sentido, y 5 en sentido
+            &nbsp;contrario, hasta que desactivemos el interruptor.<br>
+            <h2><a class="mozTocH2" name="mozTocId447083"></a>Práctica
+                6</h2>
+            Circuito
+            de potencia y mando, del cambio de giro pasando&nbsp; por paro de
+            un
+            motor trifásico&nbsp;, mediante&nbsp; pulsadores marcha
+            &nbsp;para cada
+            sentido, una parada de emergencia,&nbsp;parada con un final de
+            carrera
+            &nbsp;para un sentido y otro final de carrera para el sentido
+            contrario,
+            protección térmica,señalización piloto&nbsp; rojo &nbsp;a la
+            activación
+            del térmico o parada de emergencia.<br>
+            <h2><a class="mozTocH2" name="mozTocId176212"></a>Práctica
+                7</h2>
+            Circuito
+            de potencia y mando, del arranque de un motor monofásico, con
+            desconexión automática del devanado de arranque, señalización del
+            piloto rojo a la activación del&nbsp; térmico.
+            <h2><a class="mozTocH2" name="mozTocId579923"></a>Práctica
+                8</h2>
+            Circuito de potencia y mando, cambio de giro pasando por
+            paro&nbsp;de un
+            motor monofásico, con desconexión automática del devanado de arranque,
+            señalización del piloto rojo a la activación del&nbsp; térmico.<br>
+            <br>
+            <h1><a class="mozTocH1" name="mozTocId713480"></a><a name="Ejercicios_de_automatismos:"></a>EJERCICIOS:
+                ACTIVACIÓN DE CONTACTORES.</h1>
+            <h2><a class="mozTocH2" name="mozTocId626769"></a><a name="Activación_con_un_contactor_con:"></a>Activación
+                con un contactor con:</h2>
+            1. un interruptor<br>
+            2. un pulsador de marcha y otro de paro<br>
+            3. Dos pulsadores de marcha y uno de paro<br>
+            4. 1 pulsador de marcha y tres de paro.<br>
+            5. Tres pulsadores de marcha y tres de paro.<br>
+            6. Marcha con dos pulsadores a la vez&nbsp; (S1 y S2)&nbsp; y
+            paro con
+            dos pulsadores a la vez (S3 Y S4).<br>
+            7. Marcha con dos pulsadores a la vez&nbsp; (S1 y S2) o con el
+            pulsador
+            S3&nbsp; y paro con (S4 y S5) o con S6.<br>
+            <br>
+            <h2><a class="mozTocH2" name="mozTocId573554"></a><a name="Activación_de_dos_contactores:"></a>Activación
+                de dos contactores:</h2>
+            8. Un pulsador de marcha y otro paro para cada contactor.<br>
+            9. Un pulsador de marcha para cada contactor y el de paro para los dos.<br>
+            10. Un pulsador de marcha y otro paro para cada contactor y otro de
+            paro para los dos.<br>
+            11. Un pulsador de marcha para los dos contactores y paro
+            individualizado con dos pulsadores.<br>
+            12. Un pulsador de marcha KM1 y paro KM2, el otro pone en marcha KM2 y
+            paro KM1, y otro pulsador para KM1 y KM2.<br>
+            13. Un pulsador de marcha KM1, otro pulsador pone en marcha KM2 si esta
+            activo KM1 y&nbsp; otro pulsador para KM1 y KM2.<br>
+            14. Un pulsador de marcha para cada contactor y el de paro para los
+            dos, con la condición de que si esta KM1 no puede entrar KM2 y
+            viceversa.<br>
+            <br>
+            <h2><a class="mozTocH2" name="mozTocId917722"></a><a name="Con_un_temporizador."></a>Con
+                un temporizador.</h2>
+            15. Tengo que pulsar marcha durante 5 segundos para activar KM2.<br>
+            16. Con marcha se activa KM1 y si sigo pulsando durante 5 segundos se
+            activa KM2, con otro pulsador paro todos los contactores. <br>
+            17. Con marcha se activa KM1 y pasados 5 segundos se activa si pulso
+            otra vez marcha activo KM2 y se desactiva KM1, con otro pulsador paro
+            todos los contactores. <br>
+            18. Con marcha se activa KM1 y si mantengo pulsado 5 segundos se activa
+            activo KM2 y se desactiva KM1, con otro pulsador paro todos los
+            contactores. (aux KM3)<br>
+            19. Con marcha activo KM1 y KM2 , a los cinco segundos desactivo KM2 ya
+            activo KM3. Con paro, desactivo todos los contactores.<br>
+            <br>
+            <h1 style="text-align: left;"><a class="mozTocH1" name="mozTocId462624"></a>EJERCICIOS LÓGICA CABLEADA</h1>
+            <br>
+            <br>
+            <br>
+            <br>
+            3.- Dibuja &nbsp;y simula el circuito con la clave secreta de tres
+            puplsadores NA (S1 pulsado, S2 pulsado, S3 no pulsado),&nbsp; y al
+            activar un interruptor,
+            si la clave es correcta se enciende un piloto verde, si es incorrecta
+            un &nbsp;piloto rojo.<br>
+            <br>
+            4.- Dibuja &nbsp;y simula el circuito de la puerta de un garaje con
+            dos finales de carrera &nbsp;y un pulsador. al accionarlo la puerta
+            sube &nbsp;esta 5 segundos subida y baja.<br>
+            <br>
+            5.- Añade una fotocelula al circuito anterior de forma que si se
+            interpone un objeto cuando la puerta baja, esta se para y vuelve a
+            subir.<br>
+            <br>
+            6.-La puesta en marcha de una maquina
+            mediante un pulsador bimanual consiste &nbsp;en la
+            pulsación&nbsp;con las dos manos de los dos pulsadores &nbsp;a
+            la vez, para
+            asegurar que durante la puesta en marcha el operario esté fuera de la
+            zona de peligro.<br>
+            <br>
+            Para
+            evitar que el operario realize un mal uso
+            del bimanual. Al pulsar un pulsador, el siguiente se debe de pulsar
+            antes de un tiempo determinado. Pasado ese tiempo&nbsp; el bimanual
+            no se pone en marcha, con lo que hay volver a repetir la maniobra.<br>
+            <br>
+            <br>
+            Dibuja el circuito de mando de la puesta en marcha de un contactor con
+            un bimanual, con un tiempo
+            máximo de diferencia entre&nbsp;&nbsp;pulsadores de 1
+            segundo&nbsp;,&nbsp; la parada se realiza con un pulsador de
+            paro.<br>
+            <br>
+            <br>
+            7.- Marcha con pulsación larga y paro por pulsador de paro<br>
+            Monta un circuito de mando, de forma que para activarse tiene que estar
+            pulsado durante 5 segundos el pulsador 1 y se parara con el pulsador 2<br>
+            <br>
+            <h1><a class="mozTocH1" name="mozTocId635122"></a><span style="font-weight: bold;">TITULOS DE PRÁCTICAS DE
+                    AUTOMATISMOS CABLEADOS.</span></h1>
+            <span style="font-weight: bold;">1º Encendido de tres
+                bombillas con a través de un contactor, que se activa con un
+                pulsador.&nbsp;&nbsp;&nbsp; 1<br>
+                2º marcha paro de tres bombillas.&nbsp;&nbsp;&nbsp; <br>
+                3º dos pulsadores de marcha 1 de paro.&nbsp;&nbsp;&nbsp; <br>
+                4º dos de marcha a la vez 1 de paro.&nbsp;&nbsp;&nbsp; <br>
+                5º Señalización de funcionamiento del contactor
+                verde.&nbsp;&nbsp;&nbsp; <br>
+                6º marcha paro y señalización de un
+                motor.&nbsp;&nbsp;&nbsp; <br>
+                7 cambio de giro pasando por paro&nbsp;&nbsp;&nbsp; <br>
+                8 cambio de giro sin pasar por paro.&nbsp;&nbsp;&nbsp; <br>
+                9 cambio&nbsp; de giro con señalización de giro a derechas rojo o
+                izquierdas verde.&nbsp;&nbsp;&nbsp; <br>
+                10 Puesta en marcha con pulsación larga.&nbsp;&nbsp;&nbsp; <br>
+                11 puesta en marcha del motor 1 y del motor 2 si esta arrancado el
+                motor 1&nbsp;&nbsp;&nbsp; <br>
+                12 puesta en marcha del motor 1 y pasado un tiempo se pone en marcha el
+                motor&nbsp; <br>
+                13 con un pulsador, si le pulso menos de 1 segundo se pone en marcha el
+                motor 1, si se pulsa mas de 1 segundo se pone en&nbsp; marcha
+                el&nbsp;
+                motor 2.&nbsp;&nbsp;&nbsp; <br>
+                14 motor protegido por un térmico con
+                señalización.&nbsp;&nbsp;&nbsp; <br>
+                15 retardo a la conexión electrónica&nbsp;
+                &nbsp;&nbsp;&nbsp; <br>
+                16 temporizado intermitente.&nbsp;&nbsp;&nbsp; <br>
+                17 retardo a la desconexión electrónico.&nbsp;&nbsp;&nbsp; <br>
+                18 bimanual&nbsp;&nbsp;&nbsp; <br>
+                19 bimanual con parada de emergencia.&nbsp;&nbsp;&nbsp; </span><span style="font-weight: bold;"><br>
+            </span><span style="font-weight: bold;">20- arranque
+                de un motor
+                monofasico.&nbsp;&nbsp;&nbsp; <br>
+                21- arranque de un motor monofasico con cambio de
+                giro&nbsp;&nbsp;&nbsp; <br>
+                22- arranque estrella triangulo con
+                pulsadores.&nbsp;&nbsp;&nbsp; <br>
+                23- estrella triangulo temporizado.&nbsp;&nbsp;&nbsp; <br>
+                24- arranque estrella triangulo con cambio de
+                giro.&nbsp;&nbsp;&nbsp; <br>
+                25- puerta&nbsp; de garaje con pulsador de abrir y
+                cerrar&nbsp;&nbsp;&nbsp; <br>
+                25- puerta de garaje, temporizada al cierre con parada de
+                emergencia.&nbsp;&nbsp;&nbsp; <br>
+                27- Arranque de un motor dalhander con dos
+                velocidades.&nbsp;&nbsp;&nbsp; <br>
+                28-&nbsp; frenado de un&nbsp; motor con corriente
+                continua.&nbsp;&nbsp;&nbsp; <br>
+                29- arranque de un motor con resistencias
+                estatoricas.&nbsp;&nbsp;&nbsp; <br>
+                30- Arranque de un&nbsp; motor con&nbsp;
+                rotoricas.&nbsp;&nbsp;&nbsp; <br>
+                31- Arranque de motores de corriente continua.
+                &nbsp;&nbsp;&nbsp; <br>
+                32- Arranque estrella triangulo montando en cofre.<br>
+                33 arranque progresivo de un motor de corriente
+                alterna&nbsp;&nbsp;&nbsp; <br>
+                34 Variadores de velocidad.</span><br>
+        </main>
+        <aside>
+            <section>
+               
+                <a href="https://drive.google.com/open?id=0B2Hb811x1P1fTzFuck9LYUNQYWM" target="_blank">ESQUEMAS
+                    en CADeSIMU</a><br>
+                <br>
+                 EJERCICIOS DE AUTOMATISMOS.
+                <input value="Arranque condicionado" onclick="ejer00();" type="button"><br>
+                <input value="Iluminación ciclica" onclick="ejer01();" type="button"><br>
+                <input value="¿Cuando paro?" onclick="ejer02();" type="button"><br>
+                <!--
+<input value="Iluminación ciclica1" onclick="ejer03();" type="button"><br>
+<input value="Juego" onclick="ejer04();" type="button"><br>
+<input value="Montacargas" onclick="ejer05();" type="button"><br>
+<input value="Arranque temporizado" onclick="ejer07();" type="button"><br>
+<input value="Pulsación larga-corta" onclick="ejer08();" type="button"><br>
+<input value="------><br>
+                
+                FRENANDO CON INYECCIÓN DE CORRIENTE CONTINUA
+                <br>
+                <input value="Frenando opcional" onclick="ejer09();" type="button"><br>
+                <input value="Sin frenado con el motor parado" onclick="ejer10();" type="button"><br>
+                <input value="Con arranque instantaneo" onclick="ejer11();" type="button"><br>
+                <input value="Práctica" onclick="ejer17();" type="button"><br>
+                -----------------------------------------------------------
+                <br>
+                <input value="Frenado a contracorriente" onclick="ejer15();" type="button"><br>
+                ARRANQUE
+                <br>
+                <input value="Arrancador progresivo" onclick="ejer16();" type="button"><br>
+                BORNERO
+                <br>
+                <input value="Esquema eléctrico" onclick="ejer12();" type="button"><br>
+                <input value="Representación de borneros" onclick="ejer13();" type="button"><br>
+                <input value="Ver resultado" onclick="ejer14();" type="button"><br>
+                ASCENSOR
+                <br>
+                <input value="Todo" onclick="ejer19();" type="button"><br>
+                <input value="Potencia" onclick="ejer20();" type="button"><br>
+                <input value="Plantas" onclick="ejer21();" type="button"><br>
+            </section>
+
+            <section> <br>
+            
+             
+                    <li><a href="#mozTocId23604">PRACTICAS o EJERCICIOS
+                            1ª PARTE</a></li>
+                    <li><a href="#mozTocId525703">PRACTICAS o
+                            EJERCICIOS 2ª PARTE</a></li>
+                    <li><a href="#mozTocId713480">EJERCICIOS:
+                            ACTIVACIÓN DE CONTACTORES.</a></li>
+                    <li><a href="#mozTocId462624">EJERCICIOS LÓGICA
+                            CABLEADA</a></li>
+                    <li><a href="#mozTocId635122">TITULOS DE PRÁCTICAS
+                            DE AUTOMATISMOS CABLEADOS.</a></li>
+          
+            </section>
+
+
+        </aside> <!-- .................fin menu izquierda................................. -->
+        <footer> Nunca seré mas joven que hoy.<br>
+        </footer>
+    </div>
+</body>
+
+</html>

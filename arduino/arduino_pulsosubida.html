@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+<link href="index_files/estiloarduino.css" rel="stylesheet" type="text/css">
+<link href="index_files/menu.css" rel="stylesheet" type="text/css">
+<meta charset="UTF-8">
+<title>arduino</title>
+
+<meta content="profesorfg" name="author">
+<meta content="profesorfg enlaces" name="description">
+<meta name="keywords" content="profesorfg enlaces"></head>
+<body style="margin-top: 0px; height: 598px;">
+<!-- Comentario -->
+<div id="contenedor"><!-- ............................Contendor....................... --><!-- -----------------menu superior............................................ -->
+<div id="menusuperior">
+<script language="javascript=" type="text/javascript" src="index_files/menu_general.js"></script></div>
+<!-- ........................menu izquierda.............................-->
+<div id="izquierda">
+<script language="javascript=" type="text/javascript" src="index_files/menuizq.js"></script><br>
+<br>
+<br>
+<br>
+</div>
+<!-- ............................contenido central................... -->
+<div id="derecha"> <small style="background-color: transparent; color: rgb(255, 255, 51);"><em>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<big style="font-weight: bold; font-style: italic;"><big><big>FLANCO DE
+SUBIDA</big></big></big></em></small><br>
+<ul id="mozToc"><!--mozToc h1 1 h2 2 h3 3 h4 4 h5 5 h6 6--><li><a href="#mozTocId335545">FLANCO DE SUBIDA
+</a></li><li><a href="#mozTocId264815">FLANCO SUBIDA ANTIREBOTES</a></li></ul>
+<p>&nbsp;<br>
+</p>
+Archivos: <br>
+flancosubida<br>
+flancosubidarebotes<br>
+<br>
+Interes:<br>
+<ul>
+  <li>Crear un flanco de subida(1)</li>
+  <li>Evitar rebotes del pulsador mediantes software (2)</li>
+  <li>Crear un pulso cada Segundo que se mantenga activado un pulsador (2)</li>
+  <li>Estos programas se han realizado de una manera muy simple y eficaz.<br>
+  </li>
+
+</ul>
+<ul>
+</ul>
+El siguiente sketch&nbsp; creamos un flanco de subida, con el que
+encendemos y apagamos un led, <br>
+<br>
+El programa es simple y funciona, al probarlo a veces al pulsar realiza
+dos cambios de estado, esto es debido a los rebotes del pulsador, habra
+que hacer una funcion para no se produzcan lecturas un tiempo (ejemplo
+200ms), despues de la pulsacion para eliminar posibles rebotes.<br>
+<br>
+En este sketch nos hemos aprechado de la idea del siguiente enlace<a href="http://forum.arduino.cc/index.php/topic,96810.0.html">
+http://forum.arduino.cc/index.php/topic,96810.0.html</a>, y es que en
+programacion los mas simple es lo mejor.<br>
+<br>
+<br>
+<h1><a class="mozTocH1" name="mozTocId335545"></a>FLANCO DE SUBIDA<br>
+</h1>
+<br>
+<br style="color: rgb(255, 204, 0);">
+<span style="color: rgb(255, 204, 0);">&nbsp;/*</span><br style="color: rgb(255, 204, 0);">
+<span style="color: rgb(255, 204, 0);">con&nbsp; los flancos de subida
+de los pulsadores enciendo o apago los led</span><br style="color: rgb(255, 204, 0);">
+<span style="color: rgb(255, 204, 0);">con el pul_1, led verde, </span><br style="color: rgb(255, 204, 0);">
+<span style="color: rgb(255, 204, 0);">con el dos el amarillo </span><br style="color: rgb(255, 204, 0);">
+<span style="color: rgb(255, 204, 0);">y con el tres el rojo y verde2</span><br style="color: rgb(255, 204, 0);">
+<span style="color: rgb(255, 204, 0);">idea recogidad de </span><br style="color: rgb(255, 204, 0);">
+<span style="color: rgb(255, 204, 0);">http://forum.arduino.cc/index.php/topic,96810.0.html</span><br style="color: rgb(255, 204, 0);">
+<span style="color: rgb(255, 204, 0);">*/</span><br style="color: rgb(255, 204, 0);">
+<br style="color: rgb(255, 204, 0);">
+<span style="color: rgb(255, 204, 0);">int ledverde=12;</span><br style="color: rgb(255, 204, 0);">
+<span style="color: rgb(255, 204, 0);">int ledamarillo=11;</span><br style="color: rgb(255, 204, 0);">
+<span style="color: rgb(255, 204, 0);">int ledrojo=10;</span><br style="color: rgb(255, 204, 0);">
+<span style="color: rgb(255, 204, 0);">int ledverde2=9;</span><br style="color: rgb(255, 204, 0);">
+<span style="color: rgb(255, 204, 0);">int pulsador1=22;</span><br style="color: rgb(255, 204, 0);">
+<span style="color: rgb(255, 204, 0);">int pulsador2=24;</span><br style="color: rgb(255, 204, 0);">
+<span style="color: rgb(255, 204, 0);">int pulsador3=26;</span><br style="color: rgb(255, 204, 0);">
+<br style="color: rgb(255, 204, 0);">
+<span style="color: rgb(255, 204, 0);">//estado actual de los pulsadores</span><br style="color: rgb(255, 204, 0);">
+<span style="color: rgb(255, 204, 0);">&nbsp;&nbsp;&nbsp; boolean pul_1;</span><br style="color: rgb(255, 204, 0);">
+<span style="color: rgb(255, 204, 0);">&nbsp;&nbsp;&nbsp; boolean pul_2;</span><br style="color: rgb(255, 204, 0);">
+<span style="color: rgb(255, 204, 0);">&nbsp;&nbsp;&nbsp; boolean pul_3;</span><br style="color: rgb(255, 204, 0);">
+<span style="color: rgb(255, 204, 0);">//estado anterior de los
+pulsadores</span><br style="color: rgb(255, 204, 0);">
+<span style="color: rgb(255, 204, 0);">&nbsp;&nbsp;&nbsp; boolean
+pul_1_anterior;</span><br style="color: rgb(255, 204, 0);">
+<span style="color: rgb(255, 204, 0);">&nbsp;&nbsp;&nbsp; boolean
+pul_2_anterior;</span><br style="color: rgb(255, 204, 0);">
+<span style="color: rgb(255, 204, 0);">&nbsp;&nbsp;&nbsp; boolean
+pul_3_anterior;</span><br style="color: rgb(255, 204, 0);">
+<br style="color: rgb(255, 204, 0);">
+<span style="color: rgb(255, 204, 0);">&nbsp;&nbsp;&nbsp; boolean ledV;
+//ver el estado del led</span><br style="color: rgb(255, 204, 0);">
+<span style="color: rgb(255, 204, 0);">&nbsp;&nbsp;&nbsp; boolean ledA;
+//ver el estado del led</span><br style="color: rgb(255, 204, 0);">
+<span style="color: rgb(255, 204, 0);">&nbsp;&nbsp;&nbsp; boolean ledR;
+//ver el estado del led</span><br style="color: rgb(255, 204, 0);">
+<span style="color: rgb(255, 204, 0);">&nbsp;&nbsp;&nbsp; boolean
+ledV1; //ver el estado del led</span><br style="color: rgb(255, 204, 0);">
+<span style="color: rgb(255, 204, 0);">&nbsp;&nbsp; </span><br style="color: rgb(255, 204, 0);">
+<br style="color: rgb(255, 204, 0);">
+<br style="color: rgb(255, 204, 0);">
+<span style="color: rgb(255, 204, 0);">&nbsp;</span><br style="color: rgb(255, 204, 0);">
+<span style="color: rgb(255, 204, 0);">void setup(){</span><br style="color: rgb(255, 204, 0);">
+<span style="color: rgb(255, 204, 0);">&nbsp;pinMode(ledverde,OUTPUT);</span><br style="color: rgb(255, 204, 0);">
+<span style="color: rgb(255, 204, 0);">&nbsp;pinMode(ledamarillo,OUTPUT);</span><br style="color: rgb(255, 204, 0);">
+<span style="color: rgb(255, 204, 0);">&nbsp;pinMode(ledrojo,OUTPUT);</span><br style="color: rgb(255, 204, 0);">
+<span style="color: rgb(255, 204, 0);">&nbsp;pinMode(ledverde2,OUTPUT);</span><br style="color: rgb(255, 204, 0);">
+<span style="color: rgb(255, 204, 0);">&nbsp;pinMode(pulsador1,INPUT);</span><br style="color: rgb(255, 204, 0);">
+<span style="color: rgb(255, 204, 0);">&nbsp;pinMode(pulsador2,INPUT);</span><br style="color: rgb(255, 204, 0);">
+<span style="color: rgb(255, 204, 0);">&nbsp;pinMode(pulsador3,INPUT);</span><br style="color: rgb(255, 204, 0);">
+<span style="color: rgb(255, 204, 0);">&nbsp;</span><br style="color: rgb(255, 204, 0);">
+<span style="color: rgb(255, 204, 0);">&nbsp;Serial.begin(9600);</span><br style="color: rgb(255, 204, 0);">
+<br style="color: rgb(255, 204, 0);">
+<span style="color: rgb(255, 204, 0);">}</span><br style="color: rgb(255, 204, 0);">
+<span style="color: rgb(255, 204, 0);">&nbsp;</span><br style="color: rgb(255, 204, 0);">
+<br style="color: rgb(255, 204, 0);">
+<span style="color: rgb(255, 204, 0);">&nbsp; void loop(){</span><br style="color: rgb(255, 204, 0);">
+<span style="color: rgb(255, 204, 0);">&nbsp;&nbsp;&nbsp; //leemos el
+estado actual de las entradas</span><br style="color: rgb(255, 204, 0);">
+<span style="color: rgb(255, 204, 0);">&nbsp;&nbsp;&nbsp;
+pul_1=digitalRead(pulsador1);</span><br style="color: rgb(255, 204, 0);">
+<span style="color: rgb(255, 204, 0);">&nbsp;&nbsp;&nbsp;
+pul_2=digitalRead(pulsador2);</span><br style="color: rgb(255, 204, 0);">
+<span style="color: rgb(255, 204, 0);">&nbsp;&nbsp;&nbsp;
+pul_3=digitalRead(pulsador3);</span><br style="color: rgb(255, 204, 0);">
+<br style="color: rgb(255, 204, 0);">
+<span style="color: rgb(255, 204, 0);">&nbsp;</span><br style="color: rgb(255, 204, 0);">
+<span style="color: rgb(255, 204, 0);">&nbsp; //PULSADOR 1</span><br style="color: rgb(255, 204, 0);">
+<span style="color: rgb(255, 204, 0);">&nbsp;if (pul_1==1 &amp;&amp;
+pul_1_anterior==0){</span><br style="color: rgb(255, 204, 0);">
+<span style="color: rgb(255, 204, 0);">&nbsp;ledV=!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ledV;</span><br style="color: rgb(255, 204, 0);">
+<span style="color: rgb(255, 204, 0);">&nbsp;digitalWrite
+(ledverde,ledV);</span><br style="color: rgb(255, 204, 0);">
+<span style="color: rgb(255, 204, 0);">&nbsp;}</span><br style="color: rgb(255, 204, 0);">
+<span style="color: rgb(255, 204, 0);">&nbsp;pul_1_anterior=pul_1;</span><br style="color: rgb(255, 204, 0);">
+<span style="color: rgb(255, 204, 0);">&nbsp; //PULSADOR 2</span><br style="color: rgb(255, 204, 0);">
+<span style="color: rgb(255, 204, 0);">&nbsp;if (pul_2==1 &amp;&amp;
+pul_2_anterior==0){</span><br style="color: rgb(255, 204, 0);">
+<span style="color: rgb(255, 204, 0);">&nbsp;ledA=!ledA;</span><br style="color: rgb(255, 204, 0);">
+<span style="color: rgb(255, 204, 0);">&nbsp;digitalWrite
+(ledamarillo,ledA);</span><br style="color: rgb(255, 204, 0);">
+<span style="color: rgb(255, 204, 0);">&nbsp;}</span><br style="color: rgb(255, 204, 0);">
+<span style="color: rgb(255, 204, 0);">&nbsp;pul_2_anterior=pul_2;</span><br style="color: rgb(255, 204, 0);">
+<span style="color: rgb(255, 204, 0);">&nbsp; //PULSADOR 3</span><br style="color: rgb(255, 204, 0);">
+<span style="color: rgb(255, 204, 0);">&nbsp;if (pul_3==1 &amp;&amp;
+pul_3_anterior==0){</span><br style="color: rgb(255, 204, 0);">
+<span style="color: rgb(255, 204, 0);">&nbsp;ledR=!ledR;</span><br style="color: rgb(255, 204, 0);">
+<span style="color: rgb(255, 204, 0);">&nbsp;digitalWrite
+(ledrojo,ledR);</span><br style="color: rgb(255, 204, 0);">
+<span style="color: rgb(255, 204, 0);">&nbsp; digitalWrite
+(ledverde2,ledR);</span><br style="color: rgb(255, 204, 0);">
+<span style="color: rgb(255, 204, 0);">&nbsp;}</span><br style="color: rgb(255, 204, 0);">
+<span style="color: rgb(255, 204, 0);">&nbsp;pul_3_anterior=pul_3;</span><br style="color: rgb(255, 204, 0);">
+<span style="color: rgb(255, 204, 0);">&nbsp;</span><br style="color: rgb(255, 204, 0);">
+<br style="color: rgb(255, 204, 0);">
+<span style="color: rgb(255, 204, 0);">&nbsp;&nbsp;&nbsp;&nbsp; </span><br style="color: rgb(255, 204, 0);">
+<span style="color: rgb(255, 204, 0);">&nbsp; }//fin de programa</span><br style="color: rgb(255, 204, 51);">
+<p><br>
+</p>
+<h1><a class="mozTocH1" name="mozTocId264815"></a>FLANCO SUBIDA ANTIREBOTES</h1>
+
+En el siguiente programa hemos realizado mejoras sobre el anterior<br>
+<ul>
+  <li>En el primer pulsador hemos eliminado los rebotes, mediante
+software, no realizando una lectura hasta 200 ms despues de haber
+pulsado.</li>
+  <li>Con el segundo pulsador realizamos un pulso cada 1000ms si se mantiene activado p2</li>
+  <li>El tercer pulsador es un flanco de subida simple.</li>
+</ul>
+<span style="color: rgb(255, 204, 0);">&nbsp;/*</span><br style="color: rgb(255, 204, 0);">
+<span style="color: rgb(255, 204, 0);">con&nbsp; los flancos de subida de los pulsadores enciendo o apago los led</span><br style="color: rgb(255, 204, 0);">
+<span style="color: rgb(255, 204, 0);">con el pul_1, led verde, </span><br style="color: rgb(255, 204, 0);">
+<span style="color: rgb(255, 204, 0);">con el dos el amarillo </span><br style="color: rgb(255, 204, 0);">
+<span style="color: rgb(255, 204, 0);">y con el tres el rojo y verde2</span><br style="color: rgb(255, 204, 0);">
+<span style="color: rgb(255, 204, 0);">idea recogidad de </span><br style="color: rgb(255, 204, 0);">
+<span style="color: rgb(255, 204, 0);">http://forum.arduino.cc/index.php/topic,96810.0.html</span><br style="color: rgb(255, 204, 0);">
+<span style="color: rgb(255, 204, 0);">*/</span><br style="color: rgb(255, 204, 0);">
+<br style="color: rgb(255, 204, 0);">
+<span style="color: rgb(255, 204, 0);">int ledverde=12;</span><br style="color: rgb(255, 204, 0);">
+<span style="color: rgb(255, 204, 0);">int ledamarillo=11;</span><br style="color: rgb(255, 204, 0);">
+<span style="color: rgb(255, 204, 0);">int ledrojo=10;</span><br style="color: rgb(255, 204, 0);">
+<span style="color: rgb(255, 204, 0);">int ledverde2=9;</span><br style="color: rgb(255, 204, 0);">
+<span style="color: rgb(255, 204, 0);">int pulsador1=22;</span><br style="color: rgb(255, 204, 0);">
+<span style="color: rgb(255, 204, 0);">int pulsador2=24;</span><br style="color: rgb(255, 204, 0);">
+<span style="color: rgb(255, 204, 0);">int pulsador3=26;</span><br style="color: rgb(255, 204, 0);">
+<br style="color: rgb(255, 204, 0);">
+<span style="color: rgb(255, 204, 0);">//estado actual de los pulsadores</span><br style="color: rgb(255, 204, 0);">
+<span style="color: rgb(255, 204, 0);">&nbsp;&nbsp;&nbsp; boolean pul_1;</span><br style="color: rgb(255, 204, 0);">
+<span style="color: rgb(255, 204, 0);">&nbsp;&nbsp;&nbsp; boolean pul_2;</span><br style="color: rgb(255, 204, 0);">
+<span style="color: rgb(255, 204, 0);">&nbsp;&nbsp;&nbsp; boolean pul_3;</span><br style="color: rgb(255, 204, 0);">
+<span style="color: rgb(255, 204, 0);">//estado anterior de los pulsadores</span><br style="color: rgb(255, 204, 0);">
+<span style="color: rgb(255, 204, 0);">&nbsp;&nbsp;&nbsp; boolean pul_1_anterior;</span><br style="color: rgb(255, 204, 0);">
+<span style="color: rgb(255, 204, 0);">&nbsp;&nbsp;&nbsp; boolean pul_2_anterior;</span><br style="color: rgb(255, 204, 0);">
+<span style="color: rgb(255, 204, 0);">&nbsp;&nbsp;&nbsp; boolean pul_3_anterior;</span><br style="color: rgb(255, 204, 0);">
+<span style="color: rgb(255, 204, 0);">&nbsp;&nbsp;&nbsp; </span><br style="color: rgb(255, 204, 0);">
+<span style="color: rgb(255, 204, 0);">//temporizadores para rebotes</span><br style="color: rgb(255, 204, 0);">
+<span style="color: rgb(255, 204, 0);">&nbsp;&nbsp; int T_rebote=200;//tiempo sin lectura despues de pulsar.</span><br style="color: rgb(255, 204, 0);">
+<span style="color: rgb(255, 204, 0);">&nbsp;&nbsp; unsigned long T_rebote1=0;</span><br style="color: rgb(255, 204, 0);">
+<span style="color: rgb(255, 204, 0);">&nbsp;&nbsp; unsigned long T_rebote2=0;</span><br style="color: rgb(255, 204, 0);">
+<span style="color: rgb(255, 204, 0);">&nbsp;&nbsp; unsigned long T_rebote3=0;</span><br style="color: rgb(255, 204, 0);">
+<br style="color: rgb(255, 204, 0);">
+<span style="color: rgb(255, 204, 0);">&nbsp;&nbsp;&nbsp; boolean ledV; //ver el estado del led</span><br style="color: rgb(255, 204, 0);">
+<span style="color: rgb(255, 204, 0);">&nbsp;&nbsp;&nbsp; boolean ledA; //ver el estado del led</span><br style="color: rgb(255, 204, 0);">
+<span style="color: rgb(255, 204, 0);">&nbsp;&nbsp;&nbsp; boolean ledR; //ver el estado del led</span><br style="color: rgb(255, 204, 0);">
+<span style="color: rgb(255, 204, 0);">&nbsp;&nbsp;&nbsp; boolean ledV1; //ver el estado del led</span><br style="color: rgb(255, 204, 0);">
+<span style="color: rgb(255, 204, 0);">&nbsp;&nbsp; </span><br style="color: rgb(255, 204, 0);">
+<br style="color: rgb(255, 204, 0);">
+<br style="color: rgb(255, 204, 0);">
+<span style="color: rgb(255, 204, 0);">&nbsp;</span><br style="color: rgb(255, 204, 0);">
+<span style="color: rgb(255, 204, 0);">void setup(){</span><br style="color: rgb(255, 204, 0);">
+<span style="color: rgb(255, 204, 0);">&nbsp;pinMode(ledverde,OUTPUT);</span><br style="color: rgb(255, 204, 0);">
+<span style="color: rgb(255, 204, 0);">&nbsp;pinMode(ledamarillo,OUTPUT);</span><br style="color: rgb(255, 204, 0);">
+<span style="color: rgb(255, 204, 0);">&nbsp;pinMode(ledrojo,OUTPUT);</span><br style="color: rgb(255, 204, 0);">
+<span style="color: rgb(255, 204, 0);">&nbsp;pinMode(ledverde2,OUTPUT);</span><br style="color: rgb(255, 204, 0);">
+<span style="color: rgb(255, 204, 0);">&nbsp;pinMode(pulsador1,INPUT);</span><br style="color: rgb(255, 204, 0);">
+<span style="color: rgb(255, 204, 0);">&nbsp;pinMode(pulsador2,INPUT);</span><br style="color: rgb(255, 204, 0);">
+<span style="color: rgb(255, 204, 0);">&nbsp;pinMode(pulsador3,INPUT);</span><br style="color: rgb(255, 204, 0);">
+<span style="color: rgb(255, 204, 0);">&nbsp;</span><br style="color: rgb(255, 204, 0);">
+<span style="color: rgb(255, 204, 0);">&nbsp;Serial.begin(9600);</span><br style="color: rgb(255, 204, 0);">
+<br style="color: rgb(255, 204, 0);">
+<span style="color: rgb(255, 204, 0);">}</span><br style="color: rgb(255, 204, 0);">
+<span style="color: rgb(255, 204, 0);">&nbsp;</span><br style="color: rgb(255, 204, 0);">
+<br style="color: rgb(255, 204, 0);">
+<span style="color: rgb(255, 204, 0);">&nbsp; void loop(){</span><br style="color: rgb(255, 204, 0);">
+<span style="color: rgb(255, 204, 0);">&nbsp;&nbsp;&nbsp; //leemos el estado actual de las entradas</span><br style="color: rgb(255, 204, 0);">
+<span style="color: rgb(255, 204, 0);">&nbsp;&nbsp;&nbsp; pul_1=digitalRead(pulsador1);</span><br style="color: rgb(255, 204, 0);">
+<span style="color: rgb(255, 204, 0);">&nbsp;&nbsp;&nbsp; pul_2=digitalRead(pulsador2);</span><br style="color: rgb(255, 204, 0);">
+<span style="color: rgb(255, 204, 0);">&nbsp;&nbsp;&nbsp; pul_3=digitalRead(pulsador3);</span><br style="color: rgb(255, 204, 0);">
+<br style="color: rgb(255, 204, 0);">
+<span style="color: rgb(255, 204, 0);">&nbsp;</span><br style="color: rgb(255, 204, 0);">
+<span style="color: rgb(255, 204, 0);">&nbsp; //PULSADOR 1</span><br style="color: rgb(255, 204, 0);">
+<span style="color: rgb(255, 204, 0);">&nbsp;if (pul_1==1 &amp;&amp; pul_1_anterior==0&amp;&amp;T_rebote1==0){</span><br style="color: rgb(255, 204, 0);">
+<span style="color: rgb(255, 204, 0);">&nbsp;T_rebote1=millis();//carga el temporizador para rebotes</span><br style="color: rgb(255, 204, 0);">
+<span style="color: rgb(255, 204, 0);">&nbsp;ledV=!ledV;//ejecuto la accion (cambio de estado)</span><br style="color: rgb(255, 204, 0);">
+<span style="color: rgb(255, 204, 0);">&nbsp;digitalWrite (ledverde,ledV);</span><br style="color: rgb(255, 204, 0);">
+<span style="color: rgb(255, 204, 0);">&nbsp;}</span><br style="color: rgb(255, 204, 0);">
+<span style="color: rgb(255, 204, 0);">&nbsp;//cuando pasa el tiempo (T_rebote), inicializo el temporizador de rebotes 1</span><br style="color: rgb(255, 204, 0);">
+<span style="color: rgb(255, 204, 0);">&nbsp;if (T_rebote1!=0){</span><br style="color: rgb(255, 204, 0);">
+<span style="color: rgb(255, 204, 0);">&nbsp; if( millis()-T_rebote1&gt;T_rebote)T_rebote1=0;</span><br style="color: rgb(255, 204, 0);">
+<span style="color: rgb(255, 204, 0);">&nbsp;}</span><br style="color: rgb(255, 204, 0);">
+<span style="color: rgb(255, 204, 0);">&nbsp;pul_1_anterior=pul_1;//si quito esto se produce una pulsacion cada T_rebote.</span><br style="color: rgb(255, 204, 0);">
+<span style="color: rgb(255, 204, 0);">&nbsp; </span><br style="color: rgb(255, 204, 0);">
+<span style="color: rgb(255, 204, 0);">&nbsp; //PULSADOR 2 si mantengo pulsado se produce un pulso cada segundo</span><br style="color: rgb(255, 204, 0);">
+<span style="color: rgb(255, 204, 0);">&nbsp;if (pul_2==1 &amp;&amp;T_rebote2==0){</span><br style="color: rgb(255, 204, 0);">
+<span style="color: rgb(255, 204, 0);">&nbsp;T_rebote2=millis();</span><br style="color: rgb(255, 204, 0);">
+<span style="color: rgb(255, 204, 0);">&nbsp;ledA=!ledA;</span><br style="color: rgb(255, 204, 0);">
+<span style="color: rgb(255, 204, 0);">&nbsp;digitalWrite (ledamarillo,ledA);</span><br style="color: rgb(255, 204, 0);">
+<span style="color: rgb(255, 204, 0);">&nbsp;&nbsp; digitalWrite (ledverde2,ledA);</span><br style="color: rgb(255, 204, 0);">
+<span style="color: rgb(255, 204, 0);">&nbsp;}</span><br style="color: rgb(255, 204, 0);">
+<span style="color: rgb(255, 204, 0);">&nbsp;if (T_rebote2!=0){</span><br style="color: rgb(255, 204, 0);">
+<span style="color: rgb(255, 204, 0);">&nbsp; if( millis()-T_rebote2&gt;1000)T_rebote2=0;&nbsp; //se activa un pulso cada 1000ms mientras P2 este pulsado. </span><br style="color: rgb(255, 204, 0);">
+<span style="color: rgb(255, 204, 0);">&nbsp;}</span><br style="color: rgb(255, 204, 0);">
+<span style="color: rgb(255, 204, 0);">&nbsp;</span><br style="color: rgb(255, 204, 0);">
+<span style="color: rgb(255, 204, 0);">&nbsp; //PULSADOR 3 sin protección contra rebotes</span><br style="color: rgb(255, 204, 0);">
+<span style="color: rgb(255, 204, 0);">&nbsp;if (pul_3==1 &amp;&amp; pul_3_anterior==0){</span><br style="color: rgb(255, 204, 0);">
+<span style="color: rgb(255, 204, 0);">&nbsp;ledR=!ledR;</span><br style="color: rgb(255, 204, 0);">
+<span style="color: rgb(255, 204, 0);">&nbsp;digitalWrite (ledrojo,ledR);</span><br style="color: rgb(255, 204, 0);">
+<br style="color: rgb(255, 204, 0);">
+<span style="color: rgb(255, 204, 0);">&nbsp;}</span><br style="color: rgb(255, 204, 0);">
+<span style="color: rgb(255, 204, 0);">&nbsp;pul_3_anterior=pul_3;</span><br style="color: rgb(255, 204, 0);">
+<span style="color: rgb(255, 204, 0);">&nbsp;</span><br style="color: rgb(255, 204, 0);">
+<br style="color: rgb(255, 204, 0);">
+<span style="color: rgb(255, 204, 0);">&nbsp;&nbsp;&nbsp;&nbsp; </span><br style="color: rgb(255, 204, 0);">
+<span style="color: rgb(255, 204, 0);">&nbsp; }//fin de programa</span><br>
+<br>
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp; </span><br>
+<br>
+<br>
+</div>
+<!-- .......................................menu arduino................................ -->
+<div id="derechamenu"><br>
+<script language="javascript=" type="text/javascript" src="index_files/menuarduino.js"></script><br>
+<br>
+<br>
+<br>
+</div>
+<!-- .......................................pie................................ -->
+<div id="pie">&nbsp;&nbsp; <br>
+<div style="text-align: center;"> Los dias en los que todo te sale mas, es que todo te sale mal<br>
+</div>
+</div>
+<!-- ..................................fin contenedor..................................... -->
+</div>
+
+</body></html>

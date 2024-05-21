@@ -1,0 +1,34 @@
+Al cerrar el magnetotérmico, la instalación esta 
+fuera de servicio.
+Pulsamos rearme para poner la instalación en servicio.
+
+Pulsamos marcha S1 con la instalación en servicio,
+el variador se pone en ON (cierra KA1),
+el motor funciona a 50Hz con una rampa de acelearación
+de 5 segundos.
+Pasado 20 segundos el motor se para (abre KA1) rampa de 
+deceleración de 0seg.
+
+Si se corta la fotocelula cuando el motor esta funcionando,
+la instalación entra en fuera de servicio y el motor se para
+por inyección de corriente continua.
+
+Si pulso la parada de emergencia la instación entra en fuera
+de servicio y el motor se para.
+
+Baliza roja H3 encendida con la instalación fuera de servicio.
+Baliza verde H2 encendida con la instalacion en servicio.
+Piloto verde H1 encendido con el motor en marcha.
+
+La Sirena suena cuando cortamos la fotocelula y el motor esta 
+funcionando, deja de sonar cuando dejamos de cortar la fotocelula.
+
+parámetros del variador
+
+P700=2 terminal
+P701=1  on off
+P702=25 paro por inyección de cc
+P1000=1 Potenciometro motorizado MOP
+P1082= 50Hz frecuencia maxima
+P1120=5  tiempo de aceleración es segundos.
+P1121=0  tiempo de decelaración en segundos.

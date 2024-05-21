@@ -1,0 +1,4 @@
+* El frenado solo se activa al pulsar S1 si el motor esta funcionando.
+* El motor no se puede poner en marcha hasta que haya teminado
+la temporización del frenado.
+

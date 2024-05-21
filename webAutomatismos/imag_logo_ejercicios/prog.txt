@@ -1,0 +1,18 @@
+PROG BIMANUAL
+
+Para activarse el motor se debe de accionar dos pulsadores 
+conectados a I1 e I2 simultaneamenteen un tiempo inferior a medio segundo.
+
+El motor se para al accionar el pulsador conectado a I3.
+
+Si presionamos 1 y pasado 0,60s no se ha presionado 2 o viceversa, el motor no arranca.
+
+
+_________________________________________________________________________________________
+PROG02
+
+
+El tiempo de retardo a la conexión del bloque B01 depende del bloque contador BO2.
+
+Nota: debemos de pulsar sobre el "+" que estan debajo de las puertas.
+

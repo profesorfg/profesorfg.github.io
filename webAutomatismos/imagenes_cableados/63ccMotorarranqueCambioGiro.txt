@@ -1,0 +1,1 @@
+Arranque y cambio de giro de un motor de corriente continua.

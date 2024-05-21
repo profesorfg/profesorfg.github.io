@@ -1,0 +1,46 @@
+FUNCIONAMIENTO.
+Arrancador suave dispone de 3 bornes de alimentación.
+Para que funcione debe tener tensión A1 A2, (A1 fase, A2 Neutro).
+El led superior esta fijo.
+Si le llega tension de fase a IN inicia un arranque progresivo en función del
+tiempo y tensión parametrizado. el led superior esta intermitente.
+
+Pasado el tiempo del arranque, el led superior se apaga y se enciende
+el inferior.
+
+Al desconectar IN, se inicia el paro progresivo en función del tiempo
+de desconexión parametrizado. se apaga el led inferior y se pone intermitente
+ 
+Pasado el tiempo de parada, se queda fijo el led superior.
+
+Si se desconecta el A1, se apagan los led y el arrancador no suministra tensión.
+
+PRÁCTICA.
+MOTOR
+Colocamos el material al principio de la cinta transportador.
+Al pulsar marcha con el piloto apagado, en función de la posición del selector
+tenemos dos funcionamientos
+1) El motor arranca progresivamente, hasta llegar a su velocidad nominal,
+al llegar al primer final de carrera, inicia un paro progresivo
+y al llegar al segundo final de carrera para totalmente.
+
+2) el  motor arranca a velocidad nominal y al llegar al segundo final de carrera para.
+
+PILOTO.
+Indica que la maquina esta en marcha.
+Se enciende al pulsar marcha y se apaga al llegar al segundo final de carrera.
+
+
+
+
+
+
+NOTA:Con el pulsador S3 puedo desconectar el paro progresivo o si el paquete no llega
+a la segunda posición antes de que el arrancador progresivo se pare,  el operario lo
+debe de pulsar para desactivar el piloto y poder volver a repetir el ciclo.
+
+
+
+falta un dibujo con pcsimu
+
+

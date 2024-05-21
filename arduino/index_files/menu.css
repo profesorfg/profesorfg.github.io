@@ -1,0 +1,59 @@
+			/*http://www.falconmasters.com/tutoriales/como-hacer-un-menu-desplegable/*/
+		* {					/*elinina todos los margenes a todo*/
+				margin:0px;
+				padding:0px;
+			}	
+			
+			
+			
+			ul {
+				list-style:none;  /*quita el formato de punto y guiones de inicio de la lista */
+			}
+			
+			.menu > li {   /*li directos se refiere al primer nivel*/      				
+			float:left;
+		/*	box-shadow: 2px 2px 1px 1px #fff; /*sombreado*/
+			}
+			
+			.menu li a {    /*actua sobre todos los elementos de la clase menu  y los selectores a que esten dentro del li*/
+
+				
+				background-color:rgba(59,93,148,1);;
+				color:#fff;     /*color texto*/
+				text-decoration:none;/*elimina el subrayado de los enlaces*/
+				padding:10px 12px; /*10 pixles de altura y 10 pixel largo*/
+				display:block;
+				width: 90px;/*tamanño del bloque*/
+				height: 30px;
+								
+				border: solid 1px #fff;/*borde en blanco*/
+				text-align: center;
+				border-radius: 5px;
+                margin: 1px;
+                
+			}
+			
+			.menu li a:hover { /*actua sobre todos los elementos al pasar el raton*/
+				color:#CF3;
+				background-color:#603;
+				
+			}
+			
+			.menu li ul { /* a todos los submenus */
+				display:none;/*todos los submenus desaparecen del segundo nivel en adelante*/
+				position:absolute; /*con respeto al menu */
+				min-width:140px;
+			}
+			
+			.menu li:hover > ul {/* al menu de segundo nivel al pasar el raton se vuelve visible al recuperar la propiedad display:block que antes tenia display:none*/
+				display:block;
+			}
+			
+			.menu li ul li { /* los li derech que esten dentro de ul que esten dentro de li, osea para los submenus*/
+				position:relative; /* lo pone para poder poner los submenus al lado*/
+			}
+			
+			.menu li ul li ul {/* al tener posicion relativa los podemos desplazar -140 pix a la derecha*/				
+				right:-115px; /*este se aplica a todos los submenus*/
+				top:0px;
+			}

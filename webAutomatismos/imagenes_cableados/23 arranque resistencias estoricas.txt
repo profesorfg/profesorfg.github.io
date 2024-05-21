@@ -1,0 +1,7 @@
+Limitar la Intensidad en el arranque ponemos resistencia en el estator,
+a media que el motor acelera reducimos resistencias hasta eliminarlas.
+
+El pulsar marcha cerramos KM1, pasado unos segundos cerramos KM2 y pasados
+unos segundos cerramos KM3.
+
+Los contactores KM2 y KM3 pueden funcionar simulataneamente.

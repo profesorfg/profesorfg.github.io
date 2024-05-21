@@ -1,0 +1,2 @@
+Con el pulsador S2 el motor se pone en marcha
+Con el pulsador S1 o fallo térmico el motor se para.

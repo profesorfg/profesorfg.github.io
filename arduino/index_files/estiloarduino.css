@@ -1,0 +1,108 @@
+body {
+    background-image: url(fondoizq.gif); 
+
+font-size: 12px; 
+font-family: verdana; color:  rgb(55,55,55); 
+text-align:justify; 
+margin-left: 0in;
+ margin-right: 0in}
+
+
+h1 {background: aqua; font-size: 16px; font-weight: bold; color: rgb(100, 0, 0)}
+
+h2 {font-size: 21px; font-weight: bold; color: rgb(255, 255, 25)} 
+
+/* estilo link-------------------*/
+A:link, A:visited { text-decoration: none }
+a:link {color: rgb(255,204,153) }
+a:visited {color:  rgb(255,204,255) }
+a:hover {color: rgb(255,255,255)} /*cuando pasas el raton*/
+a:active {color: red}
+#derechamenu a:link {color:  #F3F781 }
+#derechamenu a:visited {color:  rgb(153,255,153) }
+#derechamenu a:hover {color:  #FFFFFF }
+
+
+#contenedor{
+
+
+top:0px;
+}
+ /* ...............................Cabezera ardunio..................*/  
+ #cabezera{
+  	
+        width:50%;
+ height:20%;
+   
+}
+#logoarduino{
+  	
+        width:45%;
+ height:20%;
+   
+}
+/*.................... menu de la superior...........................  */
+#menusuperior{
+    position:absolute;
+   margin-left: 20em;
+   margin-top: 1em;
+	
+	top:0px;
+width:100%;     
+}
+/*............................... menu de la izquierda....................  */
+#izquierda{
+    background-color: rgb(0,150,150);
+
+
+
+        height:100%;
+  
+
+
+        float:left;
+        width:15%;
+ clear:both;
+}
+/* ............................contenido central........................  */
+#derecha{
+          
+  /*   background-color: rgb(0,150,150);*/
+background-image: url(fondo.gif);
+
+   float:left;
+        width:65%;
+font-size: 12px; 
+font-family: verdana; color:  rgb(255,255,255); 
+
+
+text-align:justify; 
+padding: 10px;
+
+/*pretendia hace un margen dentro de DIV central aqui llamado derecha
+manteniendo el reparto 15%,65%20%, pero no lo consegui, el padding o
+el margin me ocupan espacio y tuve que reducir derecha menu a ojo a 18% */
+
+
+}
+/* .......................menu de la derecha.................  */
+
+#derechamenu{
+
+
+  float:left;
+   width:15%;   
+
+
+
+     
+
+
+}
+#pie{
+         height:20%;
+        
+       
+    clear:both;
+}
+

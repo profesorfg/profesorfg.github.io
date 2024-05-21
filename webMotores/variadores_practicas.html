@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Motores</title>
+
+    <link href="../index_files/estilo.css" rel="stylesheet" type="text/css">
+    <script src="../index_files/menu.js"></script>
+    <script defer src="index_files/cambiocableados.js"> </script>
+
+    <meta content="profesorfg" name="author">
+    <meta content="automatizacion industrial" name="description">
+    <meta name="keywords" content="automatas electricidad">
+    <meta charset="UTF-8">
+    <script type="text/javascript">
+        var mensaje0 = "MEZCLADORA <br><br>Una mezcladora se pone en marcha con un pulsador 25 segundos a 35 con una rampa de aceleración de 10 segundos, después aumenta la velocidad a 50 Hz y cuando pulse paro realiza una rampa de decelaracion de 20 segundos y se para.<br>P003=2 Nivel extendido <br> P010=0 Preparado<br>P700=2 Terminal<br>P701=1 On Derechas<br>P702=16 frecuencia fija selección directa FF 35<br>P703=17 parada OFF FF 50Hz<br>P1000=3 Frecuencias fijas<br>P1002=35 Hz frecuencia de entrada 2<br>P1003= 15 Hz frecuencia de entrada 3<br>P1080= 0 Hz fr mininma<br>P1120= 14 segundos aceleración a 50 Hz<br>P1121 =20 seg tiempo de deceleracion.<br>Funcionamiento:<br>Para funcionar a 35 hz tiene que estar a 24Vcc la entrada 8 y 9<br>Para funcionar a 50Hz tiene que estar a 24Vcc las entradas 8,9,10 (8 on/off, 9y 10 suma 35Hz+15Hz).<br><br>";
+        var mensaje1 = "MEZCLADORA <br><br>Una mezcladora se pone en marcha con un pulsador 25 segundos a 35 con una rampa de aceleración de 10 segundos, después aumenta la velocidad a 50 Hz y cuando pulse paro realiza una rampa de decelaracion de 20 segundos y se para.<br>P003=2 Nivel extendido <br> P010=0 <br>P700=2 Terminal<br>P701=1 On Derechas<br>P702=16 frecuencia fija selección directa FF 35<br>P703=17 parada OFF FF 50Hz<br>P1000=3 Frecuencias fijas<br>P1002=35 Hz frecuencia de entrada 2<br>P1003= 50 Hz frecuencia de entrada 3<br>P1080= 0 Hz fr mininma<br>P1120= 14 segundos aceleración a 50 Hz<br>P1121 =20 seg tiempo de deceleracion.<br>Funcionamiento:<br>Para funcionar a 35 hz tiene que estar a 24Vcc la entrada 8 y 9<br>Para funcionar a 50Hz tiene que estar a 24Vcc las entradas 8,10.<br><br> ";
+        var mensaje2 = "PUERTA DE GARAJE<br><br> Una puerta de garaje se abre a 45Hz cuando pulsamos el pulsador de subida,al llegar al final de carrera se para, esta 5 segundos abierta y se cierra a 35Hz hasta llegar al final de carrera inferior<br> ";
+        var mensaje3 = "PUESTA EN SERVICIO<br><br>Al cerrar el magnetotérmico, la instalación esta fuera de servicio. <br>Pulsamos rearme para poner la instalación en servicio.<br>Pulsamos marcha S1 con la instalación en servicio, <br>el variador se pone en ON (cierra KA1),el motor funciona a 50Hz con una rampa de acelearación de 5 segundos.<br>Pasado 20 segundos el motor se para (abre KA1) rampa de deceleración de 0seg. <br>Si se corta la fotocelula cuando el motor esta funcionando,la instalación entra en fuera de servicio y el motor se para por inyección de corriente continua.<br>Si pulso la parada de emergencia la instación entra en fuera de servicio y el motor se para. <br>Baliza roja H3 encendida con la instalación fuera de servicio.<br>Baliza verde H2 encendida con la instalacion en servicio. <br>Piloto verde H1 encendido con el motor en marcha.<br>La Sirena suena cuando cortamos la fotocelula y el motor esta funcionando, deja de sonar cuando dejamos de cortar la fotocelula.<br><br> ";
+        var mensaje4 = "TITULO<bT><br> ";
+
+        function ejer00() {
+            document.getElementById('matrix').src = "imagenes_Vpracticas/agitador.png";
+            document.getElementById("p1").innerHTML = mensaje0;
+        }
+
+        function ejer01() {
+            document.getElementById('matrix').src = "imagenes_Vpracticas/agitador2.png";
+            document.getElementById("p1").innerHTML = mensaje1;
+        }
+
+        function ejer02() {
+            document.getElementById('matrix').src = "imagenes_Vpracticas/PuertaGaraje.png";
+            document.getElementById("p1").innerHTML = mensaje2;
+        }
+
+        function ejer03() {
+            document.getElementById('matrix').src = "imagenes_Vpracticas/Puesta en servicio.png";
+            document.getElementById("p1").innerHTML = mensaje3;
+        }
+
+        function ejer04() {
+            document.getElementById('matrix').src = "imagenes_Vpracticas/agitador2.png";
+            document.getElementById("p1").innerHTML = mensaje4;
+        }
+
+        function ejer05() {
+            document.getElementById('matrix').src = "imagenes_Vpracticas/agitador2.png";
+            document.getElementById("p1").innerHTML = mensaje5;
+        }
+
+        function ejer06() {
+            document.getElementById('matrix').src = "imagenes_Vpracticas/agitador2.png";
+            document.getElementById("p1").innerHTML = mensaje6;
+        }
+
+        function ejer07() {
+            document.getElementById('matrix').src = "imagenes_Vpracticas/agitador2.png";
+            document.getElementById("p1").innerHTML = mensaje7;
+        }
+
+        function ejer08() {
+            document.getElementById('matrix').src = "imagenes_Vpracticas/agitador2.png";
+            document.getElementById("p1").innerHTML = mensaje8;
+        }
+
+        function ejer09() {
+            document.getElementById('matrix').src = "imagenes_Vpracticas/agitador2.png";
+            document.getElementById("p1").innerHTML = mensaje9;
+        }
+
+        function ejer10() {
+            document.getElementById('matrix').src = "imagenes_Vpracticas/agitador2.png";
+            document.getElementById("p1").innerHTML = mensaje10;
+        }
+
+        function ejer11() {
+            document.getElementById('matrix').src = "imagenes_Vpracticas/agitador2.png";
+            document.getElementById("p1").innerHTML = mensaje11;
+        }
+
+        function ejer12() {
+            document.getElementById('matrix').src = "imagenes_analizar/bornero esquema.png";
+            document.getElementById('texto').data = "imagenes_analizar/bornero esquema.txt";
+        }
+
+        function ejer13() {
+            document.getElementById('matrix').src = "imagenes_analizar/borneros representacion.png";
+            document.getElementById('texto').data = "imagenes_analizar/borneros representacion.txt";
+        }
+
+        function ejer14() {
+            document.getElementById('matrix').src = "imagenes_analizar/bornero foto.jpg";
+            document.getElementById('texto').data = "imagenes_analizar/bornero foto.txt";
+        }
+
+        function ejer15() {
+            document.getElementById('matrix').src = "imagenes_analizar/frenado a contracorriente.png";
+            document.getElementById('texto').data = "imagenes_analizar/frenado a contracorriente.txt";
+        }
+
+        function ejer16() {
+            document.getElementById('matrix').src = "imagenes_analizar/arrancador progresivo.png";
+            document.getElementById('texto').data = "imagenes_analizar/arrancador progresivo.txt";
+        }
+
+        function ejer17() {
+            document.getElementById('matrix').src = "imagenes_analizar/frenado a cc practica.png";
+            document.getElementById('texto').data = "imagenes_analizar/frenado a cc practica.txt";
+        }
+
+        function ejer18() {
+            document.getElementById('matrix').src = "imagenes_analizar/cuando paro KM.png";
+            document.getElementById('texto').data = "imagenes_analizar/cuando paro KM.txt";
+        }
+
+    </script>
+</head>
+
+<body>
+
+
+    <div id="contenedor3">
+
+        <header>
+            <nav>
+                <menu-principal></menu-principal>
+            </nav>
+            <a name="mozToc"> </a>
+
+        </header>
+        <div id=lateral>
+
+            <!--      <input type="checkbox" id="check_menu">
+            <label for="check_menu" id="label_check">
+                <img class="icon_menu_lat" src="../imagenes/icono1.png" />
+            </label>
+
+
+            <div class="menu_lateral">
+                <a href="programados.html">S7-200</a><br>
+                <a href="LOGO.html">LOGO</a><br>
+                <a href="Domo_logo.html">DOMÓTICA CON LOGO</a><br>
+                <a href="tiaportal.html">TIA PORTAL</a><br>
+
+            </div>    -->
+        </div>
+        <main>
+
+           
+            <h1>PRÁCTICAS CON VARIADORES</h1>
+           
+            <!-- ///////////////////TEXTO QUE DEBERIA DE CAMBIAR/////////////////// -->
+        
+          
+                <p id="p1">SELECCIONA EN EL MENÚ DE LA DERECHA EL
+                    EJERCICIO <br>
+                </p>
+          
+            <br>
+            <!-- ///////////////////IMAGEN QUE DEBERIA DE CAMBIAR/////////////////// -->
+            <div style="text-align: center;"><img style="width: 900px; height: 600px;" src="imagenes_Vpracticas/inicio.png" id="matrix">&nbsp;
+                <span style="font-weight: bold;"></span><br>
+                <br>
+                <br>
+            </div>
+        </main>
+        <aside>
+            <section>
+                <a href="https://drive.google.com/drive/folders/1dtCn0mh6JIUq14bGp1IfUp2GkU2Cj0RX?usp=sharing" target="_blank">ESQUEMAS en CADeSIMU</a><br>
+                     <a href="https://drive.google.com/open?id=0B2Hb811x1P1fTzFuck9LYUNQYWM" target="_blank">Descarga
+                todos los esquemas en CADe-simu </a><br>
+            <br>
+            <br>
+            </section>
+            <section>
+                <br>
+                <br>
+                PRÁCTICAS CON VARIADORES
+
+                <input value="Puerta de Garaje" onclick="ejer02();" type="button"><br>
+                <input value="Puesta en servicio" onclick="ejer03();" type="button"><br>
+            </section>
+
+
+        </aside>
+        <footer>CONSUMO MEDIO MENSUAL DE
+            UNA VIVIENDA 270 kWh</footer>
+    </div>
+
+</body>
+
+</html>

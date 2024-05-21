@@ -1,0 +1,38 @@
+PLANTAS EXTREMAS:
+
+Condicion de bajada a la planta cero y la de
+subida a la planta superior se realizan con las 
+misma lógica.
+
+El contactor auxilar KA0B bajada a la planta cero
+se activa al pulsar cualquiera de los pulsadores
+que señalados con la planta 0 (SE0, SI0) 
+y el motor no esta parado (KAP cerrado).
+
+Se desactiva al llegar a la planta 0 (FC0 se abre).
+
+PLANTAS INTERMEDIAS:
+
+El automatismo de la plantas intermidias tengo que tener
+en cuenta donde esta el ascensor y en función del pulsador
+activado el ascensor sube, si estaba en una planta inferior
+baja si estaba en una planta superior ó no hace nada si esta 
+en la planta a la que se llama.
+
+KA1S es el contacto auxilar que hace subir el ascensor a la 
+planta 1, 
+se activara con los pulsador de la planta 1 (SI1 ó SE1) y si esta
+en una planta inferior ( en este caso solo FC0 cerrado) y el
+motor no esta funcionando ( KAP cerrado).
+
+Se desactiva al llegar a la planta 1 (FC1 se abre).
+
+
+KA1B es el contacto auxilar que hace bajar el ascensor a la 
+planta 1, 
+se activara con los pulsador de la planta 1 (SI1 ó SE1) y si esta
+en una planta superior ( en este caso puede estar en la  planta 2 
+"FC2 cerrado" ó en la planta 3 "FC3 cerrado") y el motor 
+no esta funcionando ( KAP cerrado).
+
+Se desactiva al llegar a la planta 1 (FC1 se abre).

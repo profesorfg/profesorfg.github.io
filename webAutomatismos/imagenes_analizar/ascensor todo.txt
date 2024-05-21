@@ -1,0 +1,47 @@
+Automatismo ascensor de 4 plantas.
+
+Pulsadores:
+
+Tenemos un pulsador por planta. 
+SE0: Pulsador exterior planta 0
+SE1: Pulsador exterior planta 1
+SE2: Pulsador exterior planta 2
+SE3: Pulsador exterior planta 3
+
+En el interior de ascensor tenemos 4 pulsadores:
+SI0: Pulsador interior para ir a la planta 0
+SI1: Pulsador interior para ir a la planta 1
+SI2: Pulsador interior para ir a la planta 2
+SI3: Pulsador interior para ir a la planta 3
+
+
+Finales de carrera FC:
+
+SFCPA, FC puerta abierta (cerrado con la puerta cerrada)
+
+FC0: FC ascensor en planta 0 ( abierto cuando esta en la planta 0)
+FC1: FC ascensor en planta 1 ( abierto cuando esta en la planta 1)
+FC2: FC ascensor en planta 2 ( abierto cuando esta en la planta 2)
+FC3: FC ascensor en planta 0 ( abierto cuando esta en la planta 3)
+
+
+Contactores:
+
+Potencia
+KM1: el ascensor sube
+KM2: el ascensor baja
+
+Auxiliares: (solo hay una activo)
+KA0B: bajar a la planta 0
+KA1B: bajar a la planta 1
+KA2B: bajar a la planta 2
+KA1S: subir a la planta 1
+KA2S: subir a la planta 2
+KA3S: subir a la planta 3
+
+
+
+
+Funcionamiento: 
+Con la puerta del ascensor cerrada se activa un pulsador de una planta
+y el ascensor se dirige a esa planta, al llegar a ella se para.

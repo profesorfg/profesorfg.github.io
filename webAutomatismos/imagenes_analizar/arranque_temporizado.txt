@@ -1,0 +1,14 @@
+Controlamos la puesta en marcha de un motor con un solo pulsador de marcha.
+
+Al accionar el pulsador "marcha" el motor se pone en marcha y se enciende un 
+piloto de señalización verde.
+
+Transcurrido el tiempo seleccionado en el temporiazador el motor y la señalización
+se desactivan.
+
+En caso de sobrecarga del motor o falta de fase, se activa el rele térmico parando 
+el motor y enciendiendo un piloto de señalización rojo.
+
+
+
+

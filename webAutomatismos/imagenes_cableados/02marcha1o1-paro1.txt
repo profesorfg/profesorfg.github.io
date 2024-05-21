@@ -1,0 +1,2 @@
+El motor se pone en marcha con S2 o S3
+Se para con S1 o fallo térmico

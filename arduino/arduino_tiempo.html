@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+<link href="index_files/estiloarduino.css" rel="stylesheet" type="text/css">
+<link href="index_files/menu.css" rel="stylesheet" type="text/css">
+<meta charset="UTF-8">
+<title>arduino</title>
+
+<meta content="profesorfg" name="author">
+<meta content="profesorfg enlaces" name="description">
+<meta name="keywords" content="profesorfg enlaces"></head>
+<body style="margin-top: 0px; height: 598px;">
+<!-- Comentario -->
+<div id="contenedor"><!-- ............................Contendor....................... --><!-- -----------------menu superior............................................ -->
+<div id="menusuperior">
+<script language="javascript=" type="text/javascript" src="index_files/menu_general.js"></script></div>
+<!-- ........................menu izquierda.............................-->
+<div id="izquierda">
+<script language="javascript=" type="text/javascript" src="index_files/menuizq.js"></script><br>
+<br>
+<br>
+<br>
+</div>
+<!-- ............................contenido central................... -->
+<div id="derecha">
+<br>
+<br><br><br><br><br>
+<br>
+<h1><a class="mozTocH1" name="mozTocId561800"></a>CONTADOR TIEMPO DE FUNCIONAMIENTO.<br>
+</h1>
+<br>
+<ul id="mozToc">
+</ul>
+<a href="https://www.tinkercad.com/things/1NT2g1xxRv7"><img style="border: 0px solid ; width: 720px; height: 561px;" alt="Tiempo de funcionamiento" src="imagenes/arduino_tiempo_funcionamiento.png"></a><br>
+<br>
+<br>
+<ul>
+  <li>Interes</li>
+</ul>
+<ul>
+  <ul>
+    <li>Contador de tiempo con la funcion milis()</li>
+  </ul>
+</ul>
+<br>
+&nbsp;<span style="color: rgb(255, 204, 51);"> /*Intermitente Led verde
+cada 10 segundos</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">mediante contador de tiempo de
+funcionamiento</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">*/</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">int&nbsp;&nbsp;
+T_Transcurrido=0;&nbsp; //temporizacion </span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">int T_comienzo=0;</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">int segundos=0;</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">int minutos=0;</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">int ledverde=12;</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">int ledrojo=10;</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;int led;//comprueba el
+estado del led rojo</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp; </span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">void setup(){</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;pinMode(ledverde,OUTPUT);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;pinMode(ledrojo,OUTPUT);</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;
+Serial.begin(9600);&nbsp;&nbsp; </span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">}</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp; void loop(){</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp;
+led=digitalRead(ledrojo);</span>//Carga el valor de la salida del led
+rojo en la variable led<br>
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp; </span>//contador de
+segundos y minutos desde el comienzo del programa<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp; if (T_comienzo==0)
+T_comienzo=millis();//cuando el T_comienzo vale 0 cargo el tiempo.</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;T_Transcurrido=
+millis()-T_comienzo;</span>//mido el tiempo entre el actual y cuando el
+comienzo<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);"><br>
+// si pasa un segundo incremento un segundo, y a los 60s incremento un
+minuto</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;if
+(T_Transcurrido&gt;1000){</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">T_Transcurrido=0; //reinicializo</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">T_comienzo=0;</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">segundos++;// cuento el tiempo</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">if (segundos==60){</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp; minutos++;</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp; segundos=0;</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">}</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;} </span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;</span>//utilizacion del
+temporizador para imprimir y para el intermitente de 1 segundo<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">if (T_comienzo==0){
+//T_comienzo vale 0 cada segundo, aprovecho para imprimir en pantalla</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;Serial.print ("minutos de
+funcionamieto");</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;Serial.println(minutos);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;Serial.print("segundo de
+funcionamiento ");</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;Serial.println(segundos);</span><br>
+//otra forma de hacer un cambio de estado, ya sabemos que la mejor es
+estado=!estado<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;//INTERMITENTE ROJO DE 1
+SEGUNDO</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp; if ( led ==1 )&nbsp;
+digitalWrite(ledrojo,LOW);</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;else&nbsp; digitalWrite
+(ledrojo,HIGH);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;Serial.println(led);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;}</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;//realizar el
+intermitente cada 10 segundos con el temporizador</span> <br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;if (segundos==0)
+digitalWrite(ledverde,HIGH);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;if
+(segundos==10)digitalWrite(ledverde,LOW);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp; if (segundos==20)
+digitalWrite(ledverde,HIGH);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;if
+(segundos==30)digitalWrite(ledverde,LOW);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp; if (segundos==40)
+digitalWrite(ledverde,HIGH);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;if
+(segundos==50)digitalWrite(ledverde,LOW);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp; }//fin de programa</span><br>
+&nbsp; <br>
+<br>
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp; </span><br>
+<br>
+<br>
+</div>
+<!-- .......................................menu arduino................................ -->
+<div id="derechamenu"><br>
+<script language="javascript=" type="text/javascript" src="index_files/menuarduino.js"></script><br>
+<br>
+<br>
+<br>
+</div>
+<!-- .......................................pie................................ -->
+<div id="pie">&nbsp;&nbsp; <br>
+<div style="text-align: center;"> El hombre es dueño de sus pensamiento
+y esclavo de sus palabras.
+</div>
+</div>
+<!-- ..................................fin contenedor..................................... -->
+</div>
+
+</body></html>

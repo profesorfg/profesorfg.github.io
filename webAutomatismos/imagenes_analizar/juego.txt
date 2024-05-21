@@ -1,0 +1,15 @@
+Presentamos el esquema eléctrico de un automatismo para realizar
+un juego de preguntas.
+
+La dificultad del automatismos consiste en que solo se encienda
+el piloto del primer concursante que pulse de  cuatro concursantes,
+a partir  de que el moderador de permiso.
+
+Si el moderador no da permiso, se encenderan todos los pilotos de
+los concursantes que han pulsando antes de tiempo y quedaran eliminados.
+
+El permiso se otorga cuando se apaga el piloto central. 
+
+
+Para mas información copia esta dirección en la barra de tu navegador:
+http://profesorfg.blogspot.com.es/2013/04/automatismos-juego.html

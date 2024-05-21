@@ -1,0 +1,8 @@
+Al pulsar paro, el motor intenta hacer una inversión de giro.
+La resistencia en el circuito de potencia me limita la intensidad en el 
+cambio de giro.
+
+El retardo a la desconexión del temporizador, para el motor antes de que 
+empieze a girar en sentido contrario.
+
+

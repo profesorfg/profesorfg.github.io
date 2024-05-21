@@ -1,0 +1,2 @@
+El motor se pone en marcha pulsado S1 y S3 SIMULTANEAMENTE.
+Se para con S2 o fallo térmico.

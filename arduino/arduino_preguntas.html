@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+<link href="index_files/estiloarduino.css" rel="stylesheet" type="text/css">
+<link href="index_files/menu.css" rel="stylesheet" type="text/css">
+<meta charset="UTF-8">
+<title>arduino</title>
+
+<meta content="profesorfg" name="author">
+<meta content="profesorfg enlaces" name="description">
+<meta name="keywords" content="profesorfg enlaces"></head>
+<body style="margin-top: 0px; height: 598px;">
+<!-- Comentario -->
+<div id="contenedor"><!-- ............................Contendor....................... --><!-- -----------------menu superior............................................ -->
+<div id="menusuperior">
+<script language="javascript=" type="text/javascript" src="index_files/menu_general.js"></script></div>
+<!-- ........................menu izquierda.............................-->
+<div id="izquierda">
+<script language="javascript=" type="text/javascript" src="index_files/menuizq.js"></script><br>
+<br>
+<br>
+<br>
+</div>
+<!-- ............................contenido central................... -->
+<div id="derecha">
+<br><br><br><br><br><br><br>
+<font style="font-weight: bold; font-style: italic; color: yellow;" size="+3">JUEGO DE PREGUNTAS</font><br>
+
+<br>
+<ul id="mozToc">
+</ul>Arduino realiza preguntas, que
+contestamos a traves de pulsadores,<br>
+arduino nos dice si hemos acertado y al final del programa el numero de
+preguntas, acertadas.<br>
+<br><br>
+&nbsp;&nbsp;&nbsp; <br>
+<br>
+Interes:<br>
+<ul>
+  <li>Funciones<br>
+  </li>
+  <li>Comparación de variable tipo caracter "char"<br>
+  </li>
+  <li>Monitor serial como salida.<br>
+  </li>
+  <li>Instrucción While<br>
+  </li>
+</ul>
+<br>
+<h1>&nbsp;Preguntas.</h1>
+Realizamos una función para resolver.<br><br>
+<a href="https://www.tinkercad.com/things/6lZsLECObzz"><img style="border: 0px solid ; width: 744px; height: 568px;" alt="Preguntas" src="imagenes/arduino_preguntas.png"></a><br>
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">int ledverde=12;</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);"></span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">int ledrojo=10;</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);"></span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">int pulsador1=2;</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">int pulsador2=3;</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">int pulsador3=4;</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">int aciertos=0;</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">char respuesta;</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">char solucion;</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp; </span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">void setup(){</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;pinMode(ledverde,OUTPUT);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);"></span><span style="color: rgb(255, 204, 51);">&nbsp; pinMode(ledrojo,OUTPUT);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);"></span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp; pinMode(pulsador1,INPUT);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;pinMode(pulsador2,INPUT);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;pinMode(pulsador3,INPUT);</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;
+Serial.begin(9600);&nbsp;&nbsp; </span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">}</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">void resuelve(){</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp; while (
+digitalRead(pulsador1)==LOW &amp;&amp; digitalRead(pulsador2)==LOW
+&amp;&amp; digitalRead(pulsador3)==LOW)</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;{}</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;if
+(digitalRead(pulsador1)== HIGH) respuesta='A';</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">if
+(digitalRead(pulsador2)==HIGH) respuesta='B';</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">if
+(digitalRead(pulsador3)==HIGH) respuesta='C';</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">if (respuesta==solucion){</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">Serial.println ("correcta");</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">digitalWrite (ledverde,HIGH);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">delay (1000);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">digitalWrite (ledverde,LOW);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">delay (1000);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">digitalWrite (ledverde,HIGH);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">delay (1000);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">digitalWrite (ledverde,LOW);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">aciertos++;</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">}</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">if (respuesta!=solucion){</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">Serial.println ("fallo");</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">digitalWrite (ledrojo,HIGH);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">delay (1000);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">digitalWrite (ledrojo,LOW);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">delay (1000);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">digitalWrite (ledrojo,HIGH);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">delay (1000);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">digitalWrite (ledrojo,LOW);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">}</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">}</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp; void loop(){</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">Serial.println("Cual es la
+capital de Espana");</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">Serial.println("A: Madrid");</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">Serial.println("B: Lisboa");</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">Serial.println("C:Dublin");</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">solucion='A';</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">resuelve();</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp; </span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">Serial.println("Como se llaman
+la palabras que se pronuncia igual pero se escriben de forma distinta");</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">Serial.println("A: Sinonimas");</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">Serial.println("B:
+Polisemicas");</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">Serial.println("C: las dos
+respuestas son mentita");</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">solucion='C';</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">resuelve();&nbsp; </span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp; </span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp; </span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp; </span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">Serial.print("Has acertado ");</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">Serial.print (aciertos);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">Serial.println (" respuestas ");</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">Serial.println ("Si quieres
+jugar otra vez pulsa una tecla");</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">while (
+digitalRead(pulsador1)==LOW &amp;&amp; digitalRead(pulsador2)==LOW
+&amp;&amp; digitalRead(pulsador3)==LOW)</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;{}</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;aciertos=0;</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;for (int n=0;n&lt;10;n++){</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp; Serial.println(); //
+escribo 10 lineas en blanco simulando un borrado de pantalla</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;}</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;delay(500);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">}</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<br>
+<br>
+<br>
+<br>
+<br><h1>
+PREGUNTAS 2</h1>
+<br>
+Realizo funciones para preguntas y para respuestas.<br>
+Archivo preguntas 1<br><br><a href="https://www.tinkercad.com/things/dkrcWSeHKay"><img style="border: 0px solid ; width: 744px; height: 570px;" alt="PREGUNTAS 2" src="imagenes/arduino_preguntas.png"></a><br><br>
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;/* En este programa
+trabajamos la funciones,<br>
+Dos funciones son dos preguntas.<br>
+Otra funcion me comprueba si la respuesta es correcta o no<br>
+Si acierto me lo dice arduino através del monitor serie y el led verde
+parpadea<br>
+Si fallo, me lo dice arduino através del monitor serie y el led rojo
+parpadea<br>
+*/<br>
+<br>
+int ledverde=12;<br>
+<br>
+int ledrojo=10;<br>
+<br>
+int pulsador1=2;<br>
+int pulsador2=3;<br>
+int pulsador3=4;<br>
+// VALORES DEL PROGRAMA<br>
+int aciertos=0;<br>
+char respuesta;<br>
+char solucion;<br>
+<br>
+&nbsp;&nbsp; <br>
+void setup(){<br>
+&nbsp;pinMode(ledverde,OUTPUT);<br>
+&nbsp;&nbsp; pinMode(ledrojo,OUTPUT);<br>
+&nbsp;&nbsp;<br>
+&nbsp; pinMode(pulsador1,INPUT);<br>
+&nbsp;pinMode(pulsador2,INPUT);<br>
+&nbsp;pinMode(pulsador3,INPUT);<br>
+<br>
+&nbsp; Serial.begin(9600);&nbsp;&nbsp; <br>
+}<br>
+<br>
+&nbsp; void pregunta1(){<br>
+Serial.println("Cual es la capital de Espańa");<br>
+Serial.println("A: Madrid");<br>
+Serial.println("B: Lisboa");<br>
+Serial.println("C:Dublin");<br>
+<br>
+solucion='A';<br>
+&nbsp; }<br>
+&nbsp; void pregunta2(){<br>
+Serial.println(</span><span style="color: rgb(255, 204, 51);">"</span><span style="color: rgb(255, 204, 51);">Como se llaman la palabras que se pronuncia igual pero
+se escriben de forma distinta</span><span style="color: rgb(255, 204, 51);">"</span><span style="color: rgb(255, 204, 51);">);<br>
+Serial.println(</span><span style="color: rgb(255, 204, 51);">"</span><span style="color: rgb(255, 204, 51);">A: Sinonimas</span><span style="color: rgb(255, 204, 51);">"</span><span style="color: rgb(255, 204, 51);">);<br>
+Serial.println(</span><span style="color: rgb(255, 204, 51);">"</span><span style="color: rgb(255, 204, 51);">B: Polisemicas</span><span style="color: rgb(255, 204, 51);">"</span><span style="color: rgb(255, 204, 51);">);<br>
+Serial.println(</span><span style="color: rgb(255, 204, 51);">"</span><span style="color: rgb(255, 204, 51);">C: Hominimas</span><span style="color: rgb(255, 204, 51);">"</span><span style="color: rgb(255, 204, 51);">);<br>
+solucion='C';<br>
+&nbsp; }&nbsp; <br>
+&nbsp; <br></span><span style="color: rgb(255, 204, 51);">void resuelve(){</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp; while (
+digitalRead(pulsador1)==LOW &amp;&amp; digitalRead(pulsador2)==LOW
+&amp;&amp; digitalRead(pulsador3)==LOW)</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;{}</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;if
+(digitalRead(pulsador1)== HIGH) respuesta='A';</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">if
+(digitalRead(pulsador2)==HIGH) respuesta='B';</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">if
+(digitalRead(pulsador3)==HIGH) respuesta='C';</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">if (respuesta==solucion){</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">Serial.println ("correcta");</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">digitalWrite (ledverde,HIGH);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">delay (1000);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">digitalWrite (ledverde,LOW);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">delay (1000);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">digitalWrite (ledverde,HIGH);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">delay (1000);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">digitalWrite (ledverde,LOW);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">aciertos++;</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">}</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">if (respuesta!=solucion){</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">Serial.println ("fallo");</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">digitalWrite (ledrojo,HIGH);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">delay (1000);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">digitalWrite (ledrojo,LOW);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">delay (1000);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">digitalWrite (ledrojo,HIGH);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">delay (1000);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">digitalWrite (ledrojo,LOW);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">}</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">}</span><br><span style="color: rgb(255, 204, 51);">
+&nbsp; <br>
+void loop(){<br>
+pregunta1();<br><br>resuelve();<br>
+<br>
+pregunta2();<br>
+&nbsp;<br>
+&nbsp;resuelve();<br>
+<br>
+<br>
+<br>
+<br>
+Serial.print("Has acertado ");<br>
+Serial.print (aciertos);<br>
+Serial.println (" preguntas ");<br>
+Serial.println ("Si quieres jugar otra vez pulsa una tecla");<br>
+while ( digitalRead(pulsador1)==LOW || digitalRead(pulsador2)==LOW ||
+digitalRead(pulsador3)==LOW)<br>
+&nbsp;{}<br>
+&nbsp;aciertos=0;<br>
+}// fin de programa.<br>
+<br>
+<br>
+<br></span><h1><span style="color: rgb(255, 204, 51);">
+</span>A JUGAR PREGUNTAS 3</h1><a href="https://www.tinkercad.com/things/6YTB7fyXvoz%20"><img style="border: 0px solid ; width: 744px; height: 570px;" alt="PREGUNTAS 3" src="imagenes/arduino_preguntas.png"></a><br>
+<br>
+<span style="color: rgb(255, 204, 51);">//A disfrutar un programa con
+10 preguntas nivel 3 de primaria</span><br>
+<span style="color: rgb(255, 204, 51);">int ledverde=12;</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);"></span><span style="color: rgb(255, 204, 51);">int ledrojo=10;</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);"></span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">int pulsador1=2;</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">int pulsador2=3;</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">int pulsador3=4;</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">int aciertos=0;</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">char respuesta;</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">char solucion;</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp; </span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">void setup(){</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;pinMode(ledverde,OUTPUT);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp; pinMode(ledrojo,OUTPUT);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);"></span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp; pinMode(pulsador1,INPUT);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;pinMode(pulsador2,INPUT);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;pinMode(pulsador3,INPUT);</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;
+Serial.begin(9600);&nbsp;&nbsp; </span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">}</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">void resuelve(){</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp; while (
+digitalRead(pulsador1)==LOW &amp;&amp; digitalRead(pulsador2)==LOW
+&amp;&amp; digitalRead(pulsador3)==LOW)</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;{}</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;if
+(digitalRead(pulsador1)== HIGH) respuesta='A';</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">if
+(digitalRead(pulsador2)==HIGH) respuesta='B';</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">if
+(digitalRead(pulsador3)==HIGH) respuesta='C';</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">if (respuesta==solucion){</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">Serial.println ("correcta");</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">digitalWrite (ledverde,HIGH);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">delay (1000);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">digitalWrite (ledverde,LOW);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">delay (1000);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">digitalWrite (ledverde,HIGH);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">delay (1000);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">digitalWrite (ledverde,LOW);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">aciertos++;</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">}</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">if (respuesta!=solucion){</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">Serial.println ("fallo");</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">digitalWrite (ledrojo,HIGH);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">delay (1000);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">digitalWrite (ledrojo,LOW);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">delay (1000);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">digitalWrite (ledrojo,HIGH);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">delay (1000);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">digitalWrite (ledrojo,LOW);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">}</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">}</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp; void loop(){</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">//--------------pregunta-----------------------------</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">Serial.println("Las palabra que
+tiene dos o mas significados se llaman");</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">Serial.println("A:
+Polisemicas");</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">Serial.println("B: Antonimos");</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">Serial.println("C:Derivadas");</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">solucion='A';</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">resuelve();</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp; </span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">//----------------pregunta-------------------------------</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">Serial.println("Como se llaman
+la palabras que se pronuncia igual pero se escriben de forma distinta");</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">Serial.println("A: Sinonimas");</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">Serial.println("B:
+Polisemicas");</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">Serial.println("C: Homofonas");</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">solucion='C';</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">resuelve();&nbsp; </span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp; </span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;//----------------pregunta-------------------------------</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">Serial.println("Cual es el
+resultado de dividir 72 entre 8");</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">Serial.println("A: 7");</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">Serial.println("B: 8");</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">Serial.println("C: 9");</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">solucion='C';</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">resuelve();&nbsp; </span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">//----------------pregunta-------------------------------</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">Serial.println("El conjunto de
+palabras derivas que proceden de la misma se llama ________&nbsp; de
+palabras");</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">Serial.println("A: Padre");</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">Serial.println("B: Familia");</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">Serial.println("C: Colectivos");</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">solucion='B';</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">resuelve();&nbsp; </span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">//----------------pregunta-------------------------------</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">Serial.println("Las palabras
+que nombran ruidos que emiten animales o personas se llaman");</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">Serial.println("A: Animaladas");</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">Serial.println("B:
+Onomatopeyicas");</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">Serial.println("C: Homofonas");</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">solucion='B';</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">resuelve();&nbsp; </span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">//----------------pregunta-------------------------------</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">Serial.println("La mayor parte
+del agua dulce del planeta se encuentra en ");</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">Serial.println("A: El mar");</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">Serial.println("B: Los rios");</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">Serial.println("C: Aguas
+subterraneas");</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">solucion='C';</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">resuelve();&nbsp; </span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">//----------------pregunta-------------------------------</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">Serial.println("El paso de
+liqudo a gas se llama");</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">Serial.println("A:
+Solidificacion");</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">Serial.println("B:
+Evaporacion");</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">Serial.println("C:
+Condensacion");</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">solucion='B';</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">resuelve();&nbsp; </span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">//----------------pregunta-------------------------------</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">Serial.println("Los angulos mas
+grandes son los");</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">Serial.println("A: Agudos");</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">Serial.println("B: Obtusos");</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">Serial.println("C: Recto");</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">solucion='B';</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">resuelve();&nbsp; </span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">//----------------pregunta-------------------------------</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">Serial.println("La agricultura
+pertece al");</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">Serial.println("A: Sector
+Primario");</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">Serial.println("B: Sector
+Secundario");</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">Serial.println("C: Sector
+Terciario");</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">solucion='A';</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">resuelve();&nbsp; </span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">//----------------pregunta-------------------------------</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">Serial.println("Cuantos lados
+tiene un hexagono");</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">Serial.println("A: 6");</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">Serial.println("B: 7");</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">Serial.println("C: 8");</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">solucion='A';</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">resuelve();&nbsp; </span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp; </span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">//------------------fin
+preguntas----------------------------------------------</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">Serial.print("Has acertado ");</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">Serial.print (aciertos);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">Serial.println (" respuestas ");</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">Serial.println ("Si quieres
+jugar otra vez pulsa una tecla");</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">while (
+digitalRead(pulsador1)==LOW &amp;&amp; digitalRead(pulsador2)==LOW
+&amp;&amp; digitalRead(pulsador3)==LOW)</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;{}</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;aciertos=0;</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;for (int n=0;n&lt;10;n++){</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp; Serial.println(); //
+escribo 10 lineas en blanco simulando un borrado de pantalla</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;}</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;delay(500);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">}</span><br>
+<br><br><br><br><h1>PREGUNTAS 4 </h1><br><a href="https://www.tinkercad.com/things/ebqdMOyCSRi"><img style="border: 0px solid ; width: 744px; height: 570px;" alt="PREGUNTAS 4" src="imagenes/arduino_preguntas.png"></a><br><br>
+<br>
+<span style="color: rgb(255, 204, 51);">//Ahora 10 preguntas con nivel
+de 1 de primaria.</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">int ledverde=12;</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);"></span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">int ledrojo=10;</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);"></span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">int pulsador1=2;</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">int pulsador2=3;</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">int pulsador3=4;</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">int aciertos=0;</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">char respuesta;</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">char solucion;</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp; </span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">void setup(){</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;pinMode(ledverde,OUTPUT);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp; pinMode(ledrojo,OUTPUT);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp; </span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp; pinMode(pulsador1,INPUT);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;pinMode(pulsador2,INPUT);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;pinMode(pulsador3,INPUT);</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;
+Serial.begin(9600);&nbsp;&nbsp; </span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">}</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">void resuelve(){</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp; while (
+digitalRead(pulsador1)==LOW &amp;&amp; digitalRead(pulsador2)==LOW
+&amp;&amp; digitalRead(pulsador3)==LOW)</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;{}</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;if
+(digitalRead(pulsador1)== HIGH) respuesta='A';</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">if
+(digitalRead(pulsador2)==HIGH) respuesta='B';</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">if
+(digitalRead(pulsador3)==HIGH) respuesta='C';</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">if (respuesta==solucion){</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">Serial.println ("correcta");</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">digitalWrite (ledverde,HIGH);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">delay (1000);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">digitalWrite (ledverde,LOW);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">delay (1000);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">digitalWrite (ledverde,HIGH);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">delay (1000);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">digitalWrite (ledverde,LOW);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">delay (1000);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">digitalWrite (ledverde,HIGH);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">delay (1000);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">digitalWrite (ledverde,LOW);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">delay (1000);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">aciertos++;</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">}</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">if (respuesta!=solucion){</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">Serial.println ("fallo");</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">digitalWrite (ledrojo,HIGH);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">delay (1000);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">digitalWrite (ledrojo,LOW);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">delay (1000);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">digitalWrite (ledrojo,HIGH);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">delay (1000);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">digitalWrite (ledrojo,LOW);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">}</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">}</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp; void loop(){</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">//--------------pregunta-----------------------------</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">Serial.println("El Pisuerga es
+");</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">Serial.println("A: Un Rio");</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">Serial.println("B: Una
+Montańa");</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">Serial.println("C:Cordillera");</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">solucion='A';</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">resuelve();</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp; </span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">//----------------pregunta-------------------------------</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">Serial.println("9+7=");</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">Serial.println("A: 14");</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">Serial.println("B: 15");</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">Serial.println("C: 16");</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">solucion='C';</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">resuelve();&nbsp; </span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp; </span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;//----------------pregunta-------------------------------</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">Serial.println("Como se llama
+el pueblo en que vives");</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">Serial.println("A: Zaratan");</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">Serial.println("B: Valladolid");</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">Serial.println("C: Castilla y
+Leon");</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">solucion='A';</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">resuelve();&nbsp; </span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">//----------------pregunta-------------------------------</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">Serial.println("Como se llama
+la Comunidad Autonoma en la que vives");</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">Serial.println("A: Espana");</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">Serial.println("B: Valladolid");</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">Serial.println("C: Castilla y
+Leon");</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">solucion='C';</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">resuelve();&nbsp; </span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">//----------------pregunta-------------------------------</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">Serial.println("Cuando se pude
+pasar un semaforo");</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">Serial.println("A: Verde
+intermitentemente");</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">Serial.println("B: Verde");</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">Serial.println("C: Rojo");</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">solucion='B';</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">resuelve();&nbsp; </span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">//----------------pregunta-------------------------------</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">Serial.println("Como es el agua
+que bebes");</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">Serial.println("A: Dulce");</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">Serial.println("B: Salada");</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">Serial.println("C: Destilada");</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">solucion='A';</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">resuelve();&nbsp; </span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">//----------------pregunta-------------------------------</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">Serial.println("Cual es la
+dececena del numero 789");</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">Serial.println("A: 7");</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">Serial.println("B: 8");</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">Serial.println("C: 9");</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">solucion='B';</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">resuelve();&nbsp; </span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">//----------------pregunta-------------------------------</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">Serial.println("Cuantos huevos
+hay en una decena");</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">Serial.println("A: 10");</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">Serial.println("B: 12");</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">Serial.println("C: 6");</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">solucion='A';</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">resuelve();&nbsp; </span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">//----------------pregunta-------------------------------</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">Serial.println("Cuantos huevos
+hay en una docena");</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">Serial.println("A: 12");</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">Serial.println("B: 10");</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">Serial.println("C: 6");</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">solucion='A';</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">resuelve();&nbsp; </span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">//----------------pregunta-------------------------------</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">Serial.println("Cuantos lados
+tiene un hexagono");</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">Serial.println("A: 6");</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">Serial.println("B: 7");</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">Serial.println("C: 8");</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">solucion='A';</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">resuelve();&nbsp; </span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp; </span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">//------------------fin
+preguntas----------------------------------------------</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">Serial.print("Has acertado ");</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">Serial.print (aciertos);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">Serial.println (" respuestas ");</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">Serial.println ("Si quieres
+jugar otra vez pulsa una tecla");</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">while (
+digitalRead(pulsador1)==LOW &amp;&amp; digitalRead(pulsador2)==LOW
+&amp;&amp; digitalRead(pulsador3)==LOW)</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;{}</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;aciertos=0;</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;for (int n=0;n&lt;10;n++){</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp; Serial.println(); //
+escribo 10 lineas en blanco simulando un borrado de pantalla</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;}</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;delay(500);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">}</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<br>
+<br>
+<br>
+<br>
+</div>
+<!-- .......................................menu arduino................................ -->
+<div id="derechamenu"><br>
+<script language="javascript=" type="text/javascript" src="index_files/menuarduino.js"></script><br>
+<br>
+<br>
+<br>
+</div>
+<!-- .......................................pie................................ -->
+<div id="pie">&nbsp;&nbsp; <br>
+<div style="text-align: center;"> El fin del hombre es persiguir la
+felicidad.<br>
+</div>
+</div>
+<!-- ..................................fin contenedor..................................... -->
+</div>
+
+</body></html>

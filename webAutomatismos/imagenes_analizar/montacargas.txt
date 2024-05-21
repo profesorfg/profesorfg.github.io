@@ -1,0 +1,4 @@
+Una instalación con tres plantas, en cada planta hay tres pulsadores para mandar 
+el montacargas a una de las tres plantas.
+Si el montacargas esta en marcha los pulsadores no mandan ninguna orden.
+Para ir a la planta del medio el montacargas tiene que estar en la planta baja o en la superior.

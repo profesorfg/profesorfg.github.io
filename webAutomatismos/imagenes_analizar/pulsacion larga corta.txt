@@ -1,0 +1,18 @@
+Controlamos la puesta en marcha de dos motores con un solo pulsador de marcha y 
+otro de paro.
+
+Con una pulsación corta sobre el pulsador "marcha" activo un motor.
+
+Con una pulsación larga sobre el pulsador "marcha" activo el otro motor.
+
+Con una pulsación sobre el pulsador de "paro" se paran los dos motores.
+
+Un disyuntor o guardamotor, proteje al primer motor, en caso de fallo se señalizar 
+con un piloto.
+
+Un rele térmico proteje al segundo motor, en caso de fallo se señaliza 
+con otro piloto.
+
+Si hay fallo en algún motores, No arranca ninguno.
+
+

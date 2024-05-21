@@ -1,0 +1,7 @@
+* Al activar el pulsador de marcha
+* pasa un segundo
+* se enciende una bombilla
+* pasa dos segundos se enciende otra bombilla
+* pasa un segundo se enciende una tercera bombilla
+* pasan un segundo se apagan todas
+* y se repite el ciclo hasta que no pulsamos parada.

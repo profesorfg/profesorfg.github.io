@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+<link href="index_files/estiloarduino.css" rel="stylesheet" type="text/css">
+<link href="index_files/menu.css" rel="stylesheet" type="text/css">
+<meta charset="UTF-8">
+<title>arduino</title>
+
+<meta content="profesorfg" name="author">
+<meta content="profesorfg enlaces" name="description">
+<meta name="keywords" content="profesorfg enlaces"></head>
+<body style="margin-top: 0px; height: 598px;">
+<!-- Comentario -->
+<div id="contenedor"><!-- ............................Contendor....................... --><!-- -----------------menu superior............................................ -->
+<div id="menusuperior">
+<script language="javascript=" type="text/javascript" src="index_files/menu_general.js"></script></div>
+<!-- ........................menu izquierda.............................-->
+<div id="izquierda">
+<script language="javascript=" type="text/javascript" src="index_files/menuizq.js"></script><br>
+<br>
+<br>
+<br>
+</div>
+<!-- ............................contenido central................... -->
+<div id="derecha"><br>
+<p><span style="color: rgb(255, 255, 102);"><br>
+</span></p>
+<p><small style="background-color: transparent; color: rgb(255, 255, 51);"><em></em></small></p>
+<br>
+<br>
+<br>
+<p>Trabajaremos
+la entrada analógica a la que conectaremos primero un LDR, luego un LDR
+y un potenciometro.</p>
+<p>Por ultimo analizaremos&nbsp; la salida analógica
+regulando la iluminacion de un led.</p>
+<br>
+<br>
+<ol id="mozToc">
+<!--mozToc h1 1 h2 2 h3 3 h4 4 h5 5 h6 6--><li><a href="#mozTocId975245">- PROGRAMAS DE ILUMINACIÓN CON LDR
+</a>
+<ol>
+<li><a href="#mozTocId919780">- ENCENDIDO EN
+FUNCION DE LA LUZ Y UN POTENCIOMETRO.</a></li>
+<li><a href="#mozTocId998868">- REGULACIÓN DE
+UNA SALIDA DIGITAL.</a></li>
+</ol>
+</li>
+</ol>
+<p></p>
+<br>
+<p><small style="background-color: transparent; color: rgb(255, 255, 51);"><em></em></small></p>
+<h1><a class="mozTocH1" name="mozTocId975245"></a>PROGRAMAS
+DE ILUMINACIÓN CON LDR
+</h1>
+<br>
+<br>
+<br>
+<a href="https://www.tinkercad.com/things/781OUOjLWcq"><img style="border: 0px solid ; width: 722px; height: 559px;" alt="Iluminacion regulada" src="imagenes/arduino_iluminacion_regulada.png"></a><br>
+<br>
+<br>
+<br>
+Interes:<br>
+<ul>
+<li>Entrada analógica</li>
+<li>Impresión en monitor serial sin delay()<br>
+</li>
+</ul>
+<br>
+&nbsp;<br>
+AJUSTAR LOS VALORSES DE ENCENDIDO SEGÚN LOS VALORES DE LA ENTRADA A1
+DEL LDR.<br>
+&nbsp;/* Según la cantidad de luz recibida enciendo los led<br>
+con mucha luz todos apagados, a medida que hay menos luz se<br>
+encienden los led.*/<br>
+<span style="color: rgb(255, 204, 51);">&nbsp;<br>
+int ledverde=12;</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">int ledamarillo=11;</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">int ledrojo=10;</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">int ledverde2=9;</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);"></span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;
+</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">//variables para
+la impresión<br>
+int T_Impr=0;<br>
+&nbsp;int T_actual=0;&nbsp; </span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;
+</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">void setup(){</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;pinMode(ledverde,OUTPUT);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;pinMode(ledamarillo,OUTPUT);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;pinMode(ledrojo,OUTPUT);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;pinMode(ledverde2,OUTPUT);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;
+Serial.begin(9600);&nbsp;&nbsp; </span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">}</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp; void
+loop(){</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp; </span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;int luz=
+analogRead (A1); </span><br>
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;if (luz
+&gt; 250) {</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;
+digitalWrite
+(ledverde,LOW);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;
+digitalWrite
+(ledamarillo,LOW);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;
+digitalWrite
+(ledrojo,LOW);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;
+digitalWrite
+(ledverde2,LOW);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;}</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp; if (luz
+&gt; 190
+&amp;&amp; luz &lt;250) {</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;
+digitalWrite
+(ledverde,HIGH);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;
+digitalWrite
+(ledamarillo,LOW);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;
+digitalWrite
+(ledrojo,LOW);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;
+digitalWrite
+(ledverde2,LOW);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;} if
+(luz &gt; 100
+&amp;&amp; luz &lt;190) {</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;
+digitalWrite
+(ledverde,HIGH);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;
+digitalWrite
+(ledamarillo,HIGH);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;
+digitalWrite
+(ledrojo,LOW);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;
+digitalWrite
+(ledverde2,LOW);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;} if
+(luz
+&gt;40&amp;&amp;luz&lt; 100) {</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;
+digitalWrite
+(ledverde,HIGH);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;
+digitalWrite
+(ledamarillo,HIGH);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;
+digitalWrite
+(ledrojo,HIGH);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;
+digitalWrite
+(ledverde2,LOW);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;} </span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;if (luz
+&lt; 40) {</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;
+digitalWrite
+(ledverde,HIGH);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;
+digitalWrite
+(ledamarillo,HIGH);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;
+digitalWrite
+(ledrojo,HIGH);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;
+digitalWrite
+(ledverde2,HIGH);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;}</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;if
+(T_actual==0)
+T_actual=millis();<br>
+&nbsp;T_Impr= millis()-T_actual;<br>
+&nbsp;if (T_Impr&gt;1000){<br>
+&nbsp; Serial.print ( "la cantidad de luz es ");<br>
+&nbsp;Serial.println( luz);<br>
+T_Impr=0;<br>
+T_actual=0;<br>
+&nbsp;}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+&nbsp; }//fin de programa<br>
+&nbsp; </span><br>
+<br>
+<h2><a class="mozTocH2" name="mozTocId919780"></a>ENCENDIDO
+EN FUNCION DE LA LUZ Y UN POTENCIOMETRO.</h2>
+<br>
+<a href="https://www.tinkercad.com/things/6TipUY3riYr"><img style="border: 0px solid ; width: 734px; height: 563px;" alt="Iluminacion regulada potenciometro" src="imagenes/arduino_iluminacion_regulada_potenciometro.png"></a><br>
+<br>
+<br>
+En el siguiente programa, introducimos una regulación de la luz con el
+potenciometro, de forma que podemos cambiar el momento de activar los
+led sin tocar programación.<br>
+<br>
+Interes:<br>
+<ul>
+<li>&nbsp;&nbsp;&nbsp; Entradas Analogicas</li>
+</ul>
+<span style="color: rgb(255, 204, 51);">int ledverde=12;</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">int ledamarillo=11;</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">int ledrojo=10;</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">int ledverde2=9;</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);"></span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;int
+T_Impr=0;</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;int
+T_actual=0;</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">int luz;</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">int regulacion;</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);"></span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;
+</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">void setup(){</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;pinMode(ledverde,OUTPUT);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;pinMode(ledamarillo,OUTPUT);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;pinMode(ledrojo,OUTPUT);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;pinMode(ledverde2,OUTPUT);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp; </span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;
+Serial.begin(9600);&nbsp;&nbsp; </span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">}</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp; void
+loop(){</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp; </span>//leemos
+las
+entradas del ldr y del potenciometro<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">int&nbsp; luz=
+analogRead (A1); </span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;int
+regulacion=analogRead
+(A0);</span><br>
+//formula para modificar la cantidad de luz en funcion de la poscion
+del LDR<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;luz=
+luz+regulacion;</span><br>
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;if (luz
+&gt; 900) {</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;
+digitalWrite
+(ledverde,LOW);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;
+digitalWrite
+(ledamarillo,LOW);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;
+digitalWrite
+(ledrojo,LOW);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;
+digitalWrite
+(ledverde2,LOW);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;}</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp; if (luz
+&gt; 700
+&amp;&amp; luz &lt;900) {</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;
+digitalWrite
+(ledverde,HIGH);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;
+digitalWrite
+(ledamarillo,LOW);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;
+digitalWrite
+(ledrojo,LOW);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;
+digitalWrite
+(ledverde2,LOW);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;} if
+(luz &gt; 500
+&amp;&amp; luz &lt;700) {</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;
+digitalWrite
+(ledverde,HIGH);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;
+digitalWrite
+(ledamarillo,HIGH);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;
+digitalWrite
+(ledrojo,LOW);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;
+digitalWrite
+(ledverde2,LOW);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;} if
+(luz
+&gt;300&amp;&amp;luz&lt; 500) {</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;
+digitalWrite
+(ledverde,HIGH);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;
+digitalWrite
+(ledamarillo,HIGH);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;
+digitalWrite
+(ledrojo,HIGH);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;
+digitalWrite
+(ledverde2,LOW);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;} </span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;if (luz
+&lt; 100) {</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;
+digitalWrite
+(ledverde,HIGH);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;
+digitalWrite
+(ledamarillo,HIGH);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;
+digitalWrite
+(ledrojo,HIGH);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;
+digitalWrite
+(ledverde2,HIGH);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;}</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;</span><br style="color: rgb(255, 204, 51);">
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;if
+(T_actual==0)
+T_actual=millis();</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;T_Impr=
+millis()-T_actual;</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;if
+(T_Impr&gt;1000){</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;
+Serial.print ( "la
+cantidad de luz es ");</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;Serial.println(
+luz);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">T_Impr=0;</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">T_actual=0;</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;}</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp; }</span><br>
+&nbsp; <br>
+<br>
+<h2><a class="mozTocH2" name="mozTocId998868"></a>REGULACIÓN
+DE UNA SALIDA DIGITAL.</h2>
+<br>
+Archivo luz creciente decreciente.<br>
+<br>
+interes:<br>
+<ul>
+<li>Salida analógica.</li>
+</ul>
+<span style="color: rgb(255, 204, 51);">int ledverde=12;</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">int pulsador1=22;</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">boolean pul_1;</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">int Iverde=0;//
+inicializo
+intensidad verde apagado</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">boolean
+sentido=1;// 1
+creciente, 0 decreciente</span>.<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp;
+</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;
+</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">void setup(){</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;pinMode(ledverde,OUTPUT);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;pinMode(pulsador1,INPUT);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;Serial.begin(9600);&nbsp;&nbsp;
+</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">}</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp; void
+loop(){</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp;
+//leemos el
+estado de los pulsadores y lo almacenamos en pul_1</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp;
+pul_1=digitalRead(pulsador1);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;
+</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp;
+if
+(pul_1==1){//si esta pulsado aumento y disminuyo</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+if (Iverde==255)&nbsp;&nbsp;&nbsp; sentido=0;</span>//
+cuando llego a
+255 activo sentido decreciente<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+if (Iverde==0)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+sentido=1;</span>// cuando
+llego a 0 activo sentido creciente.<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+if (sentido==1) Iverde=Iverde+20;</span>//si pulse y sentido
+creciente
+incremento 20<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+if (sentido==0) Iverde=Iverde-20;</span>// si pulse y sentido
+decreciente decremento 20<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp;
+}</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+delay (100); //retrasamos la ejecucion del programa.</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+analogWrite (ledverde,Iverde);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Serial.println(pul_1);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Serial.println(Iverde);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Serial.print (" aumenta ");</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Serial.println (aumenta);</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp; }</span><br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp;
+//mejorar el programa
+con una lectura cada 100ms pero sin retardo</span><br>
+//este programa lo hice antes de utilizar la funcion milis() trabajada
+en el ejercicio anterior<br>
+<br>
+<br style="color: rgb(255, 204, 51);">
+<span style="color: rgb(255, 204, 51);">&nbsp; </span><br>
+<br>
+<br>
+</div>
+<!-- .......................................menu arduino................................ -->
+<div id="derechamenu"><br>
+<script language="javascript=" type="text/javascript" src="index_files/menuarduino.js"></script><br>
+<br>
+<br>
+<br>
+</div>
+<!-- .......................................pie................................ -->
+<div id="pie">&nbsp;&nbsp; <br>
+<div style="text-align: center;"> El fin del hombre es
+persiguir la
+felicidad.<br>
+</div>
+</div>
+<!-- ..................................fin contenedor..................................... -->
+</div>
+</body></html>

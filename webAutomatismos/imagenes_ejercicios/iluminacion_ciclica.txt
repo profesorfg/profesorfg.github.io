@@ -1,0 +1,63 @@
+Si KT1, KT2 y KT3 esta temporizado con 1 seg cada uno,
+Que bombilla se enciende cuando:
+
+	a) Cerrar Q1.
+
+	b) Cerrar Q1 y pasar 1 segundo.
+
+	c) Cerrar Q1 y pasar 2 segundo.
+
+	e) Cerrar Q1 y pasar 3 segundo.
+
+	f) Cerrar Q1 y pasar 4 segundo.
+
+	g) Cerrar Q1 y pasar 5 segundo.
+
+	h) Cerrar Q1 y pasar 6 segundo.
+
+	i) Cerrar Q1 y pasar 7 segundo.
+
+	j) Cerrar Q1 y pasar 7segundos y abrir Q1
+
+
+Solución: 
+* SEGUNDO 0: activo Q1, se enciende una bombilla H1, empieza a contar KT1.
+  FUNCIONA: H1
+
+* SEGUNDO 1 se cierra el contacto 67-68 KT1, se activa KM2 enciende la bombilla H2
+ y empieza a contar KT2.
+  FUNCIONA : H1 y H2
+  
+
+* SEGUNDO 2 se activa KT2
+se abre el contacto 55-56 de KT2, se desactiva KM1 (se apaga H1)
+se cierra el contacto 67-68 de KT2 se activa KT3, abre el contacto 55-56 de KT3
+al desativarse KM1 se desactiva KT1
+al desactivarse KT1 se desactiva KM2 (se apaga H2)
+al desactivarse KM2 Se desactiva KT2
+al destivarse KT2 se desactiva KT3 y empieza a contar el tiempo de desconexión
+  NO FUNCIONA NINGUNA BOMBILLA
+
+* SEGUNDO 3 se cierra  55-56 de KT3 y se comienza el ciclo.
+ FUNCIONA: H1
+
+* SEGUNDO 4
+ FUNCIONA: H1 y H2
+
+* SEGUNDO 5
+ NO FUNCIONA NINGUNA BOMBILLA
+
+* SEGUNDO 6.
+ FUNCIONA: H1
+
+* SEGUNDO 7
+ FUNCIONA: H1 y H2
+
+* SEGUNDO 7 abrir Q1
+ NO FUNCIONA NINGUNA BOMBILLA
+
+
+
+ 
+
+

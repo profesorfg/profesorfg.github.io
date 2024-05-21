@@ -1,0 +1,7 @@
+Al pulsar paro "S1", el motor intentar cambiar de giro.
+pero por la reducción del par por la resistencia 
+y la desactivación del cambio de giro
+por el temporizador, el motor no cambia de giro.
+
+El problema si pulsamos paro con el motor parado intenta
+arrancar en sentido contrario.

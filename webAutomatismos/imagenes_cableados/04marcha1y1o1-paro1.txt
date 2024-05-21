@@ -1,0 +1,2 @@
+El motor se pone en marcha con S4 ó pulsando S1 y S3 simultaneamente.
+el motor se para con S2 o fallo térmico.

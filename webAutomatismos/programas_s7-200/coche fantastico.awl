@@ -1,0 +1,49 @@
+ORGANIZATION_BLOCK PRINCIPAL:OB1
+TITLE=Comentario de UOP
+BEGIN
+Network 1 // Título de segmento
+// Comentario de segmento
+LDN    T37
+A      I0.0
+TON    T37, +10
+Network 2 
+LD     T37
+LD     C1
+CTD    C1, +12
+Network 3 
+LDW=   C1, +1
+OW=    C1, +12
+=      Q0.1
+Network 4 
+LDW=   C1, +2
+OW=    C1, +11
+=      Q0.2
+Network 5 
+LDW=   C1, +3
+OW=    C1, +10
+=      Q0.3
+Network 6 
+LDW=   C1, +4
+OW=    C1, +9
+=      Q0.4
+Network 7 
+LDW=   C1, +5
+OW=    C1, +8
+=      Q0.5
+Network 8 
+LDW=   C1, +6
+OW=    C1, +7
+=      Q0.6
+END_ORGANIZATION_BLOCK
+SUBROUTINE_BLOCK SBR_0:SBR0
+TITLE=Comentario de UOP
+BEGIN
+Network 1 // Título de segmento
+// Comentario de segmento
+END_SUBROUTINE_BLOCK
+INTERRUPT_BLOCK INT_0:INT0
+TITLE=Comentario de UOP
+BEGIN
+Network 1 // Título de segmento
+// Comentario de segmento
+END_INTERRUPT_BLOCK

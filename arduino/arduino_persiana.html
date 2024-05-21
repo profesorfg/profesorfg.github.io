@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+<link href="index_files/estiloarduino.css" rel="stylesheet" type="text/css">
+<link href="index_files/menu.css" rel="stylesheet" type="text/css">
+<meta charset="UTF-8">
+<title>arduino</title>
+
+<meta content="profesorfg" name="author">
+<meta content="profesorfg enlaces" name="description">
+<meta name="keywords" content="profesorfg enlaces"></head>
+<body style="margin-top: 0px; height: 598px;">
+<!-- Comentario -->
+<div id="contenedor"><!-- ............................Contendor....................... --><!-- -----------------menu superior............................................ -->
+<div id="menusuperior">
+<script language="javascript=" type="text/javascript" src="index_files/menu_general.js"></script></div>
+<!-- ........................menu izquierda.............................-->
+<div id="izquierda">
+<script language="javascript=" type="text/javascript" src="index_files/menuizq.js"></script><br>
+<br>
+<br>
+<br>
+</div>
+<!-- ............................contenido central................... -->
+<div id="derecha"> 
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<small style="background-color: transparent; color: rgb(255, 255, 51);"><em><big style="font-weight: bold; font-style: italic;"><big><big>PERSIANA AUTOMATIZADA.<br>
+</big></big></big></em></small>
+<span style="color: rgb(102, 51, 102);">FECHA:11 de Octubre 2014</span><br>
+<ul id="mozToc"><!--mozToc h1 1 h2 2 h3 3 h4 4 h5 5 h6 6--><li><a href="#mozTocId864835">PERSIANA DOMÓTIZADA</a></li><li><a href="#mozTocId784258">PERSIANA MEMORIZANDO&nbsp; LA POSICIÓN</a></li></ul>
+<p>&nbsp;<br>
+</p>
+Archivos: persiana<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; persiana1<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+Interes:<br>
+<ul>
+  <li>Funcionamiento de una persiana domotizada con un pulsador subida
+y otro de bajada.<br>
+  </li>
+  <li>Acciones distintas con la pulsación corta y larga.<br>
+  </li>
+  <li><a href="#switch">Instrucción Switch, evita facilmente cortocircuitos al evitar
+activar subir y bajar a al vez.</a><br>
+  </li>
+  <li><a href="#impresionSinDelay">Impresion cada segundo sin utilizar delay() MUY SIMPLE.(vamos
+mejorando)</a></li>
+  <li>En persiana1 memorizamos la posición para tener un mayor control de la persiana.<br>
+  </li>
+
+</ul>
+<h1><a class="mozTocH1" name="mozTocId864835"></a>PERSIANA DOMÓTIZADA</h1>
+<span style="color: rgb(255, 204, 0);">/*En el siguiente sketch <br>
+realizo el programa para el control de una persiana<br>
+el led verde simula el circuito electrico se subida<br>
+el led amarillo simula el circuito electrico de bajada<br>
+<br>
+p0 es el pulsador de subida<br>
+p1 es el pulsador de bajada<br>
+p2 bajada general<br>
+funcionamiento<br>
+con pulsaciones cortas la persiana sube o baja durante 5 segundos
+respectivamente subida o bajada<br>
+con pulsaciones largas la persiana sube o baja mientras este pulsado
+respetivamente subida o bajada<br>
+Al pulsar p2 la persiana baja 5 segundos<br>
+si se dan ordenes de subir y bajar a la vez tiene prioridad la ultima
+en dar<br>
+<br>
+interes switch<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; impresion sin dalay (MUY
+BUENO)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+*/<br>
+int led[]={12,11,10,9};//verde,amarillo,rojo, verde2<br>
+<br>
+int pulsador[]={22,24,26};<br>
+<br>
+<br>
+<br>
+//PULSACION<br>
+boolean pul_0;<br>
+boolean P0_corta;<br>
+boolean P0_larga;<br>
+//temporizacion para pulsadores<br>
+unsigned long T_inicio_pulsacion0=0;<br>
+unsigned long T_pulsado0=0;<br>
+<br>
+boolean pul_1;<br>
+boolean P1_corta;<br>
+boolean P1_larga;<br>
+//temporizacion para pulsadores<br>
+unsigned long T_inicio_pulsacion1=0;<br>
+unsigned long T_pulsado1=0;<br>
+<br>
+&nbsp;boolean pul_2;<br>
+&nbsp;<br>
+&nbsp;<br>
+&nbsp;int persiana;//opciones de la persiana<br>
+unsigned long Tpersiana=0;<br>
+<br>
+//tiempo de impresion<br>
+unsigned long Tprint=0;<br>
+<br>
+&nbsp;<br>
+void setup(){<br>
+&nbsp;pinMode(led[0],OUTPUT);<br>
+&nbsp;pinMode(led[1],OUTPUT);<br>
+&nbsp;pinMode(led[2],OUTPUT);<br>
+&nbsp;pinMode(led[3],OUTPUT);<br>
+&nbsp;pinMode(pulsador[0],INPUT);<br>
+&nbsp;pinMode(pulsador[1],INPUT);<br>
+&nbsp;pinMode(pulsador[2],INPUT);<br>
+<br>
+<br>
+&nbsp; Serial.begin(9600); <br>
+}<br>
+<br>
+&nbsp; void loop(){<br>
+&nbsp;&nbsp;&nbsp; //leo el estado de las entradas<br>
+&nbsp; pul_0= digitalRead(pulsador[0]) ;<br>
+&nbsp; pul_1= digitalRead(pulsador[1]) ;<br>
+&nbsp; pul_2= digitalRead(pulsador[2]) ;<br>
+&nbsp; <br>
+&nbsp; //pulsacion0_____________________________ <br>
+&nbsp; <br>
+&nbsp; if (pul_0==HIGH &amp;&amp; T_inicio_pulsacion0==0){<br>
+&nbsp;T_inicio_pulsacion0=millis();//inicializo el tiempo e impido que
+vuelva a funcionara hasta T_actual valga cero,<br>
+&nbsp;&nbsp; }<br>
+&nbsp; <br>
+&nbsp;//calculo de la duraccion de la pulsación
+(T_pulsado)T_inicio_pulsacion<br>
+&nbsp;if (T_inicio_pulsacion0!=0){<br>
+&nbsp; if (millis()-T_inicio_pulsacion0&gt;= 500){<br>
+&nbsp; P0_larga=1;}<br>
+&nbsp;<br>
+&nbsp;<br>
+&nbsp;if (millis()-T_inicio_pulsacion0&gt;= 500 &amp;&amp; pul_0==LOW){<br>
+&nbsp;T_inicio_pulsacion0=0;<br>
+&nbsp; P0_larga=0;}<br>
+&nbsp;<br>
+&nbsp;if (pul_0==LOW&amp;&amp; millis()-T_inicio_pulsacion0&gt; 20
+&amp;&amp; millis()-T_inicio_pulsacion0&lt;500)&nbsp; {<br>
+&nbsp;&nbsp; P0_corta=1;// SE ACTIVO PO_CORTA LUEGO HAY QUE
+DESACTIVARLA.<br>
+&nbsp;&nbsp; T_inicio_pulsacion0=0;<br>
+&nbsp;}<br>
+&nbsp; if (pul_0==LOW&amp;&amp; millis()-T_inicio_pulsacion0&lt;
+20)T_inicio_pulsacion0=0;//REBOTES NO SE CONSIDERA<br>
+&nbsp;}<br>
+//pulsacion1_____________________________ <br>
+&nbsp; <br>
+&nbsp;<br>
+&nbsp;if (pul_1==HIGH &amp;&amp; T_inicio_pulsacion1==0){<br>
+&nbsp;T_inicio_pulsacion1=millis();//inicializo el tiempo e impido que
+vuelva a funcionara hasta T_actual valga cero,<br>
+&nbsp;&nbsp; }<br>
+&nbsp; <br>
+&nbsp;//calculo de la duraccion de la pulsación
+(T_pulsado)T_inicio_pulsacion<br>
+&nbsp;if (T_inicio_pulsacion1!=0){<br>
+&nbsp; if (millis()-T_inicio_pulsacion1&gt;= 500){<br>
+&nbsp; P1_larga=1;}<br>
+&nbsp; <br>
+&nbsp; if (millis()-T_inicio_pulsacion1&gt;= 500 &amp;&amp;
+pul_1==LOW){ <br>
+&nbsp;&nbsp;&nbsp; T_inicio_pulsacion1=0;<br>
+&nbsp;&nbsp;&nbsp; P1_larga=0;}<br>
+&nbsp;&nbsp;&nbsp; <br>
+&nbsp;if (pul_1==LOW&amp;&amp; millis()-T_inicio_pulsacion1&gt; 20
+&amp;&amp; millis()-T_inicio_pulsacion1&lt;500)&nbsp; {<br>
+&nbsp;&nbsp; P1_corta=1;<br>
+&nbsp;&nbsp; T_inicio_pulsacion1=0;<br>
+&nbsp;}<br>
+&nbsp; if (pul_1==LOW&amp;&amp; millis()-T_inicio_pulsacion1&lt;
+20)T_inicio_pulsacion1=0;<br>
+&nbsp;}<br>
+//PERSIANA <br>
+&nbsp;<br>
+if (P0_corta){<br>
+Tpersiana=millis();<br>
+persiana=1;//subir<br>
+&nbsp;P0_corta=0;<br>
+<br>
+}<br>
+if (P0_larga==1) persiana=2;<br>
+<br>
+if (P1_corta==1){<br>
+Tpersiana=millis();<br>
+persiana=3;//subir<br>
+&nbsp;P1_corta=0;<br>
+}<br>
+<br>
+if (P1_larga==1) persiana=4;<br>
+<br>
+if (pul_2==1){<br>
+Tpersiana=millis();<br>
+persiana=5;}<br>
+<br>
+<br>
+&nbsp; if (millis()-Tprint&gt;1000){<a name="impresionSinDelay"></a><br>
+&nbsp; Serial.print ( "el valor de persiana es");<br>
+&nbsp; Serial.println (persiana);<br>
+&nbsp; Serial.print(Tpersiana);<br>
+&nbsp; Serial.println(Tpersiana);<br>
+&nbsp; Serial.print(P0_corta);<br>
+&nbsp; Serial.print(P0_larga);<br>
+&nbsp; Serial.print(P1_corta);<br>
+&nbsp; Serial.print(P1_larga);<br>
+<br>
+}<br>
+<br>
+<br>
+<br>
+<br>
+switch (persiana){<a name="switch"></a><br>
+&nbsp; <br>
+&nbsp; case(0):<br>
+&nbsp; digitalWrite(led[0], LOW);<br>
+&nbsp; digitalWrite(led[1], LOW);<br>
+&nbsp;&nbsp; break;<br>
+&nbsp; <br>
+&nbsp; case (1)://subir<br>
+&nbsp; digitalWrite(led[0], HIGH);<br>
+&nbsp; digitalWrite(led[1], LOW);<br>
+&nbsp; if (millis()-Tpersiana&gt;5000) persiana=0;<br>
+&nbsp; break;<br>
+&nbsp;&nbsp; case (2)://subir<br>
+&nbsp; digitalWrite(led[0], HIGH);<br>
+&nbsp; digitalWrite(led[1], LOW);<br>
+&nbsp;if (P0_larga==0) persiana=0;<br>
+&nbsp; break;<br>
+&nbsp;&nbsp; case (3)://bajar<br>
+&nbsp;&nbsp; digitalWrite(led[0], LOW);<br>
+&nbsp;&nbsp; digitalWrite(led[1], HIGH);<br>
+&nbsp;&nbsp; if (millis()-Tpersiana&gt;5000) persiana=0;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; break;<br>
+&nbsp;&nbsp; case (4)://bajar<br>
+&nbsp;&nbsp; digitalWrite(led[0], LOW);<br>
+&nbsp;&nbsp; digitalWrite(led[1], HIGH);&nbsp;&nbsp; <br>
+&nbsp;&nbsp;&nbsp;&nbsp; if (P1_larga==0) persiana=0&nbsp; ; <br>
+&nbsp;&nbsp;&nbsp;&nbsp; case (5)://bajar<br>
+&nbsp;&nbsp; digitalWrite(led[0], LOW);<br>
+&nbsp;&nbsp; digitalWrite(led[1], HIGH);<br>
+&nbsp;&nbsp; if (millis()-Tpersiana&gt;5000) persiana=0;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; break;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+&nbsp;&nbsp; }<br>
+&nbsp;&nbsp; <br>
+&nbsp;&nbsp; <br>
+&nbsp;&nbsp; //IMPRESION<br>
+&nbsp;&nbsp; <br>
+&nbsp;if (Tprint==0)Tprint=millis();<br>
+&nbsp; if (millis()-Tprint&gt;1000){<br>
+&nbsp; Serial.print ( "el valor de persiana es");<br>
+&nbsp; Serial.println (persiana);<br>
+&nbsp; Serial.print(Tpersiana);<br>
+&nbsp; Serial.println(Tpersiana);<br>
+&nbsp; Serial.print(P0_corta);<br>
+&nbsp; Serial.print(P0_larga);<br>
+&nbsp; Serial.print(P1_corta);<br>
+&nbsp; Serial.print(P1_larga);<br>
+&nbsp; Tprint=0;<br>
+}<br>
+&nbsp; <br>
+<br>
+&nbsp; }//fin de programa<br>
+<br>
+<br>
+</span><span style="color: rgb(255, 204, 0);"></span>
+<h1><a class="mozTocH1" name="mozTocId784258"></a>PERSIANA MEMORIZANDO&nbsp; LA POSICIÓN<br>
+</h1>
+<span style="color: rgb(255, 204, 0);">Archivo: persiana1<br>
+<br>
+/*Persiana.<br>
+Este el programa de iniciacion para programar una persiana.<br>
+Partimos de dos pulsadores uno de subida y otro de bajada<br>
+desde posicion bajada, tarda 10 segundos en subir.<br>
+La posicion de la persiana la realizamos por tiempo y estara comprendido entre 0 y 10 segundos.<br>
+Cuando pulsamos subir y la posicion esta por debajo de 10 segundos subimos<br>
+si pulsamos bajar y no hemos llegado a cero bajamos.<br>
+si pulsamos subir y bajar a la vez la persiana se para.<br>
+<br>
+En un siguiente programa mediante un modo programación memorizamos el tiempo que tarda <br>
+en subir desde la posición bajada a subida.<br>
+<br>
+<br>
+<br>
+<br>
+*/<br>
+<br>
+int led[]={12,11,10,9};//verde,amarillo,rojo, verde2<br>
+<br>
+int pulsador[]={22,24,26};<br>
+<br>
+<br>
+<br>
+//PULSACION<br>
+boolean pul_S;//subir<br>
+boolean pul_B;//bajar<br>
+<br>
+//temporización persianas.<br>
+unsigned long PS=10000; //persinan subida&nbsp; 10 segundos 10000ms, En un sketch se prodra cmbiar.<br>
+long PP=0; //posición persiana<br>
+long PPa=0;//poscion antes de subir o bajar<br>
+unsigned long CS=0;//Comienzo pulsacion subir o bajar.<br>
+unsigned long CB=0;//cominezo Bajar<br>
+<br>
+<br>
+&nbsp; <br>
+//temporizacion impresion<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+unsigned long T_aux_impresion=0;<br>
+unsigned long T_impresion=3000;// tiempo en el que se imprime en pantalla<br>
+<br>
+<br>
+&nbsp; <br>
+void setup(){<br>
+&nbsp;pinMode(led[0],OUTPUT);<br>
+&nbsp;pinMode(led[1],OUTPUT);<br>
+&nbsp;pinMode(led[2],OUTPUT);<br>
+&nbsp;pinMode(led[3],OUTPUT);<br>
+&nbsp;pinMode(pulsador[0],INPUT);<br>
+&nbsp;pinMode(pulsador[1],INPUT);<br>
+&nbsp;pinMode(pulsador[2],INPUT);<br>
+&nbsp;<br>
+<br>
+&nbsp; Serial.begin(9600); <br>
+&nbsp;Serial.println("empezamos"); <br>
+}<br>
+<br>
+&nbsp; void loop(){<br>
+&nbsp;&nbsp;&nbsp; //leo el estado de las entradas<br>
+&nbsp;pul_S= digitalRead(pulsador[0]);<br>
+&nbsp;pul_B=digitalRead(pulsador[1]);<br>
+&nbsp;<br>
+&nbsp;//COMIENZO DE PERSIANA<br>
+&nbsp;//SUBIR<br>
+&nbsp;if (pul_S==1&amp;&amp;PP&lt;PS&amp;&amp;pul_B==0)//SI pulso subida y no esta arriba y no pulso bajada<br>
+&nbsp;&nbsp; {<br>
+&nbsp;&nbsp;&nbsp;&nbsp; if (CS==0)CS=millis();//memorizo el momento de la pulsacion<br>
+&nbsp;&nbsp;&nbsp;&nbsp; PP=PPa+millis()-CS;// nueva posicion=incial + tiempo se subida<br>
+&nbsp;&nbsp;&nbsp;&nbsp; digitalWrite(led[0],HIGH);//subo la persiana.<br>
+&nbsp;&nbsp; }<br>
+&nbsp;&nbsp; else&nbsp; //sino inicializo el momento de la pulsacion y paro la subida<br>
+&nbsp;&nbsp; {<br>
+&nbsp;&nbsp;&nbsp;&nbsp; CS=0;<br>
+&nbsp;&nbsp;&nbsp;&nbsp; //PPa=PP; //actualiamos la posicion de la persinaPPa<br>
+&nbsp;&nbsp;&nbsp;&nbsp; digitalWrite(led[0],LOW);<br>
+&nbsp;&nbsp; }<br>
+&nbsp;//BAJAR&nbsp; <br>
+if (pul_B==1&amp;&amp;PP&gt;0&amp;&amp;pul_S==0)//SI pulso BAJAR y no esta ABAJO y no pulso SUBIR<br>
+&nbsp;&nbsp; {<br>
+&nbsp;&nbsp;&nbsp;&nbsp; if (CB==0)CB=millis();//memorizo el momento de la pulsacion<br>
+&nbsp;&nbsp;&nbsp;&nbsp; PP=PPa-millis()+CB;// calculo la nueva posicion<br>
+&nbsp;&nbsp;&nbsp;&nbsp; digitalWrite(led[2],HIGH);//BAJO la persiana.<br>
+&nbsp;&nbsp; }<br>
+&nbsp;&nbsp; else&nbsp; //sino inicializo el momento de la pulsacion y paro la subida<br>
+&nbsp;&nbsp; {<br>
+&nbsp;&nbsp;&nbsp;&nbsp; CB=0;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //&nbsp; PPa=PP;//una vez parado actulizamos la posicion actual<br>
+&nbsp;&nbsp;&nbsp;&nbsp; digitalWrite(led[2],LOW);<br>
+&nbsp;&nbsp; }<br>
+&nbsp;&nbsp; if (pul_B==0&amp;&amp;pul_S==0)PPa=PP;//una vez parado actualizamos la posicion actual<br>
+<br>
+&nbsp;&nbsp; //FIN DE PERSINA<br>
+&nbsp;&nbsp;&nbsp;&nbsp; <br>
+&nbsp; //impresion<br>
+&nbsp;if (T_aux_impresion==0) T_aux_impresion=millis();<br>
+&nbsp;if (millis()-T_aux_impresion&gt;T_impresion) T_aux_impresion=0;<br>
+&nbsp;if (T_aux_impresion==0){<br>
+<br>
+&nbsp;Serial.print ("LA POSCION DE LA PERSIANA ES&nbsp; ");&nbsp; <br>
+Serial.println(PP);<br>
+&nbsp;Serial.print ("LA POSCION actual DE LA PERSIANA ES&nbsp; ");&nbsp; <br>
+Serial.println(PPa);<br>
+Serial.print("milisegundo de funcinamiento");<br>
+&nbsp;&nbsp; Serial.println (millis());<br>
+&nbsp;&nbsp; Serial.print ("comienzo subida ");&nbsp; <br>
+Serial.println(CS);<br>
+Serial.print("diferencia comienzo subida y millis");<br>
+Serial.println(millis()-CS); <br>
+boolean subir=digitalRead(led[0]);<br>
+if (subir==1)Serial.println("la persiana esta subiendo ");<br>
+<br>
+<br>
+<br>
+<br>
+Serial.println();<br>
+<br>
+<br>
+<br>
+&nbsp;}//fin de impresion<br>
+&nbsp;<br>
+&nbsp;<br>
+&nbsp; }//fin de programa<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;
+</span>
+
+<br>
+<br>
+
+<br>
+</div>
+<!-- .......................................menu arduino................................ -->
+<div id="derechamenu"><br>
+<script language="javascript=" type="text/javascript" src="index_files/menuarduino.js"></script><br>
+<br>
+<br>
+<br>
+</div>
+<!-- .......................................pie................................ -->
+<div id="pie">&nbsp;&nbsp; <br>
+<div style="text-align: center;"> Los dias en los que todo te sale mas,
+es que todo te sale mal<br>
+</div>
+</div>
+<!-- ..................................fin contenedor..................................... -->
+</div>
+
+</body></html>

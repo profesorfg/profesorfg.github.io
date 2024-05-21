@@ -1,0 +1,13 @@
+En este detalla observamos el ciruito de potencia con inversión de giro.
+KM1 sube se activa con la contactos auxiliares de subida.
+KM2 baja se activa con la contactos auxiliares de bajada.
+
+Entre KM1 y KM2 hay un enclavamiento eléctrico.
+
+Si KAP esta cerrado indica que el motor esta parado.
+Si KAP esta abierto indica que el motor esta en marcha y me 
+impedira el funcionamiento de los pulsadores.
+
+
+Si hay fallo termico ó abrimos la puerta (SFCPA se abre)
+se para todo el cirucito de mando

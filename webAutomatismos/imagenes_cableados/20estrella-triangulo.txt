@@ -1,0 +1,9 @@
+El arranque estrella triangulo se utiliza para limitar 
+la corriente de arranque de un motor.
+
+Al pulsar marcha cerramos KM1 y KM2, arranque en estrella.
+Pasado unos segundos deactivamos KM2 y activamos KM3 funcionamiento en triangulo.
+
+KM2 y KM3 nuncan puede funcionar a la vez. para ello se le pone un enclavamiento
+eléctrico y mecánico.
+
