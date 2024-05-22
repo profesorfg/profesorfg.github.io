@@ -160,10 +160,12 @@ article {
     margin: 4%;
      justify-content: space-between;
 }
-article1 {
+/* article1 {
     width: 100%;
+}*/
 
-}
+
+
 
 .enlaces {
     background-color: #e3c6c6;
@@ -240,6 +242,36 @@ section a:hover {
     color: blue;
 }
 
+
+.video-youtube {
+	background: red;
+    display:inline-block;
+    width: 45%;
+    margin: 2%;
+   /* height: 300px;*/
+    min-width: 300px;
+    border:  2px solid orange;
+    
+}
+
+.video-youtube iframe {
+width: 100%;
+    height: 100%;
+}
+.videos-youtube{ /* explicado en Emprinnos como poner e insertar videos en html */
+    position:relative;/* para que se pueda colocar dentro position absoluta ??*/
+    padding-bottom:56,25%; /*crea un div con un ratio de 16/9 */
+    overflow: hidden; /* oculto lo que se salga del div*/
+    height: 100%;/* lo he puesto porque me aparecio en gpt*/
+    
+}
+.videos-youtube iframe{ /* los videos que esten dentro dentro de esta clase*/
+    position: absolute;/* no ocupa espacio, por lor que se pondra encima del paddin del div padre*/
+    top:0;   /* coloco en la parte superior del padre*/
+    left: 0;/* coloca a la izquierda del padre*/
+    width: 100%;/* ocupa el 100% del ancho del padre y por el ratio del padre el 100% del ancho*/
+    /*height: 100%; no lo puse y me quedo una mierda de altura*/
+}
 
 footer {
     grid-area: footer;

@@ -196,7 +196,7 @@ class menuprincipal extends HTMLElement {
     <li> <a href="../webRobotica/robotica.html" >Robotica</a></li> 
    <li> <a href="../webInterior/Interior.html" >vivienda</a> 
        <ul> 
-           <li> <a href="../webInterior/Interior.html" >Interior</a>   			
+           <li> <a href="../webInterior/interior.html" >Interior</a>   			
       	   </li>  
           <li> <a href="../webDomotica/Domotica.html">Domotica</a>    			 
    		  </li> 
@@ -451,7 +451,7 @@ class menuprincipalindex extends HTMLElement {
     <li> <a href="webRobotica/robotica.html" >Robotica</a></li> 
    <li> <a href="webInterior/Interior.html" >vivienda</a> 
        <ul> 
-           <li> <a href="webInterior/Interior.html" >Interior</a>   			
+           <li> <a href="webInterior/interior.html" >Interior</a>   			
       	   </li>  
           <li> <a href="webDomotica/Domotica.html">Domotica</a>    			 
    		  </li> 
