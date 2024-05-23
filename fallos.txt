@@ -1,2 +1,1 @@
-falta actualizar pagina vehiculos electricos
-en menu-js hay que modificar el enlace a Interior.html por interior
+las imagenes de renovables no son responsivas. ( no disminuyen al reducir la pantalla )
