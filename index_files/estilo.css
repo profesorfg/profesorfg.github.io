@@ -13,7 +13,7 @@ h1 {
     padding-left: 10px;
     border-radius: 20px;
     text-align: center;
-    margin:2px 110px 2px 50px;
+    margin: 2px 110px 2px 50px;
 }
 
 h2 {
@@ -69,26 +69,12 @@ h5 {
     min-height: 100vh;
 }
 
-/* paginas con el menu lateral en la parte superior 
-#contenedor2 {
-    background-color: #e3d5bc;
-    display: grid;
-    grid-template-columns: 25% 1fr 25%;
-    grid-template-rows: 100px auto 1fr 40px;
-    grid-gap: 5px;
-    grid-template-areas:
-        "header header header"
-        "aside aside aside"
-        "main main main"
-        "footer footer footer";
-    min-height: 100vh;
-}*/
 
 
 #contenedor2 {
     background-color: #e3d5bc;
     display: grid;
-    grid-template-columns: 1fr; 
+    grid-template-columns: 1fr;
     grid-template-rows: 100px auto 1fr 40px;
     grid-gap: 5px;
     grid-template-areas:
@@ -111,6 +97,42 @@ h5 {
         "footer footer footer";
     min-height: 100vh;
 }
+
+
+@media screen and (max-width: 768px) {
+    #contenedor {
+        background-color: #e3d5bc;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 100px auto 1fr 40px;
+        grid-gap: 5px;
+        grid-template-areas:
+            "header"
+            "aside"
+            "main"
+            "footer";
+        min-height: 100vh;
+    }
+    
+    #contenedor3 {
+        background-color: #e3d5bc;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 100px auto 1fr 40px;
+        grid-gap: 5px;
+        grid-template-areas:
+            "header"
+            "main"
+             "aside"
+            "footer";
+        min-height: 100vh;
+    }    
+}
+
+
+
+
+
 
 
 
@@ -151,7 +173,7 @@ article {
     flex-wrap: wrap;
     border-radius: 20px;
     padding: 25px 25px;
-     justify-content: space-between;
+    justify-content: space-between;
 
 }
 
@@ -161,7 +183,7 @@ article {
     flex-wrap: wrap;
     border-radius: 20px;
     margin: 4%;
-     justify-content: space-between;
+    justify-content: space-between;
 }
 
 
@@ -190,14 +212,14 @@ aside {
 }
 
 #lateral a {
-   
-background-color: rgb(148, 59, 138);
+
+    background-color: rgb(148, 59, 138);
     color: #fff;
- text-decoration: none;
- padding: 10px 12px;
-display: block;
+    text-decoration: none;
+    padding: 10px 12px;
+    display: block;
     width: 90px;
-   height: 30px;
+    height: 30px;
     box-shadow: 2px 2px 1px 1px #0062ff;
     border: solid 1px #fff;
     /*borde en blanco*/
@@ -219,7 +241,7 @@ section {
     padding: 4%;
     border-radius: 20px;
     border: 2px solid orange;
-
+    overflow: hidden;
 }
 
 
@@ -243,29 +265,43 @@ footer {
     text-align: center;
 }
 
+/* ----------------------- imagenes  ------------------------------------------*/
 
-
-
-
-
-/*  videos  ------------------------------------------*/
-
-.videos-youtube{ /* explicado en Emprinnos como poner e insertar videos en html */
-    position:relative;/* para que se pueda colocar dentro position absoluta ??*/
-    padding-bottom:56.25%; /*crea un div con un ratio de 16/9 */
-    overflow: hidden; /* oculto lo que se salga del div*/
-    height: 0%;/* lo he puesto porque me aparecio en gpt*/
-   
-    
-    
+.imagen{
+    width: 100%;
+    height: auto;
 }
 
-.videos-youtube iframe{ /* los videos que esten dentro dentro de esta clase*/
-    position: absolute;/* no ocupa espacio, por lor que se pondra encima del paddin del div padre*/
-    top:0;   /* coloco en la parte superior del padre*/
-    left: 0;/* coloca a la izquierda del padre*/
-    width: 100%;/* ocupa el 100% del ancho del padre y por el ratio del padre el 100% del ancho*/
-   height: 100%; /*no lo puse y me quedo una mierda de altura*/
+
+/*-------------------------  videos  ------------------------------------------*/
+
+.videos-youtube {
+    /* explicado en Emprinnos como poner e insertar videos en html */
+    position: relative;
+    /* para que se pueda colocar dentro position absoluta ??*/
+    padding-bottom: 56.25%;
+    /*crea un div con un ratio de 16/9 */
+    overflow: hidden;
+    /* oculto lo que se salga del div*/
+    height: 0%;
+    /* lo he puesto porque me aparecio en gpt*/
+
+
+
+}
+
+.videos-youtube iframe {
+    /* los videos que esten dentro dentro de esta clase*/
+    position: absolute;
+    /* no ocupa espacio, por lor que se pondra encima del paddin del div padre*/
+    top: 0;
+    /* coloco en la parte superior del padre*/
+    left: 0;
+    /* coloca a la izquierda del padre*/
+    width: 100%;
+    /* ocupa el 100% del ancho del padre y por el ratio del padre el 100% del ancho*/
+    height: 100%;
+    /*no lo puse y me quedo una mierda de altura*/
 }
 
 
