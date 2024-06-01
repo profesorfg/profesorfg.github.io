@@ -25,7 +25,7 @@
         var mensaje8 = "PULSACION LARGA-CORTA<br><br>Controlamos la puesta en marcha de dos motores con un solo pulsador de marcha y otro de paro.<br>Con una pulsación corta sobre el pulsador MARCHA activo un motor.<br>Con una pulsación larga sobre el pulsador MARCHA activo el otro motor.<br>Con una pulsación sobre el pulsador de PARO se paran los dos motores.<br>Un disyuntor o guardamotor, proteje al primer motor, en caso de fallo se señalizara con un piloto rojo.<br>Un rele térmico proteje al segundo motor, en caso de fallo se señaliza con otro piloto rojo.<br>Si hay fallo en algún motor, No arranca ninguno.<br> ";
         var mensaje9 = "FRENADO OPCIONAL<br><br>Dos opciones de paro.<br>* Con el pulsador S1 se para SIN frenado de CC<br>* Con el pulsador S3 se para CON frenado de CC<br>* Si pulsamos S3 con el motor parado se activa el frenado. ";
         var mensaje10 = "SIN FRENADO CON EL MOTOR PARADO<br><br>* El frenado solo se activa al pulsar S1 si el motor esta funcionando.<br>* El motor no se puede poner en marcha hasta que haya teminado la temporización del frenado.";
-        var mensaje11 = "CON ARRANQUE INSTANTENEO<br><br>* El frenado solo se activa al pulsar S1 si el motor esta funcionando.<br>* El motor se puede poner en marcha aunque no haya teminado la temporización del frenado. ";
+        var mensaje11 = "CON ARRANQUE INSTANTANEO<br><br>* El frenado solo se activa al pulsar S1 si el motor esta funcionando.<br>* El motor se puede poner en marcha aunque no haya teminado la temporización del frenado. ";
         var mensaje12 = "Utilización de borneros.<br><br>la practica se hara en dos grupos.<br>Cada grupo montara una practica con dos contactores.<br><br>PRIMER GRUPO.<br>El primer contactor sera un circuito marcha paro y que activa el contactor, apaga la luz de la practica del segundo grupo. <br>El segundo contactor se funciona solo cuando el piloto de su botonera este apagado con un circuito marcha paro.<br>El piloto esta controlado por el contactor 1 del segundo grupo.<br>SEGUNDO GRUPO. <br><br>identico al primero.<br>El primer contactor sera un circuito marcha paro y que activa el contactor, apaga la luz de la practica del primer grupo. <br>El segundo contactor se funciona solo cuando el piloto de su botonera este apagado con un circuito marcha paro.<br>El piloto esta controlado por el contactor 1 del primer grupo.<br>";
         var mensaje13 = "Utilización de borneros.<br><br>la practica se hara en dos grupos.<br>Cada grupo montara una practica con dos contactores.<br><br>PRIMER GRUPO.<br>El primer contactor sera un circuito marcha paro y que activa el contactor, apaga la luz de la practica del segundo grupo. <br>El segundo contactor se funciona solo cuando el piloto de su botonera este apagado con un circuito marcha paro.<br>El piloto esta controlado por el contactor 1 del segundo grupo.<br>SEGUNDO GRUPO. <br><br>identico al primero.<br>El primer contactor sera un circuito marcha paro y que activa el contactor, apaga la luz de la practica del primer grupo. <br>El segundo contactor se funciona solo cuando el piloto de su botonera este apagado con un circuito marcha paro.<br>El piloto esta controlado por el contactor 1 del primer grupo.<br>";
         var mensaje14 = "Utilización de borneros.<br><br>la practica se hara en dos grupos.<br>Cada grupo montara una practica con dos contactores.<br><br>PRIMER GRUPO.<br>El primer contactor sera un circuito marcha paro y que activa el contactor, apaga la luz de la practica del segundo grupo. <br>El segundo contactor se funciona solo cuando el piloto de su botonera este apagado con un circuito marcha paro.<br>El piloto esta controlado por el contactor 1 del segundo grupo.<br>SEGUNDO GRUPO. <br><br>identico al primero.<br>El primer contactor sera un circuito marcha paro y que activa el contactor, apaga la luz de la practica del primer grupo. <br>El segundo contactor se funciona solo cuando el piloto de su botonera este apagado con un circuito marcha paro.<br>El piloto esta controlado por el contactor 1 del primer grupo.<br>";
@@ -93,7 +93,7 @@
         }
 
         function ejer11() {
-            document.getElementById('matrix').src = "imagenes_analizar/frenado cc en marcha con arran.png";
+            document.getElementById('matrix').src = "imagenes_analizar/frenado cc  en marcha con arran.png";
             document.getElementById("p1").innerHTML = mensaje11;
         }
 
@@ -170,28 +170,27 @@
                   
             
           <div class="menu_lateral">
-            <a href="cableados.html">control de motores</a><br>
-            <a href="cableados_analizar.html">Analizar</a><br>
-            <a href="cableados_ejercicios.html">Ejercicios</a><br>
-            <a href="cableados_material.html">Material</a><br>
-             <a href="cableados_practicas.html">Prácticas</a><br>
-            </div>
+                <a href="cableados.html">control de motores</a><br>
+                <a href="cableados_practicas.html">Prácticas</a><br>
+                <a href="cableados_ejercicios.html">Ejercicios</a><br>
+                <a href="cableados_material.html">Material</a><br>
+              </div>
         </div>
         <main>
-            <h1>AUTOMATISMO CABLEADOS: ANALIZAR</h1>
+            <h1>AUTOMATISMOS: CONTROL DE MOTORES 2</h1>
             <br>
           
                  <!-- ///////////////////IMAGEN QUE DEBERIA DE CAMBIAR/////////////////// -->
-            <div style="text-align: center;"><img style="width: 900px; height: 600px;" src="imagenes_analizar/inicio.png" id="matrix">&nbsp;
-              <br>
-            <br>
-            <!-- ///////////////////TEXTO QUE DEBERIA DE CAMBIAR/////////////////// -->
+            <div > <!-- ///////////////////TEXTO QUE DEBERIA DE CAMBIAR/////////////////// -->
             <h3>
-                <p id="p1">SELECCIONA EN EL MENÚ DE LA DERECHA EL
-                    EJERCICIO DE AUTOMATISMOS QUE
-                    DESEAS VER<br>
+                <p id="p1">RECOJE TUBOS <br><br>Al girar el interruptor a ON la plataforma empieza a girar,<br>Al pasar el interruptor a OFF y detectar que hay un tubo en frente del detector capacitivo la plataforma se para.<br><br>CUIDADO de ponerlo en marcha sin ningún tubo sobre la plataforma, no parará<br><br>
                 </p>
             </h3>
+             
+             <img style="width: 900px; height: 600px;" src="imagenes_analizar/recoge_tubos.png" id="matrix">&nbsp;
+              <br>
+            <br>
+           
             <br>
            
                 <br>
@@ -199,25 +198,20 @@
             </div>
         </main>
        <aside>
-            <a href="#" target="_blank"> Descarga
-                todos los esquemas en CADe-simu DESHABILIDO </a><br>
-            <a href="cableados_ejercicios.html">EJERCICIOS PARA HACER.</a><br>
-          
-            
-                
-               
-                EJERCICIOS DE AUTOMATISMOS. <br>
+           <a href="cableados.html"> <img src="../imagenes/volver.png"></a><br><br><br>
+              EJERCICIOS DE AUTOMATISMOS. <br>
 
-                <input value="Recoge_tubos" onclick="ejer00();" type="button"> &nbsp; <input value="Solución" onclick="ejer01();" type="button"><br>
+                <input value="Recoge_tubos" onclick="ejer00();" type="button"> &nbsp; 
+                <input value="Solución" onclick="ejer01();" type="button"><br>
                 <input value="Motores cascada" onclick="ejer02();" type="button"> <br>
                 <input value="Iluminación ciclica1" onclick="ejer03();" type="button"><br>
                 <input value="Juego" onclick="ejer04();" type="button"><br>
                 <input value="Montacargas" onclick="ejer05();" type="button"><br>
                 <input value="Arranque temporizado" onclick="ejer07();" type="button"><br>
                 <input value="Pulsación larga-corta" onclick="ejer08();" type="button"><br>
-                <input value="----------" onclick="ejer18();" type="button"><br>
+               
                 <br>
-                FRENANDO CON INYECCIÓN DE CORRIENTE CONTINUA
+                FRENANDO CON INYECCIÓN DE CORRIENTE CONTINUA<br>
               
                 <input value="Frenando opcional" onclick="ejer09();" type="button"><br>
                 <input value="Sin frenado con el motor parado" onclick="ejer10();" type="button"><br>

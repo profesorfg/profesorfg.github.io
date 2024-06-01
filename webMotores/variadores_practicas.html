@@ -1,193 +1,346 @@
 <!DOCTYPE html>
 <html lang="es">
-
-<head>
-    <title>Motores</title>
-
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Variador</title>
     <link href="../index_files/estilo.css" rel="stylesheet" type="text/css">
-    <script src="../index_files/menu.js"></script><meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script defer src="index_files/cambiocableados.js"> </script>
-
+    <script src="../index_files/menu.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta content="profesorfg" name="author">
     <meta content="automatizacion industrial" name="description">
     <meta name="keywords" content="automatas electricidad">
-    <meta charset="UTF-8">
-    <script type="text/javascript">
-        var mensaje0 = "MEZCLADORA <br><br>Una mezcladora se pone en marcha con un pulsador 25 segundos a 35 con una rampa de aceleración de 10 segundos, después aumenta la velocidad a 50 Hz y cuando pulse paro realiza una rampa de decelaracion de 20 segundos y se para.<br>P003=2 Nivel extendido <br> P010=0 Preparado<br>P700=2 Terminal<br>P701=1 On Derechas<br>P702=16 frecuencia fija selección directa FF 35<br>P703=17 parada OFF FF 50Hz<br>P1000=3 Frecuencias fijas<br>P1002=35 Hz frecuencia de entrada 2<br>P1003= 15 Hz frecuencia de entrada 3<br>P1080= 0 Hz fr mininma<br>P1120= 14 segundos aceleración a 50 Hz<br>P1121 =20 seg tiempo de deceleracion.<br>Funcionamiento:<br>Para funcionar a 35 hz tiene que estar a 24Vcc la entrada 8 y 9<br>Para funcionar a 50Hz tiene que estar a 24Vcc las entradas 8,9,10 (8 on/off, 9y 10 suma 35Hz+15Hz).<br><br>";
-        var mensaje1 = "MEZCLADORA <br><br>Una mezcladora se pone en marcha con un pulsador 25 segundos a 35 con una rampa de aceleración de 10 segundos, después aumenta la velocidad a 50 Hz y cuando pulse paro realiza una rampa de decelaracion de 20 segundos y se para.<br>P003=2 Nivel extendido <br> P010=0 <br>P700=2 Terminal<br>P701=1 On Derechas<br>P702=16 frecuencia fija selección directa FF 35<br>P703=17 parada OFF FF 50Hz<br>P1000=3 Frecuencias fijas<br>P1002=35 Hz frecuencia de entrada 2<br>P1003= 50 Hz frecuencia de entrada 3<br>P1080= 0 Hz fr mininma<br>P1120= 14 segundos aceleración a 50 Hz<br>P1121 =20 seg tiempo de deceleracion.<br>Funcionamiento:<br>Para funcionar a 35 hz tiene que estar a 24Vcc la entrada 8 y 9<br>Para funcionar a 50Hz tiene que estar a 24Vcc las entradas 8,10.<br><br> ";
-        var mensaje2 = "PUERTA DE GARAJE<br><br> Una puerta de garaje se abre a 45Hz cuando pulsamos el pulsador de subida,al llegar al final de carrera se para, esta 5 segundos abierta y se cierra a 35Hz hasta llegar al final de carrera inferior<br> ";
-        var mensaje3 = "PUESTA EN SERVICIO<br><br>Al cerrar el magnetotérmico, la instalación esta fuera de servicio. <br>Pulsamos rearme para poner la instalación en servicio.<br>Pulsamos marcha S1 con la instalación en servicio, <br>el variador se pone en ON (cierra KA1),el motor funciona a 50Hz con una rampa de acelearación de 5 segundos.<br>Pasado 20 segundos el motor se para (abre KA1) rampa de deceleración de 0seg. <br>Si se corta la fotocelula cuando el motor esta funcionando,la instalación entra en fuera de servicio y el motor se para por inyección de corriente continua.<br>Si pulso la parada de emergencia la instación entra en fuera de servicio y el motor se para. <br>Baliza roja H3 encendida con la instalación fuera de servicio.<br>Baliza verde H2 encendida con la instalacion en servicio. <br>Piloto verde H1 encendido con el motor en marcha.<br>La Sirena suena cuando cortamos la fotocelula y el motor esta funcionando, deja de sonar cuando dejamos de cortar la fotocelula.<br><br> ";
-        var mensaje4 = "TITULO<bT><br> ";
-
-        function ejer00() {
-            document.getElementById('matrix').src = "imagenes_Vpracticas/agitador.png";
-            document.getElementById("p1").innerHTML = mensaje0;
-        }
-
-        function ejer01() {
-            document.getElementById('matrix').src = "imagenes_Vpracticas/agitador2.png";
-            document.getElementById("p1").innerHTML = mensaje1;
-        }
-
-        function ejer02() {
-            document.getElementById('matrix').src = "imagenes_Vpracticas/PuertaGaraje.png";
-            document.getElementById("p1").innerHTML = mensaje2;
-        }
-
-        function ejer03() {
-            document.getElementById('matrix').src = "imagenes_Vpracticas/Puesta en servicio.png";
-            document.getElementById("p1").innerHTML = mensaje3;
-        }
-
-        function ejer04() {
-            document.getElementById('matrix').src = "imagenes_Vpracticas/agitador2.png";
-            document.getElementById("p1").innerHTML = mensaje4;
-        }
-
-        function ejer05() {
-            document.getElementById('matrix').src = "imagenes_Vpracticas/agitador2.png";
-            document.getElementById("p1").innerHTML = mensaje5;
-        }
-
-        function ejer06() {
-            document.getElementById('matrix').src = "imagenes_Vpracticas/agitador2.png";
-            document.getElementById("p1").innerHTML = mensaje6;
-        }
-
-        function ejer07() {
-            document.getElementById('matrix').src = "imagenes_Vpracticas/agitador2.png";
-            document.getElementById("p1").innerHTML = mensaje7;
-        }
-
-        function ejer08() {
-            document.getElementById('matrix').src = "imagenes_Vpracticas/agitador2.png";
-            document.getElementById("p1").innerHTML = mensaje8;
-        }
-
-        function ejer09() {
-            document.getElementById('matrix').src = "imagenes_Vpracticas/agitador2.png";
-            document.getElementById("p1").innerHTML = mensaje9;
-        }
-
-        function ejer10() {
-            document.getElementById('matrix').src = "imagenes_Vpracticas/agitador2.png";
-            document.getElementById("p1").innerHTML = mensaje10;
-        }
-
-        function ejer11() {
-            document.getElementById('matrix').src = "imagenes_Vpracticas/agitador2.png";
-            document.getElementById("p1").innerHTML = mensaje11;
-        }
-
-        function ejer12() {
-            document.getElementById('matrix').src = "imagenes_analizar/bornero esquema.png";
-            document.getElementById('texto').data = "imagenes_analizar/bornero esquema.txt";
-        }
-
-        function ejer13() {
-            document.getElementById('matrix').src = "imagenes_analizar/borneros representacion.png";
-            document.getElementById('texto').data = "imagenes_analizar/borneros representacion.txt";
-        }
-
-        function ejer14() {
-            document.getElementById('matrix').src = "imagenes_analizar/bornero foto.jpg";
-            document.getElementById('texto').data = "imagenes_analizar/bornero foto.txt";
-        }
-
-        function ejer15() {
-            document.getElementById('matrix').src = "imagenes_analizar/frenado a contracorriente.png";
-            document.getElementById('texto').data = "imagenes_analizar/frenado a contracorriente.txt";
-        }
-
-        function ejer16() {
-            document.getElementById('matrix').src = "imagenes_analizar/arrancador progresivo.png";
-            document.getElementById('texto').data = "imagenes_analizar/arrancador progresivo.txt";
-        }
-
-        function ejer17() {
-            document.getElementById('matrix').src = "imagenes_analizar/frenado a cc practica.png";
-            document.getElementById('texto').data = "imagenes_analizar/frenado a cc practica.txt";
-        }
-
-        function ejer18() {
-            document.getElementById('matrix').src = "imagenes_analizar/cuando paro KM.png";
-            document.getElementById('texto').data = "imagenes_analizar/cuando paro KM.txt";
-        }
-
-    </script>
-</head>
-
-<body>
-
-
-    <div id="contenedor3">
-
-        <header>
-            <nav>
-                <menu-principal></menu-principal>
-            </nav>
-            <a name="mozToc"> </a>
-
-        </header>
-        <div id=lateral>
-
-            <!--      <input type="checkbox" id="check_menu">
-            <label for="check_menu" id="label_check">
-                <img class="icon_menu_lat" src="../imagenes/icono1.png" />
-            </label>
-
-
-            <div class="menu_lateral">
-                <a href="programados.html">S7-200</a><br>
-                <a href="LOGO.html">LOGO</a><br>
-                <a href="Domo_logo.html">DOMÓTICA CON LOGO</a><br>
-                <a href="tiaportal.html">TIA PORTAL</a><br>
-
-            </div>    -->
-        </div>
-        <main>
-
-           
-            <h1>PRÁCTICAS CON VARIADORES</h1>
-           
-            <!-- ///////////////////TEXTO QUE DEBERIA DE CAMBIAR/////////////////// -->
-        
-          
-                <p id="p1">SELECCIONA EN EL MENÚ DE LA DERECHA EL
-                    EJERCICIO <br>
-                </p>
-          
-            <br>
-            <!-- ///////////////////IMAGEN QUE DEBERIA DE CAMBIAR/////////////////// -->
-            <div style="text-align: center;"><img style="width: 900px; height: 600px;" src="imagenes_Vpracticas/inicio.png" id="matrix">&nbsp;
-                <span style="font-weight: bold;"></span><br>
-                <br>
-                <br>
+  </head>
+  <body>
+    <div id="contenedor1">
+      <header>
+        <nav> <menu-principal></menu-principal> </nav>
+      </header>
+      <main>
+        <h1>VARIADORES PRÁCTICAS.</h1>
+        <br>
+        <!--  ---------------------             PRACTICA  -------------------  -->
+        <article>
+          <h2>Puerta de garaje</h2>
+          <section>
+            <div class="flex_">
+              <div>Una puerta de garaje se abre a 45Hz cuando pulsamos el
+                pulsador de subida,al llegar al final de carrera se para, esta 5
+                segundos abierta y se cierra a 35Hz hasta llegar al final de
+                carrera inferior</div>
+              <div class="imagen_vermas"> <img class="imagen_vermas" alt="puerta de garaje"
+                  src="imagenes_variadores/pract_puerta_garaje.jpg"> </div>
             </div>
-        </main>
-        <aside>
-            <section>
-                <a href="https://drive.google.com/drive/folders/1dtCn0mh6JIUq14bGp1IfUp2GkU2Cj0RX?usp=sharing" target="_blank">ESQUEMAS en CADeSIMU</a><br>
-                     <a href="https://drive.google.com/open?id=0B2Hb811x1P1fTzFuck9LYUNQYWM" target="_blank">Descarga
-                todos los esquemas en CADe-simu </a><br>
-            <br>
-            <br>
-            </section>
-            <section>
-                <br>
-                <br>
-                PRÁCTICAS CON VARIADORES
-
-                <input value="Puerta de Garaje" onclick="ejer02();" type="button"><br>
-                <input value="Puesta en servicio" onclick="ejer03();" type="button"><br>
-            </section>
-
-
-        </aside>
-        <footer>CONSUMO MEDIO MENSUAL DE
-            UNA VIVIENDA 270 kWh</footer>
+            <details>
+              <summary> </summary>
+              <img src="imagenes_variadores/pract_PuertaGaraje.png" alt="Esquema automatismos puerta de garaje">
+            </details>
+          </section>
+        </article>
+        <!--  ---------------------             PRACTICA  -------------------  -->
+        <article>
+          <h2> Puesta en servicio </h2>
+          <section>
+            <div class="flex_">
+              <div>Al cerrar el magnetotérmico, la instalación esta fuera de
+                servicio. Pulsamos rearme para poner la instalación en servicio.
+                Pulsamos marcha S1 con la instalación en servicio, el variador
+                se pone en ON (cierra KA1),el motor funciona a 50Hz con una
+                rampa de acelearación de 5 segundos. Pasado 20 segundos el motor
+                se para (abre KA1) rampa de deceleración de 0seg.
+                <p>...</p>
+              </div>
+              <div> <img class="imagen_vermas" alt="puksador" src="imagenes_variadores/pract_Puesta_en_servicio_rearme.jpg">
+              </div>
+            </div>
+            <details>
+              <summary> </summary>
+              <p>Si se corta la fotocelula cuando el motor esta funcionando,la
+                instalación entra en fuera de servicio y el motor se para por
+                inyección de corriente continua.<br>
+                Si pulso la parada de emergencia la instación entra en fuera de
+                servicio y el motor se para.<br>
+                Baliza roja H3 encendida con la instalación fuera de servicio.<br>
+                Baliza verde H2 encendida con la instalacion en servicio.<br>
+                Piloto verde H1 encendido con el motor en marcha.<br>
+                La Sirena suena cuando cortamos la fotocelula y el motor esta
+                funcionando, deja de sonar cuando dejamos de cortar la
+                fotocelula.</p>
+              <h3>ESQUEMA ELÉCTRICO</h3>
+              <div class="div_imagen"> <img class="imagen" alt="esquema eléctrico"
+                  src="imagenes_variadores/pract_Puesta_en_servicio.png"><br>
+              </div>
+            </details>
+          </section>
+        </article>
+        <!--  ---------------------             PRACTICA  -------------------  -->
+        <article>
+          <h2> Mesa transportadoras </h2>
+          <section>
+            <div class="flex_">
+              <div>
+                <p>La chapa de un vehículo se encuentra sobre una cinta
+                  transportadora, al pulsar marcha, el motor se pone en marcha a
+                  una frecuencia de 50Hz en dos segundos, al llegar al primer
+                  final de carrera, baja en 4 segundos a 20Hz, y en el segundo
+                  final de carrera el motor se para con una parada natural.</p>
+                <p>Realizar la práctica con un variador.</p>
+                <p>- Realizar el esquema del variador e indica los parámetros.</p>
+                <p>- Dibuja el automatismo necesario.</p>
+              </div>
+              <div> <img class="imagen_vermas" alt="mesa transportadora" src="imagenes_variadores/pract_mesa_transportadora1.png">
+              </div>
+            </div>
+            <details>
+              <summary> </summary>
+              <div> <img class="imagen" alt="mesa transportadora" src="imagenes_variadores/pract_mesa_transportadora.png">
+              </div>
+              <div> <img class="imagen" alt="mesa transportadora" src="imagenes_variadores/pract_mesa_transportadora_esquema.png">
+              </div>
+              <p>MEJORAS</p>
+              <ul>
+                <li>La cinta no puede volver a arrancar hasta que no se haya
+                  retirado el coche de la cinta transportadora.</li>
+                <li>Poner una parada de emergencia y cambiar el parámetro de
+                  deceleración a 0 segundos</li>
+                <li>Arrancar con dos pulsares a la vez</li>
+              </ul>
+            </details>
+          </section>
+        </article>
+        <!--  ------------------     otra práctica  ----------------------------- -->
+        <br>
+        <article>
+          <h2> Mezcladora</h2>
+          <section>
+            <div class="flex_">
+              <div>
+                <p>Una mezcladora se pone en marcha con un pulsador, los
+                  primeros 25 segundos con una frecuenia de 35Hz, con una rampa
+                  de aceleración de 10 segundos, después aumenta la velocidad a
+                  50 Hz.</p>
+                <p> Cuando pulse paro, realiza una rampa de decelaracion de 20
+                  segundos y se para.</p>
+              </div>
+              <div> <img class="imagen_vermas" alt="mezcladora" src="imagenes_variadores/pract_mezcladora.png">
+              </div>
+            </div>
+            <details>
+              <summary> </summary>
+              <h3>Solución 1</h3>
+              <ul>
+                <li>P003=2 Nivel extendido</li>
+                <li>P010=0 Preparado</li>
+                <li>P700=2 Terminal</li>
+                <li>P701=1 On Derechas</li>
+                <li>P702=16 frecuencia fija selección directa F</li>
+                F 35
+                <li>P703=17 parada OFF FF 50Hz</li>
+                <li>P1000=3 Frecuencias fijas</li>
+                <li>P1002=35 Hz frecuencia de entrada 2</li>
+                <li>P1003= 15 Hz frecuencia de entrada 3</li>
+                <li>P1080= 0 Hz fr mininma</li>
+                <li>P1120= 14 segundos aceleración a 50 Hz</li>
+                <li>P1121 =20 seg tiempo de deceleracion.</li>
+              </ul>
+              <p>Funcionamiento:</p>
+              <p>Para funcionar a 35 hz tiene que estar a 24Vcc la entrada 8 y 9</p>
+              <p>Para funcionar a 50Hz tiene que estar a 24Vcc las entradas
+                8,9,10 (8 on/off, 9y 10 suma 35Hz+15Hz).</p>
+              <div class="div_imagen"> <img class="imagen" alt="esquema eléctrico"
+                  src="imagenes_variadores/pract_mezcladora_esquema.png"><br>
+              </div>
+              <h3>Solución 2</h3>
+              <ul>
+                <li>P003=2 Nivel extendido</li>
+                <li>P010=0 Preparado</li>
+                <li>P700=2 Terminal</li>
+                <li>P701=1 On Derechas</li>
+                <li>P702=16 frecuencia fija selección directa F</li>
+                F 35
+                <li>P703=17 parada OFF FF 50Hz</li>
+                <li>P1000=3 Frecuencias fijas</li>
+                <li>P1002=35 Hz frecuencia de entrada 2</li>
+                <li>P1003=50 Hz frecuencia de entrada 3</li>
+                <li>P1080= 0 Hz fr mininma</li>
+                <li>P1120= 14 segundos aceleración a 50 Hz</li>
+                <li>P1121 =20 seg tiempo de deceleracion.</li>
+              </ul>
+              <p>Nota: se ha modificado el parámetro P1003 que ahora tiene un
+                valor de 50Hz, </p>
+              <p>Para funcionar a 50Hz tienes que estar activadas las entradas 8
+                y 10</p>
+              <div class="div_imagen"> <img class="imagen" alt="esquema eléctrico"
+                  src="imagenes_variadores/pract_mezcladora_esquema2.png"><br>
+              </div>
+            </details>
+          </section>
+        </article>
+        <!--  ---------------------             PRACTICA  -------------------  -->
+        <article>
+          <h2>Puesto de trabajo de una mezcladora</h2>
+          <section>
+            <div class="flex_">
+              <div>
+                <p>En el siguiente ejercicio vamos a trabajar los conceptos de
+                  puesta en servicio y rearme. Ademas del funcionamiento de un
+                  variador.</p>
+                <p>La instalación entra en fuera de servicio en el momento de
+                  poner tensión, después de una parada de emergencia o cuando
+                  una persona se introduce en zona de peligro con la maquina
+                  funcionando</p>
+                <p>Para poner la instalación en servicio se debe de pulsar
+                  rearme.</p>
+              </div>
+              <div class="imagen_vermas"> <img class="imagen_vermas" alt="puesto der trabajo de una mezcladoras"
+                  src="imagenes_variadores/pract_mezcladora_puesto.png"> </div>
+            </div>
+            <details>
+              <summary> </summary>
+              <img class="imagen" alt="puesto der trabajo de una mezcladoras" src="imagenes_variadores/pract_mezcladora_puesto.png">
+              <p>FUNCIONAMIENTO</p>
+              <ul>
+                <li>Al cerrar el magnetotérmico, la instalación esta fuera de
+                  servicio.</li>
+                <li>Pulsamos rearme para poner la instalación en servicio.</li>
+                <li>Pulsamos marcha S1 con la instalación en servicio, el
+                  variador se pone en ON (cierra KA1),el motor funciona a 50Hz
+                  con una rampa de aceleración de 5 segundos.</li>
+                <li>Pasado 20 segundos el motor se para (abre KA1) rampa de
+                  deceleración de 10seg.</li>
+                <li>Si se corta la fotocelula cuando el motor esta
+                  funcionando,la instalación entra en fuera de servicio y el
+                  motor se para por inyección de corriente continua.</li>
+                <li>Si pulso la parada de emergencia la instalación entra en
+                  fuera de servicio y el motor hace una parada natural.</li>
+                <li>Baliza roja H3 encendida con la instalación fuera de
+                  servicio.</li>
+                <li>Baliza verde H2 encendida con la instalacion en servicio.</li>
+                <li>Piloto verde H1 encendido con el motor en marcha.</li>
+                <li>La Sirena suena cuando cortamos la fotocelula y el motor
+                  esta funcionando, deja de sonar cuando dejamos de cortar la
+                  fotocelula.</li>
+              </ul>
+              <img class="imagen" alt="puesto der trabajo de una mezcladoras esquema"
+                src="imagenes_variadores/pract_mezcladora_puesto_esquema.png"> </details>
+          </section>
+        </article>
+        <!--  ---------------------             PRACTICA  -------------------  -->
+        <!--  ---------------------             PRACTICA  -------------------  -->
+        <article>
+          <h2>Mezclado a distintas velocidades</h2>
+          <section>
+            <div class="flex_">
+              <div>
+                <p>Una mezcladora se pone en marcha con un pulsador, 25
+                  segundos, a 35 Hz, con una rampa de aceleración de 10
+                  segundos. Después aumenta la velocidad a 50 Hz y cuando pulse
+                  paro realiza una rampa de decelaracion de 20 segundos y se
+                  para.</p>
+                <p>Una vez haya comenzado al mezcladora a funcionar, para no
+                  estropear la mezcla no se pueda parar hasta que haya alcanzado
+                  los 50Hz.</p>
+              </div>
+              <div class="imagen_vermas"> <img class="imagen_vermas" alt="mezcladoras a distintas velocidades"
+                  src="imagenes_variadores/pract_mezcladora_velocidades.png"> </div>
+            </div>
+            <details>
+              <summary> </summary>
+              <img class="imagen" alt=" mezcladora a distintas velocidades" src="imagenes_variadores/pract_mezcladora_velocidades.png">
+              <img class="imagen" alt=" mezcladora a distintas velocidades" src="imagenes_variadores/pract_mezcladora_velocidades-esquema.png">
+              <p>Para el variador V20 hay que cambiar los parámetros P702 y P703</p>
+              <p>P702= 16</p>
+              <p>P703= 17</p>
+              <p>En el siguiente detalle solucionamos la condición de que, una
+                vez haya comenzado la mezcladora a funcionar, para no estropear
+                la mezcla, no se puede parar hasta que haya alcanzado los 50Hz.</p>
+              <p>A 35Hz funciona con KA1, a 50Hz funciona con KA1 y KA2.</p>
+              <p>No se puede parar la mezcladora, si esta funcionando KA1 y no
+                esta funcionando KA2. </p>
+              <img class="imagen" alt=" mezcladora a distintas velocidades" src="imagenes_variadores/pract_mezcladora_velocidades-expliacion.png">
+              <p>v(Nota: si solo pongo el KA1 abierto, nunca parara la
+                mezcladora).</p>
+              <p>OTRA SOLUCIÓN</p>
+              <p>En esta solución ademas hemos añadido un piloto que esta
+                encendido si esta funcionando el variador.</p>
+              <img class="imagen" alt=" mezcladora a distintas velocidades" src="imagenes_variadores/pract_mezcladora_velocidades-esquema1.png">
+              <p>A 35Hz funciona con KA1, a 50Hz funciona con KA2. no se puede
+                parar si esta KA1 funcionando.</p>
+              <img class="imagen" alt=" mezcladora a distintas velocidades" src="imagenes_variadores/pract_mezcladora_velocidades-expliacion1.png">
+            </details>
+          </section>
+        </article>
+        <!--  ---------------------             PRACTICA  -------------------  -->
+        <h2>VARIADOR Y AUTÓMATA LOGO</h2>
+        <br>
+        <article>
+          <h2>Puerta de garaje</h2>
+          <section>
+            <div class="flex_">
+              <div>
+                <p>Una puerta de garaje, se abre al accionar el pulsador S1,
+                  está 5 segundos abierta y después se cierra. Si cuando esta
+                  cerrándose se vuelve a pulsar abrir, la puerta se vuelve a
+                  abrir.</p>
+                <p>En la apertura de la puerta se alimenta el motor a 45 Hz.</p>
+                <p>El cierre de la puerta se alimenta el motor a 35 Hz.</p>
+                <p>La rampa de deceleración será de 0 segundos.</p>
+                <p>El motor utilizado será de inducción trifásico, controlado
+                  por un variador de frecuencia Siemens V20 y un autómata LOGO 8
+                  230RCE</p>
+              </div>
+              <div class="imagen_vermas"> <img class="imagen_vermas" alt="puerta de garaje"
+                  src="imagenes_variadores/pract_garaje_logo.jpg"> </div>
+            </div>
+            <details>
+              <summary> </summary>
+              <img class="imagen" src="imagenes_variadores/pract_garaje-logo-esquema.png"
+                alt="Esquema automatismos puerta de garaje"> <img class="imagen"
+                src="imagenes_variadores/pract_garaje-logo-programa.png" alt="Programa puerta de garaje">
+            </details>
+          </section>
+        </article>
+        <h2> pROPUPESTA DE EJERCICIOS </h2>
+        <h2><br>
+        </h2>
+        <article>
+          <h2> Control de temperatura de una granja de pollos </h2>
+          <section>
+            <div class="flex_">
+              <div>
+                <p> Automatiza la temperatura de una granja de pollos para que
+                  su valor este entres 20 y 25 grados centígrados. </p>
+                <p> La instalación dispone un termómetro con salida analógica
+                  0-10V que mide entre -35º a 100º, de 3 calefactores, un
+                  ventilador trifásico con dos pares polos controlado con un
+                  variador V20 de siemens y una señal acústica. </p>
+                <p>El control de la instalación se realizara con un autómata
+                  siemens 1200</p>
+              </div>
+              <div class="imagen_vermas"> <img class="imagen_vermas" alt="granja de pollos"
+                  src="imagenes_variadores/resolver_granja%20de%20pollos.jpg"> </div>
+            </div>
+            <details>
+              <summary>Funcionamiento:</summary>
+              <ul>
+                <li>Si la temperatura: Es inferior a 0º funcionan 3
+                  calefactores. </li>
+                <li>Está entre 0º y 10º funcionan 2 calefactores </li>
+                <li>Es mayor de 10º e inferior a 20º funcionan 1 calefactor </li>
+                <li>Está entre 20º y 25º no funciona nada </li>
+                <li>Es mayor de 25º e inferior a 40º, se pone en marcha un
+                  ventilador a una velocidad de su campo magnético de 250 rpm,
+                  aumentado linialmente su velocidad en función de la
+                  temperatura, alcanzando su velocidad máxima a 40º. </li>
+                <li>Es mayor de 40º, el ventilador funciona a velocidad máxima y
+                  se activa una señal acústica. </li>
+              </ul>
+            </details>
+          </section>
+        </article>
+        <!--  ---------------------             PRACTICA  -------------------  -->
+      </main>
+      <aside></aside>
+      <footer>El fin de hombre es perseguir la felicidad.</footer>
     </div>
-
-</body>
-
+  </body>
 </html>

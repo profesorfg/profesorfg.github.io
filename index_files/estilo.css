@@ -6,9 +6,10 @@ body {
 /* titulos*/
 
 h1 {
-    background: rgb(150, 80, 120);
+    background: #965078;
     font-size: 25px;
     font-weight: bold;
+    text-transform: uppercase;
     color: white;
     padding-left: 10px;
     border-radius: 20px;
@@ -16,11 +17,29 @@ h1 {
     margin: 2px 110px 2px 50px;
 }
 
+/*
 h2 {
+   
     font-size: 20px;
     font-weight: bold;
-    color: rgb(100, 100, 100)
+    color: #22f;
+    border-radius: 20px;
+  
+    text-transform: capitalize;
 }
+*/
+h2 {
+
+    font-size: 20px;
+    font-weight: bold;
+    color: #c24;
+    border-radius: 20px;
+
+    text-transform: capitalize;
+}
+
+
+
 
 h3 {
     font-size: 15px;
@@ -35,6 +54,11 @@ h5 {
     color: rgb(240, 200, 240)
 }
 
+.h2-vigor {
+    text-align: center;
+    font-size: 1.5em;
+    text-transform: capitalize;
+}
 
 
 
@@ -45,13 +69,14 @@ h5 {
 #contenedor {
     background-color: #e3d5bc;
     display: grid;
-    grid-template-columns: 25% 1fr 25%;
+    /* grid-template-columns: 25% 1fr 25%;*/
+    grid-template-columns: 1fr 20%;
     grid-template-rows: 100px 1fr 40px;
     grid-gap: 5px;
     grid-template-areas:
-        "header header header"
-        "main main aside"
-        "footer footer footer";
+        "header header"
+        "main aside"
+        "footer footer";
     min-height: 100vh;
 }
 
@@ -88,7 +113,8 @@ h5 {
 #contenedor3 {
     background-color: #e3d5bc;
     display: grid;
-    grid-template-columns: 120px 1fr 25%;
+    /*  grid-template-columns: 120px 1fr 25%; */
+    grid-template-columns: 120px auto 25%;
     grid-template-rows: 100px 1fr 40px;
     grid-gap: 5px;
     grid-template-areas:
@@ -113,7 +139,7 @@ h5 {
             "footer";
         min-height: 100vh;
     }
-    
+
     #contenedor3 {
         background-color: #e3d5bc;
         display: grid;
@@ -123,10 +149,10 @@ h5 {
         grid-template-areas:
             "header"
             "main"
-             "aside"
+            "aside"
             "footer";
         min-height: 100vh;
-    }    
+    }
 }
 
 
@@ -203,7 +229,8 @@ article {
 
 aside {
     grid-area: aside;
-    background-color: #e3d5bc;
+    /*  background-color: #e3d5bc; */
+
 }
 
 #lateral {
@@ -265,12 +292,64 @@ footer {
     text-align: center;
 }
 
-/* ----------------------- imagenes  ------------------------------------------*/
+.flex_ {
 
-.imagen{
-    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.ancho30 {
+
+    width: 30%;
+}
+
+.ancho60 {
+
+    width: 60%;
+}
+
+.ancho70 {
+
+    width: 70%;
+}
+
+
+
+/* ----------------------- imagenes  ------------------------------------------*/
+.div_imagen {
+    background-color: rgb(220, 220, 220);
+    margin: 2%;
+    align-content: center;
+    border-radius: 20px;
+    
+    
+ 
+
+    overflow: hidden;
+}
+
+
+.imagen {
+    max-width: 100%;
+    /* la imagen ocupa como máximo el ancho del div */
+
     height: auto;
 }
+
+.imagen_vermas {
+    height: 200px;
+    width: auto;
+}
+
+.imagen_max400 {
+    height: 400px;
+    width: auto;
+}
+
+
+
+
+
 
 
 /*-------------------------  videos  ------------------------------------------*/
