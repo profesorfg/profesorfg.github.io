@@ -194,7 +194,7 @@ class menuprincipal extends HTMLElement {
   <ul class="menu"> 
    <li> <a href="../index.html" >Inicio</a></li> 
    
-   <li> <a href="../webInterior/Interior.html" >vivienda</a> 
+   <li> <a href="#" >vivienda</a> 
        <ul> 
            <li> <a href="../webInterior/interior.html" >Interior</a>   			
       	   </li>  
@@ -203,7 +203,7 @@ class menuprincipal extends HTMLElement {
        </ul>  
    </li> 
    
-    <li> <a href="../webAutomatismos/cableados.html">Automatismos</a> 
+    <li> <a href="#" >Automatismos</a> 
       			 <ul> 
            			<li> <a href="../webAutomatismos/cableados.html">Control de Motores</a></li> 
            			<li> <a href="../webAutomatismos/cableados_practicas.html">Prácticas</a></li> 
@@ -212,7 +212,7 @@ class menuprincipal extends HTMLElement {
       			</ul>  
       	   </li>  
 
-    <li> <a href="../webAutomatismos/programados.html">Automatas</a> 
+    <li> <a href="#" >Automatas</a> 
       			 <ul> 
            			<li> <a href="../webAutomatismos/programados.html">S7-200</a> </li> 
            			<li> <a href="../webAutomatismos/logo.html">LOGO</a> </li> 
@@ -222,7 +222,7 @@ class menuprincipal extends HTMLElement {
         
    
 
-   <li> <a href="#" >Motor/Variador</a> 
+   <li> <a href="#" >Variador</a> 
        <ul> 
    		 
            <li> <a href="../webMotores/variadores.html">Variadores</a> </li> 
@@ -451,7 +451,7 @@ class menuprincipalindex extends HTMLElement {
   <ul class="menu"> 
    <li> <a href="index.html" >Inicio</a></li> 
    
-   <li> <a href="webInterior/interior.html" >vivienda</a> 
+   <li> <a href="#" >vivienda</a> 
        <ul> 
            <li> <a href="webInterior/interior.html" >Interior</a>   			
       	   </li>  
@@ -459,7 +459,7 @@ class menuprincipalindex extends HTMLElement {
    		  </li> 
        </ul>  
    </li> 
-   <li>   <a href="webAutomatismos/cableados.html">Automatismos</a> 
+   <li>   <a href="#" >Automatismos</a> 
       			 <ul> 
            			<li> <a href="webAutomatismos/cableados.html">Control de Motores</a></li> 
            			<li> <a href="webAutomatismos/cableados_practicas.html">Prácticas</a></li> 
@@ -467,7 +467,7 @@ class menuprincipalindex extends HTMLElement {
            			<li> <a href="webAutomatismos/cableados_material.html">Material</a></li> 
                 </ul>
 
-          <li> <a href="webAutomatismos/programados.html">Autómatas</a> 
+    <li> <a href="#" >Autómatas</a> 
       			 <ul> 
            			<li> <a href="webAutomatismos/programados.html">S7-200</a> </li>
            			<li> <a href="webAutomatismos/logo.html">LOGO</a> </li>

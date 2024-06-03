@@ -1,3 +1,10 @@
 git add .
 git commit -m "comentario"
 git push -u origin main
+
+
+
+
+
+contenedor3 en movil es mas grande el main que el contendor, visto en variador
+
