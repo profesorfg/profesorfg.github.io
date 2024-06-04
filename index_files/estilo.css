@@ -17,17 +17,7 @@ h1 {
     margin: 2px 110px 2px 50px;
 }
 
-/*
-h2 {
-   
-    font-size: 20px;
-    font-weight: bold;
-    color: #22f;
-    border-radius: 20px;
-  
-    text-transform: capitalize;
-}
-*/
+
 h2 {
 
     font-size: 20px;
@@ -182,20 +172,7 @@ main {
     grid-area: main;
 
     padding-left: 5%;
-    /*<section class="borde-naranja">
-                   <h2>Automatismos</h2>
-                    <ul>
-                        <ul>
-                            <li><a href="cableados.html">CONTROL DE MOTORES 1</a></li>
-                            <li><a href="cableados1.html">CONTROL DE MOTORES 2 </a></li>
-                            <li><a href="cableados_practicas.html">PRÁCTICAS</a></li>
-                             <li><a href="cableados_ejercicios.html">EJERCICIOS</a></li>
-                              <li><a href="cableados_material.html">MATERIAL</a></li>
-                        </ul>
-                        <br>
-                        <br>
-                    </ul>
-                </section>  border: 3px solid red;/* borrame esta linea*/
+   
 }
 
 article {
@@ -203,7 +180,7 @@ article {
     background-color: #e3c6c6;
     margin-left: 5%;
 
-    padding: 0px 50px;
+    padding: 5px 50px;
     border-radius: 10px;
     color: #555555;
     font-family: verdana;
@@ -275,11 +252,12 @@ footer a {
 
 
 /*   ----------------------  particularidades   colores flex ancho--------------------*/
-.borde-naranja {
+.section_naranja{
     background-color: rgb(220, 220, 220);
 
     border-radius: 20px;
     border: 2px solid orange;
+  
 }
 
 

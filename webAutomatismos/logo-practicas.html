@@ -25,90 +25,70 @@
             </nav>
 
         </header>
-       
+
         <main>
 
-            <h1>LOGO</h1>
-            <br>
-            <article>
-                <h2> Automatismos juego.</h2>
+            <h1>PRÁCTICAS</h1>
+            <a name="garaje-variador-logo"></a>
+            <br> <br> <br> <br>
 
-                <section class="borde-naranja">
+            <article>
+                <h2> Puerta de garaje</h2>
+
+                <section class="section_naranja">
                     <div class="flex_">
                         <div class="ancho60">
 
-                            <p> Presentamos el esquema eléctrico de un automatismo para realizar un
-                                juego de preguntas. </p>
-
-
-                            <p>La dificultad del automatismos consiste en que solo se encienda el
-                                piloto del primer concursante que pulse de cuatro
-                                concursantes, a partir de que el moderador de permiso. </p>
-
-
+                            <p> Control de una puerta de garaje con un variador V20 y un LOGO230RC</p>
+                            <a href="../webMotores/variadores_practicas.html#garaje-variador-logo">ir a variadores práctica puerta de garaje </a>
                         </div>
-                        <div class="ancho30">
-                            <img class="imagen" alt="imagenes/juego_pusadores.jpg" src="imagenes/juego_pusadores.jpg">
-                            <a href="http://profesorfg.blogspot.com.es/2013/04/automatismos-juego.html"> ver en blogspot</a>
+
+                        <div class="imagen_vermas">
+                            <img class="imagen_vermas" alt="puerta de garaje" src="../webMotores/imagenes_variadores/pract_garaje_logo.jpg">
                         </div>
+
+
+
+
+
                     </div>
-                    <details>
-                        <summary> </summary>
-                        <p>Si el moderador no da permiso, se encenderan todos los pilotos de los
-                            concursantes que han pulsando antes de tiempo y quedaran eliminados. </p>
-                        <p>El permiso se otorga cuando se apaga el piloto central. </p>
-                        <h3>CABLEADO DEL COFRE</h3>
-                        <div class="flex_">
-                            <section class="ancho30">
-                                <img class="imagen" src="imagenes/pract_juego_cofre_interior.jpg">
-                            </section>
-
-
-                            <section class="ancho30">
-                                <img class="imagen" alt="juego_cofre_interior.jpg" src="imagenes/pract_juego_cofre_abierta.jpg">
-                            </section>
-                        </div>
-                        <div class="flex_">
-                            <section class="ancho30">
-                                <img class="imagen" alt="imagenes/juego_cofre.jpg" src="imagenes/pract_juego_cofre.jpg">
-                            </section>
-
-                            <section class="ancho30">
-                                <img class="imagen" alt="imagenes/juego_presentacion_cableado_.jpg" src="imagenes/pract_juego_presentacion_cableado_.jpg"><br>
-                            </section>
-                        </div>
-
-                        <div style="text-align: center;"><iframe src="https://www.youtube.com/embed/a8VH8pdOFW4" allowfullscreen="" frameborder="0" height="315" width="560"></iframe><br>
-                        </div>
-
-                    </details>
                 </section>
                 <br>
             </article>
             <!--  ------------------     otra práctica  ----------------------------- -->
             <br>
             <article>
-                <h2> Mezcladora</h2>
-                <section class="borde-naranja">
+                <h2>Encendido de dos motores.</h2>
+                <section class="section_naranja">
 
                     <div class="flex_">
                         <div>
 
-                            <p> Disponemos de una mezcladora, que se pone en marcha con un pulsador y se para con otro, una vez encendida no se debe parar hasta que la mezcla esta completa, por lo que se ha puesto un motor de reserva, que se activara automaticamente si se produce sobrecalentamiento del motor principal.</p>
+
+                            <p>La instalación dispone de 3 paradas de emergencia, que en el caso de que alguna este pulsada los motores no funcionan. Cada parada de emergencia esta conectadas a las entradas I1, I2 y I3 del LOGO.</p>
+                            <p>El primer motor se controla con un interruptor conectado a la entrada 4</p>
+
 
                         </div>
                         <div>
-                            <img class="imagen_vermas" alt="imagenes/juego_pusadores.jpg" src="imagenes/pract_mezcladora.png">
+                            <img class="imagen_vermas" alt="dos motores" src="imag_logo/pract_dos-motores.png">
 
                         </div>
                     </div>
                     <details>
                         <summary> </summary>
-                        <p>Si el motor de reserva también se sobrecalienta, la mezcladora se para y se enciende un piloto de señalización que indica que la mezcladora esta fuera de servicio.</p>
 
+                        <p>El segundo motor se activa con un pulsador NA conectado a I5 y se para con otro pulsador NA conectado a I6</p>
+                        <p>Realiza el esquema eléctrico y programa del automatismo.</p>
                         <h3>ESQUEMA ELÉCTRICO</h3>
                         <div class="div_imagen">
-                            <img class="imagen" alt="imagenes/juego_presentacion_cableado_.jpg" src="imagenes/pract_mezcladora_esquema.png"><br>
+                            <img class="imagen" alt="esquema potencia de dos motores" src="imag_logo/pract_dos_motores-esquema.png">
+                            <img class="imagen" alt="esquema electrico con logo de dos motores" src="imag_logo/pract_dos_motores-logo.png">
+                            <img class="imagen" alt="programa logo de dos motores" src="imag_logo/pract_dos_motores-programa.png">
+                            <p> En la instalación anterior añade un guardamotor a cada motor y modifica el programa de forma que si hay algún guardamotor disparado no funcione la instalación</p>
+                            <img class="imagen" alt="esquema electrico con logo de dos motores" src="imag_logo/pract_dos_motores-logo2.png">
+                            <img class="imagen" alt="programa logo de dos motores" src="imag_logo/pract_dos_motores-programa2.png">
+
                         </div>
 
                     </details>
@@ -118,182 +98,55 @@
             <!--  ------------------     otra práctica  ----------------------------- -->
             <br>
             <article>
-                <h2> Arrancador progresivo.</h2>
-                <section class="borde-naranja">
+                <h2> </h2>
+                <section class="section_naranja">
 
                     <div class="flex_">
                         <div>
 
-                            <p>Los arrancadores progresivos o suaves, son dispositivos de electrónica de potencia que permiten arrancar los motores de inducción de forma progresiva y sin sacudidas, Alimentando progresivamente el motor desde un valor inicial hasta su valor nominal, limitando así las puntas de corriente en el momento del arranque.</p>
+                            <p></p>
 
 
                         </div>
                         <div>
-                            <img class="imagen_vermas" alt="arrancador progresivo" title="Arrancador progresivo ABB PS S 12" src="imagenes/pract_arr_progresivo.jpg">
+                            <img class="imagen_vermas" alt="" title="" src="i">
 
                         </div>
                     </div>
                     <details>
                         <summary> </summary>
-                        <p>Estos dispositivos disponen de un bloque de potencia o fuerza, a través del cual se alimenta el motor, y un bloque de mando, que permite gestionar el arranque de forma autónoma o por medio de un circuito externo.</p>
+                        <p>.</p>
                         <div class="div_imagen">
-                            <img class="imagen_max400" alt="arrancador progresivo" title="Arrancador progresivo ABB PS S 12" src="imagenes/pract_arr_progresivo_lat.jpg">
+                            <img class="imagen_max400" alt="" title="" src="">
                         </div>
-                        <p>El Arrancador progresivo ABB PS S 12 puede funcionar con continua o alterna entre 24V y 110V o a corriente alterna entre 110V o 480V.</p>
-
-                        <p>Si la alimentación esta entre 24V y 110V de corriente continua o alterna deberemos de conectarlos a los terminales A1 y A2 para que funcione.</p>
-                        <p>Si la alimentación esta entre 110V y 480V de corriente alterna deberemos de conectarlos a los terminales A1 y A3 para que funcione.</p>
-                        <h3>Parametros del arrancador progresivo</h3>
-                        <p>START RAMP; Es el tiempo que tardará en alcanzar la tensión nominal entre 0.5 y 6.8s.</p>
-                        <p>STOP RAMP; Es el tiempo que tardará en desacelerar y alcanzar la tensión mínima entre 0.5 y 6s.</p>
-                        <p>Uini; Es la manera de poner a que porcentaje quieres que arranque entre 0 y 85%.</p>
-
-                        <div class="div_imagen">
-                            <img class="imagen" alt="Arrancador progresivo ABB PS S 12" src="imagenes/pract_arr_progresivo_esquema.png">
-                        </div>
-                        <p>El funcionamiento de esta práctica:</p>
-                        <p>Para que el motor funcione alimentamos los bornes A1 y A3 del arrancador progresivo con 230Vac.</p>
-                        <p>Al activar el pulsador de marcha (S2) se activa el contactor auxilar KA1 y el arrancador progresivo G1, arrancando el motor con un porcentaje de la tensión nominal indicado en Uini y pasado el tiempo indicado en Start Ramp el motor funciona a su tensión nominal.</p>
-                        <p>Al pulsar paro (S1) de desactiva KA1 y G1 y el motor pasa de recibir la tensión nominal a la 0 en el tiempo seleccionado en Stop Ramp.</p>
-
-                    </details>
-                </section>
-            </article>
-
-
-            <!--  ------------------     otra práctica  ----------------------------- -->
-            <br>
-            <article>
-                <h2>Recoje tubos</h2>
-                <section class="borde-naranja">
-
-                    <div class="flex_">
-                        <div>
-
-                            <p>En esta práctica vamos modificar el esquema marcha – paro típico de una instalación.</p>
-                            <h3>FUNCIONAMIENTO.</h3>
-                            <p>Al girar el interruptor a ON la plataforma empieza a girar,</p>
-
-
-                        </div>
-                        <div>
-                            <img class="imagen_vermas" alt="imagen de la práctica" src="imagenes/pract_recoge_tubos.png">
-
-                        </div>
-                    </div>
-                    <details>
-                        <summary> </summary>
-
-                        <p>Al pasar el interruptor a OFF y detectar que hay un tubo en frente del detector capacitivo la plataforma se para.</p>
-
-
-                        <p>CUIDADO de ponerlo en marcha sin ningún tubo sobre la plataforma, no parará</p>
-
-                        <h3>Solucion1</h3>
-                        <div class="div_imagen">
-                            <img class="imagen" alt="solucion 1" src="imagenes/pract_recoge_tubos_solucion1.png"><br>
-                        </div>
-
-                        <h3>Solucion2</h3>
-                        <div class="div_imagen">
-                            <img class="imagen" alt="solucion 2" src="imagenes/pract_recoge_tubos_solucion2.png"><br>
-                        </div>
+                        <p></p>
                     </details>
                 </section>
             </article>
 
             <!--  ------------------     otra práctica  ----------------------------- -->
-            <br>
-            <article>
-                <h2> Puesta en marcha con aviso previo</h2>
-                <section class="borde-naranja">
-
-
-                    <div>
-
-                        <p>Proyecto de FRAN DIEZ MENDEZ</p>
-                        <p>Con este proyecto priorizó la seguridad de los operarios en un entorno industrial, creando un sistema de mando que permita avisar a los operarios antes de que la maquina entre en movimiento.
-                        <p>Antes de activar la máquina activamos un pulsador de aviso a trabajadores mediante una sirena acústica y una lámpara roja intermitente, indicando que en breve la maquina puede arrancar. </p>
-
-                    </div>
-
-                    <details>
-                        <summary> </summary>
-                        <p>Solo transcurridos 3 segundos el sistema te permitirá activar el movimiento, y te lo indicara mediante una lámpara intermitente de color amarilla . </p>
-                        <p>Finalmente cuando el operario principal pulse la puesta en marcha en sentido horario o en sentido antihorario se encenderán las lámparas de color verde indicando que esta en marcha y el sentido del giro de las mismas.</p>
-
-                        <h3>ESQUEMA ELÉCTRICO</h3>
-                        <div class="div_imagen">
-                            <img class="imagen" alt="esquema electrico" src="imagenes/pract_marcha_con_aviso.png"><br>
-                        </div>
-
-                    </details>
-                </section>
-            </article>
-
-            <!--  ------------------     otra práctica  ----------------------------- -->
-            <br>
-            <h2>PROPUESTA DE EJERCICIOS</h2>
-            <br>
-            <article>
-                <h2> Motor monofásico</h2>
-                <section class="borde-naranja">
-
-                    <div class="flex_">
-                        <div>
-
-                            <p> Observando la placa características de un motor monofasico.</p>
-                            <p>Realiza el automatismos de arranque de motor con cambio de giro, disponemos de un pulsador para sentido horario, otro para sentido antihorario, otro de paro, protección del motor con rele térmico trifásico, protección de la línea con magnetotérmico. </p>
-                        </div>
-
-                        <div>
-                            <img class="imagen_vermas" alt="motor monofasico" src="imagenes/pract_monofasico_motor.jpg">
-
-                        </div>
-                    </div>
-                    <details>
-                        <summary> </summary>
-                        <div class="flex_">
-
-                            <div class="div_imagen">
-                                <img class="imagen" alt="motor monofasico conexión cambio de giro" src="imagenes/pract_monofasico-conexion.png">
-                            </div>
-
-                            <div class="div_imagen">
-                                <img class="imagen" alt="motor monofasico conexión cambio de giro" src="imagenes/pract_monofasico-cambio-de-giro.png">
-                            </div>
-
-
-                        </div>
-                        <div class="div_imagen">
-                            <img class="imagen" alt="motor monofasico placa caracteristicas" src="imagenes/pract_monofasico-placa-de-caracteristicas.jpg">
-                        </div>
-
-                    </details>
-                </section>
-            </article>
 
 
 
 
         </main>
         <aside>
-              <section class="enlaces-titulo">
-                <h2>PRÁCTICAS</h2>
+            <section class="enlaces-titulo">
+                <h2>LOGO</h2>
             </section>
-              <section class="enlaces-navegacion">
-                
+            <section class="enlaces-navegacion">
+
+              
                     <ul>
-                        <ul>
-                            <li><a href="logo-practicas.html">PRÁCTICAS</a></li>
-                            <li><a href="logo.html">MOTORES</a></li>
-                            <li><a href="logo-domo.html">DOMÓTICA</a></li>
-                            
-                        </ul>
-                        
+                        <li><a href="logo-practicas.html">PRÁCTICAS</a></li>
+                        <li><a href="logo.html">MOTORES</a></li>
+                        <li><a href="logo-domo.html">DOMÓTICA</a></li>
+
                     </ul>
-                </section>
-            
+
+             
+            </section>
+
         </aside>
 
         <footer>El fin de hombre es perseguir la

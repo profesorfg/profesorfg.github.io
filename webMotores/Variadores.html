@@ -5,28 +5,30 @@
     <title>Motores</title>
 
     <link href="../index_files/estilo.css" rel="stylesheet" type="text/css">
-    <script src="../index_files/menu.js"></script><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../index_files/menu.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script defer src="index_files/cambiocableados.js"> </script>
 
     <meta content="profesorfg" name="author">
     <meta content="automatizacion industrial" name="description">
     <meta name="keywords" content="automatas electricidad">
     <meta charset="UTF-8">
-<script type="text/javascript">
-function muestraOculta(id) {
-var elemento = document.getElementById('solucion_'+id);
-var enlace = document.getElementById('enlace_'+id);
-if(elemento.style.display == "" || elemento.style.display == "block") {
-elemento.style.display = "none";
-enlace.innerHTML = 'Mostrar solución';
-}
-else {
-elemento.style.display = "block";
-enlace.innerHTML = 'Ocultar solución';
-}
-}
-</script>
+    <script type="text/javascript">
+        function muestraOculta(id) {
+            var elemento = document.getElementById('solucion_' + id);
+            var enlace = document.getElementById('enlace_' + id);
+            if (elemento.style.display == "" || elemento.style.display == "block") {
+                elemento.style.display = "none";
+                enlace.innerHTML = 'Mostrar solución';
+            } else {
+                elemento.style.display = "block";
+                enlace.innerHTML = 'Ocultar solución';
+            }
+        }
+
+    </script>
 </head>
+
 <body>
 
 
@@ -39,616 +41,622 @@ enlace.innerHTML = 'Ocultar solución';
             <a name="mozToc"> </a>
 
         </header>
-       
-        <main >
-<h1>VARIADORES</h1>
 
-<img class="imagen" alt="menu_variador." title="menu_variador" src="imagenes_variadores/variador.png">
+        <main>
+            <h1>EJERCICIOS</h1>
 
-<br>
-FUENTE: FIGURA MODIFICADA,&nbsp; EXTRAIDA DEL MANUAL DE PRIMEROS
-PASOS
-DE SIEMENS.<br>
-<br>
+            <img class="imagen" alt="menu_variador." title="menu_variador" src="imagenes_variadores/variador.png">
 
-<a href="https://cache.industry.siemens.com/dl/files/612/68321612/att_83059/v1/v20_getting_started_400v__230v_es-ES_es-ES.pdf" target="_blank"><br>
-Primeros pasos 22 páginas</a><br>
-<br>
-<a href="https://cache.industry.siemens.com/dl/files/484/67267484/att_61462/v1/v20_OPI_es-SP_es-ES.pdf" target="_blank">Manual de&nbsp; completo 332 páginas</a><br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-CONTENIDO <br>
-<p class="MsoBodyText" style="text-align: justify; line-height: 150%;"><b style=""><span style="font-size: 14pt; line-height: 150%; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;" lang="ES-TRAD">Para pasar de modo visualización a modo
-parametros
-pulsación larga en Fn</span></b></p>
-<p class="MsoBodyText" style="text-align: justify; line-height: 150%;"><b style=""><span style="font-size: 14pt; line-height: 150%; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;" lang="ES-TRAD">Para poner en funcionamiento el variador el
-parametro
-P10=0 preparado.</span></b></p>
-<p class="MsoBodyText" style="text-align: justify; line-height: 150%;"><b style=""><span style="font-size: 14pt; line-height: 150%; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;" lang="ES-TRAD"><br>
-</span></b></p>
-<p class="MsoBodyText" style="text-align: justify; line-height: 150%;"><b style=""><span style="font-size: 14pt; line-height: 150%; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;" lang="ES-TRAD">Para
-visualizar la frecuencia de funcionamiento ó trabajar con BOP, debemos
-de estar en la primera opción modo parámetros r000 y pulsar P para ver
-la frecuencia de funcionamiento., para llegar a él rapidamente&nbsp;
-estando en otro parametro, realizo&nbsp; una pulsación corta sobre Fn
-accedemos rapidamente a
-r000.<br>
-</span></b></p>
-<h2>Variador de velocidad, MICROMASTER 420</h2>
-<br>
-&nbsp;<br>
-<br>
-1º.- AJUSTES DE FABRICA, Realizar la primera puesta en marcha del
-variador de velocidad, con los parámetros indicados en la placa de
-características del motor.<br>
-Para ello en primer lugar reseteamos el variador y posteriormente
-comprobamos parámetros. <br>
-<br>
-<p id="solucion_1" style="display: none;">
-AJUTES DE FABRICA<br>
-P10=30<br>
-P970=1<br>
-TARDA 10 SEGUNDOS.<br>
-AJUSTES DE FABRICA <br>
-Fuentes de orden --&gt;terminal<br>
-Consigna frecuencia --&gt; potenciometro.<br>
-Despues:<br>
-&nbsp;P10=0 preparado<br>
-P003=2 nivel de acceso extendido. </p>
-<a id="enlace_1" href="#" onclick="muestraOculta('1'); return false;">Mostrar
-solución</a>
-<br>
-<br>
-2º.- CONTROL ANALOGICO, MARCHA &#8211; PARO EXTERNO. Realizar el control del
-motor a través del variador con las entradas (Terminal). De las
-entradas, la primera entrada el motor arranca en&nbsp;sentido
-horario,
-con el pulsador 2 arranca en sentido contrario, si se desactiva el
-pulsador 3 realiza una parada natural.<br>
-Comprueba:<br>
-Ademas de comprobar el fucionamiento del enunciado vamos a probar los
-siguientes casos.<br>
-Si pulso P1 y luego P2 el motor gira en sentido horario<br>
-Si pulso P2 y luego P1 el motor gira en sentido antihorario<br>
-Si desactivo P3, luego activo P1 y luego activo P3, el motor no arranca.<br>
-<input value="ayuda" onclick="alert('Para que el motor se ponga en marcha el pulsador 3 tiene que estar activado')" type="submit">
-<br>
-<p id="solucion_2" style="display: none;">
-P003=2 Nivel extendido<br>
-P010=0 Preparado<br>
-P1000=2 Consigna analógica<br>
-P700=2 Terminal<br>
-P701=1 On Derechas<br>
-P702=2 On izquierdas<br>
-P703=3 parada OFF<br>
-</p>
-<a id="enlace_2" href="#" onclick="muestraOculta('2'); return false;">Mostrar
-solución</a>
-<br>
-<br>
-3º.- JOG.- funcionamiento del motor: con el pulsador 1 el motor arranca
-en sentido horario y puedo modificar la frecuencia de 0 a 50 Hz con el
-potenciometro, con el pulsador 2 el motor funciona en modo
-mantenimiento "JOG" a derechas con
-frecuencia de 5Hz.<br>
-<br>
-La salida digital del terminal (luz roja) deberá encenderse con el
-motor en marcha<br>
-Comprueba:<br>
-Si pulso P1 y luego P2<br>
-Si pulso P2 y luego P1<br>
-Pulso P1 y muevo el potenciometro<br>
-Pulso P2 y muevo el potenciometro.<br>
-<p id="solucion_3" style="display: none;">
-P003=2 Nivel extendido<br>
-P010=0 Preparado<br>
-P1000=2 Consigna analógica<br>
-P700=2 Terminal<br>
-P701=1 On Derechas<br>
-P702=10 JOG Derechas<br>
-P1058=5Hz fr JOG Derecha<br>
-P703=3 parada OFF<br>
-P731= 52.2 Luz encendida con motor en marcha<br>
-</p>
-<a id="enlace_3" href="#" onclick="muestraOculta('3'); return false;">Mostrar
-solución</a>
-<br>
-<br>
-4º.- CONTROL POR FRECUENCIAS FIJAS, MARCHA - PARO EXTERNO. Utilizar las
-entradas digitales para seleccionar dos frecuencias fijas una de 10Hz y
-otra de 15Hz:<br>
-<br>
-Entrada 1 ® Arranque con frecuencia mínima de 5Hz<br>
-<br>
-Entrada 2 ® frecuencia de 10Hz<br>
-<br>
-Entrada 3 ® frecuencia de 15Hz<br>
-<br>
-<p id="solucion_4" style="display: none;">
-P003=2 Nivel extendido<br>
-P010=0 Preparado<br>
-P700=2 Terminal<br>
-P701=1 On Derechas<br>
-P702=15 frecuencia fija selección directa FF 10Hz<br>
-P703=15 parada OFF FF 15Hz<br>
-<br>
-P1000=3 Frecuencias fijas<br>
-P1002= 10 Hz frecuencia de entrada 2 10HZ<br>
-P1003= 15 Hz frecuencia de entrada 3 15 Hz<br>
-P1080= 5 Hz fr mininma 5Hz<br>
-primero lo hacemos sin fijar fr min al accionar la entrada 1 funciona
-el motor pero no gira, acciono la 1 y/o la dos y el motor gira según la
-frecuéncia.<br>
-<br>
-Entradas&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-&nbsp;&nbsp;&nbsp; 1 &nbsp;&nbsp;&nbsp; 2
-&nbsp;&nbsp;&nbsp; 3 <br>
-frecuencia 5Hz&nbsp;&nbsp;&nbsp;
-&nbsp;&nbsp;&nbsp; 1
-&nbsp;&nbsp;&nbsp; 0 &nbsp;&nbsp;&nbsp; 0 <br>
-frecuencia 10Hz &nbsp;&nbsp;&nbsp; 1
-&nbsp;&nbsp;&nbsp; 1
-&nbsp;&nbsp;&nbsp; 0 <br>
-frecuencia 15Hz &nbsp;&nbsp;&nbsp; 1
-&nbsp;&nbsp;&nbsp; 0
-&nbsp;&nbsp;&nbsp; 1 <br>
-frecuencia 25Hz &nbsp;&nbsp;&nbsp; 1
-&nbsp;&nbsp;&nbsp; 1
-&nbsp;&nbsp;&nbsp; 1 <br>
-frecuencia 0Hz&nbsp;&nbsp;&nbsp;
-&nbsp;&nbsp;&nbsp; 0
-&nbsp;&nbsp;&nbsp; 0 &nbsp;&nbsp;&nbsp; 0 <br>
-</p>
-<a id="enlace_4" href="#" onclick="muestraOculta('4'); return false;">Mostrar
-solución</a>
-<br>
-<br>
-<br>
-5º.- Con las frecuencias anteriores todos los switch (interruptor),
-ponen en ON el variador<br>
-<br>
-&nbsp;<br>
-<br>
-<p id="solucion_5" style="display: none;">
-P003=2 Nivel extendido<br>
-P010=0 Preparado<br>
-P700=2 Terminal<br>
-P701=16 Frecuencia fija 5Hz<br>
-P702=16 Frecuencia fija 10Hz<br>
-P703=16 Frecuencia fija 15Hz<br>
-<br>
-P1001= 5 Hz<br>
-P1002= 10 Hz<br>
-P1003= 15 Hz<br>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
-&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
-&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
-&nbsp;&nbsp; &nbsp;&nbsp;
-&nbsp;&nbsp; 5Hz &nbsp;&nbsp;&nbsp; 0Hz
-&nbsp;&nbsp;&nbsp; 15 Hz<br>
-Entradas&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 1
-&nbsp;&nbsp;&nbsp;
-&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
-&nbsp; 3 <br>
-frecuencia 0Hz &nbsp;&nbsp;&nbsp;
-&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; 0
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
-&nbsp;&nbsp; 0 <br>
-frecuencia 15Hz &nbsp; &nbsp;&nbsp;&nbsp;
-0&nbsp;&nbsp;&nbsp;
-&nbsp;&nbsp;&nbsp; &nbsp;
-0&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
-&nbsp;&nbsp;&nbsp; 1 <br>
-frecuencia 10Hz &nbsp; &nbsp;&nbsp;&nbsp; 0
-&nbsp;&nbsp;&nbsp;
-&nbsp;&nbsp;&nbsp;&nbsp; 1 &nbsp;&nbsp;
-&nbsp;&nbsp; &nbsp;&nbsp;
-&nbsp; 0<br>
-frecuencia 25Hz &nbsp; &nbsp;&nbsp;&nbsp;
-0&nbsp;&nbsp;&nbsp;
-&nbsp;&nbsp;&nbsp; &nbsp; 1
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
-&nbsp;&nbsp; 1 <br>
-frecuencia 5 Hz &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
-1&nbsp;&nbsp;
-&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
-0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-0 <br>
-frecuencia 20Hz &nbsp;&nbsp;&nbsp; &nbsp; 1 &nbsp;
-&nbsp; &nbsp;
-&nbsp;&nbsp; 0 &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp;&nbsp; 1 <br>
-frecuencia 15Hz &nbsp;&nbsp;&nbsp;&nbsp; 1
-&nbsp;&nbsp;&nbsp;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-0 <br>
-frecuencia 30Hz &nbsp;&nbsp;&nbsp;&nbsp; 1
-&nbsp;&nbsp;
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
-1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-&nbsp;&nbsp; 1<br>
-<br>
-</p>
-<a id="enlace_5" href="#" onclick="muestraOculta('5'); return false;">Mostrar
-solución
-</a> <br>
-<br>
-<br>
-<br>
-6º.- Añadir una cuarta entrada analógica (potenciómetro del terminal),
-limitar la frecuencia máxima a 45HZ<br>
-<br>
-&nbsp;<br>
-<p id="solucion_6" style="display: none;">
-Mantenemos los parametros y
-cambiamos:<br>
-P1000=23 fr fija + consigna analógica.<br>
-P 1082= 45 Hz fr max<br>
-<br>
-</p>
-<a id="enlace_6" href="#" onclick="muestraOculta('6'); return false;">
-Mostrar solución</a>
-&nbsp;<br>
-<br>
-&nbsp;<br>
-<br>
-7º.- POTENCIOMETRO MOTORIZADO. . Realizar el control del motor a través
-del variador con las entradas digitales y el MOP (potenciómetro
-motorizado). De las entradas digitales, una servirá para marcha, otra
-para subir frecuencias y la tercera para bajar frecuencias.<br>
-<br>
-<p id="solucion_7" style="display: none;">
-P003=2 Nivel extendido<br>
-P010=0 Preparado<br>
-P700=2 Terminal<br>
-P701=1 ON derechas<br>
-P702=13 subir frecuencias.<br>
-P703=14 bajar frecuencias.<br>
-P1000=1 MOP <br>
-para el variador v20 hay que tener en cuenta el P1031=0 Consigna del
-MOP no se guarda&nbsp; ver manual v20.<br>
-P1040= 5HZ fr min MOP.<br>
+            <br>
+            FUENTE: FIGURA MODIFICADA,&nbsp; EXTRAIDA DEL MANUAL DE PRIMEROS
+            PASOS
+            DE SIEMENS.<br>
+            <br>
 
-<br>
-Para trabajar con BOP,desde modo parámetros hacemos una pulsación corta
-sobre Fn para acceder rapidamente a r000, pulsamos P y vemos la
-frecuencia de funcionamiento.
-<br>
-<br>
-<br>
-</p>
-<br>
-<a id="enlace_7" href="#" onclick="muestraOculta('7'); return false;">
-Mostrar solución</a>
-<br>
-<br>
-8º.- PROGRAMAR 7 VELOCIDADES, con un incremento de 5Hz sin sumarse.
-Para ello utilizaremos combinaciones de los switch de entrada (código
-BCD).<br>
-<br>
-&nbsp;
-<p id="solucion_8" style="display: none;">
-Solución para el variador 420
-P003=2
-Nivel extendido<br>
-P010=0 Preparado<br>
-P700=2 Terminal<br>
-fr fija selección binaria + marcha<br>
-P701= 17<br>
-P702= 17<br>
-P703=17<br>
-Frecuencias fijas<br>
-P1000=3&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
-&nbsp;&nbsp; &nbsp;&nbsp;
-<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-0Hz&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; E3=&nbsp;
-0&nbsp; E2 = 0 &nbsp; E1=0<br>
-P1001=5Hz&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
-E3=&nbsp; 0&nbsp; E2 =
-0&nbsp;&nbsp; E1=1<br>
-P1002=10Hz&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
-E3=&nbsp; 0&nbsp; E2 = 1
-&nbsp; E1=0<br>
-P1003=15 Hz&nbsp;&nbsp; &nbsp;&nbsp; E3=&nbsp; 0 E2
-=
-1&nbsp;&nbsp;&nbsp; E1=1<br>
-P1004= 20Hz&nbsp;&nbsp; &nbsp;&nbsp; E3=&nbsp; 1 E2
-= 0 &nbsp;&nbsp;
-E1=0<br>
-P1005=25Hz&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
-E3=&nbsp; 1 E2 =
-0&nbsp;&nbsp;&nbsp; E1=1<br>
-P1006= 30Hz&nbsp;&nbsp; &nbsp;&nbsp; E3=&nbsp; 1 E2
-=
-1&nbsp;&nbsp;&nbsp; E1=0<br>
-P1007=35 Hz&nbsp;&nbsp; &nbsp;&nbsp; E3=&nbsp; 1 E2
-=1
-&nbsp;&nbsp;&nbsp; E1=1<br>
-<br>
-</p>
-<br>
-<a id="enlace_8" href="#" onclick="muestraOculta('8'); return false;">Mostrar
-solución
-</a><br>
-<br>
-9º.- TIEMPO DE ACELERACION. Reseteamos el sistema, e introducimos:<br>
-<br>
-Frecuencia máxima ® 45Hz<br>
-<br>
-Tiempo de aceleración en segundos ® 15 segundos<br>
-<br>
-Comprobamos<br>
-<br>
-<p id="solucion_9" style="display: none;">
-&nbsp; Resetemos<br>
-P0003=2<br>
-P1082=45&nbsp; Fr máxima.<br>
-P1120=15&nbsp;&nbsp; Tiempo de aceleración en segundos.<br>
-<br>
-&nbsp;<br>
-<br>
-</p>
-<a id="enlace_9" href="#" onclick="muestraOculta('9'); return false;">
-Mostrar
-solución </a>
-<br>
-<br>
-10º.- FRENADO POR INYECCIÓN DE CORRIENTE CONTINUA. Realizar el control del motor a través del
-variador con las entradas digitales con frenado por una inyección de
-corriente continua del 100% de la intensidad nominal del motor.<br>
-<br>
-Realizar nuevamente el frenado con una inyección del 45%.<br>
-<br>
-¿Qué diferencia existe entre los dos frenados?<br>
-<br>
-&nbsp; <br>
-<br>
-<p id="solucion_10" style="display: none;">
-Frenado de inyección de cc
-frena en seco.<br>
-P701=1 on derecha&nbsp; al para con la entrada 1 se desacelara
-normalmente.<br>
-P702=12 Inversión<br>
-P703 = 25 freno por inyección de cc.<br>
-P1232 =100%<br>
-<br>
-<br>
-</p>
-<a id="enlace_10" href="#" onclick="muestraOculta('10'); return false;">
-Mostrar
-solución </a>
-<br>
-<br>
-11º.- FRENO DE MANTENIMIENTO. Comprobar el funcionamiento del freno de
-mantenimiento con los siguientes parámetros:<br>
-<br>
-Retardo de apertura y retardo de cierre del freno 2sg<br>
-<br>
-Frecuencia máxima 45Hz<br>
-<br>
-Frecuencia mínima 5Hz<br>
-<br>
-<br>
-<p id="solucion_11" style="display: none;"> P1215=1
-habilitado&nbsp;&nbsp;&nbsp; Entrada 1 --&gt;marcha<br>
-P1216=2 segundos retardo apertura<br>
-P1217= 2 segundos retarddo cierre<br>
-<br>
-P1082= 45 Hz frecuencia maxima.<br>
-P1080= 5 Hz frecuencia minima.<br>
-<br>
-</p>
-<a id="enlace_11" href="#" onclick="muestraOculta('11'); return false;">Mostrar
-Solución </a>
-<br>
-<h1>Practicas variadores.</h1>
-<a href="https://www.dropbox.com/s/hivsw2qwkdwhw4k/Pr%C3%A1cticas%20de%20Variadores%20de%20Velocidad.pdf?dl=0">Descarga
-en ejercicio en PDF</a><br>
-<br>
-<br>
-<script>
-function acceso(){
-window.parent.location =document.formclave1.clave1.value + ".html"
-}
-</script>
-<form name="formclave1"><input name="clave1" type="password"><input value="Solución" onclick="acceso()" type="button"></form>
-&nbsp;<br>
-<br>
-Realizar las siguientes configuraciones con el variador de Velocidad.
-Micromaster 420 . Indica los valores de los parámetros que hay que
-poner.<br>
-<br>
-Los ejercicios son independientes, resetea el variador siempre que sea
-necesario. No es necesario indicar las variaciones en el parámetro P0003<br>
-<br>
-<br>
-<br>
-1.- Se quiere realizar el control de un motor a través de un variador.
-Queremos tener una frecuencia mínima de funcionamiento de 10 Hz, una
-máxima de 40 Hz, un tiempo de aceleración de 4 segundos y un tiempo de
-deceleración de 7 segundos. De las entradas digitales, una servirá para
-la marcha, otra para inversión de giro y otra para paro.<br>
-<br>
-&nbsp;<br>
-<br>
-&nbsp;<br>
-<br>
-&nbsp;<br>
-<br>
-&nbsp;<br>
-<br>
-&nbsp;<br>
-<br>
-2.- Se quiere realizar la puesta en marcha, paro y cambio de sentido
-desde el panel BOP, pero que la consigna de frecuencia se haga desde la
-entrada analógica<br>
-<br>
-&nbsp;<br>
-<br>
-&nbsp;<br>
-<br>
-&nbsp;<br>
-<br>
-&nbsp;<br>
-<br>
-&nbsp;<br>
-<br>
-3.- Se quiere realizar la marcha, paro y cambio de sentido desde las
-entradas digitales, pero la regulación de velocidad desde el panel BOP.<br>
-<br>
-&nbsp;<br>
-<br>
-&nbsp;<br>
-<br>
-&nbsp;<br>
-<br>
-&nbsp;<br>
-<br>
-4.- Queremos trabajar con frecuencias fijas con nuestro variador de
-velocidad. Queremos que la entrada 1 sea una entrada de activación, que
-con la entrada 2 el motor funcione a 15 Hz, y con la entrada 3 funcione
-a 35 Hz, además que si las entradas 2 y 3 están activadas, que funcione
-a 50 Hz (suma de las dos anteriores). Para que el motor funcione, es
-necesario que la entrada 1 esté activa, sino, permanece parado.<br>
-<br>
-&nbsp;<br>
-<br>
-&nbsp;<br>
-<br>
-&nbsp;<br>
-<br>
-&nbsp;<br>
-<br>
-&nbsp;<br>
-<br>
-&nbsp;<br>
-<br>
-5.- Queremos que un motor gire en dos sentidos, con regulación de
-velocidad en ambos sentidos, a derechas de 35 Hz y a izquierdas de 20
-Hz. El sentido se indicará con dos entradas digitales, la activación de
-número 2 querrá indicar giro a izquierdas, y la de la número 3 giro a
-derechas.<br>
-<br>
-&nbsp;<br>
-<br>
-&nbsp;<br>
-<br>
-&nbsp;<br>
-<br>
-&nbsp;<br>
-<br>
-&nbsp;<br>
-<br>
-&nbsp;<br>
-<br>
-&nbsp;<br>
-<br>
-6.- Configurar el variador para gobernarlo desde las entradas
-digitales. Con la entrada 1 lo ponemos en marcha, cada vez que
-activemos el pulsador dos se aumenta la frecuencia en 0,1HZ y cada vez
-que activemos la entrada tres se reduzca la frecuencia en 0,1Hz<br>
-<br>
-Al arrancar el motor deberá girar a 15 Hz<br>
-<br>
-&nbsp;<br>
-<br>
-&nbsp;<br>
-<br>
-&nbsp;<br>
-<br>
-&nbsp;<br>
-<br>
-&nbsp;<br>
-<br>
-&nbsp;<br>
-<br>
-7.- Queremos tener unas frecuencias fijas de funcionamiento del motor
-de 7, 16, 27, 23, 34, 43 y 50&nbsp; Hz, haciendo que las entradas 1
-a 3
-funcionen de forma codificada en BCD.<br>
-<br>
-Dibuja la tabla que relaciona las distintas combinaciones de las
-entradas, con los valores en la salida<br>
-<br>
-&nbsp;<br>
-<br>
-&nbsp;<br>
-<br>
-&nbsp;<br>
-<br>
-&nbsp;<br>
-<br>
-&nbsp;<br>
-<br>
-&nbsp;<br>
-<br>
-&nbsp;<br>
-<br>
-&nbsp;<br>
-<br>
-&nbsp;<br>
-<br>
-8.- Realizar el control del motor a través del variador con las
-entradas digitales con frenado por una inyección de corriente continua
-del 100% de la intensidad nominal del motor.<br>
-<br>
-Entrada 1 giro a derechas, entrada 2 JOG a izquierda a 7Hz, entrada 3
-freno.<br>
-<br>
-Cuando funcione el motor se deberá activar la salida digital<br>
-<br>
-&nbsp;<br>
-<br>
-&nbsp;<br>
-<br>
-&nbsp;<br>
-<br>
-&nbsp;<br>
-<br>
-&nbsp;<br>
-<br>
-9.- Comprobar el funcionamiento del freno de mantenimiento con los
-siguientes parámetros:<br>
-<br>
-Retardo de apertura ® 3sg<br>
-<br>
-Retardo de cierre del freno ® 2sg<br>
-<br>
-Frecuencia máxima ® 45Hz<br>
-<br>
-Frecuencia mínima ® 8Hz<br>
-<br>
-Dibuja la grafica frecuencia- tiempo, para estos parámetros. Indicando
-el punto de ON y de OFF del interruptor<br>
-<br>
-<br>
+            <a href="https://cache.industry.siemens.com/dl/files/612/68321612/att_83059/v1/v20_getting_started_400v__230v_es-ES_es-ES.pdf" target="_blank"><br>
+                Primeros pasos 22 páginas</a><br>
+            <br>
+            <a href="https://cache.industry.siemens.com/dl/files/484/67267484/att_61462/v1/v20_OPI_es-SP_es-ES.pdf" target="_blank">Manual de&nbsp; completo 332 páginas</a><br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            CONTENIDO <br>
+            <p class="MsoBodyText" style="text-align: justify; line-height: 150%;"><b style=""><span style="font-size: 14pt; line-height: 150%; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;" lang="ES-TRAD">Para pasar de modo visualización a modo
+                        parametros
+                        pulsación larga en Fn</span></b></p>
+            <p class="MsoBodyText" style="text-align: justify; line-height: 150%;"><b style=""><span style="font-size: 14pt; line-height: 150%; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;" lang="ES-TRAD">Para poner en funcionamiento el variador el
+                        parametro
+                        P10=0 preparado.</span></b></p>
+            <p class="MsoBodyText" style="text-align: justify; line-height: 150%;"><b style=""><span style="font-size: 14pt; line-height: 150%; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;" lang="ES-TRAD"><br>
+                    </span></b></p>
+            <p class="MsoBodyText" style="text-align: justify; line-height: 150%;"><b style=""><span style="font-size: 14pt; line-height: 150%; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;" lang="ES-TRAD">Para
+                        visualizar la frecuencia de funcionamiento ó trabajar con BOP, debemos
+                        de estar en la primera opción modo parámetros r000 y pulsar P para ver
+                        la frecuencia de funcionamiento., para llegar a él rapidamente&nbsp;
+                        estando en otro parametro, realizo&nbsp; una pulsación corta sobre Fn
+                        accedemos rapidamente a
+                        r000.<br>
+                    </span></b></p>
+            <h2>Variador de velocidad, MICROMASTER 420</h2>
+            <br>
+            &nbsp;<br>
+            <br>
+            1º.- AJUSTES DE FABRICA, Realizar la primera puesta en marcha del
+            variador de velocidad, con los parámetros indicados en la placa de
+            características del motor.<br>
+            Para ello en primer lugar reseteamos el variador y posteriormente
+            comprobamos parámetros. <br>
+            <br>
+            <p id="solucion_1" style="display: none;">
+                AJUTES DE FABRICA<br>
+                P10=30<br>
+                P970=1<br>
+                TARDA 10 SEGUNDOS.<br>
+                AJUSTES DE FABRICA <br>
+                Fuentes de orden --&gt;terminal<br>
+                Consigna frecuencia --&gt; potenciometro.<br>
+                Despues:<br>
+                &nbsp;P10=0 preparado<br>
+                P003=2 nivel de acceso extendido. </p>
+            <a id="enlace_1" href="#" onclick="muestraOculta('1'); return false;">Mostrar
+                solución</a>
+            <br>
+            <br>
+            2º.- CONTROL ANALOGICO, MARCHA &#8211; PARO EXTERNO. Realizar el control del
+            motor a través del variador con las entradas (Terminal). De las
+            entradas, la primera entrada el motor arranca en&nbsp;sentido
+            horario,
+            con el pulsador 2 arranca en sentido contrario, si se desactiva el
+            pulsador 3 realiza una parada natural.<br>
+            Comprueba:<br>
+            Ademas de comprobar el fucionamiento del enunciado vamos a probar los
+            siguientes casos.<br>
+            Si pulso P1 y luego P2 el motor gira en sentido horario<br>
+            Si pulso P2 y luego P1 el motor gira en sentido antihorario<br>
+            Si desactivo P3, luego activo P1 y luego activo P3, el motor no arranca.<br>
+            <input value="ayuda" onclick="alert('Para que el motor se ponga en marcha el pulsador 3 tiene que estar activado')" type="submit">
+            <br>
+            <p id="solucion_2" style="display: none;">
+                P003=2 Nivel extendido<br>
+                P010=0 Preparado<br>
+                P1000=2 Consigna analógica<br>
+                P700=2 Terminal<br>
+                P701=1 On Derechas<br>
+                P702=2 On izquierdas<br>
+                P703=3 parada OFF<br>
+            </p>
+            <a id="enlace_2" href="#" onclick="muestraOculta('2'); return false;">Mostrar
+                solución</a>
+            <br>
+            <br>
+            3º.- JOG.- funcionamiento del motor: con el pulsador 1 el motor arranca
+            en sentido horario y puedo modificar la frecuencia de 0 a 50 Hz con el
+            potenciometro, con el pulsador 2 el motor funciona en modo
+            mantenimiento "JOG" a derechas con
+            frecuencia de 5Hz.<br>
+            <br>
+            La salida digital del terminal (luz roja) deberá encenderse con el
+            motor en marcha<br>
+            Comprueba:<br>
+            Si pulso P1 y luego P2<br>
+            Si pulso P2 y luego P1<br>
+            Pulso P1 y muevo el potenciometro<br>
+            Pulso P2 y muevo el potenciometro.<br>
+            <p id="solucion_3" style="display: none;">
+                P003=2 Nivel extendido<br>
+                P010=0 Preparado<br>
+                P1000=2 Consigna analógica<br>
+                P700=2 Terminal<br>
+                P701=1 On Derechas<br>
+                P702=10 JOG Derechas<br>
+                P1058=5Hz fr JOG Derecha<br>
+                P703=3 parada OFF<br>
+                P731= 52.2 Luz encendida con motor en marcha<br>
+            </p>
+            <a id="enlace_3" href="#" onclick="muestraOculta('3'); return false;">Mostrar
+                solución</a>
+            <br>
+            <br>
+            4º.- CONTROL POR FRECUENCIAS FIJAS, MARCHA - PARO EXTERNO. Utilizar las
+            entradas digitales para seleccionar dos frecuencias fijas una de 10Hz y
+            otra de 15Hz:<br>
+            <br>
+            Entrada 1 ® Arranque con frecuencia mínima de 5Hz<br>
+            <br>
+            Entrada 2 ® frecuencia de 10Hz<br>
+            <br>
+            Entrada 3 ® frecuencia de 15Hz<br>
+            <br>
+            <p id="solucion_4" style="display: none;">
+                P003=2 Nivel extendido<br>
+                P010=0 Preparado<br>
+                P700=2 Terminal<br>
+                P701=1 On Derechas<br>
+                P702=15 frecuencia fija selección directa FF 10Hz<br>
+                P703=15 parada OFF FF 15Hz<br>
+                <br>
+                P1000=3 Frecuencias fijas<br>
+                P1002= 10 Hz frecuencia de entrada 2 10HZ<br>
+                P1003= 15 Hz frecuencia de entrada 3 15 Hz<br>
+                P1080= 5 Hz fr mininma 5Hz<br>
+                primero lo hacemos sin fijar fr min al accionar la entrada 1 funciona
+                el motor pero no gira, acciono la 1 y/o la dos y el motor gira según la
+                frecuéncia.<br>
+                <br>
+                Entradas&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp; 1 &nbsp;&nbsp;&nbsp; 2
+                &nbsp;&nbsp;&nbsp; 3 <br>
+                frecuencia 5Hz&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp; 1
+                &nbsp;&nbsp;&nbsp; 0 &nbsp;&nbsp;&nbsp; 0 <br>
+                frecuencia 10Hz &nbsp;&nbsp;&nbsp; 1
+                &nbsp;&nbsp;&nbsp; 1
+                &nbsp;&nbsp;&nbsp; 0 <br>
+                frecuencia 15Hz &nbsp;&nbsp;&nbsp; 1
+                &nbsp;&nbsp;&nbsp; 0
+                &nbsp;&nbsp;&nbsp; 1 <br>
+                frecuencia 25Hz &nbsp;&nbsp;&nbsp; 1
+                &nbsp;&nbsp;&nbsp; 1
+                &nbsp;&nbsp;&nbsp; 1 <br>
+                frecuencia 0Hz&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp; 0
+                &nbsp;&nbsp;&nbsp; 0 &nbsp;&nbsp;&nbsp; 0 <br>
+            </p>
+            <a id="enlace_4" href="#" onclick="muestraOculta('4'); return false;">Mostrar
+                solución</a>
+            <br>
+            <br>
+            <br>
+            5º.- Con las frecuencias anteriores todos los switch (interruptor),
+            ponen en ON el variador<br>
+            <br>
+            &nbsp;<br>
+            <br>
+            <p id="solucion_5" style="display: none;">
+                P003=2 Nivel extendido<br>
+                P010=0 Preparado<br>
+                P700=2 Terminal<br>
+                P701=16 Frecuencia fija 5Hz<br>
+                P702=16 Frecuencia fija 10Hz<br>
+                P703=16 Frecuencia fija 15Hz<br>
+                <br>
+                P1001= 5 Hz<br>
+                P1002= 10 Hz<br>
+                P1003= 15 Hz<br>
+                &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
+                &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+                &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+                &nbsp;&nbsp; &nbsp;&nbsp;
+                &nbsp;&nbsp; 5Hz &nbsp;&nbsp;&nbsp; 0Hz
+                &nbsp;&nbsp;&nbsp; 15 Hz<br>
+                Entradas&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 1
+                &nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+                &nbsp; 3 <br>
+                frecuencia 0Hz &nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; 0
+                &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp; 0 <br>
+                frecuencia 15Hz &nbsp; &nbsp;&nbsp;&nbsp;
+                0&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp; &nbsp;
+                0&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp; 1 <br>
+                frecuencia 10Hz &nbsp; &nbsp;&nbsp;&nbsp; 0
+                &nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp; 1 &nbsp;&nbsp;
+                &nbsp;&nbsp; &nbsp;&nbsp;
+                &nbsp; 0<br>
+                frecuencia 25Hz &nbsp; &nbsp;&nbsp;&nbsp;
+                0&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp; &nbsp; 1
+                &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp; 1 <br>
+                frecuencia 5 Hz &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
+                1&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
+                0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                0 <br>
+                frecuencia 20Hz &nbsp;&nbsp;&nbsp; &nbsp; 1 &nbsp;
+                &nbsp; &nbsp;
+                &nbsp;&nbsp; 0 &nbsp; &nbsp; &nbsp; &nbsp;
+                &nbsp;&nbsp; 1 <br>
+                frecuencia 15Hz &nbsp;&nbsp;&nbsp;&nbsp; 1
+                &nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                0 <br>
+                frecuencia 30Hz &nbsp;&nbsp;&nbsp;&nbsp; 1
+                &nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
+                1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp; 1<br>
+                <br>
+            </p>
+            <a id="enlace_5" href="#" onclick="muestraOculta('5'); return false;">Mostrar
+                solución
+            </a> <br>
+            <br>
+            <br>
+            <br>
+            6º.- Añadir una cuarta entrada analógica (potenciómetro del terminal),
+            limitar la frecuencia máxima a 45HZ<br>
+            <br>
+            &nbsp;<br>
+            <p id="solucion_6" style="display: none;">
+                Mantenemos los parametros y
+                cambiamos:<br>
+                P1000=23 fr fija + consigna analógica.<br>
+                P 1082= 45 Hz fr max<br>
+                <br>
+            </p>
+            <a id="enlace_6" href="#" onclick="muestraOculta('6'); return false;">
+                Mostrar solución</a>
+            &nbsp;<br>
+            <br>
+            &nbsp;<br>
+            <br>
+            7º.- POTENCIOMETRO MOTORIZADO. . Realizar el control del motor a través
+            del variador con las entradas digitales y el MOP (potenciómetro
+            motorizado). De las entradas digitales, una servirá para marcha, otra
+            para subir frecuencias y la tercera para bajar frecuencias.<br>
+            <br>
+            <p id="solucion_7" style="display: none;">
+                P003=2 Nivel extendido<br>
+                P010=0 Preparado<br>
+                P700=2 Terminal<br>
+                P701=1 ON derechas<br>
+                P702=13 subir frecuencias.<br>
+                P703=14 bajar frecuencias.<br>
+                P1000=1 MOP <br>
+                para el variador v20 hay que tener en cuenta el P1031=0 Consigna del
+                MOP no se guarda&nbsp; ver manual v20.<br>
+                P1040= 5HZ fr min MOP.<br>
+
+                <br>
+                Para trabajar con BOP,desde modo parámetros hacemos una pulsación corta
+                sobre Fn para acceder rapidamente a r000, pulsamos P y vemos la
+                frecuencia de funcionamiento.
+                <br>
+                <br>
+                <br>
+            </p>
+            <br>
+            <a id="enlace_7" href="#" onclick="muestraOculta('7'); return false;">
+                Mostrar solución</a>
+            <br>
+            <br>
+            8º.- PROGRAMAR 7 VELOCIDADES, con un incremento de 5Hz sin sumarse.
+            Para ello utilizaremos combinaciones de los switch de entrada (código
+            BCD).<br>
+            <br>
+            &nbsp;
+            <p id="solucion_8" style="display: none;">
+                Solución para el variador 420
+                P003=2
+                Nivel extendido<br>
+                P010=0 Preparado<br>
+                P700=2 Terminal<br>
+                fr fija selección binaria + marcha<br>
+                P701= 17<br>
+                P702= 17<br>
+                P703=17<br>
+                Frecuencias fijas<br>
+                P1000=3&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+                &nbsp;&nbsp; &nbsp;&nbsp;
+                <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                0Hz&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; E3=&nbsp;
+                0&nbsp; E2 = 0 &nbsp; E1=0<br>
+                P1001=5Hz&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+                E3=&nbsp; 0&nbsp; E2 =
+                0&nbsp;&nbsp; E1=1<br>
+                P1002=10Hz&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+                E3=&nbsp; 0&nbsp; E2 = 1
+                &nbsp; E1=0<br>
+                P1003=15 Hz&nbsp;&nbsp; &nbsp;&nbsp; E3=&nbsp; 0 E2
+                =
+                1&nbsp;&nbsp;&nbsp; E1=1<br>
+                P1004= 20Hz&nbsp;&nbsp; &nbsp;&nbsp; E3=&nbsp; 1 E2
+                = 0 &nbsp;&nbsp;
+                E1=0<br>
+                P1005=25Hz&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+                E3=&nbsp; 1 E2 =
+                0&nbsp;&nbsp;&nbsp; E1=1<br>
+                P1006= 30Hz&nbsp;&nbsp; &nbsp;&nbsp; E3=&nbsp; 1 E2
+                =
+                1&nbsp;&nbsp;&nbsp; E1=0<br>
+                P1007=35 Hz&nbsp;&nbsp; &nbsp;&nbsp; E3=&nbsp; 1 E2
+                =1
+                &nbsp;&nbsp;&nbsp; E1=1<br>
+                <br>
+            </p>
+            <br>
+            <a id="enlace_8" href="#" onclick="muestraOculta('8'); return false;">Mostrar
+                solución
+            </a><br>
+            <br>
+            9º.- TIEMPO DE ACELERACION. Reseteamos el sistema, e introducimos:<br>
+            <br>
+            Frecuencia máxima ® 45Hz<br>
+            <br>
+            Tiempo de aceleración en segundos ® 15 segundos<br>
+            <br>
+            Comprobamos<br>
+            <br>
+            <p id="solucion_9" style="display: none;">
+                &nbsp; Resetemos<br>
+                P0003=2<br>
+                P1082=45&nbsp; Fr máxima.<br>
+                P1120=15&nbsp;&nbsp; Tiempo de aceleración en segundos.<br>
+                <br>
+                &nbsp;<br>
+                <br>
+            </p>
+            <a id="enlace_9" href="#" onclick="muestraOculta('9'); return false;">
+                Mostrar
+                solución </a>
+            <br>
+            <br>
+            10º.- FRENADO POR INYECCIÓN DE CORRIENTE CONTINUA. Realizar el control del motor a través del
+            variador con las entradas digitales con frenado por una inyección de
+            corriente continua del 100% de la intensidad nominal del motor.<br>
+            <br>
+            Realizar nuevamente el frenado con una inyección del 45%.<br>
+            <br>
+            ¿Qué diferencia existe entre los dos frenados?<br>
+            <br>
+            &nbsp; <br>
+            <br>
+            <p id="solucion_10" style="display: none;">
+                Frenado de inyección de cc
+                frena en seco.<br>
+                P701=1 on derecha&nbsp; al para con la entrada 1 se desacelara
+                normalmente.<br>
+                P702=12 Inversión<br>
+                P703 = 25 freno por inyección de cc.<br>
+                P1232 =100%<br>
+                <br>
+                <br>
+            </p>
+            <a id="enlace_10" href="#" onclick="muestraOculta('10'); return false;">
+                Mostrar
+                solución </a>
+            <br>
+            <br>
+            11º.- FRENO DE MANTENIMIENTO. Comprobar el funcionamiento del freno de
+            mantenimiento con los siguientes parámetros:<br>
+            <br>
+            Retardo de apertura y retardo de cierre del freno 2sg<br>
+            <br>
+            Frecuencia máxima 45Hz<br>
+            <br>
+            Frecuencia mínima 5Hz<br>
+            <br>
+            <br>
+            <p id="solucion_11" style="display: none;"> P1215=1
+                habilitado&nbsp;&nbsp;&nbsp; Entrada 1 --&gt;marcha<br>
+                P1216=2 segundos retardo apertura<br>
+                P1217= 2 segundos retarddo cierre<br>
+                <br>
+                P1082= 45 Hz frecuencia maxima.<br>
+                P1080= 5 Hz frecuencia minima.<br>
+                <br>
+            </p>
+            <a id="enlace_11" href="#" onclick="muestraOculta('11'); return false;">Mostrar
+                Solución </a>
+            <br>
+            <h1>Practicas variadores.</h1>
+            <a href="https://www.dropbox.com/s/hivsw2qwkdwhw4k/Pr%C3%A1cticas%20de%20Variadores%20de%20Velocidad.pdf?dl=0">Descarga
+                en ejercicio en PDF</a><br>
+            <br>
+            <br>
+            <script>
+                function acceso() {
+                    window.parent.location = document.formclave1.clave1.value + ".html"
+                }
+
+            </script>
+            <form name="formclave1"><input name="clave1" type="password"><input value="Solución" onclick="acceso()" type="button"></form>
+            &nbsp;<br>
+            <br>
+            Realizar las siguientes configuraciones con el variador de Velocidad.
+            Micromaster 420 . Indica los valores de los parámetros que hay que
+            poner.<br>
+            <br>
+            Los ejercicios son independientes, resetea el variador siempre que sea
+            necesario. No es necesario indicar las variaciones en el parámetro P0003<br>
+            <br>
+            <br>
+            <br>
+            1.- Se quiere realizar el control de un motor a través de un variador.
+            Queremos tener una frecuencia mínima de funcionamiento de 10 Hz, una
+            máxima de 40 Hz, un tiempo de aceleración de 4 segundos y un tiempo de
+            deceleración de 7 segundos. De las entradas digitales, una servirá para
+            la marcha, otra para inversión de giro y otra para paro.<br>
+            <br>
+            &nbsp;<br>
+            <br>
+            &nbsp;<br>
+            <br>
+            &nbsp;<br>
+            <br>
+            &nbsp;<br>
+            <br>
+            &nbsp;<br>
+            <br>
+            2.- Se quiere realizar la puesta en marcha, paro y cambio de sentido
+            desde el panel BOP, pero que la consigna de frecuencia se haga desde la
+            entrada analógica<br>
+            <br>
+            &nbsp;<br>
+            <br>
+            &nbsp;<br>
+            <br>
+            &nbsp;<br>
+            <br>
+            &nbsp;<br>
+            <br>
+            &nbsp;<br>
+            <br>
+            3.- Se quiere realizar la marcha, paro y cambio de sentido desde las
+            entradas digitales, pero la regulación de velocidad desde el panel BOP.<br>
+            <br>
+            &nbsp;<br>
+            <br>
+            &nbsp;<br>
+            <br>
+            &nbsp;<br>
+            <br>
+            &nbsp;<br>
+            <br>
+            4.- Queremos trabajar con frecuencias fijas con nuestro variador de
+            velocidad. Queremos que la entrada 1 sea una entrada de activación, que
+            con la entrada 2 el motor funcione a 15 Hz, y con la entrada 3 funcione
+            a 35 Hz, además que si las entradas 2 y 3 están activadas, que funcione
+            a 50 Hz (suma de las dos anteriores). Para que el motor funcione, es
+            necesario que la entrada 1 esté activa, sino, permanece parado.<br>
+            <br>
+            &nbsp;<br>
+            <br>
+            &nbsp;<br>
+            <br>
+            &nbsp;<br>
+            <br>
+            &nbsp;<br>
+            <br>
+            &nbsp;<br>
+            <br>
+            &nbsp;<br>
+            <br>
+            5.- Queremos que un motor gire en dos sentidos, con regulación de
+            velocidad en ambos sentidos, a derechas de 35 Hz y a izquierdas de 20
+            Hz. El sentido se indicará con dos entradas digitales, la activación de
+            número 2 querrá indicar giro a izquierdas, y la de la número 3 giro a
+            derechas.<br>
+            <br>
+            &nbsp;<br>
+            <br>
+            &nbsp;<br>
+            <br>
+            &nbsp;<br>
+            <br>
+            &nbsp;<br>
+            <br>
+            &nbsp;<br>
+            <br>
+            &nbsp;<br>
+            <br>
+            &nbsp;<br>
+            <br>
+            6.- Configurar el variador para gobernarlo desde las entradas
+            digitales. Con la entrada 1 lo ponemos en marcha, cada vez que
+            activemos el pulsador dos se aumenta la frecuencia en 0,1HZ y cada vez
+            que activemos la entrada tres se reduzca la frecuencia en 0,1Hz<br>
+            <br>
+            Al arrancar el motor deberá girar a 15 Hz<br>
+            <br>
+            &nbsp;<br>
+            <br>
+            &nbsp;<br>
+            <br>
+            &nbsp;<br>
+            <br>
+            &nbsp;<br>
+            <br>
+            &nbsp;<br>
+            <br>
+            &nbsp;<br>
+            <br>
+            7.- Queremos tener unas frecuencias fijas de funcionamiento del motor
+            de 7, 16, 27, 23, 34, 43 y 50&nbsp; Hz, haciendo que las entradas 1
+            a 3
+            funcionen de forma codificada en BCD.<br>
+            <br>
+            Dibuja la tabla que relaciona las distintas combinaciones de las
+            entradas, con los valores en la salida<br>
+            <br>
+            &nbsp;<br>
+            <br>
+            &nbsp;<br>
+            <br>
+            &nbsp;<br>
+            <br>
+            &nbsp;<br>
+            <br>
+            &nbsp;<br>
+            <br>
+            &nbsp;<br>
+            <br>
+            &nbsp;<br>
+            <br>
+            &nbsp;<br>
+            <br>
+            &nbsp;<br>
+            <br>
+            8.- Realizar el control del motor a través del variador con las
+            entradas digitales con frenado por una inyección de corriente continua
+            del 100% de la intensidad nominal del motor.<br>
+            <br>
+            Entrada 1 giro a derechas, entrada 2 JOG a izquierda a 7Hz, entrada 3
+            freno.<br>
+            <br>
+            Cuando funcione el motor se deberá activar la salida digital<br>
+            <br>
+            &nbsp;<br>
+            <br>
+            &nbsp;<br>
+            <br>
+            &nbsp;<br>
+            <br>
+            &nbsp;<br>
+            <br>
+            &nbsp;<br>
+            <br>
+            9.- Comprobar el funcionamiento del freno de mantenimiento con los
+            siguientes parámetros:<br>
+            <br>
+            Retardo de apertura ® 3sg<br>
+            <br>
+            Retardo de cierre del freno ® 2sg<br>
+            <br>
+            Frecuencia máxima ® 45Hz<br>
+            <br>
+            Frecuencia mínima ® 8Hz<br>
+            <br>
+            Dibuja la grafica frecuencia- tiempo, para estos parámetros. Indicando
+            el punto de ON y de OFF del interruptor<br>
+            <br>
+            <br>
         </main>
-<aside>
-    <section class="enlaces-navegacion">
-                   <h2>EJERCICIOS</h2>
-                    <ul>
-                        <ul>
-                            <li><a href="Variadores.html">EJERCICIOS</a></li>
-                            <li><a href="variadores_practicas.html">PRÁCTICAS</a></li>
-                           
-                            
-                        </ul>
-                        
-                    </ul>
-                </section>
-</aside>
-<footer> Vortex Bladeless, ha
-desarrollado un prototipo de aerogenerador eléctrico sin palas.<br>
+        <aside>
+            <section class="enlaces-titulo">
+                <h2>VARIADOR</h2>
+            </section>
+            <section class="enlaces-navegacion">
+
+
+                <ul>
+                    <li><a href="Variadores.html">EJERCICIOS</a></li>
+                    <li><a href="variadores_practicas.html">PRÁCTICAS</a></li>
+
+
+                </ul>
+
+            </section>
+
+        </aside>
+        <footer> Vortex Bladeless, ha
+            desarrollado un prototipo de aerogenerador eléctrico sin palas.<br>
         </footer>
-</div>
-</body></html>
+    </div>
+</body>
+
+</html>
