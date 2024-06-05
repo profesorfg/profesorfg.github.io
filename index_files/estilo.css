@@ -14,7 +14,8 @@ h1 {
     padding-left: 10px;
     border-radius: 20px;
     text-align: center;
-    margin: 2px 110px 2px 50px;
+ /*   margin: 2px 110px 2px 50px;*/
+    margin-left: 50px;
 }
 
 
@@ -44,7 +45,7 @@ h5 {
     color: rgb(240, 200, 240)
 }
 
-.h2-vigor {
+.h2_vigor {
     text-align: center;
     font-size: 1.5em;
     text-transform: capitalize;
@@ -171,7 +172,8 @@ main {
     box-sizing: border-box;
     grid-area: main;
 
-    padding-left: 5%;
+  /*  padding-left: 5%;*/
+    padding:0 2%;
    
 }
 
@@ -326,7 +328,22 @@ footer a {
 
 
 /*  ------------------------  ENLACES  -----------------------------*/
+.boton{
+    background: #69f;
+    height: 30px;
+    width: 200px;
+    color:#fff;
+    cursor:pointer;
+    border=0px;
+    border-radius: 10px;
+  
+}
+/*
 
+ <input class="boton" type="button" value="cerrar todas las cuestiones" onClick="location.reload();">
+
+
+*/
 /*  ENLACES PAGINA INDEX  */
 .enlaces {
     background-color: #e3c6c6;
@@ -334,7 +351,7 @@ footer a {
     font-family: Arial, sans-serif;
     display: flex;
     flex-wrap: wrap;
-    margin: 0 6% 0 0;
+  /*  margin: 0 6% 0 0;*/
     padding: 16px;
     justify-content: space-between;
 }
@@ -563,4 +580,11 @@ footer a {
 .dropdown-content a:hover {
     color: #FFFFFF;
     background-color: #00A4BD;
+}
+
+
+.ancla{
+    position: relative;
+    bottom:90px;
+   
 }
