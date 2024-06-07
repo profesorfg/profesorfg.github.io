@@ -340,10 +340,34 @@ footer a {
 }
 /*
 
- <input class="boton" type="button" value="cerrar todas las cuestiones" onClick="location.reload();">
+ <input class="boton" type="button" value="cerrar todas las cuestiones" onClick="location.reload();">  */
 
 
-*/
+/* al seleccionar una pagina con un boton este queda activado indicando la pagina en la estoy */
+.pagina_seleccionada{
+    border: none;
+    color:#050;
+    background: none;
+   /*  font-weight: bold; */
+    font-size: 0.8em;
+}
+
+.pagina_seleccionada:hover{
+    color:  #957;
+    background: #fff;
+}
+
+.pagina_seleccionada:focus{
+    color:#fff;
+    background: #957;
+    padding: 0 8px;
+    border-radius: 3px;
+}
+
+
+
+
+
 /*  ENLACES PAGINA INDEX  */
 .enlaces {
     background-color: #e3c6c6;

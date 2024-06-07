@@ -104,7 +104,7 @@ class menuprincipal extends HTMLElement {
     display: none;
 }
     
-/*   MEDIA SCREEN  --------------------------------------------------------------  */    
+/*   MEDIA SCREEN  --------------------------para el movil -----------------------  */    
   @media screen and (max-width: 720px){      
     
     .header__superior{
@@ -151,14 +151,14 @@ class menuprincipal extends HTMLElement {
     
     	.menu li ul {
 				display:none;/*todos los submenus desaparecen*/
-				position:absolute; /*con respeto al menu */
-				min-width:140px;
+			/*	position:absolute; con respeto al menu
+				min-width:140px; */
 			}
     
     
     	.menu li:hover > ul{/* los li de menu al pasar el raton que sean directos de ul (esto lo dicho pero no le entiendo) aparecen el menu*/
 				display: flex;
-            flex-direction: row;
+                  flex-direction: column;
             
             left: 120px;
 			}
@@ -203,14 +203,14 @@ class menuprincipal extends HTMLElement {
        </ul>  
    </li> 
    
-    <li> <a href="#" >Automatismos</a> 
-      			 <ul> 
+    <li> <a href="../webAutomatismos/cableados.html">Automatismos</a> 
+    <!-- <ul> 
            			<li> <a href="../webAutomatismos/cableados.html">Control de Motores</a></li> 
            			<li> <a href="../webAutomatismos/cableados_practicas.html">Prácticas</a></li> 
                     <li> <a href="../webAutomatismos/cableados_ejercicios.html">Ejercicios</a></li> 
                     <li> <a href="../webAutomatismos/cableados_material.html">Material</a></li> 
       			</ul>  
-      	   </li>  
+      	   </li>  -->
 
     <li> <a href="#" >Automatas</a> 
       			 <ul> 
@@ -415,7 +415,7 @@ class menuprincipalindex extends HTMLElement {
     
     	.menu li:hover > ul{/* los li de menu al pasar el raton que sean directos de ul (esto lo dicho pero no le entiendo) aparecen el menu*/
 				display: flex;
-            flex-direction: row;
+           flex-direction: column;
             
             left: 120px;
 			}
@@ -459,13 +459,13 @@ class menuprincipalindex extends HTMLElement {
    		  </li> 
        </ul>  
    </li> 
-   <li>   <a href="#" >Automatismos</a> 
-      			 <ul> 
+   <li>   <a href="webAutomatismos/cableados.html">Automatismos</a> 
+      	<!--		 <ul> 
            			<li> <a href="webAutomatismos/cableados.html">Control de Motores</a></li> 
            			<li> <a href="webAutomatismos/cableados_practicas.html">Prácticas</a></li> 
                     <li> <a href="webAutomatismos/cableados_ejercicios.html">Ejercicios</a></li> 
            			<li> <a href="webAutomatismos/cableados_material.html">Material</a></li> 
-                </ul>
+                </ul>   -->
 
     <li> <a href="#" >Autómatas</a> 
       			 <ul> 

@@ -193,8 +193,8 @@ class menuprincipal extends HTMLElement {
                 </label>    
   <ul class="menu"> 
    <li> <a href="../index.html" >Inicio</a></li> 
-    <li> <a href="../webRobotica/robotica.html" >Robotica</a></li> 
-   <li> <a href="../webInterior/Interior.html" >vivienda</a> 
+   
+   <li> <a href="#" >vivienda</a> 
        <ul> 
            <li> <a href="../webInterior/interior.html" >Interior</a>   			
       	   </li>  
@@ -202,41 +202,43 @@ class menuprincipal extends HTMLElement {
    		  </li> 
        </ul>  
    </li> 
-   <li> <a href="../webAutomatismos/index.html" >Automatismos</a> 
-       <ul> 
-           <li> <a href="../webAutomatismos/cableados.html">Cableados</a> 
+   
+    <li> <a href="#" >Automatismos</a> 
       			 <ul> 
            			<li> <a href="../webAutomatismos/cableados.html">Control de Motores</a></li> 
-           			<li> <a href="../webAutomatismos/cableados_analizar.html">Ejercicios A.Cableados</a></li> 
+           			<li> <a href="../webAutomatismos/cableados_practicas.html">Prácticas</a></li> 
+                    <li> <a href="../webAutomatismos/cableados_ejercicios.html">Ejercicios</a></li> 
+                    <li> <a href="../webAutomatismos/cableados_material.html">Material</a></li> 
       			</ul>  
       	   </li>  
 
-          <li> <a href="../webAutomatismos/programados.html">Programados</a> 
+    <li> <a href="#" >Automatas</a> 
       			 <ul> 
-           			<li> <a href="../webAutomatismos/programados.html">S7-200</a> 
-           			<li> <a href="../webAutomatismos/logo.html">LOGO</a> 
-           			<li> <a href="../webAutomatismos/tiaportal.html">TIA-PORTAL</a> 
+           			<li> <a href="../webAutomatismos/programados.html">S7-200</a> </li> 
+           			<li> <a href="../webAutomatismos/logo.html">LOGO</a> </li> 
+           			<li> <a href="../webAutomatismos/tiaportal.html">TIA-PORTAL</a> </li> 
       			</ul>  
    		  </li> 
+        
+   
+
+   <li> <a href="#" >Variador</a> 
+       <ul> 
+   		 
+           <li> <a href="../webMotores/variadores.html">Variadores</a> </li> 
+           <li> <a href="../webMotores/variadores_practicas.html">Practicas Variadores</a> </li> 
        </ul>  
    </li> 
 
-   <li> <a href="#" >Motor/Variador</a> 
+   <li> <a href="../webRenovables/renovables.html" >Renovables</a></li>
+<li> <a href="../webenlaces/enlaces.html">Enlaces</a></li> 
+   <li> <a href="#">Varios</a>
        <ul> 
-   		   <li> <a href="../webMotores/motores.html" >Motores</a> 
-           <li> <a href="../webMotores/variadores.html">Variadores</a> 
-           <li> <a href="../webMotores/variadores_practicas.html">Practicas Variadores</a> 
-       </ul>  
-   </li> 
-   <li> <a href="../webRenovables/renovables.html" >Renovables</a></li> 
-   <li> <a href="">Varios</a> 
-       <ul> 
-         <li> <a href="../webenlaces/enlaces.html">Enlaces</a></li> 
+            <li> <a href="../webRobotica/robotica.html" >Robotica</a></li> 
+            <li> <a href="../webMotores/motores.html" >Motores</a> </li> 
           <li> <a href="../arduino/index.html">Arduino</a></li> 
           <li> <a href="https://cifpmedinadelcampo.es/iea/" >CIFP Electricidad</a></li> 
-         
-
-       </ul>  
+        </ul>  
    </li> 
  </ul>
 
@@ -448,8 +450,8 @@ class menuprincipalindex extends HTMLElement {
                 </label>    
   <ul class="menu"> 
    <li> <a href="index.html" >Inicio</a></li> 
-    <li> <a href="webRobotica/robotica.html" >Robotica</a></li> 
-   <li> <a href="webInterior/interior.html" >vivienda</a> 
+   
+   <li> <a href="#" >vivienda</a> 
        <ul> 
            <li> <a href="webInterior/interior.html" >Interior</a>   			
       	   </li>  
@@ -457,36 +459,37 @@ class menuprincipalindex extends HTMLElement {
    		  </li> 
        </ul>  
    </li> 
-   <li> <a href="webAutomatismos/index.html" >Automatismos</a> 
-       <ul> 
-           <li> <a href="webAutomatismos/cableados.html">Cableados</a> 
+   <li>   <a href="#" >Automatismos</a> 
       			 <ul> 
            			<li> <a href="webAutomatismos/cableados.html">Control de Motores</a></li> 
-           			<li> <a href="webAutomatismos/cableados_analizar.html">Ejercicios A.Cableados</a></li> 
-      			</ul>  
-      	   </li>  
+           			<li> <a href="webAutomatismos/cableados_practicas.html">Prácticas</a></li> 
+                    <li> <a href="webAutomatismos/cableados_ejercicios.html">Ejercicios</a></li> 
+           			<li> <a href="webAutomatismos/cableados_material.html">Material</a></li> 
+                </ul>
 
-          <li> <a href="webAutomatismos/programados.html">Programados</a> 
+    <li> <a href="#" >Autómatas</a> 
       			 <ul> 
-           			<li> <a href="webAutomatismos/programados.html">S7-200</a> 
-           			<li> <a href="webAutomatismos/logo.html">LOGO</a> 
-           			<li> <a href="webAutomatismos/tiaportal.html">TIA-PORTAL</a> 
+           			<li> <a href="webAutomatismos/programados.html">S7-200</a> </li>
+           			<li> <a href="webAutomatismos/logo.html">LOGO</a> </li>
+           			<li> <a href="webAutomatismos/tiaportal.html">TIA-PORTAL</a> </li>
       			</ul>  
-   		  </li> 
-       </ul>  
-   </li> 
+   		   
+        
+  
 
-   <li> <a href="#" >Motor/Variador</a> 
+   <li> <a href="#" >Variador</a> 
        <ul> 
-   		   <li> <a href="webMotores/motores.html" >Motores</a> 
+   		
            <li> <a href="webMotores/Variadores.html">Variadores</a> 
            <li> <a href="webMotores/variadores_practicas.html">Practicas Variadores</a> 
        </ul>  
    </li> 
    <li> <a href="webRenovables/renovables.html" >Renovables</a></li> 
+     <li> <a href="webenlaces/enlaces.html">Enlaces</a></li> 
    <li> <a href="">Varios</a> 
        <ul> 
-         <li> <a href="webenlaces/enlaces.html">Enlaces</a></li> 
+         <li> <a href="webRobotica/robotica.html" >Robotica</a></li> 
+       <li> <a href="webMotores/motores.html" >Motores</a> 
           <li> <a href="arduino/index.html">Arduino</a></li> 
           <li> <a href="https://cifpmedinadelcampo.es/iea/" >CIFP Electricidad</a></li> 
          
