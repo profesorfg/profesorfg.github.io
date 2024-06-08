@@ -317,8 +317,10 @@ footer a {
 }
 
 .imagen_vermas {
-    height: 200px;
-    width: auto;
+/*max-height: 200px;*/
+/*width: auto;*/
+    max-width: 30%;
+    min-width: 220px;
 }
 
 .imagen_max400 {
@@ -368,7 +370,7 @@ footer a {
 
 
 
-/*  ENLACES PAGINA INDEX  */
+/*  ENLACES   */
 .enlaces {
     background-color: #e3c6c6;
     border-radius: 20px;
@@ -377,7 +379,8 @@ footer a {
     flex-wrap: wrap;
   /*  margin: 0 6% 0 0;*/
     padding: 16px;
-    justify-content: space-between;
+    justify-content:space-evenly;
+ 
 }
 
 .enlaces-navegacion {
@@ -409,6 +412,13 @@ footer a {
     font-size: 25px;
     text-align: center;
 
+}
+
+
+.ancla{
+    position: relative;
+    bottom:90px;
+   
 }
 
 /*-------------------------  videos  ------------------------------------------*/
@@ -607,8 +617,3 @@ footer a {
 }
 
 
-.ancla{
-    position: relative;
-    bottom:90px;
-   
-}

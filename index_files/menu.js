@@ -225,7 +225,7 @@ class menuprincipal extends HTMLElement {
    <li> <a href="#" >Variador</a> 
        <ul> 
    		 
-           <li> <a href="../webMotores/variadores.html">Variadores</a> </li> 
+           <li> <a href="../webMotores/Variadores.html">Variadores</a> </li> 
            <li> <a href="../webMotores/variadores_practicas.html">Practicas Variadores</a> </li> 
        </ul>  
    </li> 
@@ -486,7 +486,7 @@ class menuprincipalindex extends HTMLElement {
    </li> 
    <li> <a href="webRenovables/renovables.html" >Renovables</a></li> 
      <li> <a href="webenlaces/enlaces.html">Enlaces</a></li> 
-   <li> <a href="">Varios</a> 
+   <li> <a href="#">Varios</a> 
        <ul> 
          <li> <a href="webRobotica/robotica.html" >Robotica</a></li> 
        <li> <a href="webMotores/motores.html" >Motores</a> 
