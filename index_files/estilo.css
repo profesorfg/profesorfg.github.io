@@ -14,7 +14,7 @@ h1 {
     padding-left: 10px;
     border-radius: 20px;
     text-align: center;
- /*   margin: 2px 110px 2px 50px;*/
+    /*   margin: 2px 110px 2px 50px;*/
     margin-left: 50px;
 }
 
@@ -23,7 +23,7 @@ h2 {
 
     font-size: 20px;
     font-weight: bold;
-    color: #c24;
+    color: #741;
     border-radius: 20px;
 
     text-transform: capitalize;
@@ -88,13 +88,15 @@ h5 {
 
 
 #contenedor2 {
+    /*  no utilizado  */
     background-color: #e3d5bc;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 100px auto 1fr 40px;
+    grid-template-rows: 100px 280px auto 1fr 40px;
     grid-gap: 5px;
     grid-template-areas:
         "header"
+        "lateral"
         "aside"
         "main"
         "footer";
@@ -172,9 +174,9 @@ main {
     box-sizing: border-box;
     grid-area: main;
 
-  /*  padding-left: 5%;*/
-    padding:0 2%;
-   
+    /*  padding-left: 5%;*/
+    padding: 0 2%;
+
 }
 
 article {
@@ -254,17 +256,19 @@ footer a {
 
 
 /*   ----------------------  particularidades   colores flex ancho--------------------*/
-.section_naranja{
+.section_naranja {
     background-color: rgb(220, 220, 220);
 
     border-radius: 20px;
     border: 2px solid orange;
-  
+
+}
+.inline-block{
+    display: inline-block;
 }
 
 
-
-.flexible_wrap {
+.flex_wrap {
 
     display: flex;
     flex-wrap: wrap;
@@ -317,53 +321,79 @@ footer a {
 }
 
 .imagen_vermas {
-/*max-height: 200px;*/
-/*width: auto;*/
+    /*max-height: 200px;*/
+    /*width: auto;*/
     max-width: 30%;
     min-width: 220px;
 }
 
-.imagen_max400 {
-    height: 400px;
-    width: auto;
+
+
+    .carrusel {
+            display: flex;
+            flex-wrap: nowrap;
+            overflow: scroll;
+    
+        overflow-y: hidden;
+        
+   width:10%;
+   
+        }
+
+        .carrusel_elemento {
+            flex: 1 0 auto;
+            margin: 0 10px;
+          
+
+        }
+.carrusel_elemento img{
+  
+    max-height: 250px;
 }
+
+
+
+
 
 
 /*  ------------------------  ENLACES  -----------------------------*/
-.boton{
+.boton {
     background: #69f;
     height: 30px;
     width: 200px;
-    color:#fff;
-    cursor:pointer;
+    color: #fff;
+    cursor: pointer;
     border=0px;
     border-radius: 10px;
-  
+
 }
+
 /*
 
  <input class="boton" type="button" value="cerrar todas las cuestiones" onClick="location.reload();">  */
 
 
 /* al seleccionar una pagina con un boton este queda activado indicando la pagina en la estoy */
-.pagina_seleccionada{
+.pagina_seleccionada {
     border: none;
-    color:#050;
+    color: #050;
     background: none;
-   /*  font-weight: bold; */
+    /*  font-weight: bold; */
     font-size: 0.8em;
+    
 }
 
-.pagina_seleccionada:hover{
-    color:  #957;
+.pagina_seleccionada:hover {
+    color: #957;
     background: #fff;
 }
 
-.pagina_seleccionada:focus{
-    color:#fff;
+.pagina_seleccionada:focus {
+    color: #fff;
     background: #957;
     padding: 0 8px;
     border-radius: 3px;
+  
 }
 
 
@@ -377,10 +407,10 @@ footer a {
     font-family: Arial, sans-serif;
     display: flex;
     flex-wrap: wrap;
-  /*  margin: 0 6% 0 0;*/
+    /*  margin: 0 6% 0 0;*/
     padding: 16px;
-    justify-content:space-evenly;
- 
+    justify-content: space-evenly;
+
 }
 
 .enlaces-navegacion {
@@ -389,11 +419,13 @@ footer a {
     background-color: #347;
     border-radius: 20px;
     border: 2px solid orange;
+    
 }
 
 
 .enlaces-navegacion a {
-    color: #2df;
+    color: #fff;
+    
 }
 
 .enlaces-navegacion a:hover {
@@ -415,10 +447,10 @@ footer a {
 }
 
 
-.ancla{
+.ancla {
     position: relative;
-    bottom:90px;
-   
+    bottom: 90px;
+
 }
 
 /*-------------------------  videos  ------------------------------------------*/
@@ -450,6 +482,32 @@ footer a {
     /* ocupa el 100% del ancho del padre y por el ratio del padre el 100% del ancho*/
     height: 100%;
     /*no lo puse y me quedo una mierda de altura*/
+}
+
+
+/* video en la pagina de renovables y va bien para tener dos videos en una fila */
+
+.video-container {
+    width: 45%;
+    margin: 5px;
+     min-width: 350px;
+}
+.video-container_3videos {/* poner detras de video containerpara que me pise el width*/
+    width: 30%;
+  
+    
+}
+
+
+.video-container iframe {
+  width: 100%;
+   /* height: 250px;*/
+    height: auto;
+    /* Puedes ajustar la altura según tus necesidades */
+}
+
+.video-container h2 {
+    margin-bottom: 5px;
 }
 
 
@@ -615,5 +673,3 @@ footer a {
     color: #FFFFFF;
     background-color: #00A4BD;
 }
-
-
