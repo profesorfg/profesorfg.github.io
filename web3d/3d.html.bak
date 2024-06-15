@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>3D</title>
+    <link href="../index_files/estilo.css" rel="stylesheet" type="text/css">
+    <script src="../index_files/menu.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="profesorfg" name="author">
+    <meta content="automatizacion industrial" name="description">
+    <meta name="keywords" content="automatas electricidad">
+  </head>
+  <body>
+    <div id="contenedor2">
+      <header>
+        <nav> <menu-principal></menu-principal> </nav>
+      </header>
+      <div #id="lateral"> <img class="imagen" src="imagenes/cabezera_impresion3D.jpg"
+          alt="imagen de cabezera impresión 3d"> </div>
+      <main>
+        <h1> IMPRESORA 3D</h1>
+        <article>
+          <h2>Partes de una impresora 3D</h2>
+          <p>El <span class="azul_negrita">Hotend o Fusor</span>, es el
+            elemento de la impresora 3D que funde el filamento.</p>
+          <p>El <span class="azul_negrita">nozzle o Boquilla</span>: tienen un
+            orificio por donde sale plástico fundido, este orificio puede tener
+            distintos diámetros,</p>
+          <p>Base de impresión de tamaño 220*220 nos limita el tamaño máximo de
+            la base de la pieza, la altura en nuestra impresora es recomendable
+            no superar los 200 mm, la base de impresión esta calefactada para
+            mejora el agarre de pieza a la base, la temperatura de la base para
+            las primeras capas la hacemos a 70º y cuando empieza con la capas
+            sucesivas bajamos la temperatura 40º, estas temperaturas, también se
+            puede añadir laca al inicio de la impresión con lo que se mojora el
+            agarre de las piezas con base muy pequeña, si la base es muy grande
+            y utilizamos la cama caliente y laca la pieza quedara muy pegada la
+            base y costara mucho despegarla. Para retirar la pieza de la base
+            cuando halla terminado, se recomienda dejar pasar un tiempo para
+            despegar mejor la pieza de la base.</p>
+          <p>El filamento se introduce en el hotend o fusor gracias a la<span class="azul_negrita">
+              polea extrusora</span>, en nuestro caso hemos utilizado la MK8,
+            para filamento de 1,75 mm, se debe de regular la presión entre la
+            polea extrusora y el filamento con un tensor, una presión
+            insuficiente o que la polea tensora de este bien sujeta al eje motor
+            que la hace girar, tiene como resultado que el filamento no avance
+            para introducirse en el hotend, para comprobar que el filamento
+            avanza, suelo marcar con un rotulador una linea en el filamento
+            antes de entrar por la guía de teflón.</p>
+          <p>Para introducir o sacar el filamento del hotend este debe de estar
+            caliente.</p>
+        </article>
+        <article>
+          <h2>Descarga de modelos 3D</h2>
+          <section class="section_naranja"> <a href="https://www.impresoras3d.com/los-mejores-sitios-bajar-archivos-stl/"
+              target="_blank"> Los mejores repositorios para descargar STL&nbsp;
+            </a><span style="color: green;">&nbsp;&nbsp; <a href="https://www.tinkercad.com/#/"
+                target="_blank">– TINKERCAD&nbsp;</a> &nbsp; <a href="https://cults3d.com/es"
+                target="_blank">– CULTS3D</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a
+                href="https://www.thingiverse.com/explore/newest/3d-printing" target="_blank">–
+                THINGIVERSE&nbsp;</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://www.myminifactory.com/es/"
+                target="_blank"> MYMINIFACTORY</a><br>
+              <br>
+              <a href="https://www.traceparts.com/en/product/abbs-industrial-solutions-business-compact-electronic-rcbo-with-neutral-tail-dme60-g-1pn-40-a-30-ma?CatalogPath=TRACEPARTS%3ATP09004001010&amp;Product=10-29072015-117041&amp;PartNumber=605066"
+                target="_blank">TRACEPARTS&nbsp;</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <a href="https://grabcad.com/" target="_blank">– GRABCAD&nbsp;</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              –<a href="https://www.youmagine.com/" target="_blank"> YOUMAGINE</a>&nbsp;&nbsp;&nbsp;
+              <a href="https://www.stlfinder.com/" target="_blank">– BUSCADOR DE
+                STL</a></span><br>
+          </section>
+          En nuestro curso para aprender a manejar la impresora, vamos a
+          realizar la impresión piezas de ajedrez, que las podemos descargar en
+          el este enlace <a href="https://archivosstl.com/stl/set-ajedrez-completo-fichas-sueltas/%20"
+            title="pagian de descarga de ficha de agradrez" target="_blank">https://archivosstl.com/stl/set-ajedrez-completo-fichas-sueltas/</a><br>
+          <br>
+          En esta página también podemos ver y descargar otros modelos de
+          ajedrez <a href="https://www.3dforprint.com/es/modelos3d/piezas%20de%20ajedrez"
+            target="_blank">https://www.3dforprint.com/es/modelos3d/piezas%20de%20ajedrez</a><br>
+          <br>
+          O un <a href="https://www.thingiverse.com/thing:705095">molinillo de
+            viento con ilusión óptica</a>&nbsp; desde thingiverse.<br>
+          <br>
+          <br>
+          <br>
+        </article>
+        <article>
+          <h2> Nuestros diseños </h2>
+          <article class="enlaces">
+            <!-- Por ejemplo: -->
+            <div class="card"> <a href="#"> <img alt="CINTA TRANSPORTADORA NUEVA VERSIÓN"
+                  title="cinta-transportador nueva version" src="imagenes/nuestros_dise%C3%B1o_cinta-montaje.png">
+                <h3>CINTA TRANSPORTADORA NUEVA VERSIÓN</h3>
+              </a> </div>
+            <!-- fin  ejemplo: -->
+            <!-- Por ejemplo: -->
+            <div class="card"> <a href="#"> <img alt="PANEL DE HERRAMIENTAS" title="Renovables"
+                  src="imagenes/nuestros_dise%C3%B1o_panel-de-herramientas.jpg">
+                <h3>PANEL DE HERRAMIENTAS</h3>
+              </a> </div>
+            <!-- fin  ejemplo: -->
+            <!-- Por ejemplo: -->
+            <div class="card"> <a href="#"> <img alt="ACCESORIOS MOTOR" title=""
+                  src="imagenes/nuestros_dise%C3%B1o_motor.jpg">
+                <h3>ACCESORIOS MOTOR</h3>
+              </a> </div>
+            <!-- fin  ejemplo: -->
+            <!-- Por ejemplo: -->
+            <div class="card"> <a href="#" target="_blank"> <img alt="CINTA TRANSPORTADORAg"
+                  title="CINTA TRANSPORTADORA" src="imagenes/nuestros_dise%C3%B1o_cinta-transportadora.jpg">
+                <h3>CINTA TRANSPORTADORA</h3>
+              </a> </div>
+            <!-- fin  ejemplo: -->
+            <!-- Por ejemplo: -->
+            <div class="card"> <a href="#"> <img alt="ACTUADOR LINEAL" title="ACTUADOR LINEAL"
+                  src="imagenes/nuestros_dise%C3%B1o_actuador-lineal.gif">
+                <h3>ACTUADOR LINEAL</h3>
+              </a> </div>
+            <!-- fin  ejemplo: --><br>
+            <!-- Por ejemplo: -->
+            <div class="card"> <a href="#"> <img alt="REDUCTORA" title="REDUCTORA"
+                  src="imagenes/nuestros_dise%C3%B1o_reductora-acoplada-al-motor.jpg">
+                <h3>REDUCTORA</h3>
+              </a> </div>
+            <!-- fin  ejemplo: --> </article>
+        </article>
+        <article>
+          <h2>Creación de G-Codes conSLIC3R </h2>
+          <p> Prepara tus modelos3D para imprimir en tu impresora 3D con el
+            programa Slic3r. </p>
+          <p> <a href="https://slic3r.org/download/" target="_blank">Descarga
+              el programa Slir3r</a>. Programa portable, no hace falta
+            instalarlo, se puede llevar en pendrive y utilizar en cualquier
+            ordenador. </p>
+          <p>A partir de los modelos que has descargado o que has creado, se
+            deben de preparar para la impresión 3D, indicándoles con un programa
+            de laminado los parámetros a utilizar en tu impresora como
+            temperatura a la que vas a fundir el plástico, tipos de plástico,
+            tipo de relleno de las partes macizas, acabados de las piezas y
+            muchos mas parámetros.</p>
+          <p>Para empezar puedes descargarte <a href="https://cifpmedinadelcampo.es/automatismos/zaguan/Perfil_Slic3R.zip">este
+              perfil </a> para empezar a imprimir tus modelos.</p>
+          <p>Se debe de cargar el modelos 3D en el programa Slic3r debe de tener
+            formato stl, si el modelos esta descargado de Internet, los mas
+            seguro que ya este en este formato, si lo has diseñado con algún
+            programa de CAD o de modelado debe de exportarlo o convertirlo ha
+            este formato.</p>
+          <p><a href="https://www.youtube.com/watch?v=tlv_MOkPG54">VideoTutoriales
+              BQ Educación | Slic3r – Tutorial software para imprimir en 3D</a></p>
+          <p><a href="https://silo.tips/download/reprapbcn-manual-slic3r#google_vignette"
+              target="_blank">Manual Slic3r</a></p>
+          <h2>Guía visual de impresión 3D con slic3r</h2>
+          <h3>Cargar pieza</h3>
+          <p><span style="color: rgb(122, 122, 122); font-family: Roboto, sans-serif; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(209, 209, 225); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;">Cargar
+              la pieza en formato stl: file/open STL&nbsp; buscar carpeta donde
+              esta la pieza creada o descargada, seleccionarla y abrir.</span></p>
+          <img src="imagenes/slic3r-01cargar-pieza.png" alt="programa slicer captura pantalla"><br>
+          <img src="imagenes/slic3r-02-cargar-pieza.png" alt="programa slicer captura pantalla"><br>
+          <img src="imagenes/slic3r-03-modificar-pieza.png" alt="programa slicer captura pantalla"><br>
+          <h3> Modificar la pieza </h3>
+          <p><span style="color: rgb(122, 122, 122); font-family: Roboto, sans-serif; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(209, 209, 225); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;">Seleccionamos
+              la pieza pinchándola con el puntero, se queda en color verde</span></p>
+          <img src="imagenes/slic3r-04-modificar-pieza-seleccionar.png" alt="captura pantalla slicer3r"><br>
+          <p> Seleccionamos la opción Object en el menú principal. </p>
+          <p> </p>
+          <p> Delete: Borra la pieza seleccionado </p>
+          <p> </p>
+          <p> Increase copies: copia el objeto seleccionado, para hacer dos o
+            más impresiones. </p>
+          <p> Decrease copies: quita una copia.<br>
+          </p>
+          <p> Set number of copies: crea directamente el número de copias que se
+            indique. </p>
+          <p> Rotate 45º: gira el objeto 45&nbsp; grados en sentido horario o
+            antihorario en el eje z </p>
+          <p> Rotate: rota el objeto según el eje seleccionado el angulo
+            indicado. SE UTILIZA PARA COLOCAR EL OBJETO EN LA POSICIÓN MAS
+            IDÓNEA PARA LA IMPRESIÓN. </p>
+          <p> Mirror: crea una copia espejo del objeto seleccionado. </p>
+          <p> Scale: Escala la pieza según porcentaje, 50% mitad, 200% doble… </p>
+          <p> Scale to size: Escala la pieza&nbsp; al tamaño indicado. </p>
+          <img src="imagenes/slic3r-05-modificar-pieza-opciones.png" alt="Captura pantalla slicer"><br>
+          Rotate se utiliza para colocar la pieza en la mejor posición para la
+          impresión, para crear los menos soportes posibles y las cara visibles
+          tengan un mejor acabado.<br>
+          <img src="imagenes/slic3r-06-modificar-pieza-rotar.png" alt="Captura pantalla slicer"><br>
+          <img src="imagenes/slic3r-07-modificar-pieza-rotar.png" alt="Captura pantalla slicer"><br>
+          <h3>Cargar el perfil de impresión</h3>
+          <p>En el perfil de impresión se encuentra todos los parámetros para
+            imprimir el objeto en nuestra impresora, al cargar este perfil
+            simplificamos este trabajo.</p>
+          <p>El perfil se puede descargar<a href="https://cifpmedinadelcampo.es/automatismos/zaguan/Perfil_Slic3R.zip">
+              pinchando aqui,</a> esta en comprimido en formato zip.</p>
+          <p>file/Load config..</p>
+          <img src="imagenes/slic3r-08-cargar-perfil.png" alt="Captura slicer"><br>
+          Buscamos la carpeta donde hemos descomprimido el perfil, lo
+          seleccionamos y pulso abrir.<br>
+          <img src="imagenes/slic3r-09-cargar-perfil.png" alt="Captura pantalla slicer"><br>
+          Observamos en la parte derecha que se a cargado el perfil
+          correctamente.<br>
+          <p>Ahora podemos, si asi lo deseamos modificar algunos parámetros,
+            para conocer que hace cada parámetro podemos consultar las guías
+            Slic3d en los enlaces de la sección CREACIÓN DE GCODES CON SLIC3R</p>
+          <img src="imagenes/slic3r-10-cargar-perfil.png" alt="Captura pantalla slicer"><br>
+          <h3>Creación del G-code</h3>
+          <p>El último paso es la creación del archivo G-code para copiarlo en
+            una tarjeta SD y cargarlo en la impresora.</p>
+          <p>Plater/ Export G-code&nbsp;&nbsp; –&nbsp;&nbsp; y elegimos el
+            nombre y la carpeta donde deseamos guardarlo.</p>
+          <img src="imagenes/slic3r-11-creacion-gcode.png" alt="Captura pantalla"><br>
+          <p>En la zona inferior derecha vemos el proceso de creación y cuando
+            termina vemos el peso y precio aproximado de las piezas impresas.</p>
+          <img src="imagenes/slic3r-12-creacion-gcode.png" alt="Captura pantalla slicer"><br>
+          <h3>Impresión</h3>
+          <p>Grabamos el archivo creado con extensión gcode en una tarjeta SD</p>
+          <p>la introducimos en la ranura con los contactos de la tarjeta
+            mirándonos a nosotros.</p>
+          <p><span style="color: rgb(122, 122, 122); font-family: Roboto, sans-serif; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(209, 209, 225); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;">Pulsamos
+              el botón azul entrar el la pantalla principal</span></p>
+          <img src="imagenes/pantalla-impresora01.jpg" alt="Pantalla impresora"><br>
+          <p><span style="color: #7a7a7a;"><span style="font-family: Roboto,sans-serif;">Girando
+                el botón azul en sentido antihorario selecciona la opción MENU
+                DE SD</span></span></p>
+          <img src="imagenes/pantalla-impresora02.jpg" alt="Pantalla impresora"><br>
+          <span style="color: #7a7a7a;"><span style="font-family: Roboto,sans-serif;">Vemos
+              los archivos gcode de la tarjeta, girando el botón azul selecciono
+              el archivo que quiero imprimir, y pulso el botón azul..<br>
+              <img src="imagenes/pantalla-impresora03.jpg" alt="Pantalla impresora"><br>
+            </span></span>
+          <h3> </h3>
+          <h3>Y YA ESTAMOS IMPRIMIENDO.</h3>
+          <h2>Y cuando salen mal las cosas.</h2>
+          <p><a href="https://www.leon-3d.es/guia-de-resolucion-de-problemas/https://www.leon-3d.es/guia-de-resolucion-de-problemas/"
+              target="_blank">Guía de resolución de problemas</a></p>
+          <p><a href="https://www.leon-3d.es/guia-de-resolucion-de-problemas/" target="_blank">Identificar
+              y corregir problemas de impresión 3D</a></p>
+          <p>Problemas de impresión 3D. Como evitarlos.</p>
+          <p>Guía visual para resolver problemas impresión 3D por Bitfab</p>
+          <h2>Enlaces de interes</h2>
+          <p>Impresión 3D según Luis Llamas.</p>
+          <h2>Tus diseños con FREECAD</h2>
+          <p>Descarga el programa freecad.<br>
+            FreeCAD, Tu propio modelador paramétrico 3D</p>
+          <p>Aprende utilizar FREECAD con Obijuan.<br>
+            Dos cursos muy didácticos para empezar conocer el programa freecad,
+            utiliza la versión 16, un poco antigua, pero validos&nbsp; para
+            versiones posteriores, esta a punto de salir la versión 0,19.</p>
+          <p><a href="http://diwo.bq.com/course/curso-de-introduccion-a-freecad/"
+              target="_blank" rel="noopener noreferrer" style="box-sizing: border-box; background-color: rgb(209, 209, 225); color: rgb(104, 104, 104); text-decoration: none; outline: 0px; box-shadow: none; font-family: Roboto, sans-serif; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal;">CURSO
+              I FREECAD</a></p>
+          <p>WIKI DEL CURSO I FREECAD<br>
+            <br>
+            CURSO II FREECAD<br>
+            <br>
+            WIKI DEL CURSO II FREECAD<br>
+            <br>
+            Manuales&nbsp; FREECAD avanzado.<br>
+            Tato3D CAD Tutoriales&nbsp; <br>
+            <br>
+            FCGear banco de trabajo para realizar engranajes.<br>
+            Videotutorial: Dividir un objeto usando puntos y planos de
+            referencia<br>
+            <br>
+            Videotutorial: FreeCAD y Assembly4: Animación de tuerca en tornillo.<br>
+            <br>
+            Videotutorial: Curso Profesional de FreeCad TechDraw<br>
+            <br>
+            Tutorial diseño 3D básico | FreeCAD | Generar planos PDF<br>
+            <br>
+            Codigo G con Inkscape para CNC</p>
+        </article>
+      </main>
+      <!-- ....................................menu........................... -->
+      <footer> El fin de hombre es perseguir la felicidad. </footer>
+    </div>
+  </body>
+</html>

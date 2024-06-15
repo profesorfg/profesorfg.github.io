@@ -51,7 +51,9 @@ h5 {
     text-transform: capitalize;
 }
 
-
+P {
+    margin-bottom: 1em;
+}
 
 
 
@@ -174,8 +176,8 @@ main {
     box-sizing: border-box;
     grid-area: main;
 
-    /*  padding-left: 5%;*/
-    padding: 0 2%;
+  
+  /*  padding: 0 2%;    15/06    */
 
 }
 
@@ -184,7 +186,8 @@ article {
     background-color: #e3c6c6;
     margin-left: 5%;
 
-    padding: 5px 50px;
+   /* padding: 5px 50px;    15/06  */
+    padding: 10px;
     border-radius: 10px;
     color: #555555;
     font-family: verdana;
@@ -223,7 +226,7 @@ aside {
 section {
 
     margin: 2%;
-    padding: 4%;
+    padding: 2%;
 
     overflow: hidden;
 }
@@ -263,7 +266,8 @@ footer a {
     border: 2px solid orange;
 
 }
-.inline-block{
+
+.inline-block {
     display: inline-block;
 }
 
@@ -273,7 +277,7 @@ footer a {
     display: flex;
     flex-wrap: wrap;
     border-radius: 20px;
-    padding: 25px 25px;
+    gap: 20px;
     justify-content: center;
 
 }
@@ -286,73 +290,112 @@ footer a {
     justify-content: space-between;
 }
 
+
+/* -----------------------classes particulares ------------------------------------------*/
+
+.azul_negrita {
+    color: #00f;
+    font-weight: bold;
+}
+.fondo_verde{
+    background: #0d0;
+    padding: 10px;
+}
+.fondo_verde:hover{
+     background: #ada;
+}
+
 .ancho30 {
 
     width: 30%;
 }
 
-.ancho60 {
 
-    width: 60%;
-}
 
-.ancho70 {
 
-    width: 70%;
-}
+
+
 
 
 
 /* ----------------------- imagenes  ------------------------------------------*/
 .div_imagen {
     background-color: rgb(220, 220, 220);
-    margin: 2%;
-    align-content: center;
+  /*  margin: 2%;
+    align-content: center;*/
+ text-align: center;
     border-radius: 20px;
     overflow: hidden;
+  /*  border: 2px solid red; pruebas*/
 }
+
 
 
 .imagen {
     max-width: 100%;
-    /* la imagen ocupa como máximo el ancho del div */
-
     height: auto;
-}
 
-.imagen_vermas {
-    /*max-height: 200px;*/
-    /*width: auto;*/
-    max-width: 30%;
-    min-width: 220px;
 }
 
 
 
-    .carrusel {
-            display: flex;
-            flex-wrap: nowrap;
-            overflow: scroll;
-    
-        overflow-y: hidden;
-        
-   width:10%;
-   
-        }
 
-        .carrusel_elemento {
-            flex: 1 0 auto;
-            margin: 0 10px;
-          
 
-        }
-.carrusel_elemento img{
-  
+.carrusel {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: scroll;
+
+    overflow-y: hidden;
+
+    width: 10%;
+
+}
+
+.carrusel_elemento {
+    flex: 1 0 auto;
+    margin: 0 10px;
+
+
+}
+
+.carrusel_elemento img {
+
     max-height: 250px;
 }
 
+/* ------------------  ver mas  ----------------------------*/
+  .flex_wrap_vermas {
 
+    display: flex;
+    flex-wrap: wrap-reverse;
+    border-radius: 20px;
+    gap:20px;
+    justify-content: center;
 
+}
+        .vermas_texto{
+           
+           /* width: 70%;*/
+            flex:4 2 500px;
+        
+        }  
+        
+        .vermas_imagen{
+            flex:1 0 200px;
+            text-align: center;
+            
+           
+        }   
+        
+        .vermas_imagen img{
+        max-height: 300px;
+         max-width: 200px;
+          
+            
+    
+        }
+        
 
 
 
@@ -380,7 +423,7 @@ footer a {
     background: none;
     /*  font-weight: bold; */
     font-size: 0.8em;
-    
+
 }
 
 .pagina_seleccionada:hover {
@@ -393,7 +436,7 @@ footer a {
     background: #957;
     padding: 0 8px;
     border-radius: 3px;
-  
+
 }
 
 
@@ -419,13 +462,13 @@ footer a {
     background-color: #347;
     border-radius: 20px;
     border: 2px solid orange;
-    
+
 }
 
 
 .enlaces-navegacion a {
     color: #fff;
-    
+
 }
 
 .enlaces-navegacion a:hover {
@@ -490,18 +533,20 @@ footer a {
 .video-container {
     width: 45%;
     margin: 5px;
-     min-width: 350px;
+    min-width: 350px;
 }
-.video-container_3videos {/* poner detras de video containerpara que me pise el width*/
+
+.video-container_3videos {
+    /* poner detras de video containerpara que me pise el width*/
     width: 30%;
-  
-    
+
+
 }
 
 
 .video-container iframe {
-  width: 100%;
-   /* height: 250px;*/
+    width: 100%;
+    /* height: 250px;*/
     height: auto;
     /* Puedes ajustar la altura según tus necesidades */
 }

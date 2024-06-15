@@ -236,6 +236,7 @@ class menuprincipal extends HTMLElement {
        <ul> 
             <li> <a href="../webRobotica/robotica.html" >Robotica</a></li> 
             <li> <a href="../webMotores/motores.html" >Motores</a> </li> 
+            <li> <a href="../web3d/3d.html">Impresión 3D</a></li> 
           <li> <a href="../arduino/index.html">Arduino</a></li> 
           <li> <a href="https://cifpmedinadelcampo.es/iea/" >CIFP Electricidad</a></li> 
         </ul>  
@@ -490,6 +491,7 @@ class menuprincipalindex extends HTMLElement {
        <ul> 
          <li> <a href="webRobotica/robotica.html" >Robotica</a></li> 
        <li> <a href="webMotores/motores.html" >Motores</a> 
+        <li> <a href="web3d/3d.html">Impresión 3D</a></li> 
           <li> <a href="arduino/index.html">Arduino</a></li> 
           <li> <a href="https://cifpmedinadelcampo.es/iea/" >CIFP Electricidad</a></li> 
          
