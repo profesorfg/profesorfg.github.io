@@ -11,11 +11,11 @@ h1 {
     font-weight: bold;
     text-transform: uppercase;
     color: white;
-    padding-left: 10px;
+    padding: 0 4px;
     border-radius: 20px;
     text-align: center;
-    /*   margin: 2px 110px 2px 50px;*/
-    margin-left: 50px;
+    margin:0 20px;
+    overflow: hidden;
 }
 
 
@@ -89,12 +89,12 @@ P {
 
 
 
-#contenedor2 {
-    /*  no utilizado  */
+ #contenedor2 {
+   
     background-color: #e3d5bc;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 100px 280px auto 1fr 40px;
+    grid-template-rows: 100px auto auto 1fr 40px;
     grid-gap: 5px;
     grid-template-areas:
         "header"
@@ -326,7 +326,7 @@ footer a {
 
 
 .lateral_impresora3d{
-    box-sizing: border-box;
+  
     background:linear-gradient(to right,#447f, #4479, #447f);
 
    text-align: center;
