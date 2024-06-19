@@ -315,6 +315,9 @@ footer a {
 .fondo_verde:hover{
      background: #ada;
 }
+.fondo_contenedor{
+     background-color: #edb;
+}
 
 .ancho30 {
 
@@ -384,17 +387,18 @@ footer a {
     margin: 0 10px;
     text-align: center;
 
-
 }
-
 .carrusel_elemento img {
+max-height: 250px; 
+  
+  
+} 
 
-  max-height: 250px;
-  
-  
+
+.max-height_230px{
+    max-height: 230px;
 }
-
-
+ 
 
 
 /* ------------------  ver mas  ----------------------------*/
@@ -424,13 +428,79 @@ footer a {
         .vermas_imagen img{
         max-height: 300px;
          max-width: 200px;
-          
-            
-    
-        }
-        
+     }
+       .flex-item {
+    flex: 1 0 auto;
+    margin: 0 10px;
+    text-align: center;
+
+} 
+
+/*-------------------------  videos  ------------------------------------------*/
+
+.videos-youtube {
+    /* explicado en Emprinnos como poner e insertar videos en html */
+    position: relative;
+    /* para que se pueda colocar dentro position absoluta ??*/
+    padding-bottom: 56.25%;
+    /*crea un div con un ratio de 16/9 */
+    overflow: hidden;
+    /* oculto lo que se salga del div*/
+    height: 0%;
+    /* lo he puesto porque me aparecio en gpt*/
 
 
+
+}
+
+.videos-youtube iframe {
+    /* los videos que esten dentro dentro de esta clase*/
+    position: absolute;
+    /* no ocupa espacio, por lor que se pondra encima del paddin del div padre*/
+    top: 0;
+    /* coloco en la parte superior del padre*/
+    left: 0;
+    /* coloca a la izquierda del padre*/
+    width: 100%;
+    /* ocupa el 100% del ancho del padre y por el ratio del padre el 100% del ancho*/
+    height: 100%;
+    /*no lo puse y me quedo una mierda de altura*/
+}
+
+
+/* video en la pagina de renovables y va bien para tener dos videos en una fila */
+
+.video-container {
+    width: 45%;
+    margin: 5px;
+    min-width: 350px;
+}
+
+.video-container_3videos {
+    /* poner detras de video containerpara que me pise el width*/
+    width: 30%;
+
+
+}
+
+
+.video-container iframe {
+    width: 100%;
+    /* height: 250px;*/
+    height: auto;
+    /* Puedes ajustar la altura según tus necesidades */
+}
+
+.video-container h2 {
+    margin-bottom: 5px;
+}
+
+/* ------------------------- TXT  programa----------------------- */
+.txt iframe{
+ overflow: auto;
+    width: 100%;
+    height:700px;
+}
 
 /*  ------------------------  ENLACES  -----------------------------*/
 .boton {
@@ -527,65 +597,6 @@ footer a {
     position: relative;
     bottom: 90px;
 
-}
-
-/*-------------------------  videos  ------------------------------------------*/
-
-.videos-youtube {
-    /* explicado en Emprinnos como poner e insertar videos en html */
-    position: relative;
-    /* para que se pueda colocar dentro position absoluta ??*/
-    padding-bottom: 56.25%;
-    /*crea un div con un ratio de 16/9 */
-    overflow: hidden;
-    /* oculto lo que se salga del div*/
-    height: 0%;
-    /* lo he puesto porque me aparecio en gpt*/
-
-
-
-}
-
-.videos-youtube iframe {
-    /* los videos que esten dentro dentro de esta clase*/
-    position: absolute;
-    /* no ocupa espacio, por lor que se pondra encima del paddin del div padre*/
-    top: 0;
-    /* coloco en la parte superior del padre*/
-    left: 0;
-    /* coloca a la izquierda del padre*/
-    width: 100%;
-    /* ocupa el 100% del ancho del padre y por el ratio del padre el 100% del ancho*/
-    height: 100%;
-    /*no lo puse y me quedo una mierda de altura*/
-}
-
-
-/* video en la pagina de renovables y va bien para tener dos videos en una fila */
-
-.video-container {
-    width: 45%;
-    margin: 5px;
-    min-width: 350px;
-}
-
-.video-container_3videos {
-    /* poner detras de video containerpara que me pise el width*/
-    width: 30%;
-
-
-}
-
-
-.video-container iframe {
-    width: 100%;
-    /* height: 250px;*/
-    height: auto;
-    /* Puedes ajustar la altura según tus necesidades */
-}
-
-.video-container h2 {
-    margin-bottom: 5px;
 }
 
 
