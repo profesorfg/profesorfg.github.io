@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>3D</title>
+    <link href="../index_files/estilo.css" rel="stylesheet" type="text/css">
+    <script src="../index_files/menu.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="profesorfg" name="author">
+    <meta content="automatizacion industrial" name="description">
+    <meta name="keywords" content="automatas electricidad">
+</head>
+
+<body>
+    <div id="contenedor2">
+        <header>
+            <nav>
+                <menu-principal></menu-principal>
+            </nav>
+        </header>
+
+
+        <div id="lateral" class="lateral_impresora3d">
+            <a href="3d.html">
+                <img class="imagen" src="imagenes/cabezera_impresion3D.png" alt="imagen de cabezera impresión 3d"></a>
+        </div>
+        <main>
+            <h1>ACTUADOR LINEAL</h1>
+            <article>
+                <p>Este actuador lineal, esta accionado por un servomotor MG995 «trucado», no funciona como servo sino como un motor.</p>
+                <p>El servo esta controlado por una placa arduino UNO, el funcionamiento cambia con respecto al servo, al poner en la programación del servo 0º, el motor gira a velocidad máxima en un sentido, con 180º gira a velocidad máxima en sentido contrario, a mediada que nos acercamos a 90º, la velociad disminuye y al llegar a 90″ se detiene.</p>
+                <p>Funcionamiento; Con cada activación del pulsador conectado al pin 11, el vastago sale, y se recoge.</p>
+                <div class="flex_wrap">
+
+                    <div class="carrusel_elemento">
+                        <img class="max-width400px" src="imagenes/actuador-lineal_carcasa3.png" alt="actuador lineal">
+                    </div>
+
+                    <div class="carrusel_elemento">
+                     <img class="max-width400px" src="imagenes/actuador-lineal_cremallera2.png" alt="actuador lineal">
+                    </div>
+
+                    <div class="carrusel_elemento">
+                       <img class="max-width400px" src="imagenes/actuador-lineal_pinon-futaba.png" alt="actuador lineal">
+
+
+                    </div>
+                </div>
+                <!-- 
+                           
+                                    <div class="flex_wrap">
+                                        <div class="carrusel_elemento">
+                                            <img src="imagenes/actuador-lineal_actuador-lineal.png" alt="actuador lineal">
+                                        </div>
+                                        
+                                        <div class="carrusel_elemento">
+                                            <img src="imagenes/nuestros_diseño_actuador-lineal.gif" alt="actuador lineal">
+                                        </div>
+                
+                
+                
+                                    </div>
+                
+                 -->
+                   
+
+
+
+                     <div class="flex_wrap">
+                        <div class="carrusel_elemento">
+                            <img src="imagenes/actuador-lineal-y-arduino.jpg" alt="actuador lineal">
+                        </div>
+                        <div class="carrusel_elemento">
+                            <img src="imagenes/actuador-lineal-y-arduino.png" alt="actuador lineal">
+                        </div>
+                    </div>
+                    
+                    
+                    
+                    
+                     <section class="centrar">
+                        <a class="fondo_verde" href="https://drive.google.com/drive/folders/1K7ZkeAoi1eLu3-2J4P8PA-GOVMf-WLCU?usp=sharing"> Descarga aquí los archivos fuente en Freecad y los archivos stl</a>
+                    </section>
+
+
+            </article>
+            <div class="overflow_auto">
+               <h2>Programa</h2>
+               
+                <pre><code>
+// este proyecto utiliza uns servo MG995 trucado,
+//el valor que recibe el servo regula la velocidad y sentido de rotación
+// cuando cargamos el valor 90 el servo esta parado
+// con el valor 0 gira a velocidad máxima en un sentido
+// con el valor 180 gira a velocidad máxima en sentido contrario
+// ciclo: al activar el pulsador el motor gira 1300 ms, y luego gira en sentido contrario hasta que acitve el final de carrera de inicio
+
+#include <Servo.h> //Libreria para Servomotores </Servo.h>
+Servo Servo_1;
+int motor=3;
+int fc=8;  // final de carrera vastago recogido
+int pul=11; // señal para iniciar el ciclo, mediante un pulsador
+
+int marcha=0;
+
+void setup()
+{
+  // defino los pines utilizados
+
+ pinMode(fc, INPUT);
+ pinMode(pul, INPUT);
+
+}
+
+
+void loop()
+{
+if (digitalRead(pul)==HIGH && marcha ==0) marcha=1; // inicio un ciclo de salida y entrada del vastago
+
+  if (marcha==0)Servo_1.detach(); // si marcha es cero deconecto el servo
+  else Servo_1.attach(motor); // si no activo el servo
+
+  if (marcha==1){  //Cuando acitvamos el pulsador
+    Servo_1.write(180);		 // avanzo el cilindro a tope
+    delay(1300);             //durante 1300 milisegundos
+    Servo_1.write(90);  // paro el servo
+    delay (2000); // le tengo dos segundos abierto
+    marcha=2; //salido el vastago no vuelve entrar en este if hasta que halla finalizado el ciclo
+    }
+
+if (digitalRead(fc) == HIGH) { // si el final de carrera del servo no esta activado
+    Servo_1.write(45);        //retrocedo el cilindro despacio
+  }
+  else {                      // si el final de carrera inicio esta actido
+    marcha=0; 				  // me preparo para un nuevo ciclo
+
+    }
+
+}
+
+</code></pre>
+                
+                
+            </div>
+
+
+
+
+
+
+
+
+        </main>
+        <!-- ....................................menu........................... -->
+        <footer> <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Licencia de Creative Commons" style="border-width: 0pt;" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png"></a>
+            Este obra está bajo una licencia de Creative Commons Reconocimiento-NoComercial 4.0 Internacional </footer>
+    </div>
+</body>
+
+</html>

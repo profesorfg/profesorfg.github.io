@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>3D</title>
+    <link href="../index_files/estilo.css" rel="stylesheet" type="text/css">
+    <script src="../index_files/menu.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="profesorfg" name="author">
+    <meta content="automatizacion industrial" name="description">
+    <meta name="keywords" content="automatas electricidad">
+    <style>
+        
+     .lateral_impresora3d{
+    box-sizing: border-box;
+ /*    background:linear-gradient(to right,#447f,blue , #447f); */
+
+   text-align: center;
+    padding-top: 10px;
+}
+        
+      #contenedorX {
+    background-color: #447;
+    
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px auto 40px;
+    grid-gap: 5px;
+    grid-template-areas:
+        "header"
+        "main"
+        "footer";
+    min-height: 100vh;
+}  
+        
+      main {
+   /*  box-sizing: border-box; */
+    grid-area: main;
+          background: #4475;
+
+  
+
+
+}  
+        
+    
+    .carrusel_elemento1 {
+    flex: 1 0 auto;
+    margin: 0 10px;
+    text-align: center;
+
+
+}
+
+.carrusel_elemento1 img {
+
+  max-height: 250px;
+  
+  
+}
+    
+  h1 {
+    background: #965078;
+    font-size: 25px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+    padding: 5px;
+    border-radius: 20px;
+    text-align: center;
+      margin: 2%;
+    /*   margin: 2px 110px 2px 50px;*/
+   
+}  
+    </style>
+</head>
+
+<body>
+    <div id="contenedorX">
+        <header>
+            <nav>
+                <menu-principal></menu-principal>
+            </nav>
+        </header>
+
+
+     
+        <main>
+   <div class="lateral_impresora3d">
+            <a href="3d.html">
+                  <img class="imagen" src="imagenes/cabezera_impresion3D.png" alt="imagen de cabezera impresión 3d"></a> 
+                   </div> 
+      <h1> ACCESORIOS DE MOTORES ELÉCTRICOS</h1> 
+     <article>
+          <h2> Borneo</h2>
+<p>hemos realizado el bornero para un motor trifásico, que se habia estropeado por el uso.</p>
+
+<p>El Bornero se utiliza para conectar los bobinados del motor a la alimentación</p>
+   <div class="flex_wrap">
+                   <div class="carrusel_elemento1">
+                        <img src="imagenes/motor_bornero.jpg" alt="motor bornero">
+                    </div>
+                    <div class="carrusel_elemento1">
+                        <img src="imagenes/motor_bornero-motor-.png" alt="motor bornero">
+                    </div>
+                    <div class="carrusel_elemento1">
+                        <img src="imagenes/nuestros_dise%C3%B1o_motor.jpg" alt="motor bornero">
+                    </div>
+                </div>
+    </article>
+    <br>
+    <article>
+        <h2>Moldes de bobinados concentricos</h2>
+        <p>Este diseño es un molde de bobinados concentricos que se acopla a una bobinadora para realizar bobinas concentricas para el motor.</p>
+         <div class="flex_wrap">
+                   <div class="carrusel_elemento1">
+                        <img src="imagenes/motor_bobinas-concentricas-3d-2.png" alt="moldes bobinas">
+                    </div>
+                    <div class="carrusel_elemento1">
+                        <img src="imagenes/motor_molde-bobinas-concentricas.jpg" alt="moldes bobinas">
+                    </div>
+                    <div class="carrusel_elemento1">
+                        <img src="imagenes/motor_contruccion%20molde.jpg" alt="contrucción de bobinas">
+                    </div>
+                </div>
+        
+    </article>
+    <br>
+    <article>
+        <h2>Tapa bornero</h2>
+        <p>Se ha realizado la tapa de un motor didáctico que estaba deteriorada.</p>
+         <div class="flex_wrap">
+                   <div class="carrusel_elemento1">
+                        <img src="imagenes/motor_placa-bornero.png" alt="tapas bornero">
+                    </div>
+        </div>
+        <article><a class="fondo_verde" href="https://drive.google.com/drive/folders/1PUzIJ8smjA10IC2i-qjoezJj5uaVXrf-?usp=sharing">Descarga aquí los archivos fuente en Freecad y los archivos stl</a></article>
+    </article>
+    <br>
+    </main>
+    <!-- ....................................menu........................... -->
+    <footer> <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Licencia de Creative Commons" style="border-width: 0pt;" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png"></a>
+        Este obra está bajo una licencia de Creative Commons Reconocimiento-NoComercial 4.0 Internacional </footer>
+    </div>
+</body>
+
+</html>

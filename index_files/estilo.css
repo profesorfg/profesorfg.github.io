@@ -121,6 +121,12 @@ P {
 }
 
 
+
+
+
+
+
+
 @media screen and (max-width: 768px) {
     #contenedor {
         background-color: #e3d5bc;
@@ -184,7 +190,7 @@ main {
 article {
     background-image: url(../imagenes/fondo.gif);
     background-color: #e3c6c6;
-    margin-left: 5%;
+    margin:0 2%;
 
    /* padding: 5px 50px;    15/06  */
     padding: 10px;
@@ -290,6 +296,10 @@ footer a {
     justify-content: space-between;
 }
 
+.padding_{
+    padding: 2%;
+}
+.centrar{  text-align: center;}
 
 /* -----------------------classes particulares ------------------------------------------*/
 
@@ -300,6 +310,7 @@ footer a {
 .fondo_verde{
     background: #0d0;
     padding: 10px;
+  
 }
 .fondo_verde:hover{
      background: #ada;
@@ -311,9 +322,20 @@ footer a {
 }
 
 
+.lateral_impresora3d{
+    box-sizing: border-box;
+    background:linear-gradient(to right,#447f, #4479, #447f);
 
+   text-align: center;
+    padding-top: 40px;
+}
 
+.lateral_impresora3d img{
+   max-width: 100%;
+    border-radius: 20px;
 
+    
+}
 
 
 
@@ -338,6 +360,11 @@ footer a {
 }
 
 
+.overflow_auto{
+   overflow:auto; 
+    
+}
+
 
 
 
@@ -355,14 +382,20 @@ footer a {
 .carrusel_elemento {
     flex: 1 0 auto;
     margin: 0 10px;
+    text-align: center;
 
 
 }
 
 .carrusel_elemento img {
 
-    max-height: 250px;
+  max-height: 250px;
+  
+  
 }
+
+
+
 
 /* ------------------  ver mas  ----------------------------*/
   .flex_wrap_vermas {
