@@ -141,6 +141,23 @@ P {
             "footer";
         min-height: 100vh;
     }
+     #contenedor2 {
+   
+    background-color: #e3d5bc;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 20px auto auto 1fr 40px;
+    grid-gap: 5px;
+    grid-template-areas:
+        "header"
+        "lateral"
+        "aside"
+        "main"
+        "footer";
+    min-height: 100vh;
+}
+    
+    
 
     #contenedor3 {
         background-color: #e3d5bc;
@@ -263,6 +280,42 @@ footer a {
     text-decoration: none;
 }
 
+/*  ------------------------- flex  -----------------------------*/
+
+
+.flex_wrap {
+
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 20px;
+    gap: 10px;
+    justify-content: center;
+
+}
+
+
+
+.flex_ {
+
+    display: flex;
+    justify-content: space-between;
+}
+.flex_wrap_2items{/* meter 4 imagenes en pantalla de ordenador y que aparezaca en columna en movil */
+  max-width: 49%;
+    min-width: 300px;
+}
+.flex_wrap_3items{/* meter 4 imagenes en pantalla de ordenador y que aparezaca en columna en movil */
+  max-width: 32%;
+    min-width: 300px;
+    
+}
+
+.flex_wrap_4items{/* meter 4 imagenes en pantalla de ordenador y que aparezaca en columna en movil */
+  max-width: 24%;
+    min-width: 300px;
+}
+
+
 
 /*   ----------------------  particularidades   colores flex ancho--------------------*/
 .section_naranja {
@@ -278,24 +331,9 @@ footer a {
 }
 
 
-.flex_wrap {
-
-    display: flex;
-    flex-wrap: wrap;
-    border-radius: 20px;
-    gap: 20px;
-    justify-content: center;
-
+.justify-content_space-a{
+  justify-content: space-around;
 }
-
-
-
-.flex_ {
-
-    display: flex;
-    justify-content: space-between;
-}
-
 .padding_{
     padding: 2%;
 }
@@ -315,9 +353,7 @@ footer a {
 .fondo_verde:hover{
      background: #ada;
 }
-.fondo_contenedor{
-     background-color: #edb;
-}
+
 
 .ancho30 {
 
