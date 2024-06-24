@@ -19,7 +19,7 @@
           alt="imagen de cabezera impresión 3d"> </div>
       <main>
         <h1> IMPRESORA 3D</h1>
-        <article>
+        <article class="articulo">
           <h2>Partes de una impresora 3D</h2>
           <p>El <span class="azul_negrita">Hotend o Fusor</span>, es el
             elemento de la impresora 3D que funde el filamento.</p>
@@ -50,7 +50,7 @@
           <p>Para introducir o sacar el filamento del hotend este debe de estar
             caliente.</p>
         </article>
-        <article>
+        <article class="articulo">
           <h2>Descarga de modelos 3D</h2>
           <section class="section_naranja"> <a href="https://www.impresoras3d.com/los-mejores-sitios-bajar-archivos-stl/"
               target="_blank"> Los mejores repositorios para descargar STL&nbsp;
@@ -83,7 +83,7 @@
           <br>
           <br>
         </article>
-        <article>
+        <article class="articulo">
           <h2> Nuestros diseños </h2>
           <article class="enlaces">
             <!-- Por ejemplo: -->
@@ -123,7 +123,7 @@
               </a> </div>
             <!-- fin  ejemplo: --> </article>
         </article>
-        <article>
+        <article class="articulo">
           <h2>Creación de G-Codes conSLIC3R </h2>
           <p> Prepara tus modelos3D para imprimir en tu impresora 3D con el
             programa Slic3r. </p>

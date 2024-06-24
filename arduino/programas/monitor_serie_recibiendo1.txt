@@ -1,0 +1,60 @@
+int a=0; // inicializo la variable a y almaceno el valor 0
+int pul_1=5;// la variable pul1 vale 5 y la utilizo para indicar que el pulsador 1 esta conectado al pin 5
+int pul_2=6;// indico que el pulsador 2 esta conectado al pin 6
+int pul_3=7;// pulsador 3 al pin 7
+int led_v=2;// led verde al pin2
+int led_r=3;// led rojo al pin3
+int led_a=4;// led amarillo al pin4
+
+int lectura; // VARIABLE DONDE ALMACENO EL DATO LEIDO POR ARDUINO
+
+void setup() 
+{
+pinMode(led_v,OUTPUT);
+pinMode(led_r,OUTPUT);
+pinMode(led_a,OUTPUT);
+pinMode(pul_1,INPUT);
+pinMode(pul_2,INPUT);
+pinMode(pul_3,INPUT);
+Serial.begin(9600);
+Serial.println(" Introduce  R, V , A para encender el led rojo , verde o amarillo");
+Serial.println(" Introduce  r, v , a para apagar el led rojo , verde o amarillo");
+}
+void loop() 
+{
+if (Serial.available() > 0){// SI HAY DATOS EN EL BUFER 
+   lectura = Serial.read();// LO ALMACENO EN LA VARIABLE LECTURA
+
+
+
+      switch (lectura)
+      { 
+      case 'V':
+       digitalWrite(led_v,HIGH);
+      break;
+      case 'v' :
+        digitalWrite(led_v,LOW);
+      break;
+      case 'R':
+        digitalWrite(led_r,HIGH);
+      break;
+      case 'r' :
+        digitalWrite(led_r,LOW);
+       break;
+       case 'A':
+        digitalWrite(led_a,HIGH);
+       break;
+       case 'a' :
+        digitalWrite(led_a,LOW);
+       break;
+       default:
+     Serial.println(" Introduce  R, V , A para encender el led rojo , verde o amarillo");
+     Serial.println(" Introduce  r, v , a para apagar el led rojo , verde o amarillo");
+       break;
+        }    
+  }
+}
+AutorFernando Gutiérrez
+Publicado el23 octubre, 2018
+CategoríasArduino
+Deja una respuesta

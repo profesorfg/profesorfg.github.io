@@ -1,0 +1,60 @@
+#include <Servo.h>
+ 
+Servo myservo;  // crea el objeto servo
+ 
+int pos = 0;    // posicion del servo en grados
+int pos1 = 0;  
+int pin_servo=9;
+boolean lect;
+ 
+void setup() 
+  {
+   myservo.attach(pin_servo);  // vincula el servo al pin digital 9
+   Serial.begin(9600);
+   Serial.println("escribe un angulo entre 0 y 180");
+
+  } 
+void loop() 
+{
+
+   if (Serial.available() > 0 ) 
+   {
+    lect=Serial.available();
+    pos1 = Serial.parseInt();
+    if (pos1!=0)    pos = pos1;
+    /* he observado que al introducir un dato en monitor serie me hace dos lecturas
+     *  la primera el valor que he introducido
+     *  la segunda cero este cambio tambien me lo considera lectura y por la tanto me pone
+     *  Serial.avaible() en true osea a 1 
+     *  en este programa y a falta de informacion he hecho que solo me guarde la primera lectura 
+     *  otra cosa que he aprendido es que para que el valor que meto me lo considere numero utilizo
+     *  la instruccion Serial.parseInt()
+     *  porque la instrucción Serial.Read() me lee el dato en codigo ascii
+     */
+    Serial.println ("leido el dato");
+    delay(1000); 
+       Serial.print("el angulo leido  ");  
+   Serial.println(pos);
+     delay(1000); 
+          Serial.print("estado de la lectura ");  
+   Serial.println(lect);
+     delay(1000); 
+  
+     
+   if( pos<0 || pos>180) 
+      {
+        Serial.println ("El angulo no esta entre 0 y 180");
+        pos=90;
+      }
+   }//fin de acciones a realizar cuando hay se escribe dato
+
+
+   delay(3000);  
+
+   Serial.print("EL ANGULO ACTUAL  "); 
+      Serial.println(pos); 
+       myservo.write(pos); 
+   
+   
+               
+}

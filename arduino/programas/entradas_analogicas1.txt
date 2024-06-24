@@ -1,0 +1,21 @@
+int Vpot;//la varible  sera uVpot temdra un valor entre 0 y 1023 en función de la posición del potenciometro
+int led_r=3;// led rojo al pin3
+int tiempo;
+void setup()
+{
+pinMode(led_r,OUTPUT);
+Serial.begin(9600);
+}
+ 
+void loop()
+{
+Vpot= analogRead(A0);//lee el valor de tensión 0-5V lo  convierte un número entre 0-1023 y lo almacena en la variable Vpot  
+tiempo=Vpot*5+200; /*el valor de tiempo sera un valor entre 200 y 5315  el valor 5315 sera el resultado de la opereración 1023 por 5 mas 200*/
+
+digitalWrite(led_r,LOW); 
+delay(tiempo);
+digitalWrite(led_r,HIGH);
+delay(tiempo);
+Serial.println(tiempo);
+  
+}

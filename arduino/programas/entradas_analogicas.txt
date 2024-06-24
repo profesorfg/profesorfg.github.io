@@ -1,0 +1,42 @@
+int Vpotenciometro;
+  
+int led_v=2;// led verde al pin2
+int led_r=3;// led rojo al pin3
+int led_a=4;// led amarillo al pin4
+void setup()
+{
+pinMode(led_v,OUTPUT);
+pinMode(led_r,OUTPUT);
+pinMode(led_a,OUTPUT); 
+//la entrada analogica no es necesario declararla  
+  Serial.begin(9600);
+}
+ 
+void loop()
+{
+  
+  Vpotenciometro = analogRead(A0);//lee el valor de tensión 0-5V lo  convierte un número entre 0-1023 y lo almacena en la varialbe Vpotenciometro  
+
+if (Vpotenciometro<256) // si el valor de Vpotenciometro es menor que 256, apago los 3 leds
+  {digitalWrite(led_v,LOW);
+   digitalWrite(led_r,LOW);
+   digitalWrite(led_a,LOW); 
+  }
+if (Vpotenciometro>=256 && Vpotenciometro<512) // si el valor de Vpotenciometro es mayor o igual que 256 y menor que 512 enciendo el led verde
+  {digitalWrite(led_v,HIGH);
+   digitalWrite(led_r,LOW);
+   digitalWrite(led_a,LOW);
+  }
+if (Vpotenciometro>=512 && Vpotenciometro<768) // si el valor de Vpotenciometro esta entre 512 y 768 enciendo el led verde y el rojo
+  {digitalWrite(led_v,HIGH);
+   digitalWrite(led_r,HIGH);
+   digitalWrite(led_a,LOW);
+  }
+  if (Vpotenciometro>=768) // si el valor de Vpotenciometro es mayor que 768, enciendo los 3 leds
+  {digitalWrite(led_v,HIGH);
+   digitalWrite(led_r,HIGH);
+   digitalWrite(led_a,HIGH);
+  }
+ Serial.println(Vpotenciometro);
+  delay(1000);
+}

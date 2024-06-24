@@ -1,0 +1,20 @@
+int Vpot;//la varible  sera uVpot temdra un valor entre 0 y 1023 en función de la posición del potenciometro
+int Vled;
+int led_r=3;// led rojo al pin3
+void setup()
+{
+pinMode(led_r,OUTPUT);
+Serial.begin(9600);
+}
+ 
+void loop()
+{
+Vpot= analogRead(A0);//lee el valor de tensión 0-5V0 lo  convierte un nuemro entre 0-1023 y lo almacena en la varialbe Vpotenciometro  
+Vled=map(Vpot,0,1023,0,255);// mapea el valor Vpot que oscila entre 0 y 1023 a Vled que oscila entre 0 y 255
+analogWrite(led_r,Vled);// la iluminación del led rojo depende del valor Vled
+//para ver la tension que suminista el led  
+Serial.print("Tension salida pin analogico  ");
+Serial.println(Vled*0.0195); 
+delay(500);
+  
+}

@@ -1,0 +1,13 @@
+ = map(x, a, b, A, B);
+y numero mapeado
+x numero a mapear
+a valor mínimo del numero a mapear, puede ser el valor mínimo de x
+b valor máximo del numero a mapear, puede ser el valor máximo de x
+A valor mínimo del numero mapeado, es el valor mínimo de y
+B Valor máximo del numero mapeado, es el valor máximo de x
+Asi nuesta función quedadara
+Vled=map(Vpot,0,1023,0,255)
+Donde 
+- El valor 0 de Vpot corresponde a 0 Vled 
+-El valor 1023 de Vpot corresponde a 255 Vled
+- Y para valores intermedios de Vpot realiza una función proporcional y nos da el valor Vled, con la ventaja de no tener que realizar ningún calculo.

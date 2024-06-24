@@ -1,0 +1,27 @@
+int Led1 = 2;
+int pulsador1= 5;
+
+void setup() 
+{
+pinMode(Led1,OUTPUT);
+pinMode(pulsador1,INPUT);
+Serial.begin(9600);
+
+}
+void loop() 
+{ 
+  if (digitalRead(pulsador1) == HIGH)
+  {
+  digitalWrite(Led1,HIGH); 
+  Serial.println (" el led esta encendido ");
+  }
+  else {
+    digitalWrite(Led1,LOW);
+    Serial.println (" el led esta apagado "); 
+  }
+ Serial.print (" el pulsador está conectado al pin ");
+ Serial.println(pulsador1);
+ Serial.print (" el led1 está conectado al pin ");
+ Serial.println(Led1);
+ delay (1000); 
+}

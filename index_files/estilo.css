@@ -141,23 +141,6 @@ P {
             "footer";
         min-height: 100vh;
     }
-     #contenedor2 {
-   
-    background-color: #e3d5bc;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 20px auto auto 1fr 40px;
-    grid-gap: 5px;
-    grid-template-areas:
-        "header"
-        "lateral"
-        "aside"
-        "main"
-        "footer";
-    min-height: 100vh;
-}
-    
-    
 
     #contenedor3 {
         background-color: #e3d5bc;
@@ -204,7 +187,7 @@ main {
 
 }
 
-article {
+.articulo {
     background-image: url(../imagenes/fondo.gif);
     background-color: #e3c6c6;
     margin:0 2%;
@@ -280,7 +263,50 @@ footer a {
     text-decoration: none;
 }
 
-/*  ------------------------- flex  -----------------------------*/
+
+/*   ----------------------  particularidades   colores flex ancho--------------------*/
+.section_naranja {
+    background-color: rgb(220, 220, 220);
+
+    border-radius: 20px;
+    border: 2px solid orange;
+
+}
+
+.article_curso{
+  background-color: #8a8;
+max-width: 800px;
+    border-radius: 20px;
+    border: 2px solid orange;  
+    padding:30px;
+    margin: auto;
+    margin-bottom: 30px;
+    
+}
+
+.article_curso h2{
+    font-size: 2em;
+       text-align: center;
+    padding-bottom: 10px;
+  
+}
+
+.article_curso_enlaces {
+     padding: 10%;
+    
+}
+.article_curso_enlaces a{
+    color:#6d4f13;
+    font-size: 1.5em;
+    font-weight: 600;
+    text-decoration: none;
+   
+}
+
+
+
+ 
+
 
 
 .flex_wrap {
@@ -288,7 +314,7 @@ footer a {
     display: flex;
     flex-wrap: wrap;
     border-radius: 20px;
-    gap: 10px;
+    gap: 20px;
     justify-content: center;
 
 }
@@ -300,44 +326,27 @@ footer a {
     display: flex;
     justify-content: space-between;
 }
-.flex_wrap_2items{/* meter 4 imagenes en pantalla de ordenador y que aparezaca en columna en movil */
-  max-width: 49%;
-    min-width: 300px;
-}
-.flex_wrap_3items{/* meter 4 imagenes en pantalla de ordenador y que aparezaca en columna en movil */
-  max-width: 32%;
-    min-width: 300px;
-    
-}
 
-.flex_wrap_4items{/* meter 4 imagenes en pantalla de ordenador y que aparezaca en columna en movil */
-  max-width: 24%;
-    min-width: 300px;
-}
-
-
-
-/*   ----------------------  particularidades   colores flex ancho--------------------*/
-.section_naranja {
-    background-color: rgb(220, 220, 220);
-
-    border-radius: 20px;
-    border: 2px solid orange;
+.flex10auto_center {
+    flex: 1 0 auto;
+    margin: 0 10px;
+    text-align: center;
 
 }
+.flex10auto_center img {
+ max-height: 250px;  
+  
+} 
 
-.inline-block {
-    display: inline-block;
-}
 
 
-.justify-content_space-a{
-  justify-content: space-around;
-}
+
+
 .padding_{
     padding: 2%;
 }
 .centrar{  text-align: center;}
+.derecha{text-align: end;}
 
 /* -----------------------classes particulares ------------------------------------------*/
 
@@ -353,7 +362,9 @@ footer a {
 .fondo_verde:hover{
      background: #ada;
 }
-
+.fondo_contenedor{
+     background-color: #edb;
+}
 
 .ancho30 {
 
@@ -382,12 +393,10 @@ footer a {
 /* ----------------------- imagenes  ------------------------------------------*/
 .div_imagen {
     background-color: rgb(220, 220, 220);
-  /*  margin: 2%;
-    align-content: center;*/
  text-align: center;
     border-radius: 20px;
-    overflow: hidden;
-  /*  border: 2px solid red; pruebas*/
+  overflow: hidden;
+    /*  border: 2px solid red; pruebas*/
 }
 
 
@@ -398,6 +407,10 @@ footer a {
 
 }
 
+.max-height_230px{
+    max-height: 230px;
+}
+
 
 .overflow_auto{
    overflow:auto; 
@@ -406,34 +419,28 @@ footer a {
 
 
 
-
+/* 
 .carrusel {
     display: flex;
     flex-wrap: nowrap;
     overflow: scroll;
+    max-width:100%;
+       display: inline-block;
 
     overflow-y: hidden;
 
-    width: 10%;
-
-}
-
-.carrusel_elemento {
-    flex: 1 0 auto;
-    margin: 0 10px;
-    text-align: center;
-
-}
-.carrusel_elemento img {
-max-height: 250px; 
   
-  
-} 
 
-
-.max-height_230px{
-    max-height: 230px;
 }
+ */
+
+
+
+
+
+
+
+
  
 
 
@@ -631,9 +638,11 @@ max-height: 250px;
 
 .ancla {
     position: relative;
-    bottom: 90px;
+    bottom: 120px;
+    /* bottom: 90px;*/
 
 }
+
 
 
 /* ---------------  tarjetas--------------------------*/

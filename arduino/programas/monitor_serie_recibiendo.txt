@@ -1,0 +1,31 @@
+int led_v=2;// led verde al pin2
+
+int lectura; // VARIABLE DONDE ALMACENO EL DATO LEIDO POR ARDUINO
+
+void setup() 
+{
+pinMode(led_v,OUTPUT);
+Serial.begin(9600);
+Serial.println(" Introduce  V para encender el led verde");
+Serial.println(" Introduce  v , a para apagar el led verde");
+}
+void loop() 
+{
+if (Serial.available() > 0)
+ {// SI HAY DATOS EN EL BUFER 
+   lectura = Serial.read();// LO ALMACENO EN LA VARIABLE LECTURA
+      switch (lectura)
+      { 
+      case 'V':
+       digitalWrite(led_v,HIGH);
+      break;
+      case 'v' :
+        digitalWrite(led_v,LOW);
+      break;
+      default:
+     Serial.println("  Introduce  V para encender el led verde");
+     Serial.println("  Introduce  v para apagar el led verde");
+       break;
+        } 
+ }   
+}

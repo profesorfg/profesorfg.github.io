@@ -1,0 +1,18 @@
+#include <Servo.h>
+ 
+Servo myservo;  // crea el objeto servo
+ 
+int pos = 0;    // posicion del servo
+ 
+void setup() {
+   myservo.attach(9);  // vincula el servo al pin digital 9
+}
+ 
+void loop()  {
+   myservo.write(0);    //posición inicial          
+   delay(5000);
+   myservo.write(90);  // posición intermedia
+   delay(5000);    
+   myservo.write(180); // posición final
+   delay(5000);                       
+   }

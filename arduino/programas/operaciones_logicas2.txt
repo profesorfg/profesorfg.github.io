@@ -1,0 +1,31 @@
+void setup() 
+{
+pinMode(2,OUTPUT);
+pinMode(3,OUTPUT);
+pinMode(4,OUTPUT);
+pinMode(5,INPUT);
+pinMode(6,INPUT);
+pinMode(7,INPUT);
+}
+void loop() 
+{
+  if (digitalRead(5) == HIGH)
+  {
+  digitalWrite(2,HIGH); 
+  delay(500);
+  digitalWrite(2,LOW); 
+  delay(500);
+  }
+  else digitalWrite(2,LOW);
+
+  if (digitalRead(7) == HIGH || digitalRead(6) == HIGH ) 
+  {
+  digitalWrite(4,HIGH); 
+  digitalWrite(3,HIGH);
+  }
+  else 
+  {
+  digitalWrite(4, LOW);
+  digitalWrite(3,LOW);
+  }
+}

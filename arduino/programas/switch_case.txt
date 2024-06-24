@@ -1,0 +1,59 @@
+int a=0; // inicializo la variable a y almaceno el valor 0
+int pul_1=5;// la variable pul1 vale 5 y la utilizo para indicar que el pulsador 1 esta conectado al pin 5
+int pul_2=6;// indico que el pulsador 2 esta conectado al pin 6
+int pul_3=7;// pulsador 3 al pin 7
+int led_v=2;// led verde al pin2
+int led_r=3;// led rojo al pin3
+int led_a=4;// led amarillo al pin4
+
+void setup() 
+{
+pinMode(led_v,OUTPUT);
+pinMode(led_r,OUTPUT);
+pinMode(led_a,OUTPUT);
+pinMode(pul_1,INPUT);
+pinMode(pul_2,INPUT);
+pinMode(pul_3,INPUT);
+Serial.begin(9600);
+}
+void loop() 
+{
+ if (digitalRead(pul_1) == HIGH)
+  {
+  a=a+1;// al activar el pulsador incremento la variable a una unidad
+   Serial.print("el valor de la variable a es  ");
+   Serial.print(a);
+   delay (500);// espero medio segundo  
+   Serial.println("  Habilitada siguiente pulsacion ");
+   }
+  if (digitalRead(pul_2) == HIGH) 
+  { 
+      switch (a)
+      { 
+      case 0:
+        //ninguna accion
+      break;
+      case 1 :
+        digitalWrite(led_v,HIGH);
+      break;
+      case 2:
+        digitalWrite(led_v,HIGH);
+        digitalWrite(led_r,HIGH);
+      break;
+      default:
+        digitalWrite(led_v,HIGH);
+        digitalWrite(led_r,HIGH);
+        digitalWrite(led_a,HIGH);
+       break;
+       }
+     Serial.print("el valor de la variable a es  ");//si pulso dos
+     Serial.println(a);
+     delay (2000);
+     digitalWrite(led_v,LOW);
+     digitalWrite(led_r,LOW);
+     digitalWrite(led_a,LOW);
+     a=0;
+     Serial.println("PREPARADO PARA EL SIGUIENTE CONTAJE  ");
+    
+  }    
+}

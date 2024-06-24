@@ -1,0 +1,39 @@
+void setup() {  
+
+ pinMode(2, OUTPUT);  // pin dos salida para controlar el led verde
+ pinMode(3, OUTPUT);  // pin tres salida para controlar el led rojo
+ pinMode(4, OUTPUT); // pin cuatro salida para controlar el led amarillo
+}
+
+void loop() {          // inicio  del programa  que se repite en bucle
+ digitalWrite(2, HIGH); // enciendo el led verde
+ digitalWrite(3, LOW);  // apago el led rojo
+ digitalWrite(14,LOW);  // apago el led amarillo
+ delay(300);            // espero 300 milisegundos
+
+ digitalWrite(2, HIGH); 
+ digitalWrite(3, HIGH);
+ digitalWrite(14,LOW);
+ delay(300);
+
+ digitalWrite(2, HIGH); 
+ digitalWrite(3, HIGH);
+ digitalWrite(14,HIGH);
+ delay(300);
+
+ digitalWrite(2, LOW); 
+ digitalWrite(3, LOW);
+ digitalWrite(4, LOW);
+ delay(300); 
+
+ digitalWrite(2, HIGH); 
+ digitalWrite(3, HIGH);
+ digitalWrite(4, HIGH);
+ delay(300);
+
+ digitalWrite(2, LOW); 
+ digitalWrite(3, LOW);
+ digitalWrite(4, LOW);
+ delay(300); 
+  
+} // fin  y vuelta a empezar el bucle.

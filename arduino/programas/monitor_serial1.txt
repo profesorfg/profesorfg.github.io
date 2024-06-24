@@ -1,0 +1,32 @@
+int Led1 = 2;
+int pulsador1= 5;
+int estadoPulsador1; // creo una varible para almacenar el estado del pulsador 1
+
+void setup() 
+{
+pinMode(Led1,OUTPUT);
+pinMode(pulsador1,INPUT);
+Serial.begin(9600);
+
+}
+void loop() 
+{ 
+  estadoPulsador1=digitalRead(pulsador1);// la variable estadoPulsador1 toma el valor 1 si esta pulsado o cero si no esta pulsado.
+  if (digitalRead(pulsador1) == HIGH)
+  {
+  digitalWrite(Led1,HIGH); 
+  Serial.println (" el led esta encendido ");
+  }
+  else {
+    digitalWrite(Led1,LOW);
+    Serial.println (" el led esta apagado "); 
+  }
+ Serial.print (" el pulsador está conectado al pin ");
+ Serial.print(pulsador1);
+  Serial.print (" y tiene el valor");
+  Serial.println(estadoPulsador1);// 0 no pulsado 1 pulsado
+ 
+  Serial.print (" el led1 está conectado al pin ");
+ Serial.println(Led1);
+  delay (1000); 
+}

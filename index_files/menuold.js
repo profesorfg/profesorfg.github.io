@@ -104,7 +104,7 @@ class menuprincipal extends HTMLElement {
     display: none;
 }
     
-/*   MEDIA SCREEN  --------------------------------------------------------------  */    
+/*   MEDIA SCREEN  --------------------------para el movil -----------------------  */    
   @media screen and (max-width: 720px){      
     
     .header__superior{
@@ -151,14 +151,14 @@ class menuprincipal extends HTMLElement {
     
     	.menu li ul {
 				display:none;/*todos los submenus desaparecen*/
-				position:absolute; /*con respeto al menu */
-				min-width:140px;
+			/*	position:absolute; con respeto al menu
+				min-width:140px; */
 			}
     
     
     	.menu li:hover > ul{/* los li de menu al pasar el raton que sean directos de ul (esto lo dicho pero no le entiendo) aparecen el menu*/
 				display: flex;
-            flex-direction: row;
+                  flex-direction: column;
             
             left: 120px;
 			}
@@ -203,14 +203,14 @@ class menuprincipal extends HTMLElement {
        </ul>  
    </li> 
    
-    <li> <a href="#" >Automatismos</a> 
-      			 <ul> 
+    <li> <a href="../webAutomatismos/cableados.html">Automatismos</a> 
+    <!-- <ul> 
            			<li> <a href="../webAutomatismos/cableados.html">Control de Motores</a></li> 
            			<li> <a href="../webAutomatismos/cableados_practicas.html">Prácticas</a></li> 
                     <li> <a href="../webAutomatismos/cableados_ejercicios.html">Ejercicios</a></li> 
                     <li> <a href="../webAutomatismos/cableados_material.html">Material</a></li> 
       			</ul>  
-      	   </li>  
+      	   </li>  -->
 
     <li> <a href="#" >Automatas</a> 
       			 <ul> 
@@ -225,7 +225,7 @@ class menuprincipal extends HTMLElement {
    <li> <a href="#" >Variador</a> 
        <ul> 
    		 
-           <li> <a href="../webMotores/variadores.html">Variadores</a> </li> 
+           <li> <a href="../webMotores/Variadores.html">Variadores</a> </li> 
            <li> <a href="../webMotores/variadores_practicas.html">Practicas Variadores</a> </li> 
        </ul>  
    </li> 
@@ -236,6 +236,7 @@ class menuprincipal extends HTMLElement {
        <ul> 
             <li> <a href="../webRobotica/robotica.html" >Robotica</a></li> 
             <li> <a href="../webMotores/motores.html" >Motores</a> </li> 
+            <li> <a href="../web3d/3d.html">Impresión 3D</a></li> 
           <li> <a href="../arduino/index.html">Arduino</a></li> 
           <li> <a href="https://cifpmedinadelcampo.es/iea/" >CIFP Electricidad</a></li> 
         </ul>  
@@ -415,7 +416,7 @@ class menuprincipalindex extends HTMLElement {
     
     	.menu li:hover > ul{/* los li de menu al pasar el raton que sean directos de ul (esto lo dicho pero no le entiendo) aparecen el menu*/
 				display: flex;
-            flex-direction: row;
+           flex-direction: column;
             
             left: 120px;
 			}
@@ -459,13 +460,13 @@ class menuprincipalindex extends HTMLElement {
    		  </li> 
        </ul>  
    </li> 
-   <li>   <a href="#" >Automatismos</a> 
-      			 <ul> 
+   <li>   <a href="webAutomatismos/cableados.html">Automatismos</a> 
+      	<!--		 <ul> 
            			<li> <a href="webAutomatismos/cableados.html">Control de Motores</a></li> 
            			<li> <a href="webAutomatismos/cableados_practicas.html">Prácticas</a></li> 
                     <li> <a href="webAutomatismos/cableados_ejercicios.html">Ejercicios</a></li> 
            			<li> <a href="webAutomatismos/cableados_material.html">Material</a></li> 
-                </ul>
+                </ul>   -->
 
     <li> <a href="#" >Autómatas</a> 
       			 <ul> 
@@ -486,10 +487,11 @@ class menuprincipalindex extends HTMLElement {
    </li> 
    <li> <a href="webRenovables/renovables.html" >Renovables</a></li> 
      <li> <a href="webenlaces/enlaces.html">Enlaces</a></li> 
-   <li> <a href="">Varios</a> 
+   <li> <a href="#">Varios</a> 
        <ul> 
          <li> <a href="webRobotica/robotica.html" >Robotica</a></li> 
        <li> <a href="webMotores/motores.html" >Motores</a> 
+        <li> <a href="web3d/3d.html">Impresión 3D</a></li> 
           <li> <a href="arduino/index.html">Arduino</a></li> 
           <li> <a href="https://cifpmedinadelcampo.es/iea/" >CIFP Electricidad</a></li> 
          

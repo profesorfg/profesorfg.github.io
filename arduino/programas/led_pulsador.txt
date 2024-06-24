@@ -1,0 +1,17 @@
+void setup() 
+{
+  pinMode(13, OUTPUT);
+  pinMode(2, INPUT);
+}
+
+void loop() 
+{
+  if (digitalRead(2) == HIGH) // si el pulsador esta ativado
+  {
+    digitalWrite(13, HIGH);// enciende el led
+  }
+  else // si no
+  {
+    digitalWrite(13, LOW); // apaga el led
+  }
+}

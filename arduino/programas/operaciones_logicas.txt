@@ -1,0 +1,22 @@
+void setup() {
+pinMode(2,OUTPUT);
+pinMode(3,OUTPUT);
+pinMode(4,OUTPUT);
+pinMode(5,INPUT);
+pinMode(6,INPUT);
+pinMode(7,INPUT);
+}
+void loop() 
+{
+  if (digitalRead(5) == HIGH && digitalRead(6) == HIGH &&  digitalRead(7)== LOW) 
+  {
+  digitalWrite(2, HIGH); 
+  }// podia haberlo puesto todo en una linea
+  else digitalWrite(2, LOW); // solo una condición no necesito y por lo tanto no pongo llaves
+
+  if (digitalRead(5) == HIGH || digitalRead(6) == HIGH) digitalWrite(3, HIGH);
+  else digitalWrite(3, LOW);
+
+  if (digitalRead(5) == LOW) digitalWrite(4, HIGH);
+  else digitalWrite(4, LOW);
+}

@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Arduino</title>
+    <link href="../index_files/estilo.css" rel="stylesheet" type="text/css">
+    <script src="../index_files/menu.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="profesorfg" name="author">
+    <meta content="automatizacion industrial" name="description">
+    <meta name="keywords" content="automatas electricidad">
+</head>
+
+<body>
+    <div id="contenedor2">
+        <header>
+            <nav>
+                <menu-principal></menu-principal>
+            </nav>
+        </header>
+        <div id="lateral" class="lateral_impresora3d">  <a href="index.html">
+            <img class="imagen" src="imagenes/ir_a_ARDUINOPINTADO.png" alt="dibujo de un ardino">
+            </a>
+        </div>
+        <main>
+            <h1>Curso Arduino</h1>
+            <br>
+            <!--  ---------------------            TEMA -------------------  -->
+            <article class="article_curso">
+
+
+
+                <p> Vamos a aprender arduino desde cero, con la creación de proyectos simples con programas comentados donde podras conocer y estudiar instrucciones nuevas y la recomendación de enlaces a teoría.</p>
+
+                <p> Los ejercicios se pueden probar en un montaje real con una placa arduino o en el simulador muy recomendable <a href="https://www.tinkercad.com/"> tinkercad. </a> es gratuito con solo registraste en su página.<a href="https://www.youtube.com/watch?v=hZmSG-IALAM"> enlace a video tutorial arduino tinkercad</a> o <a href="https://www.youtube.com/watch?v=ajcDI9NoTac">en este otro</a> </p>
+
+                <p> Empezamos con los siguientes apuntes que nos podemos encontrar en los siguiente enlaces.</p>
+                <ul>
+                    <li><a href="https://arduinobot.pbworks.com/f/Manual+Programacion+Arduino.pdf">Manual de programación Traducido</a> y adaptado:José Manuel Ruiz Gutiérrez</li>
+                    <li><a href="http://educalab.es/documents/10180/640047/TallerRoboticaLibreArduino.pdf/c77adbfd-606a-4fbe-acd4-11630927b5a4"> Robótica Libre con Arduino</a> de María Loureiro y José Pujol</li>
+                    <li>En esta página <a href="http://www.futureworkss.com/">http://www.futureworkss.com/</a> encontraras un montón de proyectos</li>
+                    <li>Libro kit básico. Nociones de electrónica y introducción a la placa arduino.</li>
+                    <li>Para los avanzados recomiendo el libro arduino curso práctico de formación.</li>
+                     
+                </ul>
+                <div class=" article_curso_enlaces"> 
+                    <a class="ancla" id="indice"> </a><h2>ÍNDICE DEL CURSO</h2> 
+                <ul>
+                    <li> <a href="#hola">hola mundo</a></li>
+                    <li>  <a href="#secuencia">Secuencia de Leds</a></li>
+                <li><a href="#pulsador">Pulsador, instrucción IF ELSE</a></li>
+              <li>  <a href="#operaciones">Operaciones Lógicas</a></li>
+              <li>  <a href="#monitor">Monitor Serie</a></li>
+              <li>  <a href="#variables">Variables</a></li>
+             <li>   <a href="#anidar">Anidar IF</a></li>
+             <li>   <a href="#switch">Switch Case</a></li>
+                <li>   <a href="#monitor">Monitor Serie, recibiendo mensajes</a></li>
+              <li>  <a href="#entradas">Entradas Analógicas</a></li>
+              <li>  <a href="#salidas">Salidas Analógicas</a></li>
+             <li>   <a href="#funcion">Función Map</a></li>
+             <li>   <a href="#servo">Servo.H</a></li>
+               </ul>
+           
+              
+               
+</div>  
+
+            </article>
+            <!--  ---------------------            TEMA -------------------  -->
+
+            <article class="article_curso">
+          
+           
+              <a class="ancla" id="hola"></a> <h2>Hola mundo</h2>
+
+                <p>La primera práctica es como no, el hola mundo de arduino, Podemos ver una explicación del ejemplo hola mundo en la pagina 17 de
+                    <a href="http://educalab.es/documents/10180/640047/TallerRoboticaLibreArduino.pdf/c77adbfd-606a-4fbe-acd4-11630927b5a4">Robótica Libre con Arduino</a>
+                </p>
+                <p>En este proyecto vemos la estructura del programa,</p>
+                <p><span class="azul_negrita">void setup</span> { es la zona del progama que se ejecuta al conectar arduino, solo se ejecuta una sola vez, y se utiliza por ejemplo para activar pines como entradas o salidas, }</p>
+
+                <p><span class="azul_negrita">void loop</span>{ es la parte de programa que se ejecuta ciclicamente}</p>
+
+
+                <p><span class="azul_negrita"> // comentarios</span> en linea, el comentario se inicia despues de la instrucción y termina a cambiar de línea.</p>
+
+                <p><span class="azul_negrita"> /* inicio comentario</span>, este comentario dura desde el inicio hasta que encuentre la instrucción fin de comentario */</p>
+
+
+<div class="derecha"><a  href="#indice">Indice</a></div>
+                <details name="info">
+                    <summary> </summary>
+                    <p> Tambien encontramos en internet una explicación en en el<a href=" https://www.tr3sdland.com/2011/11/arduino-mi-primer-hola-mundo/"> siguiente enlace </a> </p>
+                    <h2 class="centrar">Programa</h2>
+                    <section class="section_naranja txt">
+                        <section class="centrar">
+                            <a class="fondo_verde" href="programas/hola_mundo.txt" download="hola_mundo.ino"> Descarga el programa</a>
+                        </section>
+
+
+                        <iframe src="programas/hola_mundo.txt" frameborder="0"></iframe>
+                    </section>
+
+
+                </details>
+
+            </article>
+
+            <!--  ---------------------            TEMA -------------------  -->
+            <article class="article_curso">
+              <a class="ancla" id="secuencia"></a>  <h2>Secuencia de leds</h2>
+
+                <p>En la p&aacute;gina 29 de&nbsp;<a href="http://educalab.es/documents/10180/640047/TalerRoboticaLibreArduino.pdf/c77adbfd-606a-4fbe-acd4-11630927b5a4">taller robotica libre arduino&nbsp;</a>encontramos podemos realizar la pr&aacute;ctica del sem&aacute;foro
+                </p>
+
+                <p>En el siguiente proyecto encenderemos primero el led verde, luego a&ntilde;ado el rojo y luego el amarillo, despues parpadean los tres a la vez y vuelta a empezar el ciclo.</p>
+                <p><strong>NOTA: los pulsadores no hace falta cablearlos todavia.</strong></p>
+
+<div class="derecha"><a  href="#indice">Indice</a></div>
+                <details name="info">
+                    <summary> </summary>
+                    <h2 class="centrar">Programa</h2>
+                    <section class="section_naranja txt">
+                        <section class="centrar">
+                            <a class="fondo_verde" href="programas/secuencias_leds.txt" download="secuencias_leds.ino"> Descarga el programa</a>
+                        </section>
+                        <iframe src="programas/secuencias_leds.txt" frameborder="0"></iframe>
+                    </section>
+
+                </details>
+
+
+
+            </article>
+
+
+            <!--  ---------------------            TEMA -------------------  -->
+            <article class="article_curso">
+             <a class="ancla" id="pulsador"></a>   <h2>Pulsador, instrucción ‘if’ ‘else’</h2>
+
+                <p>Toca trabajar con entradas, conectando un pulsador a arduino y la instrucci&oacute;n &lsquo;if&rsquo; , que es como decir si pasa esto haz esto &lsquo;else&rsquo; sino haz esto otro.</p>
+                <p>Mas informaci&oacute;n en el siguiente enlace&nbsp;<a href="https://programarfacil.com/blog/arduino-blog/if-else-arduino/">programarfacil.com blog/arduino-blog if-else-arduino/</a></p>
+                <p>Tenemos un ejemplo en la p&aacute;gina 34 de&nbsp;<a href="http://educalab.es/documents/10180/640047/TallerRoboticaLibreArduino.pdf/c77adbfd-606a-4fbe-acd4-11630927b5a4">taller de programaci&oacute;n libre arduino</a></p>
+
+
+
+
+<div class="derecha"><a  href="#indice">Indice</a></div>
+                <details name="info">
+                    <summary> </summary>
+                    <h2 class="centrar">Programa: Enciende un led al activar un pulsador</h2>
+                    <section class="section_naranja txt">
+                        <section class="centrar">
+                            <a class="fondo_verde" href="programas/led_pulsador.txt" download="led_ pulsador.ino"> Descarga el programa</a>
+                        </section>
+                        <iframe src="programas/led_pulsador.txt" frameborder="0"></iframe>
+                    </section>
+                    <p>Mismo programa pero como las instruccion if y else solo tiene una condición de una línea se puede eliminar las llaves y quedar el programa así</p>
+                    <section class="section_naranja txt">
+                        <section class="centrar">
+                            <a class="fondo_verde" href="programas/led_pulsador1.txt" download="led_ pulsador1.ino"> Descarga el programa</a>
+                        </section>
+                        <iframe src="programas/led_pulsador1.txt" frameborder="0"></iframe>
+                    </section>
+                    <p>Con este programa, el led estará intermitente mientras este activado el pulsador.</p>
+                    <section class="section_naranja txt">
+                        <section class="centrar">
+                            <a class="fondo_verde" href="programas/led_pulsador2.txt" download="led_ pulsador2.ino"> Descarga el programa</a>
+                        </section>
+                        <iframe src="programas/led_pulsador2.txt" frameborder="0"></iframe>
+                    </section>
+
+
+
+
+                </details>
+
+
+
+            </article>
+
+
+
+
+
+
+            <!--  ---------------------            TEMA -------------------  -->
+            <article class="article_curso">
+              <a class="ancla" id="operaciones"></a>  <h2>Operaciones lógicas</h2>
+
+                <p>Con la instrucci&oacute;n if, ya vista en el tema pulsadores, vimos un condicional,&nbsp;<strong>si&nbsp;</strong>el pulsador esta activado, enciende una luz.</p>
+                <p>En este tema vamos a ampliar las posibilidades de la instrucci&oacute;n if, aumentando el numero de condiciones para realizar una acci&oacute;n.</p>
+                <p>Ejemplos:</p>
+                <ul>
+                    <li>Si esta activado el pulsador uno Y el pulsador dos enciendo un led</li>
+                    <li>Si esta activado el pulsador uno O el pulador dos enciendo un led</li>
+                    <li>Si esta activado el pulsador uno Y NO esta activado el pulsador dos enciendo un led</li>
+                </ul>
+                <div class="derecha"><a  href="#indice">Indice</a></div>
+                <details name="info">
+                    <summary>Ejercicio</summary>
+                <p>En una instalaci&oacute;n con tres led conectados a los pines 2,3 y 4 y tres pulsadores conectados a los pines 5,6 y 7.</p>
+                <p>El led 2 se encender&aacute; si activo los pulsadores 5 y 6 y no activo el 7</p>
+                <p>El led 3 se encender&aacute; si activo el pulsador 5 o el 6</p>
+                <p>El led 4 se encender&aacute; si no pulso el 5</p>
+
+                    solución
+                    <img class="imagen centrar" src="imagenes/curso_3LED-3-PULSADORES.png" alt="circuito con tres pulsadores y tres leds">
+
+                    <h2 class="centrar">Programa</h2>
+                    <section class="section_naranja txt">
+                        <section class="centrar">
+                            <a class="fondo_verde" href="programas/operaciones_logicas.txt" download="operaciones logicas.ino"> Descarga el programa</a>
+                        </section>
+                        <iframe src="programas/operaciones_logicas.txt" frameborder="0"></iframe>
+                    </section>
+                    <p>Con siguiente programa si activamos el pulsador conectado al pin 5, el led verde parpadea con una frecuencia de medio segundo, si pulsamos los pulsadores conectados a 6 o 7 se encienden los led rojo y amarillo.</p>
+                    <section class="section_naranja txt">
+                        <section class="centrar">
+                            <a class="fondo_verde" href="programas/operaciones_logicas2.txt" download="operaciones logicas2.ino"> Descarga el programa</a>
+                        </section>
+                        <iframe src="programas/operaciones_logicas2.txt" frameborder="0"></iframe>
+                    </section>
+
+                    <p>Si el parpadeo lo realizamos con una frecuencia de 2 segundos, observamos que las reación si pulso el pulsador del pin5 y luego el pulsador del pin6 o del pin7 observo que tardan casi 4 segundos en encender desde la pulsación de uno de estos, y pasa algo similar en el apagado.</p>
+                    <p>Esto se solucionará mas adelante cuando cambiemos la instrucción delay por otra.</p>
+
+                </details>
+
+
+
+            </article>
+
+
+
+
+
+
+            <!--  ---------------------            TEMA -------------------  -->
+            <article class="article_curso">
+               <a class="ancla" id="monitor"></a> <h2>Monitor serie</h2>
+                <p>Enlaces donde encontras informaci&oacute;n:</p>
+                <ul>
+                    <li>De monitor serie</li>
+                </ul>
+                <p><a href="https://www.luisllamas.es/arduino-puerto-serie/">luisllamas.es arduino-puerto-serie/</a></p>
+                <p><a href="https://aprendiendoarduino.wordpress.com/category/monitor-serie/">aprendiendoarduino monitor-serie/</a></p>
+                <ul>
+                    <li>Instrucci&oacute;n serial.print()</li>
+                </ul>
+                <p><a href="http://cursoarduinomega.blogspot.com/2015/10/todo-sobre-serialprint.html">cursoarduino serialprint</a></p>
+                <p>aqui adem&aacute;s vemos una tabla de c&oacute;digo ascii</p>
+                <p><a href="http://manueldelgadocrespo.blogspot.com/p/description-text-strings-can-be.html">manueldelgadocrespo blogspot.com</a></p>
+                <p>Es hora de comunicarnos con el ordenador, lo haremos con instrucci&oacute;n</p>
+                <pre><code> Serial.begin(9600);</code></pre>
+                <br>
+                <p> Esta instrucci&oacute;n habilita la comunicaci&oacute;n.</p>
+
+<div class="derecha"><a  href="#indice">Indice</a></div>
+                <details name="info">
+                    <summary> </summary>
+                    <p>Este instrucci&oacute;n debe la ponemos dentro de void setup(){</p>
+                    <p>Con ella habilitamos la comunicaci&oacute;n con el ordenador, y ATENCI&Oacute;N no podemos utilizar los pines 0 y 1 del arduino como entradas o salidas, porque los utiliza para la comunicaci&oacute;n, asi que en nuestros programas dejaremos esos pines sin conectar.</p>
+                    <p>Para ver el resultado de la comunicaci&oacute;n en el ordenador abrimos en la IDE de arduino el monitor serie</p>
+                    <img class="imagen centrar" src="imagenes/curso_monitor-serie.png">
+
+                    <p>Para ver un texto en el monitor serie utilizo la instrucci&oacute;n</p>
+                    <pre><code>Serial.print("entrecomillado");</code></pre>
+                    <p>("el texto entrecomillado aparece en el monitor cuando se ejecuta la instrucci&oacute;n")</p>
+                    <pre><code> Serial.print(variable); </code></pre>
+                    <p>sino pongo comillas se imprime el valor de la variable</p>
+
+                    <pre><code> Serial.println(" texto ");</code></pre>
+                    <p>si termino con println la siguiente impresi&oacute;n se escribre en al l&iacute;nea siguiente.</p>
+                    <p>En el siguiente programa veras aparecer mensajes de texto en el monitor serie cada segundo, y sera distinto si el pulsador esta activado o no lo est&aacute;.</p>
+                    <p>Solo hemos utilizado un led y un pulsador, pero te vale el montaje de la protoboard del tema anterior.</p>
+                    <p>Adelantamos el concepto de variable, que veremos un poco m&aacute;s en profundidad en el tema siguiente.</p>
+                    <pre><code>int Led1 = 2;</code></pre>
+                    <p>la variable led1 almacena el valor 2</p>
+                    <img class="imagen centrar" src="imagenes/curso_3LED-3-PULSADORES.png" alt="circuito con tres pulsadores y tres leds">
+
+
+
+                    <h2 class="centrar">Programa</h2>
+                    <section class="section_naranja txt">
+                        <section class="centrar">
+                            <a class="fondo_verde" href="programas/monitor_serial.txt" download="monitor_serial.ino"> Descarga el programa</a>
+                        </section>
+                        <iframe src="programas/monitor_serial.txt" frameborder="0"></iframe>
+                    </section>
+
+
+                    <p><strong>NOTA</strong>: El programa realiza una ejecuci&oacute;n cada segundo, por la instrucci&oacute;n delay (1000); por tanto debe de tener accionado el pulsador como m&iacute;nimo a 1 segundo para asegurarte el funcionamiento.</p>
+                    <p><strong>Ampliamos el programa a&ntilde;adiendo la variable</strong>&nbsp;(estadoPulsador1) que toma el valor 0 si no esta pulsado y 1 si esta pulsado con la instrucci&oacute;n</p>
+                    <p>estadoPulsador1=digitalRead(pulsador1);// la variable estadoPulsador1 toma el valor del estado del pin 5, porque pulsador1 vale 5.</p>
+
+
+
+                    <h2 class="centrar">Programa</h2>
+                    <section class="section_naranja txt">
+                        <section class="centrar">
+                            <a class="fondo_verde" href="programas/monitor_serial1.txt" download="monitor_serial1.ino"> Descarga el programa</a>
+                        </section>
+                        <iframe src="programas/monitor_serial1.txt" frameborder="0"></iframe>
+                    </section>
+
+
+
+                    <p>Ante cualquier duda o ejercicio relacionado no dudes en ponerlos en comentarios.</p>
+                    <h2>OTRO EJEMPLO DE IMPRESIÓN</h2>
+
+                    <img class="imagen centrar" src="imagenes/curso_pulsador.png" alt="circuito arduino con un pulasador">
+
+
+                    <h2 class="centrar">Programa</h2>
+                    <section class="section_naranja txt">
+                        <section class="centrar">
+                            <a class="fondo_verde" href="programas/monitor_serial2.txt" download="monitor_serial2.ino"> Descarga el programa</a>
+                        </section>
+                        <iframe src="programas/monitor_serial2.txt" frameborder="0"></iframe>
+                    </section>
+
+
+                    <p>NOTA: puedo utilizar el montaje tres led tres pulsadores, cambiando las instrucciones</p>
+                    <pre><code>int pin_pulsador= 2; </code></pre>
+                    <p>por </p>
+                    <pre><code> int pin_pulsador= 5;</code></pre>
+                    <pre><code>int pin_led=13;</code></pre>
+                    <p>por </p>
+                    <pre><code>int pin_led=2;</code></pre>
+
+
+                </details>
+
+            </article>
+
+            <!--  ---------------------            TEMA -------------------  -->
+            <article class="article_curso">
+              <a class="ancla" id="variables"></a>  <h2>Variables</h2>
+                <p>&iquest;Que es una variable?&nbsp;<a href="https://aprendiendoarduino.wordpress.com/2017/06/20/variables-en-arduino/">aprendiendoarduino/</a></p>
+                <p>Tipos de variables<a href="https://www.prometec.net/intro-programacion/">prometec.net intro-programacion</a></p>
+                <p><a href="https://aprendiendoarduino.wordpress.com/2017/06/20/tipos-de-datos-3/">Tipos de Datos</a></p>
+                <p>Si quiero utilizar la variable en cualquier parte del programa, lo tengo que declarar al principio del programa, antes del setup(), y se las llama VARIABLES GLOBALES.</p>
+                <p>Si la declaro dentro de un setup(), if {}, swich{}&hellip; solo funciona dentro de esa funci&oacute;n y se las llama VARIABLES LOCALES</p>
+                <p>Puedes ver unos ejemplos de utilizaci&oacute;n de variables en la siguiente p&aacute;gina web&nbsp;<a href="http://diwo.bq.com/variables-en-arduino/">diwo.bq.com variables-en-arduino/</a></p>
+
+                     <div class="derecha"><a  href="#indice">Indice</a></div>
+                     
+                <details name="info">
+                    <summary> ejemplo</summary>
+                    <p>En el siguiente programa, la variable «a» se incremente una unidad por cada pulsación o por cada medio segundo que mantenga pulsado el pulsador 1 (cableado al pin 5), luego al activar el pulsador 2 (cableado al pin 6) se enciende durante 2 segundos, un led si «a» vale 1, dos led si «a» vale 2 y tres led si «a» vale 3, y cambio el valor de la variable «a» a 0. puedo ver el valor de la varible «a» con el monitor serie.</p>
+                    <div class="centrar">
+                    <img class="imagen" src="imagenes/curso_3LED-3-PULSADORES.png" alt="circuito con tres pulsadores y tres leds">
+                    </div>
+
+
+
+                    <h2 class="centrar">Programa</h2>
+                    <section class="section_naranja txt">
+                        <section class="centrar">
+                            <a class="fondo_verde" href="programas/variables.txt" download="variables.ino"> Descarga el programa</a>
+                        </section>
+                        <iframe src="programas/variables.txt" frameborder="0"></iframe>
+                    </section>
+
+
+
+
+                </details>
+
+
+
+            </article>
+
+
+
+
+            <!--  ---------------------            TEMA -------------------  -->
+            <article class="article_curso">
+           <a class="ancla" id="anidar"></a>     <h2>Anidar if</h2>
+
+                <p>El programa funciona igual que el realizado en la anterior entrada «variables», pero se ha programado anidando if dentro de otros if.</p>
+<div class="derecha"><a  href="#indice">Indice</a></div>
+
+                <details name="info">
+                    <summary> </summary>
+                         <img class="imagen centrar" src="imagenes/curso_3LED-3-PULSADORES.png" alt="circuito con tres pulsadores y tres leds">
+                    <h2 class="centrar">Programa</h2>
+                    <section class="section_naranja txt">
+                        <section class="centrar">
+                            <a class="fondo_verde" href="programas/anidar_if.txt" download="anidar if.ino"> Descarga el programa</a>
+                        </section>
+                        <iframe src="programas/anidar_if.txt" frameborder="0"></iframe>
+                    </section>
+
+                </details>
+
+
+
+            </article>
+
+
+
+            <!--  ---------------------            TEMA -------------------  -->
+            <article class="article_curso">
+            <a class="ancla" id="switch"></a>    <h2>Switch Case</h2>
+
+<p>Puede conocer el funci&oacute;namiento de la instrucci&oacute;n switch &ndash; case en el siguientes enlances</p>
+<p><a href="http://www.arduino.utfsm.cl/referencia/switch-case/">arduino.utfsm.cl switch-case/</a></p>
+<p>Volvemos repetir funcionamiento del programa &laquo;variable&raquo; pero en este caso hemos utilizado la instrucci&oacute;n switch-case.</p>
+                <div class="derecha"><a  href="#indice">Indice</a></div>
+
+                <details name="info">
+                    <summary> </summary>
+                    <h2 class="centrar">Programa</h2>
+                    <section class="section_naranja txt">
+                        <section class="centrar">
+                            <a class="fondo_verde" href="programas/switch_case.txt" download="switch_case.ino"> Descarga el programa</a>
+                        </section>
+                        <iframe src="programas/s.txt" frameborder="0"></iframe>
+                    </section>
+
+                </details>
+
+
+
+            </article>
+
+
+
+            <!--  ---------------------            TEMA -------------------  -->
+            <article class="article_curso">
+           <a class="ancla" id="monitor"></a>        <h2>Monitor Serie recibiendo mensajes</h2>
+<p>Para el siguiente proyecto, volvemos a utilizar el montaje 3 leds 3 pulsadores, pero solo vamos a utilizar los leds y el monitor serie.</p>
+
+<p>En esta entrada, voy a realizar un programa que me encienda el led verde si escribo V y lo apago si escribo v.</p>
+
+<a href="https://www.luisllamas.es/enviar-recibir-numeros-puerto-serie-arduino/">En este enlace </a>encotraras como enviar y recibir numeros por el puerto serie, es un articulo de <strong>arduino avanzado</strong> realizado por Luis LLamas.
+
+    <div class="derecha"><a  href="#indice">Indice</a></div>
+
+                <details name="info">
+                    <summary> </summary>
+                    
+                    
+                    <h2 class="centrar">Programa</h2>
+                    <section class="section_naranja txt">
+                        <section class="centrar">
+                            <a class="fondo_verde" href="programas/monitor_serie_recibiendo.txt" download="monitor_serie_recibiendo.ino"> Descarga el programa</a>
+                        </section>
+                        <iframe src="programas/monitor_serie_recibiendo.txt" frameborder="0"></iframe>
+                    </section>
+                    
+                    <p>Como ampliación voy ha hacerlo con los tres led Verde, Rojo, y Amarillo.</p>
+
+                 <h2 class="centrar">Programa</h2>
+                    <section class="section_naranja txt">
+                        <section class="centrar">
+                            <a class="fondo_verde" href="programas/monitor_serie_recibiendo1.txt" download="monitor_serie_recibiendo1.ino"> Descarga el programa</a>
+                        </section>
+                        <iframe src="programas/monitor_serie_recibiendo1.txt" frameborder="0"></iframe>
+                    </section>
+                
+                  
+                      </details>
+
+
+
+            </article>
+
+
+
+            <!--  ---------------------            TEMA -------------------   -->
+            <article class="article_curso">
+                <a class="ancla" id="entradas"></a>   <h2>Entradas analógicas</h2>
+                <p>Una entrada anal&oacute;gica en arduino toma valores entre 0 y 5 voltios y los convierte de forma a lineal a valores entre 0 y 1023.</p>
+<p>ejemplo</p>
+<p>si el pin anal&oacute;gico A0 recibe una tensi&oacute;n de 0V lee un valor 0</p>
+<p>si el pin anal&oacute;gico A0 recibe una tensi&oacute;n de 2,5 V lee un valor 512</p>
+<p>si el pin anal&oacute;gico A0 recibe una tensi&oacute;n de 5V lee un valor 1023</p>
+<p>Vemos que diferencia de una entrada digital que solo tomaba dos valores 0 &oacute; 1 una entrada anal&oacute;gica puede tomas 1024 valores diferentes que dependiendo del sensor a que este conectado nos puede dar informaci&oacute;n de temperatura, iluminaci&oacute;n, posici&oacute;n&hellip;</p>
+<p>Conocemos mas de las entradas anal&oacute;gicas en el siguiente enlace&nbsp;<a href="https://www.luisllamas.es/entradas-analogicas-en-arduino/">luisllamas.es entradas-analogicas-en-arduino/</a></p>
+
+
+<div class="derecha"><a  href="#indice">Indice</a></div>
+                <details name="info">
+                    <summary> </summary>
+                    <p>En el siguiente programa, en funci&oacute;n de la posici&oacute;n del potenciometro, tendremos todos los leds apagados o encendido el verde o el verde y el rojo o todos encendidos.</p>
+<p>Utilizamos la entrada digital A0, la tensi&oacute;n que recibe depende la posici&oacute;n del potenciometro, si la tensi&oacute;n que recibe es menor de 1,25V los tres leds estan apagados, si esta entre 1,25V y 2,5V enciendo el led verde, entre 2,5 y 3,75 el verde y el rojo y si es mayor que 3,75 enciendo los tres led.</p>
+                    
+                    <h2 class="centrar">Programa</h2>
+                    <section class="section_naranja txt">
+                        <section class="centrar">
+                            <a class="fondo_verde" href="programas/entradas_analogicas.txt" download="entradas_analogicas.ino"> Descarga el programa</a>
+                        </section>
+                        <iframe src="programas/entradas_analogicas.txt" frameborder="0"></iframe>
+                    </section>
+                    
+                    
+                    <p>Aprovechando el mismo circuito y con el siguiente programa, el led rojo estará intermitente un tiempo entre 200 ms y 5315 ms, que seleccionare con el potenciometro.</p>
+                    <p>El 5315 sale de resolver la operación 5*1023+200</p>
+                    
+                    
+                     <h2 class="centrar">Programa</h2>
+                    <section class="section_naranja txt">
+                        <section class="centrar">
+                            <a class="fondo_verde" href="programas/entradas_analogicas1.txt" download="entradas_analogicas1.ino"> Descarga el programa</a>
+                        </section>
+                        <iframe src="programas/entradas_analogicas1.txt" frameborder="0"></iframe>
+                    </section>
+                    
+                    
+                    
+                    
+
+                </details>
+
+
+
+            </article>
+
+
+
+            <!--  ---------------------            TEMA -------------------  -->
+            <article class="article_curso">
+                 <a class="ancla" id="salidas"></a>     <h2>Salidas analógicas</h2>
+
+<p>Si queremos alimentar una salida conectada a un pin de arduino, con tensiones entre 0 y 5, por ejemplo para dar mas o menos intensidad a un led, velocidad a un motor cc &hellip; los haremos mediante una salida PWM, que es dara valores de tensi&oacute;n de salida medios entre 0V y 5 V.</p>
+<p>Pasa saber mas recomiendo la pagina de Luis Llamas&nbsp;<a href="https://www.luisllamas.es/salidas-analogicas-pwm-en-arduino/">https://www.luisllamas.es salidas-analogicas-pwm-en-arduino</a></p>
+                
+<div class="derecha"><a  href="#indice">Indice</a></div>
+                <details name="info">
+                    <summary> </summary>
+                    
+                    <p>En Arduino Uno, Mini y Nano, disponemos de 6 salidas PWM de 8bits en los pines 3, 5, 6, 9, 10 y 11. si te fijas en tu placa arduino, estos pines estas marcado con el s&iacute;mbolo de corriente alterna. ~ (126 de la tabla ascii, para imprimirlo en pantalla pulsa la tecla alt y sin soltar escribe el numero 126, y obtendras el caracter ascii 126)</p>
+<p>En Arduino Mega disponemos de 15 salidas PWM de 8bis en los pines 2 a 13 y 44 a 46</p>
+<p>La tensi&oacute;n que suministra la salida PWM de arduino son valores de 0 a 255 de manera que el incremento de un unidad equivales a 5V/256= 0.0195V.</p>
+<p>Un valor 0 equivale a una salida de 0V</p>
+<p>un valor de 30 equivale a 30*0.0195=0,585V</p>
+<p>un valor de 128 equivale 128*0.0195 = 2,5V</p>
+<p>Utilizando el circuito de la entrada anterior, vamos ha realizar un programa que cambiara la iluminaci&oacute;n del led rojo cuando giremos el potenciometro.</p>
+<p>Como el valor del potenciometro suminitra un valor entre 0 y 1024 y la salida PWM toma valores entre 0 y 256. divideremos el valor de la entrada anal&oacute;gica por 4 y asi utilizar para la regulaci&oacute;n todo el angulo del potenciometro</p>
+                    <h2 class="centrar">Programa</h2>
+                    <section class="section_naranja txt">
+                        <section class="centrar">
+                            <a class="fondo_verde" href="programas/salidas_analogicas.txt" download="salidas_analogicas.ino"> Descarga el programa</a>
+                        </section>
+                        <iframe src="programas/salidas_analogicas.txt" frameborder="0"></iframe>
+                    </section>
+
+                </details>
+
+
+
+            </article>
+
+
+ <!--  ---------------------            TEMA -------------------   -->
+            <article class="article_curso">
+               <a class="ancla" id="funcion"></a>       <h2>Función Map</h2>
+<p>En la entrada anterior ajustabamos el rango de la salida y el de la entrada dividiendo por 4. Esta acci&oacute;n se puede simplificar con la funci&oacute;n map &laquo;mapeo&raquo;. saber mas en el siguiente enlace&nbsp;<a href="http://manueldelgadocrespo.blogspot.com/p/mapvalue-fromlow-fromhigh-tolow-tohigh.html">manueldelgadocrespo</a></p>
+
+<div class="derecha"><a  href="#indice">Indice</a></div>
+                <details name="info">
+                    <summary> </summary>
+                    <h2 class="centrar">Programa</h2>
+                    <section class="section_naranja txt">
+                        <section class="centrar">
+                            <a class="fondo_verde" href="programas/funcion_map.txt" download="funcion_map.ino"> Descarga el programa</a>
+                        </section>
+                        <iframe src="programas/funcion_map.txt" frameborder="0"></iframe>
+                    </section>
+
+         
+                
+                <p>El programa quedara así</p>
+  <h2 class="centrar">Programa</h2>
+                    <section class="section_naranja txt">
+                        <section class="centrar">
+                            <a class="fondo_verde" href="programas/funcion_map1.txt" download="funcion_map1.ino"> Descarga el programa</a>
+                        </section>
+                        <iframe src="programas/funcion_map1.txt" frameborder="0"></iframe>
+                    </section>
+
+                </details>
+
+
+            </article>
+
+
+
+
+            <!--  ---------------------            TEMA -------------------  -->
+  <article class="article_curso">
+                   <a class="ancla" id="servo"></a>   <h2>Servo.h</h2>
+                <p>La librer&iacute;a servo.h nos facilita el trabajo con servomotores.</p>
+<p>Podemos leer acerca de la Teor&iacute;a de servos en la <a href="https://www.luisllamas.es/controlar-un-servo-con-arduino/">p&aacute;gina de Luis Llamas</a></p>
+<p><a href="https://www.electronicoscaldas.com/datasheet/MG995_Tower-Pro.pdf">datasheet de MG995</a></p>
+<p>p&aacute;ginas con teor&iacute;a de servomotores</p>
+<p>En los siguientes enlaces se explica la libreria servo.h</p>
+<ul>
+<li><a href="https://zaragozamakerspace.com/index.php/lessons/curso-arduino-y-robotica-servomotores/">zaragozamaker</a></li>
+<li><a href="https://eldesvandejose.com/2016/04/02/la-libreria-servo/"> eldesvandejose</a></li>
+<li><a href="http://techamc.es/ARDUINO/PROGRAMACION/LIBRERIAS/LIBRERIA%20Servo%20ARDUINO.htm">techamc.es</a></li>
+</ul>
+<p>Videos sobre servos</p>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=6bPVZg17vKc">aprende arduino desde cero</a></li>
+</ul>
+<p>Mi servo 995 tiene giro continuo<a href="https://forum.arduino.cc/index.php?topic=605282.0">, aqui tienes una respuesta, </a></p>
+<p>Ejemplo b&aacute;sico: al conectar el servo al pin 9 este parte de la posici&oacute;n inicial, 0 grados, esta 5 segundos va la posici&oacute;n mitad, 90 grados, pasan 5 segundos pasa a la posici&oacute;n final, (180 grados), pasan 5 segundos vuelve a la posici&oacute;n inicial</p>
+
+<div class="derecha"><a  href="#indice">Indice</a></div>
+
+                <details name="info">
+                    <summary> </summary>
+                    
+                    
+                    
+                    
+                    
+                    <h2 class="centrar">Programa</h2>
+                    <section class="section_naranja txt">
+                        <section class="centrar">
+                            <a class="fondo_verde" href="programas/servo.txt" download="servo.ino"> Descarga el programa</a>
+                        </section>
+                        <iframe src="programas/servo.txt" frameborder="0"></iframe>
+                    </section>
+                    
+                    
+                    <p>El siguiente ejemplo son unas pruebo instrucciones de la libreria servo.h y veo su funcionamiento en el monitor serie, nota he observado que la instrucci&oacute;n <code>asociado = MiMotorServo.attached(9);</code> del desvandejose no funciona porque dicha funci&oacute;n de lleva argumento</p>
+                    
+                    
+                    
+                    
+                     <h2 class="centrar">Programa</h2>
+                    <section class="section_naranja txt">
+                        <section class="centrar">
+                            <a class="fondo_verde" href="programas/servo1.txt" download="servo1.ino"> Descarga el programa</a>
+                        </section>
+                        <iframe src="programas/servo1.txt" frameborder="0"></iframe>
+                    </section>
+                    <h2>PRUEBAS</h2>
+<p>A continuaci&oacute;n escribo un programa que estoy desarollando para controlar el servo con el teclado del ordenador,</p>
+<p>Me he encorntrado con grandes sorpresas, con al instrucci&oacute;n para leer n&uacute;meros de monitor serie</p>
+<p>Serial.parseInt();</p>
+<p>otra sorpresa es que al meter el valor en monitor serie en una primera lectura me lee el valor introducido pero en una segunda, me vuelve a leer 0 como lectura.</p>
+<p>otra m&aacute;s al conectar el servo directamente a arduino me deja de funcionar monitor serie, nota probar con una alimentaci&oacute;n externa al servo</p>
+<p>por ultimo los servos que me vendier&oacute;n mg995 no me grad&uacute;an el angulo sino que giran 360 y regulan la velocidad.</p>
+                    
+                    
+                    
+                    
+                       <h2 class="centrar">Programa</h2>
+                    <section class="section_naranja txt">
+                        <section class="centrar">
+                            <a class="fondo_verde" href="programas/servo2.txt" download="servo2.ino"> Descarga el programa</a>
+                        </section>
+                        <iframe src="programas/servo2.txt" frameborder="0"></iframe>
+                    </section>
+              </details>
+
+
+
+            </article>
+
+           <!--  ---------------------            TEMA ------------------- 
+  <article class="article_curso">
+                <h2>Curso Arduino</h2>
+
+
+
+                <details name="info">
+                    <summary> </summary>
+                    <h2 class="centrar">Programa</h2>
+                    <section class="section_naranja txt">
+                        <section class="centrar">
+                            <a class="fondo_verde" href="programas/.txt" download=".ino"> Descarga el programa</a>
+                        </section>
+                        <iframe src="programas/.txt" frameborder="0"></iframe>
+                    </section>
+
+                </details>
+
+
+
+            </article>           <!--  ---------------------            TEMA ------------------- 
+  <article class="article_curso">
+                <h2>Curso Arduino</h2>
+
+
+
+                <details name="info">
+                    <summary> </summary>
+                    <h2 class="centrar">Programa</h2>
+                    <section class="section_naranja txt">
+                        <section class="centrar">
+                            <a class="fondo_verde" href="programas/.txt" download=".ino"> Descarga el programa</a>
+                        </section>
+                        <iframe src="programas/.txt" frameborder="0"></iframe>
+                    </section>
+
+                </details>
+
+
+
+            </article>
+
+
+
+
+
+
+      ---------------------     fin        TEMA -------------------  -->
+        </main>
+
+        <footer>De los errores se aprende, y mas que de los aciertos.</footer>
+    </div>
+</body>
+
+</html>

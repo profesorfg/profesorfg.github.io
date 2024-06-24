@@ -1,0 +1,51 @@
+#include <Servo.h>
+ 
+Servo myservo;  // crea el objeto servo
+ 
+int pos = 0;    // posicion del servo en grados
+boolean conectado;
+ 
+void setup() {
+   myservo.attach(9);  // vincula el servo al pin digital 9
+   Serial.begin(9600);
+}
+ 
+void loop() {
+   
+  
+      myservo.write(0); 
+     pos= myservo.read();
+     Serial.println(pos);         
+      delay(5000);
+      
+      delay(500);
+      myservo.write(90); 
+       pos= myservo.read();
+      Serial.println(pos); 
+      delay(5000);    
+      myservo.write(180); 
+      pos= myservo.read();
+      Serial.println(pos); 
+      //compruebo que el servo esta conectado
+     conectado = myservo.attached(); 
+     if (conectado==1)    Serial.println(" el servo esta conectado");
+     else Serial.println(" el servo NO esta conectado");
+     //fin comprobacion
+      delay(5000); 
+      myservo.detach();  //desconecto el servo 
+
+        //compruebo que el servo esta no conectado
+     conectado = myservo.attached(); 
+     if (conectado==1)    Serial.println(" el servo esta conectado");
+     else Serial.println(" el servo NO esta conectado");
+     //fin comprobacion
+       delay(5000); 
+       myservo.attach(9); // vuelvo a conectar el servo
+   //compruebo  que el servo esta no conectado
+     conectado = myservo.attached(); 
+     if (conectado==1)    Serial.println(" el servo esta conectado");
+     else Serial.println(" el servo NO esta conectado");
+   //fin comprobacion
+     delay(1000);
+                   
+   }

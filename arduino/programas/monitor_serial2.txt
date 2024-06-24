@@ -1,0 +1,37 @@
+int a=123; //declaro la variable a y la cargo con 123
+int pin_pulsador= 2;//declaro la variable pin_pulsador y la cargo con 2
+int pin_led=13; //declaro la variable pin_led y la cargo con 13
+int estado_pul; //declaro la variable estado_pul para almacenar el estado del pulsador
+int estado_led; //declaro la variable estado_led para almacenar el estado del led
+
+void setup() {
+pinMode(pin_led, OUTPUT);
+pinMode(pin_pulsador, INPUT);
+Serial.begin(9600);// activamos el monitor serie
+}
+void loop() {
+if (digitalRead(pin_pulsador) == HIGH ) digitalWrite(13, HIGH);//si activo el pulsador
+else digitalWrite(pin_led, LOW);// sino apago el led
+  
+estado_pul=digitalRead(pin_pulsador);//leo el estado de la entrada 2 y lo almaceno en la variable pul_1 (0 no pulsado, 1 pulsado)
+estado_led=digitalRead(pin_led);//leo el estado de la salida 13 y lo almaceno en la variable led (0 apagado 1 encendido)
+
+Serial.print ("el pulsador esta conectado a pin ");
+Serial.println (pin_pulsador);
+Serial.print ("el estado del pulsador  1 es  ");////texto entrecomillado  sale en la pantalla monitor serie
+Serial.println(estado_pul); //i no esta activado el pulsador 1, escribe 1 si esta pulsado. Como he utilizado  la instrucción terminada en ln, bajo una linea.
+Serial.print ("el led esta conectado a pin ");
+Serial.println (pin_led);
+Serial.print("el estado del led es ");// identico para el estado del led.
+Serial.println(estado_led);
+Serial.print ("OTRAS IMPRESIONES");
+Serial.println (2); // el numero 2
+Serial.println (2,BIN); //dos en binario 10
+Serial.println (a); // el valor de la variable a
+Serial.println ('a');//  el caracter a
+Serial.println ('a',DEC); //a en codigo ascii vale 97
+Serial.println ("a");// la cadena a
+//Serial.println (b); b hace referencia a una variable que al no estar declarada da error
+
+delay (500);//espera medio segundo y vuelve realizar el programa.
+}
