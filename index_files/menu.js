@@ -11,7 +11,7 @@ class menuprincipal extends HTMLElement {
 			margin:0px;
 				padding:0px;
 			}	
-   .menu_ul {
+   ul {
 				list-style:none;  /*quita el formato de punto y guiones de inicio de la lista */
 			} 
  

@@ -331,12 +331,36 @@ max-width: 800px;
     flex: 1 0 auto;
     margin: 0 10px;
     text-align: center;
+ /*   border: 2px solid green; borrame*/
 
 }
+
+
 .flex10auto_center img {
- max-height: 250px;  
+    max-height: 250px;  
+    max-width: 100%; /*añadida por una foto de 3d reductora*/
   
 } 
+
+
+
+.flex11auto_center {
+    flex: 1 1 180px; /* el div tiene una anchura minima de  Xpx cuando llega a esa hace un wrap  la div ocupan de X px al total de ancho y todos se reducen en la misma proporcion */
+
+    text-align: center;
+  /*  border: 2px solid red;  borrame*/
+   
+
+}
+
+.flex11400px {
+    flex: 1 1 400px; /* el div tiene una anchura minima de  Xpx cuando llega a esa hace un wrap  la div ocupan de X px al total de ancho y todos se reducen en la misma proporcion */
+
+    text-align: center;
+  /* border: 2px solid gray; borrame*/
+   
+
+}
 
 
 
@@ -405,6 +429,9 @@ max-width: 800px;
     max-width: 100%;
     height: auto;
 
+}
+.max_ancho200px{
+    max-width: 200px;
 }
 
 .max-height_230px{
@@ -519,14 +546,6 @@ max-width: 800px;
     min-width: 350px;
 }
 
-.video-container_3videos {
-    /* poner detras de video containerpara que me pise el width*/
-    width: 30%;
-
-
-}
-
-
 .video-container iframe {
     width: 100%;
     /* height: 250px;*/
@@ -537,6 +556,24 @@ max-width: 800px;
 .video-container h2 {
     margin-bottom: 5px;
 }
+
+
+.video-container_3videos {
+    /* poner detras de video containerpara que me pise el width*/
+    width: 30%;
+}
+.video-container1{
+     width: 45%;
+    min-width: 400px;
+ aspect-ratio:16/9;
+}
+.video-container1 iframe {
+    width: 100%;
+    height: 100%;
+    /* Puedes ajustar la altura según tus necesidades */
+}
+
+
 
 /* ------------------------- TXT  programa----------------------- */
 .txt iframe{
