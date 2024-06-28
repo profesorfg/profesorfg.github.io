@@ -183,7 +183,7 @@ main {
     grid-area: main;
 
   
-  /*  padding: 0 2%;    15/06    */
+
 
 }
 
@@ -192,7 +192,7 @@ main {
     background-color: #e3c6c6;
     margin:0 2%;
 
-   /* padding: 5px 50px;    15/06  */
+
     padding: 10px;
     border-radius: 10px;
     color: #555555;
@@ -369,6 +369,11 @@ max-width: 800px;
 .padding_{
     padding: 2%;
 }
+
+.margin0_15{
+  margin: 0 15%;  
+ 
+}
 .centrar{  text-align: center;}
 .derecha{text-align: end;}
 
@@ -430,6 +435,19 @@ max-width: 800px;
     height: auto;
 
 }
+.imagen1 {
+    max-width: 100%;
+    height: auto;
+  padding-top: 20px;
+    padding-bottom: 15px;
+
+}
+ 
+
+
+
+
+
 .max_ancho200px{
     max-width: 200px;
 }
