@@ -11,7 +11,7 @@ class menuprincipal extends HTMLElement {
 			margin:0px;
 				padding:0px;
 			}	
-     ul {
+   ul {
 				list-style:none;  /*quita el formato de punto y guiones de inicio de la lista */
 			} 
  
@@ -191,7 +191,7 @@ class menuprincipal extends HTMLElement {
                 <label for="check__menu" id="label__check">
                    <img class="icon__menu" src="../imagenes/icono.png"/>
                 </label>    
-  <ul class="menu"> 
+  <ul class="menu menu_ul"> 
    <li> <a href="../index.html" >Inicio</a></li> 
    
    <li> <a href="#" >vivienda</a> 
@@ -237,7 +237,7 @@ class menuprincipal extends HTMLElement {
             <li> <a href="../webRobotica/robotica.html" >Robotica</a></li> 
             <li> <a href="../webMotores/motores.html" >Motores</a> </li> 
             <li> <a href="../web3d/3d.html">Impresión 3D</a></li> 
-          <li> <a href="../arduino/index.html">Arduino</a></li> 
+          <li> <a href="../arduino/arduino_curso.html">Arduino</a></li> 
           <li> <a href="https://cifpmedinadelcampo.es/iea/" >CIFP Electricidad</a></li> 
         </ul>  
    </li> 
@@ -272,7 +272,7 @@ class menuprincipalindex extends HTMLElement {
 			margin:0px;
 				padding:0px;
 			}	
-     ul {
+   .menu_ul {
 				list-style:none;  /*quita el formato de punto y guiones de inicio de la lista */
 			} 
  
@@ -449,7 +449,7 @@ class menuprincipalindex extends HTMLElement {
                 <label for="check__menu" id="label__check">
                    <img class="icon__menu" src="imagenes/icono.png"/>
                 </label>    
-  <ul class="menu"> 
+  <ul class="menu menu_ul"> 
    <li> <a href="index.html" >Inicio</a></li> 
    
    <li> <a href="#" >vivienda</a> 
@@ -492,7 +492,7 @@ class menuprincipalindex extends HTMLElement {
          <li> <a href="webRobotica/robotica.html" >Robotica</a></li> 
        <li> <a href="webMotores/motores.html" >Motores</a> 
         <li> <a href="web3d/3d.html">Impresión 3D</a></li> 
-          <li> <a href="arduino/index.html">Arduino</a></li> 
+          <li> <a href="arduino/arduino_curso.html">Arduino</a></li> 
           <li> <a href="https://cifpmedinadelcampo.es/iea/" >CIFP Electricidad</a></li> 
          
 

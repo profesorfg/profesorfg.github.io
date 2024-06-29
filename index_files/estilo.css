@@ -1,3 +1,14 @@
+ * {	/*elinina todos los margenes a todo alinea todos los li al borde*/
+			margin:0px;
+            padding:0px;
+			}	
+   ul {
+				list-style:none;  /*quita el formato de punto y guiones de inicio de la lista */
+			} 
+
+
+
+
 body {
     margin: 0;
     padding: 0;
@@ -370,8 +381,9 @@ max-width: 800px;
     padding: 2%;
 }
 
-.margin0_15{
-  margin: 0 15%;  
+.width_ajustable{
+width: min(1000px, 100%);
+    margin: auto;
  
 }
 .centrar{  text-align: center;}
@@ -862,3 +874,187 @@ max-width: 800px;
     color: #FFFFFF;
     background-color: #00A4BD;
 }
+
+
+
+
+
+
+-----------------------------------------------------------------------------*/
+/*--------------------               MENÚ PRINCIPAL  ------------------------*/
+/*---------------------------------------------------------------------------*/
+
+.siborronofunciona {}/* Si borro esto se me va el menu y no se porque antes habia instrucciones generales que he pasado al inicio del css, sera porque no puede empezsr por media*/
+ 
+ @media not screen and (max-width: 720px){   
+      .menu {
+          width: 100%;
+          height: 50px;
+         
+          padding: 20px 10%;
+          
+          background-image: url(../imagenes/cabezera1.jpg)}	
+			.menu > li {   /*li directos se refiere al primer nivel*/      				
+			float:left;
+               
+		/*	box-shadow: 2px 2px 1px 1px #fff; /*sombreado*/
+			}
+ 	.menu li a {    /*actua sobre todos los elementos de la clase menu  y los selectores a que esten dentro del li*/
+
+				
+				background-color:rgba(59,93,148,1);;
+				color:#fff;     /*color texto*/
+				text-decoration:none;/*elimina el subrayado de los enlaces*/
+				padding:10px 12px; /*10 pixles de altura y 10 pixel largo*/
+				display:block;
+				width: 90px;/*tamanño del bloque*/
+				height: 30px;
+				box-shadow: 2px 2px 1px 1px #0062ff; /*sombreado*/				
+				border: solid 1px #fff;/*borde en blanco*/
+				text-align: center;
+				border-radius: 5px;
+                margin: 1px;
+                
+			}
+			
+			.menu li a:hover { /*actua sobre todos los elementos al pasar el raton*/
+				color:#CF3;
+				background-color:#603;
+				
+			}
+     
+     
+
+			
+			.menu li ul { /* a todos los submenus */
+				display:none;/*todos los submenus desaparecen del segundo nivel en adelante*/
+				position:absolute; /*con respeto al menu */
+				min-width:140px;
+			}
+			
+			.menu li:hover > ul {/* al menu de segundo nivel al pasar el raton se vuelve visible al recuperar la propiedad display:block que antes tenia display:none*/
+				display:block;
+			}
+			
+			.menu li ul li { /* los li derech que esten dentro de ul que esten dentro de li, osea para los submenus*/
+				position:relative; /* lo pone para poder poner los submenus al lado*/
+			}
+			
+			.menu li ul li ul {/* al tener posicion relativa los podemos desplazar -140 pix a la derecha*/				
+				right:-115px; /*este se aplica a todos los submenus*/
+				top:0px;
+			}   
+    
+  }
+    
+/*ELEMENTOS RESPONSIVOS -----------------------------------------------------------*/
+
+.icon__menu{
+    font-size: 26px;
+    color: white;
+    cursor: pointer;
+    width: 26px;
+    height: 100%;
+    display: none;
+    margin-left: 50px;
+   
+   
+}
+
+#label__check{
+   /* width: 26px;*/
+    width:100%;
+    height: 100%;
+    background-attachment:fixed;
+    background-image: url(../imagenes/cabezera.jpg);
+     
+   
+}
+    
+#check__menu{
+    display: none;
+}
+    
+/*   MEDIA SCREEN  --------------------------para el movil -----------------------  */    
+  @media screen and (max-width: 720px){      
+    
+    .header__superior{
+        padding: 10px;
+    }
+			
+  /*  .menu{background-color: black;}	*/	
+      .menu {background-image: url(../imagenes/cabezera.jpg)}	
+	.menu >  li {   /*li directos se refiere al primer nivel*/      				
+			display: flex;
+             opacity: 0;
+              visibility: hidden;
+                height: 0px;
+            }
+    
+    .menu >  li ul li {   /*li directos se refiere al segundo  nivel*/      				
+			display: flex;
+        flex-direction: row;
+ 			}
+  			.menu li  a {    /*actua sobre todos los elementos de la clase menu  y los selectores a que esten dentro del li*/
+
+				
+				background-color:rgba(59,93,148,1);
+				color:#fff;     /*color texto*/
+				text-decoration:none;/*elimina el subrayado de los enlaces*/
+				padding:10px 12px; /*10 pixles de altura y 10 pixel largo*/
+				display:block;
+              
+				width: 90px;/*tamanño del bloque*/
+				height: 30px;
+								
+				border: solid 1px #fff;/*borde en blanco*/
+				text-align: center;
+				border-radius: 5px;
+                margin: 1px;
+                
+			}
+			
+			.menu li a:hover { /* propiedades al pasar el raton*/
+				color:#CF3;
+				background-color:#603;
+				
+			}
+    
+    	.menu li ul {
+				display:none;/*todos los submenus desaparecen*/
+			/*	position:absolute; con respeto al menu
+				min-width:140px; */
+			}
+    
+    
+    	.menu li:hover > ul{/* los li de menu al pasar el raton que sean directos de ul (esto lo dicho pero no le entiendo) aparecen el menu*/
+				display: flex;
+                  flex-direction: column;
+            
+            left: 120px;
+			}
+    
+    .menu li ul li:hover > ul{/* los li de menu al pasar el raton que sean directos de ul (esto lo dicho pero no le entiendo) aparecen el menu*/
+     display:block;
+        top:50px;
+				 left: 80px;
+             }        
+        #label__check{
+        display: block;
+    }
+
+    .icon__menu{
+        display: flex;
+    }
+
+    #check__menu:checked ~ .menu > li{
+   
+       height: 50px;
+        visibility: visible;
+        opacity: 1;
+    }
+}
+		
+-----------------------------------------------------------------------------*/
+/*--------------------       FIN   MENÚ PRINCIPAL  ------------------------*/
+/*---------------------------------------------------------------------------*/
