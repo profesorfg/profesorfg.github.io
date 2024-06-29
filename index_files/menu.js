@@ -33,9 +33,9 @@ class menuprincipal extends HTMLElement {
    <li> <a href="#" >Mecatrónica</a> 
        <ul> 
    		 
-           <li> <a href="../webMotores/variadores.html">Variadores</a> </li> 
+           <li> <a href="../webMotores/variadores.html">Variador</a> </li> 
            <li> <a href="../webMotores/motores.html">Motores</a> </li> 
- <li> <a href="../webMotores/trafo_practicas.html">Transformador</a> </li> 
+           <li> <a href="../webMotores/trafo_practicas.html">Transformador</a> </li> 
        </ul>  
    </li> 
 
@@ -94,11 +94,12 @@ class menuprincipalindex extends HTMLElement {
            			<li> <a href="webAutomatismos/logo.html">LOGO</a> </li>
            			<li> <a href="webAutomatismos/tiaportal.html">TIA-PORTAL</a> </li>
       			</ul>  
-   <li> <a href="#" >Variador</a> 
+  <li> <a href="#" >Mecatrónica</a> 
        <ul> 
-   		
-           <li> <a href="webMotores/Variadores.html">Variadores</a> 
-           <li> <a href="webMotores/variadores_practicas.html">Practicas Variadores</a> 
+   		 
+           <li> <a href="webMotores/variador.html">Variadores</a> </li> 
+           <li> <a href="webMotores/motores.html">Motores</a> </li> 
+           <li> <a href="webMotores/trafo_practicas.html">Transformador</a> </li> 
        </ul>  
    </li> 
 
