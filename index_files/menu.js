@@ -33,7 +33,7 @@ class menuprincipal extends HTMLElement {
    <li> <a href="#" >Mecatrónica</a> 
        <ul> 
    		 
-           <li> <a href="../webMotores/variadores.html">Variador</a> </li> 
+           <li> <a href="../webMotores/variadores.html">variador</a> </li> 
            <li> <a href="../webMotores/motores.html">Motores</a> </li> 
            <li> <a href="../webMotores/trafo_practicas.html">Transformador</a> </li> 
        </ul>  

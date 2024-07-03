@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+<!-- imagenes en imag-logo -->
 
 <head>
     <title>Automatas</title>
@@ -42,7 +43,7 @@
             </nav>
             <a name="inicio"></a>
         </header>
-        
+
         <main>
             <h1>DOMÓTICA</h1>
             <article class="flex_wrap articulo">
@@ -82,6 +83,99 @@
 
             <br>
             <article class="articulo">
+                <a class="ancla" name="lwe"></a>
+                    <h2>Pantalla LWE </h2>
+                    <p>En está práctica vamos a utilizar LWE (logo web editor) para poder activar la iluminación, calefacción y llamada desde sus elementos de maniobra (pulsadores, interruptores) o desde una página web accesible a desde cualquier aparato que se puede conectar a la intranet (al router)</p>
+                    <p>La imagen que aparecerá al conectarse a la ip del LOGO sera la siguiente</p>
+                    
+                     <div class="width_ajustable">
+
+                        <img class="imagen" src="imag_logo/lwe-domo_lwe.jpg" alt="pantalla LWE">
+                    </div>
+                    <a href="https://drive.google.com/drive/folders/1uBefd781qLf1SrJpnnGaLHictV0WuJ4x?usp=drive_link">Descarga el programa lsc y lwe en este enlace</a>
+                    
+                    
+                    
+                    
+                   
+                    <p>Y pulsado sobre los pulsadores o interruptores de la pantalla se realizara la acción programada en la práctica real y en cambiara el estado del receptor en la pantalla</p>
+                    <h3>Descripción</h3>
+                    <p>En esta instalación vamos a controlar desde
+                        pulsadores reales o virtuales </p>
+                    <ul class="conpunto">
+                        <li>Timbre</li>
+                        <li>Iluminación</li>
+                        <li>Calefacción</li>
+
+                    </ul>
+                   
+                   
+                    
+                    <h3>Esquema eléctrico</h3>
+                     <div class="width_ajustable">
+
+                        <img class="imagen" src="imag_logo/lwe-domo_esquema.png" alt="esquema eléctrico de la práctica">
+                    </div>
+                     <h3>Timbre</h3>
+                    <p>Se puede activar con el pulsador físico de la entrada
+                        o pulsado el pulsador desde la web.</p>
+                    <p>Si se mantiene pulsado, el zumbador funciona de
+                        forma intermitente, 0,5 segundos encendido 1
+                        segundo apagado, como máximo 5 segundos.</p>
+                    <p>Programación</p>
+                    <p>En la pagina el pulsador virtual es un push button V0.5 writable</p>
+                    <p>El zumbador es un switch button Q4</p>
+
+                    <div class="width_ajustable">
+
+                        <img class="imagen" src="imag_logo/lwe-domo_1_programatimbre.png" alt="pantalla LWE">
+                    </div>
+                    <h3>Iluminación</h3>
+                    <p>La bombilla se puede encender y apagar mediante un pulsador real o accionando el pulsador virtual
+                        desde la página web</p>
+                    <p>Programación</p>
+                    <p>La bombilla es un switch button Q3,</p>
+                    <p>El pulsador es un push button V0.4/p>
+
+                        <div class="width_ajustable">
+
+                            <img class="imagen" src="imag_logo/lwe-domo_2programailuminacion.png" alt="pantalla LWE">
+                        </div>
+
+                        <h3>Calefacción</h3>
+
+                        <p>Para que la calefacción se pueda encender antes tiene que estar encendido el sistema de control de
+                            calefacción, que se enciende con un interruptor o mediante pulsador virtual habilitar calefacción
+                            desde la web.
+                        </p>
+                        <p>Para que la calefacción se pueda encender antes tiene que estar encendido el sistema de control de
+                            calefacción, que se enciende con un interruptor o mediante pulsador virtual habilitar calefacción
+                            desde la web.
+                        </p>
+                        <p>La calefacción estará encendida cuando la temperatura sea inferior al la seleccionada en el
+                            termostato, o mediante el interruptor virtual V0.3 en posición “FORZADA”
+                        </p>
+                        <p>La calefacción estará apagada si la temperatura ambiente es superior a la seleccionada y el
+                            interruptor virtual V0.3 esta en posición “NO FORZADO”</p>
+
+                        <div class="width_ajustable">
+
+                            <img class="imagen" src="imag_logo/lwe-domo_3_programacalefaccion.png" alt="pantalla LWE">
+                        </div>
+
+
+
+
+
+
+
+
+
+
+                        <p>Ademas veremos en el logo y en la web, la fecha
+                            que tiene almacenada el Logo</p>
+            </article>
+            <article class="articulo">
                 <h2><a class="ancla" name="mozTocId313631"></a>Ejercicios de iniciación<a name="3ejercicio"></a></h2>
                 <br>
 
@@ -111,58 +205,48 @@
                 <br>
                 <div style="text-align: right;"><a href="#inicio">volver a inicio</a><br>
                 </div>
-                <br>
-                <br>
-                <table style="text-align: left; width: 669px; height: 381px;" border="0" cellpadding="2" cellspacing="2">
-                    <tbody>
-                        <tr>
-                            <td style="vertical-align: top;">
-                                <h2><a class="mozTocH2" name="mozTocId694601"></a>-Ejercicio
-                                    1&nbsp;&nbsp;&nbsp; </h2>
-                                Funcionamiento:<br>
-                                Con el&nbsp; interruptor cerrado&nbsp; y doy al pulsador
-                                conmuto tres bombillas.<br>
-                                Con el&nbsp; interruptor abierto&nbsp; y doy al pulsador
-                                conmuto las otras tres bombillas.
-                            </td>
-                            <td colspan="1" rowspan="5" style="vertical-align: top;"><img style="width: 238px; height: 320px;" alt="ejercicios" src="imag_logo/ejercicios_con_logo.png"><br>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td style="vertical-align: top;">
-                                <h2><a class="mozTocH2" name="mozTocId397714"></a>-Ejercicio
-                                    2</h2>
-                                Funcionamiento:<br>
-                                Con pulsaciones cortas conmuto&nbsp; una bombilla,<br>
-                                Con pulsaciones largas y el interruptor abierto conmuto dos
-                                bombillas.<br>
-                                Con pulsaciónes largas y el interruptor cerrado conmuto tres
-                                bombillas
-                            </td>
-                        </tr>
-                        <tr>
-                            <td colspan="1" rowspan="1" style="vertical-align: top;">
-                                <h2><a class="mozTocH2" name="mozTocId177340"></a>-Ejercicio
-                                    3</h2>
-                                Funcionamieto:<br>
-                                Con el interruptor cerrado y pulsaciones cortas conmuto 3 bombillas y
-                                con pulsaciones largas conmuto las otras 3 bombillas.<br>
-                                Al abrir el interruptor se apagan todas las bombillas y para volver a
-                                encenderlas debo cerrar el interruptor y volver a realizar pulsaciones
-                                cortas o larga.
-                            </td>
-                        </tr>
-                        <tr>
-                        </tr>
-                        <tr>
-                        </tr>
-                    </tbody>
-                </table>
+
+                <div class="width_ajustable">
+                    <img class="imagen" alt="ejercicios" src="imag_logo/ejercicios_con_logo.png">
+                </div>
+
+
+
+                <h2><a class="mozTocH2" name="mozTocId694601"></a>-Ejercicio
+                    1&nbsp;&nbsp;&nbsp; </h2>
+                Funcionamiento:<br>
+                Con el&nbsp; interruptor cerrado&nbsp; y doy al pulsador
+                conmuto tres bombillas.<br>
+                Con el&nbsp; interruptor abierto&nbsp; y doy al pulsador
+                conmuto las otras tres bombillas.
+
+
+
+
+                <h2><a class="mozTocH2" name="mozTocId397714"></a>-Ejercicio
+                    2</h2>
+                Funcionamiento:<br>
+                Con pulsaciones cortas conmuto&nbsp; una bombilla,<br>
+                Con pulsaciones largas y el interruptor abierto conmuto dos
+                bombillas.<br>
+                Con pulsaciónes largas y el interruptor cerrado conmuto tres
+                bombillas
+
+
+                <h2><a class="mozTocH2" name="mozTocId177340"></a>-Ejercicio
+                    3</h2>
+                Funcionamieto:<br>
+                Con el interruptor cerrado y pulsaciones cortas conmuto 3 bombillas y
+                con pulsaciones largas conmuto las otras 3 bombillas.<br>
+                Al abrir el interruptor se apagan todas las bombillas y para volver a
+                encenderlas debo cerrar el interruptor y volver a realizar pulsaciones
+                cortas o larga.
+
                 <br>
                 <h2><a class="mozTocH2" name="mozTocId703714"></a>-Ejercicio
                     4</h2>
-                &nbsp;Funcionamiento:<br>
-                &nbsp;Si aprieto el pulsador se enciende una bombilla durante 5
+                Funcionamiento:<br>
+                Si aprieto el pulsador se enciende una bombilla durante 5
                 segundos contados desde el momento de la pulsación.<br>
                 Despues se apaga y se enciende dos bombillas durante 4 segundos,<br>
                 Después se apagan y se enciende 3 bombillas durante 3 segundos<br>
@@ -185,9 +269,9 @@
                 Con la segunda pulsación corta se encienden dos bombillas mas.<br>
                 Con tercera pulsación corta se encienden tres bombillas mas<br>
                 Con la pulsación larga se apagan todas.<br>
-                Ejercicio 7&nbsp; <br>
+                <h2>Ejercicio 7</h2>
                 Funcionamiento:<br>
-                Con&nbsp; el interruptor cerrado una bombilla parpadea con una
+                Con el interruptor cerrado una bombilla parpadea con una
                 frecuencia de 1 segundo.<br>
                 <br>
                 Al accionar el pulsador se enciende 2 bombillas, si vuelvo a pulsar
@@ -196,18 +280,19 @@
                 primera pulsación se apagan las cinco bombillas.<br>
                 <a class="ancla" name="mozTocId562027"></a>
                 <br>
-                <article class="articulo"><h2>Ejercicio de iluminación controlada por un autómata LOGO</h2>
-                   <div class="videos-youtube"> 
-                   <iframe src="https://www.youtube.com/embed/UEnMJB4u3j4?si=hRsk35Tv3YF0rxtW" title="YouTube video player" frameborder="0"  allowfullscreen></iframe>
-                   
-                   </div>
-                    
-                    
+                <article class="articulo">
+                    <h2>Ejercicio de iluminación controlada por un autómata LOGO</h2>
+                    <div class="videos-youtube">
+                        <iframe src="https://www.youtube.com/embed/UEnMJB4u3j4?si=hRsk35Tv3YF0rxtW" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+
+                    </div>
+
+
                 </article>
                 <br>
-                
+
             </article>
-<br>
+            <br>
             <article class="articulo">
                 <h2>EXPLICA LOS PROGRAMAS LOGO.</h2>
                 <br>
@@ -215,17 +300,14 @@
                         a inicio</a>
                 </div>
                 A partir de los siguientes programas y despues de contestar a las
-                cuestiones &nbsp;crea un enunciado que determine el funcionamiento
+                cuestiones crea un enunciado que determine el funcionamiento
                 de
                 la instalción.<br>
-                <br>
-                <a href="https://www.asuswebstorage.com/navigate/s/BB38F40EAF9A422191178A970B910B06W" target="_blank">Pincha aqui para descargar todos los
-                    programas en PDF
-                    o LSC</a><br>
+
                 <h2><a class="mozTocH2" name="mozTocId578198"></a>-Programa
                     1.</h2>
                 <br>
-                <img style="width: 703px; height: 383px;" alt="explica_prog1.png" src="imag_logo/explica_prog1.png"><br>
+                <img class="imagen" alt="explica_prog1.png" src="imag_logo/explica_prog1.png"><br>
                 <br>
                 <a class="mozTocH3" name="mozTocId653146"></a>-
                 ¿Cuanto tiempo se de de
@@ -234,8 +316,9 @@
                 <br>
                 - Explica el funcionamiento de la pulsación corta de I1.<br>
                 <br>
-                <img style="width: 389px; height: 103px;" alt="Pulsación corta" src="imag_logo/explica_prog1_pulsacionCorta.png"><br>
-                <br>
+                <div class="width_ajustable">
+                    <img class="imagen" alt="Pulsación corta" src="imag_logo/explica_prog1_pulsacionCorta.png"><br>
+                </div>
                 - Cuando se pone a uno&nbsp;el bloque B06.<br>
                 <br>
                 - Que sucede con:<br>
@@ -257,7 +340,9 @@
                 <br>
                 <h2><a class="mozTocH2" name="mozTocId923936"></a>-Programa2
                 </h2>
-                <img style="width: 698px; height: 594px;" alt="explica programa2" src="imag_logo/explica_prog2.png"><br>
+                <div class="width_ajustable">
+                    <img class="imagen" alt="explica programa2" src="imag_logo/explica_prog2.png">
+                </div>
                 <br>
                 <br>
                 - Identifica los sensores conectados a las entradas y los acutadores
@@ -284,7 +369,9 @@
                 <h2><a class="mozTocH2" name="mozTocId384576"></a>-Programa
                     3</h2>
                 <br>
-                <img style="width: 621px; height: 396px;" alt="explica programa8" src="imag_logo/explica_prog8.png"><br>
+                <div class="width_ajustable">
+                    <img class="imagen" alt="explica programa8" src="imag_logo/explica_prog8.png">
+                </div>
                 <br>
                 - Identifica los sensores conectados a las entradas y los acutadores
                 conectados a la salida.<br>
@@ -307,7 +394,9 @@
                 <br>
                 <h2><a class="mozTocH2" name="mozTocId481458"></a>-Programa
                     4</h2>
-                <img style="width: 696px; height: 455px;" alt="explica programa9" src="imag_logo/explica_prog9.png"><br>
+                <div class="width_ajustable">
+                    <img class="imagen" alt="explica programa9" src="imag_logo/explica_prog9.png">
+                </div>
                 <br>
                 - Identifica los sensores conectados a las entradas y los acutadores
                 conectados a la salida.<br>
@@ -345,7 +434,9 @@
                 Con el pulsador I4 se apagan todas la luces y se baja la persiana 5
                 segundos.(aunque el pulsador subida esta activado).<br>
                 <br>
-                <img style="width: 701px; height: 799px;" alt="esquema" src="imag_logo/logo%20con%20persiana%20y%20dos%20bombillas.png"><br>
+                <div class="width_ajustable">
+                    <img class="imagen" alt="esquema" src="imag_logo/logo%20con%20persiana%20y%20dos%20bombillas.png">
+                </div>
                 <div style="text-align: right;"><a href="Domo_logo.html#inicio">volver
                         a inicio</a>
                 </div>
@@ -379,7 +470,9 @@
                 frio y estan las ventanas cerradas o cierras el interruptor haga<br>
                 calor,frio, esten la ventanas abiertas o cerradas.").<br>
                 <br>
-                <img style="width: 659px; height: 805px;" alt="esquema" src="imag_logo/logo%20bombilla,%20persiana%20y%20calefaccion%20-%20copia.png"><br>
+                <div class="width_ajustable">
+                    <img class="imagen" alt="esquema" src="imag_logo/logo%20bombilla,%20persiana%20y%20calefaccion%20-%20copia.png">
+                </div>
                 <div style="text-align: right;"><a href="Domo_logo.html#inicio">volver
                         a inicio</a>
                 </div>
@@ -416,35 +509,38 @@
                 de gas o fuego. Pone un aviso ESCAPE DE AGUA, si esta activado el
                 sensor se inundación.<br>
                 <br>
-                <img style="width: 689px; height: 820px;" alt="esquema" src="imag_logo/logo%20dos%20electrovalvulas%20un%20zumbador%20y%20una%20bombilla.png"><br>
+                <div class="width_ajustable">
+                    <img class="imagen" alt="esquema" src="imag_logo/logo%20dos%20electrovalvulas%20un%20zumbador%20y%20una%20bombilla.png">
+                </div>
                 <div style="text-align: right;"><a href="Domo_logo.html#inicio">volver
                         a inicio</a>
                 </div>
             </article>
-            
+
         </main>
 
         <aside>
-             <section class="enlaces-titulo">
+            <section class="enlaces-titulo">
                 <h2>LOGO</h2>
             </section>
-           <section class="enlaces-navegacion">
-               
+            <section class="enlaces-navegacion">
+
+                <ul>
                     <ul>
-                        <ul>
-                            <li><a href="logo-practicas.html">PRÁCTICAS</a></li>
-                            <li><a href="logo.html">MOTORES</a></li>
-                            <li><a href="logo-domo.html">DOMÓTICA</a></li>
-                            
-                        </ul>
-                        
+                        <li><a href="logo-practicas.html">PRÁCTICAS</a></li>
+                        <li><a href="logo.html">MOTORES</a></li>
+                        <li><a href="logo-domo.html">DOMÓTICA</a></li>
+
                     </ul>
-                </section>
-           
-           
+
+                </ul>
+            </section>
+
+
             <section class="section_naranja">
-                
+
                 <a href="#"> EJERCICIOS DE INICIACIÓN</a><br>
+                 <a href="#lwe">-Práctica LWE</a><br>
                 <a href="#mozTocId576652">-Ejercicio1: </a><br>
                 <a href="Domo_logo.html#mozTocId291318">-Ejercicio 2:</a>
                 <br>

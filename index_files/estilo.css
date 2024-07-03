@@ -428,7 +428,10 @@ width: min(1000px, 100%);
     
 }
 
-
+.conpunto{
+    list-style: circle;
+    padding-left:50px;
+}
 
 
 /* ----------------------- imagenes  ------------------------------------------*/
