@@ -72,12 +72,14 @@
               
                 <!-- *************** inicio practica  ********************************** -->
                 <section class="section_naranja">
-                      <details>
+                     
+                    <h2><a name="prac1"></a> Colocación de objetos en robotstudio.</h2>
+                     <details>
 
                         <summary> 
-                    <h2><a name="prac1"></a> Colocación de objetos en robotstudio.</h2></summary>
+                    </summary>
              
-                     <img class="imagen"  src="imagen/pract_Colocaci%C3%B3n_objetos_robotstido..png" alt="punto de luz"><br>
+                     <img class="imagen"  src="imagen/act_Colocacion_objetos_robotstido.png" alt="punto de luz"><br>
                      Crea una estación vacía<br>
 Inserta <br>
 - un robot 120<br>
@@ -94,9 +96,11 @@ y en el centro del soporte coloca un cono de diámetro 50 y altura 100<br>
                 <!-- fin practica  -->
                 <!-- ******************************************* inicio practica  ********************************** -->
                 <section class="section_naranja">
+                    
+                    <h2><a name="prac2"></a>Crea un herramienta</h2>
                      <details>
                     <summary>
-                    <h2><a name="prac2"></a>Crea un herramienta</h2> </summary>
+                      </summary>
                    Dibuja un tetraedro de longitud 200 anchura 400 altura 50<br>
 
 Un hexágono circunscrito en una circunferencia de 50 y altura 50<br>
@@ -131,40 +135,51 @@ Instala la controladora   y mueve robot según tcp del cono y mueve el robot seg
                 </section>
                 <!-- fin practica  
                 <a name="prac3"></a><br><br><br>
-                <!-- ******************************************* inicio practica  ********************************** 
+                <!-- ******************************************* inicio practica  ********************************** -->
                 <section class="section_naranja">
-                    <h2> Circuito paralelo.</h2>
-                    Realiza el montaje de dos puntos de luz en paralelo con un
-                    interruptor.<br>
-                    Prueba y realiza las medidas de intensidad y voltajes ( alimentación y
-                    en cada bombilla) <br>
-                    <br>
-                    <ol>
-                        <li>Con dos bombillas iguales .</li>
-                        <li>Con una bombilla de 100W y otra de 45 W</li>
-                    </ol>
-                    Explica el funcionamiento del circuito en ambos casos.
-                    <br><a href="#contenedor">INICIO</a>
+                   
+                    <h2> Trayectoria</h2> 
+                        <details>
+
+                        <summary> 
+                        </summary>
+                   Crea una estación con dos objetos, un cubo de 200mm y otro un cubo de 200mm al que se la ha añadido un medio cilindro.<br>
+coloca el robot en la posición inicial, y crea un punto en esa posición con referencia al robot.<br><br>
+Crea dos trayectorias una que recorra el cubo con una  base de coordenadas llamada cubo y otra que recorra la cubo con el cilindro con otra base de coordenadas llamada cubo curvado.<br><br>
+haz que el robot pase exactamente por dos puntos del cubo y reduce a 100 mm/s en dos tramos.<br><br>
+Graba la animación donde el robot parte de la posición inicial, recorre primero el cubo vuelve a la posición inicial,  luego el recorre el cubo curvado y termina en la posición inicial.<br>
+
+Mueve la base de coordenadas del cubo curvado y graba la animación donde el robot parte de la posición inicial, recorre primero el cubo curvado  vuelve a la posición inicial,  luego el recorre el cubo y termina en la posición inicial.<br>
+
+Entrega los dos videos.<br><br>
+      <h3> Ejemplo resuelto realizado por los alumnos</h3>
+     
+        <a href="https://youtu.be/SSz8bD2jNEA"  > Trayectorias con referencia a objetos</a>  <br>    
+                
+                  <a href="https://youtu.be/N9e6ICzQukU">Base de coordenadas desplazada</a>
+                  
+              
+                   <a href="#contenedor">INICIO</a>
+                    </details>
+                 
                 </section>
-                <!-- fin practica  
+                <!-- fin practica  -->
                 <a name="prac4"></a><br><br><br>
-                <!-- ******************************************* inicio practica  ********************************** 
+                <!-- ******************************************* inicio practica  ********************************** -->
                 <section class="section_naranja">
-                    <h2> Punto de luz</h2>
+                    <h2> Trayectoria con flexPendant</h2>
+                    <summary></summary>
+                    <details>
                     <br>
-                    Realiza el montaje de un punto de luz según el plano de distribución
-                    de la figura. <br>
-                    Entrega un informe en el que incluya una expliación de la bombilla
-                    conectada en el punto de luz, tipo de casquillo, potencia, con
-                    respecto a elemento de maniobra:posiciones estables que tiene y bornas
-                    de conexión.<br>
+                   Realiza una trayectoria con flexPendant que recorra aproximadamente las 4 esquinas de cada caja sin tocar la pared intermedia.
                     <br>
-                    El objetivo de la práctica es la utilización de cajas de registro,
-                    cajas de mecanismos y tubo corrugado.<br>
-                    Realización de un montaje sobre el tablero simulando una instalación
-                    real, en pared y techo.<br>
-                    <br>
+                       <img class="imagen"  src="imagen/act_flexpendant.png" alt="flexpendant"><br>
+                     <h3> Ejemplo resuelto realizado por los alumnos</h3>
+     
+        <a href="https://youtu.be/EBQ7CrFpn0M"  > Trayectorias con flexpendant</a>  <br> 
                     <br><a href="#contenedor">INICIO</a>
+                    
+                    </details>
                 </section>
                 <!-- fin practica  -->
                 <a name="prac5"></a><br><br><br>
@@ -750,9 +765,9 @@ Instala la controladora   y mueve robot según tcp del cono y mueve el robot seg
 
            <a href="#prac1">Colocación de objetos en robotstido.</a> <br>
                 <a href="#prac2">Crea un herramienta</a> <br>
-                       <!--   <a href="#prac3">Circuito paralelo</a> <br>
-                <a href="#prac4">Punto de luz</a> <br>
-                <a href="#prac5">Un puntos de luz desde 2 sitios</a> <br>
+                       <a href="#prac3">Trayectoria</a> <br>
+                  <a href="#prac4">Trayectoria con flexPendant</a> <br>
+               <!--  <a href="#prac5">Un puntos de luz desde 2 sitios</a> <br>
                 <a href="#prac6">Interruptor con señalización</a> <br>
                 <a href="#prac7">Dos puntos de luz desde 2 sitios</a> <br>
                 <a href="#prac8">Dos puntos de luz desde 3 sitios</a> <br>
