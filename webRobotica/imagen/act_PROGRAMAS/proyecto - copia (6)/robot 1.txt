@@ -1,0 +1,58 @@
+MODULE Module1
+        CONST robtarget INICIO:=[[547.330665099,0,451.647306311],[0.190808996,0,0.981627183,0],[0,-1,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_10:=[[539.367835409,0,340.165399999],[0.088323191,0,0.99609187,0],[-1,0,-1,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_20:=[[462.070173912,-137.232801189,234.618947582],[0.088323191,0,0.99609187,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_30:=[[-97.269723866,530.524602292,340.165413516],[0.056542702,-0.765222972,0.637677676,0.067852108],[1,0,-1,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_40:=[[-112.033826088,611.733198811,225.637947582],[0,-0.707106781,0.707106781,0],[1,-1,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_50:=[[465.727415935,-0.168214349,479.273385052],[0.091553621,0.000179835,0.995800131,-0.000016534],[-1,-1,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_60:=[[371.063676927,281.449466007,479.273385052],[0.086776704,-0.317455729,0.943843098,0.029186802],[0,-1,-1,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_20_2:=[[462.070173912,-137.232801189,518.43482927],[0.088323191,0,0.99609187,0],[-1,0,-1,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+!***********************************************************
+    !
+    ! Módulo:  Module1
+    !
+    ! Descripción:
+    !   <Introduzca la descripción aquí>
+    !
+    ! Autor: raulb
+    !
+    ! Versión: 1.0
+    !
+    !***********************************************************
+    
+    
+    !***********************************************************
+    !
+    ! Procedimiento Main
+    !
+    !   Este es el punto de entrada de su programa
+    !
+    !***********************************************************
+    PROC main()
+        !Añada aquí su código
+    
+        Path_10;
+    ENDPROC
+    PROC Path_10()
+        INI:
+        Setdo Salida1,0;
+        Setdo Salida2,0;
+        
+        MoveL INICIO,v1000,fine,MyTool\WObj:=wobj0;
+        WaitDI Entrada1,1;
+         WaitTime 3;
+        MoveL Target_10,v1000,fine,MyTool\WObj:=wobj0;
+        MoveJdo Target_20,v200,z100,MyTool\WObj:=wobj0,Salida1,1;!atará la caja a la herramienta
+       
+        MoveL Target_20,v1000,z100,MyTool\WObj:=wobj0;
+        MoveL Target_20_2,v500,fine,MyTool\WObj:=wobj0;
+        MoveL Target_30,v1000,z100,MyTool\WObj:=wobj0;
+        
+        MoveJdo Target_40,v200,z100,MyTool\WObj:=wobj0,Salida2,1;!soltará la caja
+        MoveL INICIO,v1000,fine,MyTool\WObj:=wobj0;
+        WaitDI Entrada2,1;!espera al sensor 2
+        WaitTime 2;
+        GOTO INI;
+    ENDPROC
+
+ENDMODULE

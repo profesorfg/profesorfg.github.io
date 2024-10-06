@@ -1,0 +1,44 @@
+MODULE Module1
+    CONST robtarget P10:=[[484.31,-66.55,551.61],[0.728696,0.0560697,0.681994,-0.0272453],[-1,-1,-4,1],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget P20:=[[439.64,17.17,239.59],[0.706915,0.0144669,0.707002,0.0144917],[0,0,-4,1],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget P30:=[[537.24,-255.44,241.66],[0.706928,0.0145277,0.706989,0.0144125],[-1,-1,-4,1],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget P40:=[[537.11,-255.43,493.27],[0.707005,0.0147762,0.706914,0.0140655],[-1,-1,-4,1],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    Var num despl:=0;
+    VAR num ciclo:=0;
+
+
+    PROC main()
+
+        MoveL P10,v50,fine,tool0\WObj:=wobj0;
+        IF DI10_2=1 ciclo:=1;
+        IF ciclo=1 THEN
+            SetDO DO10_1,1;
+            MoveL P20,v50,fine,tool0\WObj:=wobj0;
+            WaitTime 3;
+            IF DI10_1=1 THEN
+                Path_Pieza;
+            ELSEIF DI10_1=0 THEN
+                ciclo:=0;
+                Path_NoPieza;
+            ENDIF
+        ENDIF
+    ENDPROC
+
+
+
+    PROC Path_Pieza()
+        MoveL P40,v50,fine,tool0\WObj:=wobj0;
+        WaitTime 2;
+        MoveL offs(p30,0,0,despl),v50,fine,Tool0\WObj:=wobj0;
+        despl:=despl+60;
+        WaitTime 2;
+        Reset DO10_1;
+
+    ENDPROC
+
+    PROC Path_NoPieza()
+        Reset DO10_1;
+        MoveL P10,v50,fine,tool0\WObj:=wobj0;
+        despl:=0;
+    ENDPROC
+ENDMODULE

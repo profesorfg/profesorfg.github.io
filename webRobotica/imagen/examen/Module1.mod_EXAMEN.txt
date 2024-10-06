@@ -1,0 +1,58 @@
+MODULE Module1
+        CONST robtarget Target_10:=[[224.478,-158.242,400],[-0.000000002,-0.000000001,1,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_20:=[[524.478,-158.242,400],[0.000000001,-0.000000001,1,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_30:=[[524.478,141.758,400],[0.000000001,-0.000000001,1,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_40:=[[224.478,141.758,400],[0.000000001,-0.382683433,0.923879532,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_50:=[[52.906585922,-346.768953484,30.20555657],[0.073490678,-0.764668218,-0.638572653,-0.045897753],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_60:=[[-97.093414078,-496.768953484,30.20555657],[0.127034175,0.856657645,0.494591519,-0.073343217],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_70:=[[-247.093414078,-346.768953484,30.20555657],[0.098348616,-0.911990925,-0.319470988,-0.237778026],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_80:=[[-97.093414078,-196.768953484,30.20555657],[0.224922218,-0.895780703,-0.336579948,-0.183577957],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_90:=[[52.906585922,-346.768953484,30.20555657],[0.069766336,0.756341776,0.648028389,-0.056026636],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    VAR NUM a:=0;
+!***********************************************************
+    !
+    ! Módulo:  Module1
+    !
+    ! Descripción:
+    !   <Introduzca la descripción aquí>
+    !
+    ! Autor: javie
+    !
+    ! Versión: 1.0
+    !
+    !***********************************************************
+    
+    
+    !***********************************************************
+    !
+    ! Procedimiento Main
+    !
+    !   Este es el punto de entrada de su programa
+    !
+    !***********************************************************
+    PROC main()
+        repetir:
+        a:=a+1;
+        Path_10;
+        Path_20;
+        IF a<=1 THEN GOTO repetir;
+        ENDIF
+        a:=0;
+    ENDPROC
+    PROC Path_10()
+        MoveL Target_10,v1000,fine,MyTool\WObj:=WOTetraedro;
+        MoveL Target_20,v1000,fine,MyTool\WObj:=WOTetraedro;
+        MoveL Target_30,v1000,fine,MyTool\WObj:=WOTetraedro;
+        MoveL Target_40,v1000,fine,MyTool\WObj:=WOTetraedro;
+        MoveL Target_10,v1000,fine,MyTool\WObj:=WOTetraedro;
+    ENDPROC
+    PROC Path_20()
+        MoveL Target_50,v1000,z100,MyTool\WObj:=WOCono;
+        MoveC Target_60,Target_70,v1000,z100,MyTool\WObj:=WOCono;
+        MoveC Target_80,Target_90,v1000,z100,MyTool\WObj:=WOCono;
+    ENDPROC
+    
+        
+    
+
+ENDMODULE

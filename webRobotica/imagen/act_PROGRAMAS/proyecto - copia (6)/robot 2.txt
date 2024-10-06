@@ -1,0 +1,43 @@
+MODULE Module1
+        CONST robtarget Target_10:=[[430.597385602,0,428.737205584],[0.258819045,0,-0.965925826,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_20:=[[501.529,214.04,234],[0,0,1,0],[0,-2,1,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_30:=[[701.529,214.04,234],[0,0,1,0],[0,-2,1,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_40:=[[701.529,14.04,234],[0,0,1,0],[0,0,-1,1],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_50:=[[501.529,14.04,234],[0,0,1,0],[0,0,-1,1],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+!***********************************************************
+    !
+    ! Módulo:  Module1
+    !
+    ! Descripción:
+    !   <Introduzca la descripción aquí>
+    !
+    ! Autor: raulb
+    !
+    ! Versión: 1.0
+    !
+    !***********************************************************
+    
+    
+    !***********************************************************
+    !
+    ! Procedimiento Main
+    !
+    !   Este es el punto de entrada de su programa
+    !
+    !***********************************************************
+    PROC main()
+        !Añada aquí su código
+        INICIO:
+        MoveL Target_10,v1000,z100,Pen_TCP\WObj:=wobj0;
+        WaitDI Entrada1,1;
+        MoveJ Target_20,v1000,fine,Pen_TCP\WObj:=wobj0;
+        MoveJ Target_30,v1000,fine,Pen_TCP\WObj:=wobj0;
+        MoveJ Target_40,v1000,fine,Pen_TCP\WObj:=wobj0;
+        MoveJ Target_50,v1000,fine,Pen_TCP\WObj:=wobj0;
+        MoveJ Target_20,v1000,fine,Pen_TCP\WObj:=wobj0;
+        MoveL Target_10,v1000,fine,Pen_TCP\WObj:=wobj0;
+        WaitTime 3;
+        GOTO INICIO;
+        
+    ENDPROC
+ENDMODULE

@@ -1,0 +1,47 @@
+MODULE Module1
+    CONST robtarget Target_40:=[[300,100,200],[0,0,1,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_10:=[[500,100,200],[0,0,1,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_20:=[[300,0,200],[0,0,1,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_30:=[[500,0,200],[0,0,1,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_50:=[[500,-50,200],[0,0,1,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_60:=[[300,-50,200],[0.087155743,0,-0.996194698,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_INICIO:=[[547.330665099,0,451.64730631],[0.190808996,0,0.981627183,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    VAR num NI;
+    VAR num mov:=0;
+    
+    PROC main()
+        Path_INICIO;
+        
+        TPReadNum NI, "PULSA 1 PARA ESCRIBIR NI O PULSA 2 PARA ESCRIBIR IN";
+        
+        IF NI=1 THEN
+        Path_N;
+        Path_I;
+        ENDIF
+        
+        IF NI=2 THEN
+        mov:=mov+100;
+        Path_I;
+        mov:=mov-200;
+        Path_N;
+        ENDIF
+        
+    ENDPROC
+    PROC Path_N()
+        MoveL Target_INICIO,v200,fine,MyTool\WObj:=CUBO;
+        MoveL offs (Target_40,0,mov,0),v200,fine,MyTool\WObj:=CUBO;
+        MoveL offs (Target_10,0,mov,0),v200,fine,MyTool\WObj:=CUBO;
+        MoveL offs (Target_20,0,mov,0),v200,fine,MyTool\WObj:=CUBO;
+        MoveL offs (Target_30,0,mov,0),v200,fine,MyTool\WObj:=CUBO;
+        MoveL Target_INICIO,v200,fine,MyTool\WObj:=CUBO;       
+    ENDPROC
+    PROC Path_I()
+        MoveL Target_INICIO,v200,fine,MyTool\WObj:=CUBO;
+        MoveL offs (Target_50,0,mov,0),v200,fine,MyTool\WObj:=CUBO;
+        MoveL offs (Target_60,0,mov,0),v200,fine,MyTool\WObj:=CUBO;
+        MoveL Target_INICIO,v200,fine,MyTool\WObj:=CUBO;
+    ENDPROC
+    PROC Path_INICIO()
+        MoveL Target_INICIO,v200,fine,MyTool\WObj:=CUBO;
+    ENDPROC
+ENDMODULE

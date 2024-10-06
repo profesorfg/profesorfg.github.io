@@ -1,0 +1,57 @@
+MODULE Module1
+        CONST robtarget Home:=[[364.353829072,0,594],[0.5,0,0.866025404,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_10:=[[353.619,-200,200],[0.010082456,0.098188593,0.980353702,0.1707746],[-1,0,-1,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_20:=[[180.414,-100,200],[0.006985913,-0.098457365,-0.995116509,0.00069119],[-1,0,-1,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_30:=[[180.414,100,200],[0.006985913,-0.098457365,-0.995116509,0.00069119],[0,-1,1,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_80:=[[353.619036846,200.00000981,199.99993508],[0.077590237,0.238631249,-0.956523579,0.148652364],[0,-1,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_50:=[[531.875,99.872,300],[0.006985913,-0.098457365,-0.995116509,0.00069119],[0,-1,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_60:=[[626.37,9.518,300],[0.006985913,-0.098457365,-0.995116509,0.00069119],[0,-1,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_70:=[[525.522,-99.992,300],[0.006985913,-0.098457365,-0.995116509,0.00069119],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+!***********************************************************
+    !
+    ! Módulo:  Module1
+    !
+    ! Descripción:
+    !   <Introduzca la descripción aquí>
+    !
+    ! Autor: estev
+    !
+    ! Versión: 1.0
+    !
+    !***********************************************************
+    
+    
+    !***********************************************************
+    !
+    ! Procedimiento Main
+    !
+    !   Este es el punto de entrada de su programa
+    !
+    !***********************************************************
+    VAR NUM a:=0;
+    PROC main()
+ 
+    repite:
+    Path_10;
+    a:=a+1;
+
+    IF a<=2 THEN GOTO repite;
+    ENDIF
+    
+    ENDPROC
+    PROC Path_10()
+        MoveL Home,v1000,z100,MyTool\WObj:=figura;
+        MoveL Target_10,v1000,z100,MyTool\WObj:=figura;
+        MoveL Target_20,v200,z0,MyTool\WObj:=figura;
+        WaitTime 1;
+!       REALIZACION DE SOLDADURA
+        MoveL Target_30,v200,z0,MyTool\WObj:=figura;
+        WaitTime 1;
+!       REALIZACION DE SOLDADURA
+        MoveL Target_80,v1000,z100,MyTool\WObj:=figura;
+        MoveL Target_50,v1000,z10,MyTool\WObj:=figura;
+        MoveC Target_60,Target_70,v500,z0,MyTool\WObj:=figura;
+        MoveL Target_70,v1000,z100,MyTool\WObj:=figura;
+        MoveL Home,v1000,z100,MyTool\WObj:=figura;
+    ENDPROC
+ENDMODULE

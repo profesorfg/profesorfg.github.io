@@ -1,0 +1,88 @@
+MODULE Module1
+        CONST robtarget Target_80:=[[527.83,86.564,300],[0,0,1,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_90:=[[327.83,86.564,300],[0,0,1,0],[0,-1,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_100:=[[527.83,-113.436,300],[0,0,1,0],[-1,0,-1,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_110:=[[327.83,-113.436,300],[0,0,1,0],[-1,0,-1,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_120:=[[427.83,86.564,300],[0,0,1,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_130:=[[527.83,-13.436,300],[0,0,1,0],[-1,0,-1,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_140:=[[427.83,-113.436,300],[0,0,1,0],[-1,0,-1,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_150:=[[327.83,-13.436,300],[0,0,1,0],[-1,0,-1,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_inicio:=[[547.330665099,0,451.64730631],[0.190808996,0,0.981627183,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    VAR num a:=0;
+!***********************************************************
+    !
+    ! Módulo:  Module1
+    !
+    ! Descripción:
+    !   <Introduzca la descripción aquí>
+    !
+    ! Autor: javier
+    !
+    ! Versión: 1.0
+    !
+    !***********************************************************
+    
+    
+    !***********************************************************
+    !
+    ! Procedimiento Main
+    !
+    !   Este es el punto de entrada de su programa
+    !
+    !***********************************************************
+    PROC main()
+       inicio:
+        MoveL Target_inicio,v1000,z100,MyTool\WObj:=wobj0;
+        TPReadNum reg1, "escribe 1 para escribir una N, 2 para escribir una O";
+        TPReadNum reg2, "¿entre 1 y 4 cuantas veces quieres que se repita la letra?";
+        IF reg2<=4 THEN
+        Clear a;
+        etiqueta:
+        WHILE a>=reg2 DO GOTO inicio;
+        ENDWHILE
+        TEST reg1 
+        CASE 1:
+        WHILE a<reg2 DO
+        TPWrite "VOY A DIBUJAR UNA N";
+        Path_N;
+        Incr a;       
+        ENDWHILE
+        GOTO etiqueta;
+        Clear a;
+        CASE 2:
+        WHILE a<reg2 DO
+        TPWrite "VOY A DIBUJAR UNA O";
+        Path_O;
+        Incr a;
+        ENDWHILE
+        GOTO etiqueta;
+        Clear a;
+        DEFAULT:
+        TPWrite "EL NÚMERO NO ES CORRECTO";
+        WAITTIME 1;
+        TPErase;
+        ENDTEST
+        ELSE
+            TPWrite "EL NÚMERO INTRODUCIDO NO ESTÁ ENTRE 1 Y 4";
+            GOTO inicio;
+        ENDIF
+        MoveL Target_inicio,v1000,z100,MyTool\WObj:=wobj0;
+
+        GOTO inicio;
+        
+       
+        
+        
+    ENDPROC
+    PROC Path_N()
+        MoveL Target_80,v1000,fine,MyTool\WObj:=CAJA;
+        MoveL Target_90,v1000,fine,MyTool\WObj:=CAJA;
+        MoveL Target_100,v1000,fine,MyTool\WObj:=CAJA;
+        MoveL Target_110,v1000,fine,MyTool\WObj:=CAJA;
+    ENDPROC
+    PROC Path_O()
+        MoveL Target_120,v1000,fine,MyTool\WObj:=CAJA;
+        MoveC Target_130,Target_140,v1000,fine,MyTool\WObj:=CAJA;
+        MoveC Target_150,Target_120,v1000,fine,MyTool\WObj:=CAJA;
+    ENDPROC
+ENDMODULE

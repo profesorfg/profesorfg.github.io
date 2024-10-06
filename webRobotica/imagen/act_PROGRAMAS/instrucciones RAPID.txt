@@ -1,0 +1,47 @@
+    MODULE Module1
+    CONST robtarget p10:=[[521.28,47.06,219.63],[0.00163837,-0.707105,0.00163838,-0.707105],[0,0,-3,1],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget p20:=[[395.24,47.06,219.63],[0.00163892,-0.707105,0.0016388,-0.707105],[0,0,-3,1],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget p30:=[[395.24,-49.74,219.63],[0.00163865,-0.707105,0.00163871,-0.707105],[-1,-1,-2,1],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget p40:=[[521.14,-49.74,219.63],[0.00163834,-0.707105,0.00163838,-0.707105],[-1,-1,-2,1],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    !***********************************************************
+    !
+    ! Módulo:  Module1
+    !
+    ! Descripción:
+    !   <Introduzca la descripción aquí>
+    !
+    ! Autor: cesar_fdf3fuh
+    !
+    ! Versión: 1.0
+    !
+    !***********************************************************
+    
+    
+    !***********************************************************
+    !
+    ! Procedimiento Main
+    !
+    !   Este es el punto de entrada de su programa
+    !
+    !***********************************************************
+    VAR num a:=0;
+    CONST robtarget home:=[[483.952566766,-53.773840219,312.093862423],[0.021070759,0.701165397,-0.008505839,0.712636485],[-1,-1,-2,1],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    
+    PROC main()
+      Repetir:
+      Patch_10;
+    ! a:=a+1;
+      !Add a,1;
+      Incr a;
+      IF a<=1 GOTO repetir;
+    ! a:=0;
+        Clear a;
+    ENDPROC
+    PROC Patch_10()
+        MoveL home,v1000,z0,Rotulador\WObj:=wobj0;
+        MoveL p20, v200, z0, Rotulador\WObj:=wobj0;
+        MoveL p10, v200, z0, Rotulador\WObj:=wobj0;
+        MoveL p30, v200, z0, Rotulador\WObj:=wobj0;
+        MoveL p40, v200, z0, Rotulador\WObj:=wobj0;
+    ENDPROC
+    ENDMODULE
