@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Domótica</title>
+    <link href="../index_files/estilo.css" rel="stylesheet" type="text/css">
+    <script src="../index_files/menu.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="profesorfg" name="author">
+    <meta content="automatizacion industrial" name="description">
+    <meta name="keywords" content="automatas electricidad">
+  </head>
+  <body>
+    <div id="contenedor">
+      <header>
+        <nav> <menu-principal></menu-principal> </nav>
+      </header>
+      <main>
+        <article class="articulo">
+          <div class="fondo_blanco"><br>
+            <br>
+            <p>RobotStudio - <a href="https://www.youtube.com/watch?v=4iHHf1-veJY"
+                target="_top">Práctica de robótica nº 1: Trayectorias básicas </a>&nbsp;&nbsp;
+              </p>
+            <p>RobotStudio - <a href="https://www.youtube.com/watch?v=S3FUCfqmXpg"
+                target="_top">Práctica de robótica nº 2: Trayectorias complejas
+              </a>&nbsp; </p>
+            <p>Robot Studio - <a href="https://www.youtube.com/watch?v=OcMogsjw45Q">Práctica
+                de robótica nº 2C: Creación de una herramienta</a> &nbsp; </p>
+            <p>RobotStudio - <a href="https://www.youtube.com/watch?v=AJQs3cpMZSE">Práctica
+                de robótica nº 3: &nbsp;Programación básica desde el flexpendant</a>
+              &nbsp;&nbsp; </p>
+            <p>RobotStudio - <a href="https://www.youtube.com/watch?v=IMAy4mZA0bE">Práctica
+                de robótica nº 4: Saltos, variables y condicionantes</a>
+              &nbsp;&nbsp; </p>
+            <p>RobotStudio - <a href="https://www.youtube.com/watch?v=FyoQ4zLPJ1s"
+                target="_top">Práctica robótica nº 5 Trayectoria sobre figura
+                irregular</a> &nbsp; </p>
+            <p>RobotStudio - <a href="https://www.youtube.com/watch?v=IBRY07R12_E"
+                target="_top">Práctica robótica nº 6 Entradas digitales del
+                sistema</a> &nbsp;&nbsp; </p>
+            <p>RobotStudio - <a href="https://www.youtube.com/watch?v=jAJYZrZqWhw"
+                target="_top">Práctica robótica nº 7 - Entradas y salidas
+                digitales del sistema</a> &nbsp;&nbsp; </p>
+            <p>RobotStudio - <a href="https://www.youtube.com/watch?v=qJFw8KrEubg"
+                target="_top">Práctica robótica nº 8 Realización de pausas y
+                parada con señales del sistema</a> &nbsp;&nbsp; </p>
+            <p>RobotStudio - <a href="https://www.youtube.com/watch?v=CJypmpGsRRw"
+                target="_top">Práctica robótica nº 9 Utilización de la función
+                offset</a> &nbsp;&nbsp; </p>
+            <p>Robot Studio - <a href="https://www.youtube.com/watch?v=4Gnrj51qyJs"
+                target="_top">Práctica de robótica nº 10 Señales específicas del
+                sistema</a> &nbsp;&nbsp; </p>
+            <p>RobotStudio - <a href="https://www.youtube.com/watch?v=RxI5kN4Q-M4"
+                target="_top">Práctica de robótica nº 11 Utilizando relojes del
+                sistema</a> &nbsp;&nbsp; </p>
+            <p>RobotStudio - <a href="https://www.youtube.com/watch?v=YUDv8Jp2DEk"
+                target="_top">Práctica de robótica nº 12 Gestión de
+                interrupciones</a> &nbsp;&nbsp; </p>
+            <p>RobotStudio - <a href="https://www.youtube.com/watch?v=4qhGcmgHksk">Practica
+                de robótica nº 13 Colisiones</a> &nbsp;&nbsp; </p>
+            <p>RobotStudio - <a href="https://www.youtube.com/watch?v=_ozEN9Op0D8"
+                target="_top">Práctica de robótica nº 14A: Pick and place
+                mediante objetos inteligentes</a> &nbsp;&nbsp; </p>
+            <p>RobotStudio - <a href="https://www.youtube.com/watch?v=UNDgMr2cYs4"
+                target="_top">Práctica de robótica nº 14B: Pick and place con
+                objetos inteligentes</a> &nbsp;&nbsp; </p>
+            <p>RobotStudio - <a href="https://www.youtube.com/watch?v=lwBsRubQWZU"
+                target="_top">Práctica de robótica nº 14C Pick and place control
+                desde rapid</a> &nbsp;&nbsp; </p>
+            <p>RobotStudio - <a href="https://www.youtube.com/watch?v=ycjYdWTxEFc"
+                target="_top">Práctica robótica nº 15 Pick and place mediante
+                una garra con movimiento</a> &nbsp;&nbsp; </p>
+            <p>RobotStudio - <a href="https://www.youtube.com/watch?v=UmDubIZ_ejI"
+                target="_top">Práctica de robótica nº 16 &nbsp;Movimiento de
+                objetos mediante componentes inteligentes</a> &nbsp;&nbsp; </p>
+            <p>RobotStudio- https://www.youtube.com/watch?v=9euvb258CtU
+              &nbsp;&nbsp; </p>
+            <p>RobotStudio - <a href="https://www.youtube.com/watch?v=3mEhCXCcF8I"
+                target="_top">Práctica nº 18 Trabajando con el robot araña
+                IRB320</a> </p>
+          </div>
+        </article>
+      </main>
+      <!-- ....................................menu........................... -->
+      <aside>
+        <section class="section_naranja"> <br>
+          <br>
+          <p>RobotStudio - Práctica de robótica nº 1: Trayectorias básicas
+            &nbsp;https://www.youtube.com/watch?v=4iHHf1-veJY &nbsp;RobotStudio
+            - Práctica de robótica nº 2: Trayectorias complejas
+            &nbsp;https://www.youtube.com/watch?v=S3FUCfqmXpg &nbsp;Robot Studio
+            - Práctica de robótica nº 2C: Creación de una herramienta
+            &nbsp;https://www.youtube.com/watch?v=OcMogsjw45Q RobotStudio -
+            Práctica de robótica nº 3: &nbsp;Programación básica desde el
+            flexpendant &nbsp;https://www.youtube.com/watch?v=AJQs3cpMZSE
+            &nbsp;RobotStudio - Práctica de robótica nº 4: Saltos, variables y
+            condicionantes &nbsp;https://www.youtube.com/watch?v=IMAy4mZA0bE
+            &nbsp;RobotStudio - Práctica robótica nº 5 Trayectoria sobre figura
+            irregular &nbsp;https://www.youtube.com/watch?v=FyoQ4zLPJ1s
+            &nbsp;RobotStudio - Práctica robótica nº 6 Entradas digitales del
+            sistema &nbsp;https://www.youtube.com/watch?v=IBRY07R12_E
+            &nbsp;RobotStudio - Práctica robótica nº 7 - Entradas y salidas
+            digitales del sistema
+            &nbsp;https://www.youtube.com/watch?v=jAJYZrZqWhw &nbsp;RobotStudio
+            - Práctica robótica nº 8 Realización de pausas y parada con señales
+            del sistema &nbsp;https://www.youtube.com/watch?v=qJFw8KrEubg
+            &nbsp;RobotStudio - Práctica robótica nº 9 Utilización de la función
+            offset &nbsp;https://www.youtube.com/watch?v=CJypmpGsRRw &nbsp;Robot
+            Studio - Práctica de robótica nº 10 Señales específicas del sistema
+            &nbsp;https://www.youtube.com/watch?v=4Gnrj51qyJs &nbsp;RobotStudio
+            - Práctica de robótica nº 11 Utilizando relojes del sistema
+            &nbsp;https://www.youtube.com/watch?v=RxI5kN4Q-M4 &nbsp;RobotStudio
+            - Práctica de robótica nº 12 Gestión de interrupciones
+            &nbsp;https://www.youtube.com/watch?v=YUDv8Jp2DEk &nbsp;RobotStudio
+            - Practica de robótica nº 13 Colisiones
+            &nbsp;https://www.youtube.com/watch?v=4qhGcmgHksk &nbsp;RobotStudio
+            - Práctica de robótica nº 14A: Pick and place mediante objetos
+            inteligentes &nbsp;https://www.youtube.com/watch?v=_ozEN9Op0D8
+            &nbsp;RobotStudio - Práctica de robótica nº 14B: Pick and place con
+            objetos inteligentes
+            &nbsp;https://www.youtube.com/watch?v=UNDgMr2cYs4 &nbsp;RobotStudio
+            - Práctica de robótica nº 14C Pick and place control desde rapid
+            &nbsp;https://www.youtube.com/watch?v=lwBsRubQWZU &nbsp;RobotStudio
+            - Práctica robótica nº 15 Pick and place mediante una garra con
+            movimiento &nbsp;https://www.youtube.com/watch?v=ycjYdWTxEFc
+            &nbsp;RobotStudio - Práctica de robótica nº 16 &nbsp;Movimiento de
+            objetos mediante componentes inteligentes
+            &nbsp;https://www.youtube.com/watch?v=UmDubIZ_ejI &nbsp;RobotStudio-
+            Práctica de robótica nº 17 Trabajo colaborativo de dos robots
+            &nbsp;https://www.youtube.com/watch?v=9euvb258CtU &nbsp;RobotStudio
+            - Práctica nº 18 Trabajando con el robot araña IRB320
+            &nbsp;https://www.youtube.com/watch?v=3mEhCXCcF8I </p>
+          <br>
+        </section>
+        <section class="section_naranja"> <br>
+          <br>
+          <br>
+        </section>
+      </aside>
+      <footer> El fin de hombre es perseguir la felicidad. </footer>
+    </div>
+  </body>
+</html>
