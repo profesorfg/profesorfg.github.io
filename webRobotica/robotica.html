@@ -290,6 +290,79 @@ Crea una instalación vacio, incorpora <br>
                     </details>
                 </section>
                 <!-- fin practica  -->
+                
+                ********************************** -->
+                <section class="section_naranja">
+
+                    <details>
+
+                        <summary>
+                            <h2>TCP con flexpendant 2024</h2>
+                        </summary>
+                        Diseña en robotstudio  o con otro programa de 3D un objeto que con las medidas de la herramienta real rotulador de nuestro robot IRB120. <br>
+                         <img class="imagen" src="imagen/act_tcp2024_1.png" alt="tcp"><br>
+                         
+                         
+                            <a href=" https://drive.google.com/drive/folders/1fOCFth-VBuhmPO7KKbvEitevhOLNvvG4?usp=sharing" target="_blank"> 
+                         
+             
+                         
+                         
+                                En el este enlace encontraras la pieza realizada con freecad </a>de la siguiente manera
+                         <ul>
+                             <li>cilindro de diámetro 40 altura 60 </li>
+                             <li>Un cono de diámetro 20 altura 200, gira 90 grados frente al eje y, subirlo con z=40mm</li>
+                         </ul>
+                        y  exportada a formato STL.<br>
+                         
+                         Abrir Robotstudio y arrastrar el archivo STL a robotstudio <br>
+                          <img class="imagen" src="imagen/act_tcp2024_0.png" alt="tcp"> <br>
+                         Creo  una herramienta a partir del objeto con un  peso 100gr cdg z=40 x=40 y un tcp (200,0,40) <br>
+                         Al conectarlo al robot observo que el eje Z del  TCP no es correcto <br>
+                         <img class="imagen" src="imagen/act_tcp2024_2.png" alt="tcp"><br>
+                        Tendre que rotarlo 90º respecto el eje Y
+                        <br>
+                       Vuelvo a crear la herramienta con los siguientes datos del TCP
+                        <br>
+                         <img class="imagen" src="imagen/act_tcp2024_3.png" alt="tcp"><br>
+                        Ahora si que esta colocado correctamente el TCP <br>
+                         <img class="imagen" src="imagen/act_tcp2024_4.png" alt="tcp"><br>
+                        Incorporo la herramienta al robot estudio y pruebo movimientos de reorientación
+                    <br> <img class="imagen" src="imagen/act_tcp2024_5.png" alt="tcp"><br>
+                        <br>
+                        <h3>El TCP en la flexpendat</h3>
+                        Abrimos la flexpendant y vemos que no tenie ninguna herramienta incorporada, solo aparace la brida, tool0
+                        <br>
+                        <img class="imagen" src="imagen/act_tcp2024_6.png" alt="tcp">    <br>
+                        
+                        Sincronizo la estación con RAPID, reinicio la flexpendant, y veo que se ha incoporado la herramienta    <br>  
+                          <img class="imagen" src="imagen/act_tcp2024_7.png" alt="tcp">  <br>   y vemos los valores del TCP <br> 
+                           <img class="imagen" src="imagen/act_tcp2024_8.png" alt="tcp">    <br>
+                           
+                           
+                           En RAPID -> Módulos de programa -> Calib Data vemos los datos de la herramienta creada
+<br>
+                           <img class="imagen" src="imagen/act_tcp2024_9.png" alt="tcp"> <br>
+                           <br>
+                         
+                           
+                           <br>
+                        
+                        <a href="#contenedor">INICIO</a>
+                    </details>
+                </section>
+                <!-- fin practica  -->
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
                 <a name="prac7"></a>
                 <!-- ******************************************* inicio practica  ********************************** -->
                 <section class="section_naranja">
