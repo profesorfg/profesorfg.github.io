@@ -1,0 +1,42 @@
+MODULE Module1
+        CONST robtarget Target_50:=[[547.330665099,0,451.64730631],[0.190808996,0,0.981627183,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_10:=[[550,-150,300],[0,0.000000001,1,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_20:=[[250,-150,300],[0,0,1,0],[-1,0,-1,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_30:=[[250,150,300],[0,0,1,0],[0,-1,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_40:=[[550,150,300],[0,0,1,0],[0,-1,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_60:=[[350,-300,200],[0,0,1,0],[-1,0,-1,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_70:=[[150,-300,200],[0,0,1,0],[-2,0,-2,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Target_80:=[[150,-100,200],[0,0,1,0],[-2,0,-2,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Inicio:=[[547.330665099,0,451.64730631],[0.190808996,0,0.981627183,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+!***********************************************************
+    !
+    ! Modulo:  Module1
+    ! Descripcion:
+    ! Autor: 
+    ! Version: 1.0
+    !***********************************************************
+    ! Procedimiento Main
+    !   Este es el punto de entrada de su programa
+    !***********************************************************
+    PROC main()
+        !Add your code here
+        WaitTime 2;
+        Path_10;
+        Path_20;
+    ENDPROC
+    PROC Path_10()
+        MoveL Inicio,v200,z100,MyTool\WObj:=wobj0;
+        MoveJ Target_10,v200,z0,MyTool\WObj:=Objeto1;
+        MoveL Target_20,v200,z0,MyTool\WObj:=Objeto1;
+        MoveL Target_30,v200,z0,MyTool\WObj:=Objeto1;
+        MoveL Target_40,v200,z0,MyTool\WObj:=Objeto1;
+        MoveL Target_10,v200,z0,MyTool\WObj:=Objeto1;
+        MoveJ Inicio,v200,z100,MyTool\WObj:=wobj0;
+    ENDPROC
+    PROC Path_20()
+        MoveL Target_60,v200,z0,MyTool\WObj:=Objeto2;
+        MoveL Target_70,v200,z0,MyTool\WObj:=Objeto2;
+        MoveL Target_80,v200,z0,MyTool\WObj:=Objeto2;
+        MoveL Inicio,v200,z100,MyTool\WObj:=wobj0;
+    ENDPROC
+ENDMODULE

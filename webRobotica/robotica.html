@@ -48,7 +48,7 @@
                 <div class="card card_icono">
                     <a href="minimanuales.html">
 
-                        <img src="imagen/mini_manuales.jpg" alt="mini manuales">Mini manuales
+                        <img src="imagen/mini_manuales.jpg" alt="mini manuales">Migas de pan
 
                     </a>
                 </div>
@@ -102,7 +102,7 @@
                     <a name="prac2"></a>
                     <details>
                         <summary>
-                            <h2>Crea un herramienta</h2>
+                            <h2>Crea una herramienta</h2>
                         </summary>
                         Dibuja un tetraedro de longitud 200 anchura 400 altura 50<br>
 
@@ -137,6 +137,104 @@
                     </details>
                 </section>
                 <!-- fin practica  -->
+                
+                
+                
+                  <!-- ******************************************* inicio practica  ********************************** -->
+                <section class="section_naranja">
+
+                    <a name="prac2a"></a>
+                    <details>
+                        <summary>
+                            <h2>Crea un WorkObject 2024</h2>
+                        </summary>
+                       
+              Crea una instalación vacia, incorpora <br>
+              <ul>
+                <li><br>
+                </li>
+                <li>- un robot IRB120</li>
+                <li>- Un controlador</li>
+                <li>- La herramienta mytool</li>
+                <li>- Un cubo de 300*300*300, con el nombre pieza1</li>
+                <li>- Un cubo de 200*200*200, con el nombre pieza2</li>
+                    <li>- Desplaza la pieza1 a 250, -150,0</li>
+                <li>- Desplaza la pieza2 a 150,-300,0</li>
+                <li>- Crea un objeto de trabajo, llamado objeto1</li>
+                <li>- Crea un objeto de trabajo, llamado objeto2</li>
+                  <li>- Conecta la pieza1 con el objeto de trabajo objeto1</li>
+                    <li>- Conecta la pieza2 con el objeto de trabajo objeto2</li>
+              </ul>
+              
+              <br> <img class="imagen" src="imagen/act_workobject.png" alt="workobject"><br>
+              Selecciona el workobject, botón derecho -> conectar y seleccionar la pieza deseada. <br>
+              Cuando muevas las pieza, también se  movera el Wobject conectado a la pieza y los puntos refereridos al Wobject
+             
+              <ul>
+                Crea los siguientes puntos
+                <li>- Punto INICIO, en la posición inicial del robot relativo al
+                  WObj0</li>
+                <li>- 4 puntos coincidentes con la esquinas de la cara superior
+                  de la pieza1 relativo al objeto de trabajo objeto1</li>
+                <li>- 3 puntos coincidentes con la esquinas de la cara superior
+                  de la pieza2 relativo al objeto de trabajo objeto2</li>
+              </ul>
+              <br>
+              <ul>
+                Crea las siguientes trayectorias
+                <li>-Desde el punto de inicio, que recorra las 4 esquinas de la
+                  pieza1 y vuelva al punto de inicio</li>
+                <li>-Desde el punto de inicio, que recorra las 3 esquinas
+                  accesibles de la pieza2 y vuelva al punto de inicio</li>
+                <li>- Una trayectoria main (todo en minusculas) que incluya las
+                  dos trayectorias anteriores</li>
+              </ul>
+              
+              
+              <p>Simula las trayectorias añadiendo una colisión entre mytool y las piezas 1 y 2  y graba la simulación de la trayectora
+                main</p>
+                  
+              <br> <img class="imagen" src="imagen/act_colision.png" alt="colisión"><br>
+              <p>Desplaza la pieza1 y el objeto de trabajo objeto1 una distancia
+                sufiente para que el robot no choque con la pieza1, graba la
+                simulación de la nueva trayectoria</p>
+              <p>Guarda el proyecto, empaquetalo en pack and go y envía las
+                simulaciones grabadas y la estación empaquetada.</p>
+                        <p>Al sincronizar la estación con RAPID podemos ver los workobjet (objetos de trabajo) en el archivo calib data</p>
+                        <br> <img class="imagen" src="imagen/act_workobject1.png" alt="workobject"><br>
+                        
+                        
+                        
+                        
+                         <a href="https://youtu.be/1jr0G5oGVnw" target="_blank">Video de como mover un Wobject y sus puntos referenciados, moviendo la pieza</a> 
+                           <br>
+                            <h3 class="centrar">CalibData</h3>
+                            <br>
+                             <article class="article_curso txt">
+                     
+                        
+                           <iframe src="txt/creawobject2024/CalibData.txt" frameborder="0"></iframe>
+                           
+                        </article>
+                           
+                           <br>
+                           <h3 class="centrar">Module1</h3>
+                              <br>
+                               <article class="article_curso txt">
+                                   <iframe src="txt/creawobject2024/Module1.txt" frameborder="0"></iframe></article>
+                        <br><a href="#contenedor">INICIO</a>
+                    </details>
+                </section>
+                <!-- fin practica  -->
+                
+                
+                
+                
+                
+                
+                
+                
+                
                 <a name="prac3"></a>
                 <!-- ******************************************* inicio practica  ********************************** -->
                 <section class="section_naranja">
@@ -276,7 +374,7 @@ Crea una instalación vacio, incorpora <br>
                         <summary>
                             <h2>TCP con flexpendant</h2>
                         </summary>
-                        Diseña en robotstudio un objeto que con las medidas de la herramienta real rotulador de nuestro robot IRB120. <br>
+                        Diseña en robotstudio un objeto con las medidas de la herramienta real rotulador de nuestro robot IRB120. <br>
                         En robotstudio conecta el objeto al robot y desde la flexpendant crea la herramienta. <br>
                         Desde la flexpendant del robot real, crea una herramienta, identificala con tu nombre, dala un peso de 100gr, ponla un centro de gravedad aproximado y desde definir crea con 4 puntos el TCP de la herramienta. <br>
                         Observa el error de creación del TCP, y compara los los valores del TCP de la herramienta obtenido a partir de la medición con el TCP obtenido por el método definir. <br>
@@ -289,9 +387,9 @@ Crea una instalación vacio, incorpora <br>
                         <br><a href="#contenedor">INICIO</a>
                     </details>
                 </section>
-                <!-- fin practica  -->
-                
-                ********************************** -->
+                <!-- fin practica            ********************************** -->
+                 <a name="prac6a"></a>
+                         <!-- ******************************************* inicio practica  ********************************** -->
                 <section class="section_naranja">
 
                     <details>
@@ -299,7 +397,7 @@ Crea una instalación vacio, incorpora <br>
                         <summary>
                             <h2>TCP con flexpendant 2024</h2>
                         </summary>
-                        Diseña en robotstudio  o con otro programa de 3D un objeto que con las medidas de la herramienta real rotulador de nuestro robot IRB120. <br>
+                        Diseña en robotstudio  o con otro programa de 3D un objeto con las medidas de la herramienta real rotulador de nuestro robot IRB120. <br>
                          <img class="imagen" src="imagen/act_tcp2024_1.png" alt="tcp"><br>
                          
                          
@@ -344,9 +442,19 @@ Crea una instalación vacio, incorpora <br>
 <br>
                            <img class="imagen" src="imagen/act_tcp2024_9.png" alt="tcp"> <br>
                            <br>
-                         
-                           
-                           <br>
+            
+                        <br>  
+                        Valores del TCP obtenido por el metodo de 4 puntos<br>  
+                        
+                        
+                        <br>   <br> <img class="imagen" src="imagen/act_tcp2024_91.png" alt="tcp"> <br>  
+                        
+                         <br> <img class="imagen" src="imagen/act_tcp2024_92.png" alt="tcp"> <br>  
+                         <h3>VALORES DEL TCP DE MYTOOL</h3>
+                          Valores del TCP dados por Robotstudio.
+                           <br> <img class="imagen" src="imagen/act_tcp2024_9_mytool.png" alt="tcp"> <br> 
+                          Valores del TCP  de MyTool obtenido por el metodo de 4 puntos<br>  
+                          <br> <img class="imagen" src="imagen/act_tcp2024_9_mytool4puntos.png" alt="tcp"> <br>  
                         
                         <a href="#contenedor">INICIO</a>
                     </details>
@@ -386,8 +494,8 @@ Crea una instalación vacio, incorpora <br>
                         <br><a href="#contenedor">INICIO</a>
                     </details>
                 </section>
-                <!-- fin practica  --> <br>
-                <a name="prac8"></a>
+                <!-- fin practica  --> 
+                 <a name="prac8"></a>
                 <!-- ******************************************* inicio practica  **********************************  -->
                 <section class="section_naranja">
                     <details>
@@ -536,6 +644,7 @@ Crea una instalación vacio, incorpora <br>
                         </details>
                     </section>
                     <!-- fin practica   -->
+                
                     <a name="prac14"></a>
                     <!-- ******************************************* inicio practica  **********************************  -->
                     <section class="section_naranja">
@@ -871,6 +980,7 @@ Crea una instalación vacio, incorpora <br>
                     <br><a href="#contenedor">INICIO</a>
                 </section>
                 <!-- fin practica  -->
+                    <br><a href="#contenedor">INICIO</a>
             </article>
         </main>
         <aside>
@@ -882,10 +992,12 @@ Crea una instalación vacio, incorpora <br>
 
                 <a href="#prac1">Colocación de objetos en robotstido.</a> <br>
                 <a href="#prac2">Crea un herramienta</a> <br>
+                <a href="#prac2a">Crea un WorkObject 2024</a> <br>
                 <a href="#prac3">Trayectoria</a> <br>
                 <a href="#prac4">Trayectoria con flexPendant</a> <br>
                 <a href="#prac5">RAPID</a> <br>
                 <a href="#prac6">TCP con flexpendant</a> <br>
+                 <a href="#prac6a">TCP con flexpendant 2024</a> <br>
                 <a href="#prac7">Crear una trayectoria con flexpendant</a> <br>
                 <a href="#prac8">Trayectoria N</a> <br>
                 <a href="#prac9">Programación con Flexpendant</a> <br>
