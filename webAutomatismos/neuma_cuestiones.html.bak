@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Neumatica</title>
+
+    <link href="../index_files/estilo.css" rel="stylesheet" type="text/css">
+    <script src="../index_files/menu.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <meta content="profesorfg" name="author">
+    <meta content="automatizacion industrial" name="description">
+    <meta name="keywords" content="automatas electricidad">
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    <div id="contenedor">
+
+        <header>
+            <nav>
+                <menu-principal></menu-principal>
+            </nav>
+
+        </header>
+
+        <main>
+
+            <h1>CUESTIONES</h1>
+           <br>
+            <!--   --------------------------   cuestiones  --------------------------  -->
+            <article class="articulo">
+
+
+                <section class="section_naranja">
+                    <h2>Protección de instalaciones</h2>
+
+                    <details>
+
+                        <summary> </summary>
+                        
+                        <ol>
+                            <li>Dibuja un circuito el&eacute;ctrico con una pila, una bombilla y un aparato que te mida la caida de tensi&oacute;n en la bombilla</li>
+                            <li>Dibuja un circuito el&eacute;ctrico con una pila, una bombilla y un aparato que te mida la intensidad que pasa por la bombilla</li>
+                            <li>Dibuja una red trifasica con neutro de 400V&nbsp; con los aparatos de medida para medir V1 tensi&oacute;n entre L1-L2, V2 tensi&oacute;n entre L1-L3, V3 tensi&oacute;n entre L2-L3, V4 tensi&oacute;n entre L1 y neutro, V5 Tensi&oacute;n entre L2 y neutro y V6 tensi&oacute;n entre L3 y neutro.</li>
+                            <li>En que unidades y con que aparato se mide
+                                <ul>
+                                    <li>La intensidad</li>
+                                    <li>Resistencia</li>
+                                    <li>Voltaje</li>
+                                </ul>
+                            </li>
+                            <li>Que es un cortocircuito y una sobrecarga.</li>
+                            <li>&iquest;A que llamamos intensidad nominal de una instalaci&oacute;n?</li>
+                            <li>Define que es una Sobrecarga</li>
+                            <li>Define Que es un cortocircuito</li>
+                            <li>&iquest;Qu&eacute; es un contacto indirecto, y porque se produce?</li>
+                            <li>&iquest; A que llamamos corriente de fuga?</li>
+                            <li>Como funciona un fusible.</li>
+                            <li>Diferencias entre&nbsp; una sobretensi&oacute;n transitoria y una sobretensi&oacute;n temporal.</li>
+                            <li>Cu&aacute;l es la funci&oacute;n del mecanismo percutor de un fusible.</li>
+                            <li>Dibuja la curva de fusi&oacute;n de un fusible, e indica la zona donde rompe y donde no rompe, Explica sobre la gr&aacute;fica el tiempo que aguanta el fusible sin romper durante una sobrecarga</li>
+                            <li>Dibuja el s&iacute;mbolo e identificador de: Fusible monopolar, Fusible bipolar, Fusible tripolar, Fusibles seccionador tripolar.</li>
+                            <li>Enumera y define las principales caracter&iacute;sticas de un fusible.</li>
+                            <li>Explica los principales tipos de fusible en referencia al principal uso al que ha sido dise&ntilde;ado.</li>
+                            <li>Dibuja el s&iacute;mbolo e identificador de Interruptor magnetot&eacute;rmico unipolar, Interruptor magnetot&eacute;rmico bipolar, Interruptor magnetot&eacute;rmico tripolar y Interruptor magnetot&eacute;rmico tetrapolar.</li>
+                            <li>Enumera y define las caracter&iacute;sticas de un magnetotermico.</li>
+                            <li>Dibuja la curva caracter&iacute;stica de un magnetotermico donde est&eacute; representado la tolerancia en el disparo e indica cual es la zona donde se activa la parte t&eacute;rmica, o la parte magn&eacute;tica.</li>
+                            <li>Contra que protege el interruptor diferencial.</li>
+                            <li>Ante un defecto de aislamiento c&oacute;mo reacciona ante un contacto inderecto:
+                                <ol>
+                                    <li>Una instalaci&oacute;n con toma de tierra,</li>
+                                    <li>Una instalaci&oacute;n con diferencial,</li>
+                                    <li>Una instalaci&oacute;n con toma de tierra y diferencial.</li>
+                                </ol>
+                            </li>
+                            <li>Explica la diferencia en el funcionamiento de una instalaci&oacute;n con diferencial y toma de tierra y otra instalaci&oacute;n con solo diferencial</li>
+                            <li>Dibuja el s&iacute;mbolo e identificador de un diferencial monof&aacute;sico y un diferencial tetraf&aacute;sico.</li>
+                            <li>Enumera y define las caracter&iacute;sticas de un diferencial</li>
+                            <li>Que es la sensibilidad de un diferencial.</li>
+                            <li>Define selectividad</li>
+                            <li>Que es el poder de corte de un interruptor autom&aacute;tico</li>
+                            <li>Define filiaci&oacute;n.</li>
+                            <li>Dibuja el s&iacute;mbolo de un Protector contra sobretensi&oacute;n monof&aacute;sico</li>
+                            <li>Completa.
+                                <ol>
+                                    <li>Los defectos por sobre intensidades son _________________________ y _______________________</li>
+                                    <li>La intensidad que circula durante un cortocircuito suponiendo que la resistencia del circuito es cero, es ________________________.</li>
+                                    <li>Una sobreintensidad es una intensidad superior a la _________________.Un defecto de aislamiento puede producir ___________________ y ________________________.</li>
+                                    <li>Las sobretensiones se pueden clasificar en dos tipos que son __________________ y _______________________</li>
+                                    <li>Las sobretensiones transitorias son producidas por __________________________ o por _____________________.</li>
+                                    <li>Las sobretensiones temporales o permanentes son producidas por __________________________.</li>
+                                    <li>Los fusibles son elementos de protecci&oacute;n de las instalaciones el&eacute;ctricas que se conectan en __________________ con el circuito que tienen que proteger.</li>
+                                    <li>Los principales tipos constructivos de fusibles son : ___________________, _______________ y _____________________.</li>
+                                    <li>Fusibles Diazed tambi&eacute;n denominados &laquo;fusibles botella&raquo; se fabrican para intensidades nominales entre _____________ y ______________.</li>
+                                    <li>El interruptor magnetot&eacute;rmico es un dispositivo de protecci&oacute;n contra corrientes de ________________ y ________________________.</li>
+                                    <li>Disparador magn&eacute;tico: act&uacute;a frente a las corrientes de_______________, y debido a que este tipo de corrientes son muy peligrosas, tiene que proporcionar un corte ________________.Disparador t&eacute;rmico: act&uacute;a frente a las corrientes de ____________________. El corte es m&aacute;s
+                                        <p>__________________.</p>
+                                    </li>
+                                    <li>Los dispositivos de protecci&oacute;n siempre se instalan en _______________ con la instalaci&oacute;n que se quiere proteger y con una uni&oacute;n a______________ lo m&aacute;s directa posible</li>
+                                </ol>
+                            </li>
+                            <li>Verdadero o falso
+                                <ol>
+                                    <li>Si por un circuito circula la intensidad nominal durante mucho tiempo los cables se queman.</li>
+                                    <li>Si por un circuito pasa 30 veces la intensidad nominal es porque se ha producido un cortocircuito.</li>
+                                    <li>En un cortocircuito la resistencia de la instalaci&oacute;n es muy peque&ntilde;a.</li>
+                                    <li>Una sobretensi&oacute;n transitoria dura unos pocos segundos.</li>
+                                    <li>Se considera una sobretensi&oacute;n temporal cuando la tensi&oacute;n excede un 10%.</li>
+                                    <li>Los fusibles protegen contra sobretensiones.</li>
+                                    <li>Los Fusibles de cuchillas o NH se fabrican para intensidades nominales de hasta 1250 A</li>
+                                    <li>El diferencial protege contra cortocircuitos.</li>
+                                    <li>Un fusible protege contra cortocircuitos.</li>
+                                    <li>Un magnetotermico protege contra sobretensiones.</li>
+                                    <li>El objetivo del dispositivo de protecci&oacute;n es conseguir que la tensi&oacute;n en sus extremos sea siempre menor que la m&aacute;xima admisible para los equipos que tiene que proteger.</li>
+                                    <li>Con un solo dispositivo de protector contra sobretensiones es capaz de proteger a todos los equipos sensibles conectados a la instalaci&oacute;n.</li>
+                                    <li>El valor de la resistencia de un cable es 0 ohmnios.</li>
+                                    <li>Si mido continuidad en un circuito abierto, el polimetro marca un valor raro (que significa infinito).</li>
+                                    <li>Un fusible proteje contra sobretensiones.</li>
+                                    <li>Un diferencial de baja sensibilidad se utiliza en vivienda.</li>
+                                    <li>Un diferencial proteje contra cortocircuitos</li>
+                                    <li>Un diferencial proteje contra sobrecargas</li>
+                                    <li>Un diferencial proteje contra defectos de aislamiento</li>
+                                    <li>El disparador t&eacute;rmico de un magnetot&eacute;rmico proteje contra cortocircuitos</li>
+                                    <li>Un magnetot&eacute;rmico proteje contra sobrecargas</li>
+                                    <li>Un magnetot&eacute;rmico proteje contra defectos de aislamiento.</li>
+                                </ol>
+                            </li>
+                            <li>En la curva de fusibles reperesentada en el libro en la p&aacute;gina 80
+                                <ul>
+                                    <li>Cuanto tiempo tarda en rompense un fusible de calibre 3A si por el circulan 8A. (pon el tiempo y dibuja las lineas sobre la tabla)</li>
+                                    <li>Se rompera un fusible de calibre 2A que protege un motor con una intensidad nominal de 1,5A si durante el arranque consume una intensidad de 4 I<sub>n</sub>&nbsp;durante 3 segundos. (dibuja las lineas sobre la tabla y razona tu respuesta</li>
+                                </ul>
+                            </li>
+                            <li>Dibuja el s&iacute;mbolo con el identificador de:( no se te olvide poner los numeros de los bones)
+                                <ul>
+                                    <li>Magnetot&eacute;rmico unipolar.</li>
+                                    <li>Magnetot&eacute;rmico bipolar.</li>
+                                    <li>Magnetot&eacute;rmico tripolar.</li>
+                                    <li>Diferencial bipolar.</li>
+                                    <li>Diferencial tetrapolar.</li>
+                                    <li>Fusible.</li>
+                                </ul>
+                            </li>
+                        </ol>
+                         <input class="boton" type="button" value="cerrar todas las cuestiones" onClick="location.reload();">
+                    </details>
+                </section>
+
+            </article>
+            <br>
+<h1>EJERCICIOS DE ESQUEMAS</h1>
+            <!--   --------------------------   practica  -------------------------- --> 
+            <article class="articulo">
+
+
+                <section class="section_naranja">
+                    <h2>Marcha - Paro</h2>
+
+                    <details>
+                        <summary> </summary>
+                        <p></p>
+                        <input class="boton" type="button" value="cerrar todas las cuestiones" onClick="location.reload();">
+                    </details>
+                </section>
+            </article>
+   
+           <!-- -------------------fin de práctica  ------------------------------------  -->
+
+        <!--   --------------------------   practica  -------------------------- --> 
+            <article class="articulo">
+
+
+                <section class="section_naranja">
+                    <h2>Marcha  - Paro  con protección con magnetotérmico y fuente de alimentación.</h2>
+
+                    <details>
+                        <summary> </summary>
+                        <p></p>
+                        <input class="boton" type="button" value="cerrar todas las cuestiones" onClick="location.reload();">
+                    </details>
+                </section>
+            </article>
+   
+           <!-- -------------------fin de práctica  ------------------------------------  --> <!--   --------------------------   practica  -------------------------- --> 
+            <article class="articulo">
+
+
+                <section class="section_naranja">
+                    <h2>Marcha desde dos sitios distintos- Paro desde dos sitios distintos</h2>
+
+                    <details>
+                        <summary> </summary>
+                        <p></p>
+                        <input class="boton" type="button" value="cerrar todas las cuestiones" onClick="location.reload();">
+                    </details>
+                </section>
+            </article>
+   
+           <!-- -------------------fin de práctica  ------------------------------------  --> 
+           
+           <!--   --------------------------   practica  -------------------------- --> 
+            <article class="articulo">
+
+
+                <section class="section_naranja">
+                    <h2>Marcha - Paro, marcha desde un pulsador, paro desde dos pulsadores a la vez</h2>
+
+                    <details>
+                        <summary> </summary>
+                        <p></p>
+                        <input class="boton" type="button" value="cerrar todas las cuestiones" onClick="location.reload();">
+                    </details>
+                </section>
+            </article>
+   
+           <!-- -------------------fin de práctica  ------------------------------------  --> 
+           
+           <!--   --------------------------   practica  -------------------------- --> 
+            <article class="articulo">
+
+
+                <section class="section_naranja">
+                    <h2>Marcha desde dos pulsadores a la vez- Paro de un pulsador</h2>
+
+                    <details>
+                        <summary> </summary>
+                        <p></p>
+                        <input class="boton" type="button" value="cerrar todas las cuestiones" onClick="location.reload();">
+                    </details>
+                </section>
+            </article>
+   
+           <!-- -------------------fin de práctica  ------------------------------------  -->  <!--   --------------------------   practica  -------------------------- --> 
+            <article class="articulo">
+
+
+                <section class="section_naranja">
+                    <h2>Marcha - Paro de dos contactores con enclavamiento eléctrico</h2>
+
+                    <details>
+                        <summary> </summary>
+                        <p></p>
+                        <input class="boton" type="button" value="cerrar todas las cuestiones" onClick="location.reload();">
+                    </details>
+                </section>
+            </article>
+   
+           <!-- -------------------fin de práctica  ------------------------------------  --> <!--   --------------------------   practica  -------------------------- --> 
+            <article class="articulo">
+
+
+                <section class="section_naranja">
+                    <h2>Marcha - Paro de dos contactores, en el que el segundo contactor no funciona si no esta funcionando el primero</h2>
+
+                    <details>
+                        <summary> </summary>
+                        <p></p>
+                        <input class="boton" type="button" value="cerrar todas las cuestiones" onClick="location.reload();">
+                    </details>
+                </section>
+            </article>
+   
+           <!-- -------------------fin de práctica  ------------------------------------  --> <!--   --------------------------   practica  -------------------------- --> 
+            <article class="articulo">
+
+
+                <section class="section_naranja">
+                    <h2>Marcha - Paro de dos contactores, en el que para poner en marcha el segundo contactor debe de estar funcionando el primero</h2>
+
+                    <details>
+                        <summary> </summary>
+                        <p></p>
+                        <input class="boton" type="button" value="cerrar todas las cuestiones" onClick="location.reload();">
+                    </details>
+                </section>
+            </article>
+   
+           <!-- -------------------fin de práctica  ------------------------------------  --> <!--   --------------------------   practica  -------------------------- --> 
+            <article class="articulo">
+
+
+                <section class="section_naranja">
+                    <h2>Bimanual, puesta en marcha de un contactor pulsando, dos pulsadores a la vez, con una diferencia como máximo de tiempo de 0.5s, el paro con un pulsador.</h2>
+
+                    <details>
+                        <summary> </summary>
+                        <p></p>
+                        <input class="boton" type="button" value="cerrar todas las cuestiones" onClick="location.reload();">
+                    </details>
+                </section>
+            </article>
+   
+           <!-- -------------------fin de práctica  ------------------------------------  -->   <!--   --------------------------   practica  -------------------------- --> 
+            <article class="articulo">
+
+
+                <section class="section_naranja">
+                    <h2>Marcha - Paro de un contactor, y un piloto que se encienden 5 segundos después de activarse el contactor</h2>
+
+                    <details>
+                        <summary> </summary>
+                        <p></p>
+                        <input class="boton" type="button" value="cerrar todas las cuestiones" onClick="location.reload();">
+                    </details>
+                </section>
+            </article>
+   
+           <!-- -------------------fin de práctica  ------------------------------------  -->
+       
+        <!--   --------------------------   practica  -------------------------- --> 
+            <article class="articulo">
+
+
+                <section class="section_naranja">
+                    <h2>Un piloto intermitente, con una frecuencia de 1 segundo</h2>
+
+                    <details>
+                        <summary> </summary>
+                        <p></p>
+                        <input class="boton" type="button" value="cerrar todas las cuestiones" onClick="location.reload();">
+                    </details>
+                </section>
+            </article>
+   
+           <!-- -------------------fin de práctica  ------------------------------------  --> <!--   --------------------------   practica  -------------------------- --> 
+            <article class="articulo">
+
+
+                <section class="section_naranja">
+                    <h2>Marcha - Paro de un contactor, y un piloto que se enciende con el contactor y permanece 5 segundos más después de desactivarse el contactor</h2>
+
+                    <details>
+                        <summary> </summary>
+                        <p></p>
+                        <input class="boton" type="button" value="cerrar todas las cuestiones" onClick="location.reload();">
+                    </details>
+                </section>
+            </article>
+   
+           <!-- -------------------fin de práctica  ------------------------------------  --> <!--   --------------------------   practica  -------------------------- --> 
+            <article class="articulo">
+
+
+                <section class="section_naranja">
+                    <h2>Marcha - Paro de dos contactores y un tercer contactor que esta activado si el contactor 1 o el contactor 2 estan activados.</h2>
+
+                    <details>
+                        <summary> </summary>
+                        <p></p>
+                        <input class="boton" type="button" value="cerrar todas las cuestiones" onClick="location.reload();">
+                    </details>
+                </section>
+            </article>
+   
+           <!-- -------------------fin de práctica  ------------------------------------  --> <!--   --------------------------   practica  -------------------------- --> 
+            <article class="articulo">
+
+
+                <section class="section_naranja">
+                    <h2>Función pulso, al pulsar marcha, se activa el contactor durante 10 segundos, pasado ese tiempo se para.</h2>
+
+                    <details>
+                        <summary> </summary>
+                        <p></p>
+                        <input class="boton" type="button" value="cerrar todas las cuestiones" onClick="location.reload();">
+                    </details>
+                </section>
+            </article>
+   
+           <!-- -------------------fin de práctica  ------------------------------------  --> 
+       
+       
+       
+       
+       
+        </main>
+        <aside>
+            <section class="enlaces-titulo">
+                <h2>NEUMÁTICA</h2>
+            </section>
+            <section class="enlaces-navegacion">
+
+                <ul>
+                    <ul>
+                    <!--       <li><a href="cableados.html">Control de motores 1</a></li>
+                     <li><a href="cableados1.html">Control de motores 2</a></li>
+                        <li><a href="cableados_practicas.html">Prácticas</a></li>
+                        <li><a href="cableados_ejercicios.html">Ejercicios</a></li>
+                        <li><a href="cableados_material.html">Material</a></li> <li><a href="cableados_cuestiones.html">Cuestiones</a></li> <li><a href="cableados_teoria.html">Teoría</a></li>   -->
+                    </ul>
+
+                </ul>
+            </section>
+            <br>
+            <section class="section_naranja">
+                 <input class="boton" type="button" value="cerrar todas las cuestiones" onClick="location.reload();">
+                
+            </section>
+        </aside>
+
+        <footer>Presión utilizada en instalaciones neumaticas 6 Bares</footer>
+
+    </div>
+
+</body>
+
+</html>
