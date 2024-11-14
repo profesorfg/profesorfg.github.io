@@ -494,9 +494,46 @@ width: min(1000px, 100%);
 }
  */
 
+/* ------------------  details----------------------------*/
+
+/*  https://www.silocreativo.com/details-summary-elementos-desplegables-ocultos-html/  */
+
+/* ------------------  details----------------------------*/
+.detalles{
+}
+
+.detalles[open] {
+  background: #ddd; 
+}
+
+.detallescard{
+    max-width: 200px;
+    min-height: 200px;
+    margin: 5px;
+}
+
+.detallescard[open] {
+  background: #ddd; 
+    max-width: 100%;
+     background: #222; 
+    color:white;
+    padding: 4px;
+    border-radius: 8px;
+    border-color: greenyellow;
+}
 
 
+.sumario{
+      list-style: none;
+    
+}
 
+.puntero{
+      cursor: pointer;
+      background: #bbb;
+     padding: 4px;
+     border-radius: 8px;
+}
 
 
 
