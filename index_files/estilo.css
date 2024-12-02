@@ -389,7 +389,7 @@ width: min(1000px, 100%);
 .centrar{  text-align: center;}
 .derecha{text-align: end;}
 
-/* -----------------------classes particulares ------------------------------------------*/
+/* -----------------------clases particulares ------------------------------------------*/
 
 .azul_negrita {
     color: #00f;
@@ -432,6 +432,22 @@ width: min(1000px, 100%);
     list-style: circle;
     padding-left:50px;
 }
+/* ----------------------------- listas-  remarcar alternativamente------------*/
+/*---  https://developer.mozilla.org/es/docs/Web/CSS/:nth-child------------------*/
+/* ------------------------------------------------------------------------------*/
+
+
+.lista0 li:nth-child(odd){/*odd impares   even par*/
+	background: #bfbfbf;
+	
+}
+
+.marcar_impares a:nth-child(even){
+    	background: #bbb;
+    
+}
+
+
 
 
 /* ----------------------- imagenes  ------------------------------------------*/
@@ -773,8 +789,21 @@ width: min(1000px, 100%);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     text-align: left;
     width: 150px;
+    height: 150px;
+}
+
+
+/* .card_vertical {
+    background-color: #ffddaa;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    width: 150px;
     height: 210px;
 }
+ */
+
 
 .card_icono {
 
