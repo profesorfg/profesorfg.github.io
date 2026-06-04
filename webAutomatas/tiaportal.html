@@ -95,7 +95,7 @@
 
 
             <article class="articulo article_flex_contenedor1">
-                <!--  ------------------     otra práctica 1 ----------------------------- -->
+                <!--  ------------------  Virtual box    ----------------------------- -->
 
 
 
@@ -138,7 +138,7 @@
 
 
 
-                <!--      ------------------     otra práctica 1-2 --------------------------- -->
+                <!--      ------------------     Cambiar la IP del ordenador --------------------------- -->
 
 
 
@@ -264,7 +264,7 @@
 
 
 
-                <!--  ------------------     otra práctica  2----------------------------- -->
+                <!--  ------------------     Iniciar un proyecto----------------------------- -->
 
 
                 <details class="detallescard">
@@ -368,7 +368,7 @@
 
 
 
-                <!--  ------------------     otra práctica  3----------------------------- -->
+                <!--  ------------------     IP Autómata 1200----------------------------- -->
                 <details class="detallescard">
                     <summary class="sumario">
                         <h2 class="puntero"> IP Autómata 1200</h2>
@@ -417,7 +417,7 @@
 
 
 
-                <!--  ------------------     otra práctica 4 ----------------------------- -->
+                <!--  ------------------     Guardar un programa ----------------------------- -->
                 <details class="detallescard">
                     <summary class="sumario">
                         <h2 class="puntero"> Guardar un programa</h2>
@@ -447,7 +447,7 @@
 
 
 
-                <!--      ------------------     otra práctica  --------------------------- -->
+                <!--      ------------------     PLC Sim  --------------------------- -->
 
 
                 <details class="detallescard">
@@ -529,7 +529,7 @@
                     <input class="boton" type="button" value="cerrar todas las cuestiones" onClick="location.reload();">
                 </details>
 
-                <!--      ------------------     otra práctica  ----------------------------- -->
+                <!--      ------------------     IO Factory ----------------------------- -->
 
 
                 <details class="detallescard">
@@ -538,7 +538,15 @@
 
                     </summary>
                     <h3>PREPARACIÓN TIA PORTAL</h3>
-
+                     <p>Preparamos el autómata para que pueda simular las entradas en factory IO</p>
+                    <p>En configuración del disposito</p>
+<p>botón derecho sobre el autómata -> propiedades</p>
+                    <p>En la pestaña general</p>
+                    <p>DI / DO-> direcciones entradas y salidas-> direcciones de entradas "memoria imagen de proceso" cambiarlo a <span>NONE</span></p>
+                     <img class="imagen1" alt="Factory IO" title="Factory IO" src="imagenes/teoria_factoryIO00.png">
+                    
+                    
+<h3>Template de Comunicación tia portal - factoryIO</h3>
                     <p>Descargar la plantilla template de Factory IO para plc sim</p>
                     <p>Abrimos TIA portal y cargamos el proyecto template</p>
                     <p>Al cargar el proyecto template, inserta un autómata 1200, se crea un nuevo bloque, y en la primera linea del OB1 hace una llamada a un bloque, en ese bloque esta toda la programación para la comunicación con Factory IO.</p>
@@ -551,7 +559,7 @@
                     <p>Realizamos un programa "marcha paro de una cinta transportadora", que consiste en un pulsador<strong>marcha</strong> (pulsador NA conectado a I0.0) <strong>un pulsador paro</strong> (pulsador de paro NC conectado a I0,1) y una cinta transportadora con un motor controlado por la salida Q0.0</p>
                     <p>Iniciamos simulación con PLC Sim</p>
                     <p>ya tenemos preparado el TIA PORTAL</p>
-                    <h3>Instalar plantilla en nuestro proyecto</h3>
+                    <h3>INSTALAR TEMPLATE EN UN PROYECTO CREADO</h3>
                      
                      <p>Abrir el proyecto 2 "FactoryIO_Template_S7-1200_V15_V16.ap16" y actulizar o una plantilla actualizada a la versión 19.</p>
                       <img class="imagen1" alt="" title="plantilla instalada" src="imagenes/teoria_factoryIO20.png">
@@ -579,6 +587,7 @@
                     
                     
                     <h3>FACTORY IO</h3>
+                   
                     <p>Abrimos FACTORY IO</p>
                     <P>Vamos a crear una escena con una cinta transportadora, una caja, un cofre en el que colocamos un pulsador verde y otro rojo </P>
                     <P>Los objetos necesarios se arrastran desde el menú de la derecha, y para colocarlos, nos colocamos sobre el objeto, click botón derecho y nos aparecen unas opciones, entre la que destaco que con la tecla v pulsada puedo desplazar el objeto verticalmente</P>
