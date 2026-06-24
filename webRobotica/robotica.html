@@ -139,60 +139,7 @@
                 </section>
                 <!-- fin practica  -->
                 
-               <!--   <a name="prac10"></a> -->
-                     <p class="lineas3" id="prac10"></p> 
-                <!-- ******************************************* inicio practica  ****************************4 Taladros en un cubo 2024******  -->
               
-             <!-- <a name="prac10a"></a> -->
-              <p class="lineas3" id="prac10a"></p>
-               
-                <section class="section_naranja">
-
-                    <details class="detalles">
-                        <summary class="sumario">
-                            <h2 class="puntero"> 4 Taladros en un cubo 2024</h2>
-                        </summary>
-                       <p>Crea un tetraedro de longitud 300mm, anchura 400mm y altura 200mm, trasládalo a una distancia de 450mm en dirección X de la base de robot, crea 4 orificios pasantes de 12mm de diámetro a un distancia de 20mm de los bordes. llama a la figura creada guía.<a href="libreria/guia.rslib" download>Descargar la figura Base</a></p>
-                       
-                       <p>Crea otro tetraedro de 320mm, anchura 420mm y altura 175mm, y sitúalo de forma que sobresalga 10mm por los lados. Llama a la figura objetivo, desplazamiento de 460 mm en dirección X <a href="libreria/objetivo.rslib" download>Descargar la figura objetivo</a></p>
-                        <img class="imagen" src="imagen/act_taladro.png" alt="
-                        taladro"><br>
-                       
-                       
-                       
-                       
-                       <p>Crea un programa que vaya de la posición inicial, entre en un orificio toque la figura objetivo durante 2 segundos sin tocar la figura guía,  salga y vuelva a hacer la misma operación en los tres orificios restantes, vuelve a la posición inicial y desde esta posición en 5 segundos toque el centro de la figura guía sin tocar la figura objetivo.</p>
-                       <ul>Nota: 
-                           <li>Velocidad de robot 200mm/s</li>
-                           <li><del>Todos los puntos salvo el inicial deben de estar referenciados a un workobject llamado WO_objetivo situado en la esquina inferior derecha de la figura objetivo desde el punto de vista del robot.</del></li>
-                           <li>A producirse una colisión deben de cambiar de color las piezas que colisionan</li>
-                           <li> <img class="imagen" src="imagen/act_taladro_.colision.png" alt="
-                        taladro"><br></li>
-                       </ul>
-                       <p>Debes de enviar un video de la simulación, el programa rapid (module1 y calibdata) y el archivo pack and go</p>
-                       
-                       
-                       
-                       
-                        <h3> Ejemplo resuelto realizado Mario Sobradillo</h3>
-                        <a href="https://youtu.be/JywKWJin7Jg" target="_blank">  4 taladros en un cubo</a> <br>
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/JywKWJin7Jg?si=12DzbaqSTOFGg0Fy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                        
-                         <h3> Ejemplo resuelto realizado Mario Sobradillo</h3>
-                        <a href="https://youtu.be/JywKWJin7Jg" target="_blank">  4 taladros en un cubo</a> <br>
-                        
-                         <h3> Ejemplo resuelto realizado Sergio Sanchez</h3>
-                        <a href="https://youtu.be/nYbxppdN0aI" target="_blank">  4 taladros en un cubo</a> <br>
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/nYbxppdN0aI?si=SF_TqIHE1sAkxGvZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                        
-                        
-                        
-                        
-                        
-                        <br><a href="#contenedor">INICIO</a>
-                    </details>
-                </section>
-                <!-- fin practica   -->
                 
                 
                 <!-- ******************************************* inicio practica  crea una herramienta********************************** -->
@@ -203,7 +150,7 @@
                     <details class="detalles">
                         <summary class="sumario">
                             <h2 class="puntero">
-                                Crea una herramienta</h2>
+                                Crea una herramienta REHACER</h2>
                         </summary>
                         Dibuja un tetraedro de longitud 200 anchura 400 altura 50<br>
 
@@ -241,63 +188,7 @@
 
 
 
-                <!-- *************** inicio practica  ****CAJA 2025****************** -->
-                <section class="section_naranja">
-
-
- <p class="lineas3" id="pracWO2025"></p>   <!-- <a name="pracWO2025"></a> -->
-                    <details class="detalles">
-                        <summary class="sumario">
-                            <h2 class="puntero">Caja 2025</h2>
-                        </summary>
-<p>Crear un workobject caja con centro en origen de coordenadas<br>
-                      Creamos los puntos con orientaci&oacute;n en eje y 180 y z 90 (no estoy seguro si 90 o -90)<br>
-                      
-                      <a href="libreria/Cubo_medidas.svg" target="_blank"> Coordenadas de la trayectoria </a>
-                      <p>
-                      Duplicamos los puntos 1,2,3,4 y 8 con un offset de 20mm respecto mundo<br>Creamos el punto home respecto workobject 0</p><br>
-                      Creamos la ruta. Bajamos velocidad a 200, fine a los puntos cr&iacute;ticos, convertimos el movimiento lineal a circular para crear nuestra curva
-                         <br> <img class="imagen" src="imagen/pract_caja_ConvertiraMovimientoCiruclar.png" alt="workobject"><br>
-                      
-                      <br>
-                      <a href="libreria/Cubo_Fabio.zip" download> Importamos la caja de fabio</a>
-                     <br>
-                      Ponemos su origen local en &nbsp;nuestro (0,0)<br>
-                       <br> <img class="imagen" src="imagen/pract_caja_modificarOrigenSistCoordenadas.png" alt="workobject">
-                       
-                         <br> <img class="imagen" src="imagen/pract_caja_OrigenCaja.png" alt="workobject"><br>
-                       
-                       <br>
-                       
-                       
-                      
-                      
-                     <p> Conectar workobjectcaja con la caja. ( ahora cuando mueva la caja, muevo el woorkobject)<br>Ponemos la caja con f&iacute;sica comportamiento din&aacute;mico (no muy importante)</p>
-                      <img class="imagen" src="imagen/pract_caja_ConectarWOconCaja.png" alt="workobject">
-                      
-                      <br>  <p>Creo un soporte (400,400,200) posici&oacute;n (200, -200, 0) con f&iacute;sica comportamiento anclado<br>Fijo la posici&oacute;n de la caja en &nbsp;(300, -145/2=-72,5, 300) rotada 90&ordm; respecto Z<br>Crear una colisi&oacute;n entre la caja y tool<br>Crear una ruta main<br>Sincronizar con rapid<br>Ocultar trayectoria y marca TCP</p>
-                       
-
-                     
-                        
-
-
-                        <a href="https://youtu.be/FwL-7gO1Imk" target="_blank">Funcionamiento de la práctica</a>
-                        
-                        
-                         <div class=videos-youtube>
-                            <iframe src="https://www.youtube.com/embed/FwL-7gO1Imk?si=OaC_z5WsiCMJVwXD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                        </div>
-                       
-                       
-                     
-                       
-                       
-                      
-                        <br><a href="#contenedor">INICIO</a>
-                    </details>
-                </section>
-                <!-- fin practica  -->
+               
                 
                 
                 
@@ -513,9 +404,119 @@
                 </section>
                 <!-- fin practica  -->
 
+ <!--   <a name="prac10"></a> -->
+                     <p class="lineas3" id="prac10"></p> 
+                <!-- ******************************************* inicio practica  ****************************4 Taladros en un cubo 2024******  -->
+              
+             <!-- <a name="prac10a"></a> -->
+              <p class="lineas3" id="prac10a"></p>
+               
+                <section class="section_naranja">
 
+                    <details class="detalles">
+                        <summary class="sumario">
+                            <h2 class="puntero"> 4 Taladros en un cubo 2024</h2>
+                        </summary>
+                       <p>Crea un tetraedro de longitud 300mm, anchura 400mm y altura 200mm, trasládalo a una distancia de 450mm en dirección X de la base de robot, crea 4 orificios pasantes de 12mm de diámetro a un distancia de 20mm de los bordes. llama a la figura creada guía.<a href="libreria/guia.rslib" download>Descargar la figura Base</a></p>
+                       
+                       <p>Crea otro tetraedro de 320mm, anchura 420mm y altura 175mm, y sitúalo de forma que sobresalga 10mm por los lados. Llama a la figura objetivo, desplazamiento de 460 mm en dirección X <a href="libreria/objetivo.rslib" download>Descargar la figura objetivo</a></p>
+                        <img class="imagen" src="imagen/act_taladro.png" alt="
+                        taladro"><br>
+                       
+                       
+                       
+                       
+                       <p>Crea un programa que vaya de la posición inicial, entre en un orificio toque la figura objetivo durante 2 segundos sin tocar la figura guía,  salga y vuelva a hacer la misma operación en los tres orificios restantes, vuelve a la posición inicial y desde esta posición en 5 segundos toque el centro de la figura guía sin tocar la figura objetivo.</p>
+                       <ul>Nota: 
+                           <li>Velocidad de robot 200mm/s</li>
+                           <li><del>Todos los puntos salvo el inicial deben de estar referenciados a un workobject llamado WO_objetivo situado en la esquina inferior derecha de la figura objetivo desde el punto de vista del robot.</del></li>
+                           <li>A producirse una colisión deben de cambiar de color las piezas que colisionan</li>
+                           <li> <img class="imagen" src="imagen/act_taladro_.colision.png" alt="
+                        taladro"><br></li>
+                       </ul>
+                       <p>Debes de enviar un video de la simulación, el programa rapid (module1 y calibdata) y el archivo pack and go</p>
+                       
+                       
+                       
+                       
+                        <h3> Ejemplo resuelto realizado Mario Sobradillo</h3>
+                        <a href="https://youtu.be/JywKWJin7Jg" target="_blank">  4 taladros en un cubo</a> <br>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/JywKWJin7Jg?si=12DzbaqSTOFGg0Fy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        
+                         <h3> Ejemplo resuelto realizado Mario Sobradillo</h3>
+                        <a href="https://youtu.be/JywKWJin7Jg" target="_blank">  4 taladros en un cubo</a> <br>
+                        
+                         <h3> Ejemplo resuelto realizado Sergio Sanchez</h3>
+                        <a href="https://youtu.be/nYbxppdN0aI" target="_blank">  4 taladros en un cubo</a> <br>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/nYbxppdN0aI?si=SF_TqIHE1sAkxGvZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        
+                        
+                        
+                        
+                        
+                        <br><a href="#contenedor">INICIO</a>
+                    </details>
+                </section>
+                <!-- fin practica   -->
                 
+ <!-- *************** inicio practica  ****CAJA 2025****************** -->
+                <section class="section_naranja">
 
+
+ <p class="lineas3" id="pracWO2025"></p>   <!-- <a name="pracWO2025"></a> -->
+                    <details class="detalles">
+                        <summary class="sumario">
+                            <h2 class="puntero">Caja 2025</h2>
+                        </summary>
+<p>Crear un workobject caja con centro en origen de coordenadas<br>
+                      Creamos los puntos con orientaci&oacute;n en eje y 180 y z 90 (no estoy seguro si 90 o -90)<br>
+                      
+                      <a href="libreria/Cubo_medidas.svg" target="_blank"> Coordenadas de la trayectoria </a>
+                      <p>
+                      Duplicamos los puntos 1,2,3,4 y 8 con un offset de 20mm respecto mundo<br>Creamos el punto home respecto workobject 0</p><br>
+                      Creamos la ruta. Bajamos velocidad a 200, fine a los puntos cr&iacute;ticos, convertimos el movimiento lineal a circular para crear nuestra curva
+                         <br> <img class="imagen" src="imagen/pract_caja_ConvertiraMovimientoCiruclar.png" alt="workobject"><br>
+                      
+                      <br>
+                      <a href="libreria/Cubo_Fabio.zip" download> Importamos la caja de fabio</a>
+                     <br>
+                      Ponemos su origen local en &nbsp;nuestro (0,0)<br>
+                       <br> <img class="imagen" src="imagen/pract_caja_modificarOrigenSistCoordenadas.png" alt="workobject">
+                       
+                         <br> <img class="imagen" src="imagen/pract_caja_OrigenCaja.png" alt="workobject"><br>
+                       
+                       <br>
+                       
+                       
+                      
+                      
+                     <p> Conectar workobjectcaja con la caja. ( ahora cuando mueva la caja, muevo el woorkobject)<br>Ponemos la caja con f&iacute;sica comportamiento din&aacute;mico (no muy importante)</p>
+                      <img class="imagen" src="imagen/pract_caja_ConectarWOconCaja.png" alt="workobject">
+                      
+                      <br>  <p>Creo un soporte (400,400,200) posici&oacute;n (200, -200, 0) con f&iacute;sica comportamiento anclado<br>Fijo la posici&oacute;n de la caja en &nbsp;(300, -145/2=-72,5, 300) rotada 90&ordm; respecto Z<br>Crear una colisi&oacute;n entre la caja y tool<br>Crear una ruta main<br>Sincronizar con rapid<br>Ocultar trayectoria y marca TCP</p>
+                       
+
+                     
+                        
+
+
+                        <a href="https://youtu.be/FwL-7gO1Imk" target="_blank">Funcionamiento de la práctica</a>
+                        
+                        
+                         <div class=videos-youtube>
+                            <iframe src="https://www.youtube.com/embed/FwL-7gO1Imk?si=OaC_z5WsiCMJVwXD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        </div>
+                       
+                       
+                     
+                       
+                       
+                      
+                        <br><a href="#contenedor">INICIO</a>
+                    </details>
+                </section>
+                <!-- fin practica  -->
+                <!-- fin practica  -->
 
 
 
@@ -981,185 +982,7 @@
                 
                 
                 
-                <!-- ************ inicio practica  *****SMART COMPONENT, Paletizado yogures 2026 *****  -->
-             
-
               
-              
-                
-                       
-                       
-                       
-                 <section class="section_naranja">
-                    <details class="detalles">
-                        <summary class="sumario">
-                                 <h2 class="puntero">SMART COMPONENT, Paletizado yogures 2026 </h2>
-                        </summary>   
-                        <h3 class="azul_negrita">EJEMPLO1</h3>    
-                       
-                       <p>Ponemos el selector en <strong>ON</strong>.</p> <p> El robot recoge un yogur, lo transporta, vuelve a recoger otro y lo coloca encima del anterior. Repite este proceso sucesivamente mientras el selector permanezca en <strong>ON</strong>. </p> <p>Al poner el selector en <strong>OFF</strong>, el robot se detiene en su posición inicial.</p> <p> Cuando volvamos a poner el selector en <strong>ON</strong>, el robot reiniciará el proceso y comenzará a apilar los yogures desde cero. </p>
-                       
-                       
-                      
-                           	
-                       
-                       
-                       
-                 
-                     <br>
-                     <iframe width="560" height="315" src="https://www.youtube.com/embed/6z3whpAv7xo?si=JTF6AObRkGxqt5pV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                     <H3 class="azul_negrita">PALET</H3>
-                    
-                            <a class="fondo_verde" href="../soluciones/packANGgo/palet_sin_programacion" download="palet.rspag"> Descarga el pack and go</a>
-                            <H3>FUNCIONAMIENTO</H3>
-                    <p>Se activa la luz verde. DO_0 a 0</p>
-
-<p>Aparece el siguiente mensaje en la FlexPendant solicitando que escribas un número entre 1 y 3, indicando cuántos yogures quieres apilar.</p>
-
-<p>Si el número introducido no está entre 1 y 3, aparece en la FlexPendant el siguiente mensaje de error durante 2 segundos:</p>
-<p><em>"El número no está entre 1 y 3"</em></p>
-<p>Después del mensaje, vuelve a preguntar cuántos yogures quieres apilar.</p>
-
-<p>Si el número introducido está entre 1 y 3, la luz se pone roja (DO_0 a 1)y el robot apila la cantidad de yogures solicitada.</p>
-
-<p>Al terminar, el robot vuelve a la posición inicial y el ciclo se repite.</p>
-
-                     
-                     
-                         <br>
-                     <iframe width="560" height="315" src="https://www.youtube.com/embed/8zvL0Rn9qX8?si=zz0LqYJdp8qc28AK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                     <h3> SMARTCOMPONENT</h3>
-                     <P>LÓGICA DE LA ESTACIÓN</P>
-                     
-        <img class="imagen" src="imagen/PALETlogicaestacion.png" alt="Smart component apilar"><br>
-                     <p>Baliza</p>
-                      <img class="imagen" src="imagen/PALETbaliza.png" alt="Smart component apilar"><br>
-                       
-                          <p>Yogures</p>
-                      <img class="imagen" src="imagen/PALETyogures.png" alt="Smart component apilar"><br>
-                       
-                      
-                     
-                     
-                   <div>
-                              <br>
-                              <br>
-                              <script language="javascript=" type="text/javascript" src="../index_files/acceder.js"></script>
-                        </div> 
-                        
-                        
-                        
-                 
-                                                            
-                                         
-                                 
-                  
-                </details>
-                </section>
-                                
-
-                
-                <!-- fin practica    -->
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                <a name="prac16"></a>
-                <!-- ******************************************* inicio practica  **********************************   -->
-               
-
-
-
-                <section class="section_naranja">
-                    <details class="detalles">
-                        <summary class="sumario">
-                                 <h2 class="puntero">SMART COMPONENT, Paletizado Cajas 20026</h2>
-                        </summary>       
-                       
-                       
-                       <iframe width="560" height="315" src="https://www.youtube.com/embed/7UJ4pjRyKaY?si=c89fA9o91hMF4ZJW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                       
-                       
-                       
-                       
-                       
-                 
-                     <br>
-                  
-                     al poner en marcha
-                     la baliza se pone en verde
-                     con la baliza en verde puedo colocar una caja ( en la simulación pulsar sobre caja)
-                     pasado 3 segundos de que la baliza este verde el robot se pone en marcha y se dirige hacia la caja, 
-                     si hay caja se activa el vacuostato y la coloca a la derecha
-                     va a origen la baliza se pone en verde y podemos sacar otra caja pasado 3 segundos va a buscar la caja y la pone encima de la anterior
-                     se repite el proceso con una tercera caja
-                     la 4 caja la colaca al lado
-                     la 5 y la 6 encima de la caja
-                      y la 7 caja la coloca en la posición inicial
-                      
-                      si quitamos marcha el robot se queda parado en posicion de inicio
-                      si al buscar caja no hay el robot vuelve a posicion de inicio, pone la baliza en verde y vuelve a buscar la caja, si la encuentra la coloca en la primera posicion
-                      
-                    
-                    
-                   <!--  <img class="imagen" src="imagen/tem_apilar01.png" alt="Smart component apilar"><br>
-                          <img class="imagen" src="imagen/tem_apilar01a.png" alt="Smart component apilar"><br>
-                           <p>En colisión hay una distacia de 66mm que es la altura del vaso, osea la distancia del tcp de la ventosa a la base del cilindro. con distancias inferiores no se activaba</p>
-                       <img class="imagen" src="imagen/tem_apilar02.png" alt="Smart component apilar"><br>
-                        
-                           <img class="imagen" src="imagen/tem_apilar03.png" alt="Smart component apilar"><br>
-                           
-                          <section class="section_naranja txt centrar">
-                            <a class="fondo_verde" href="packANGgo/apilar_yogur.rspag" download="apilar_yogur.rspag"> Descarga el programa</a>
-                           
-                            <iframe src="txt/apilar/CalibData.txt" frameborder="0"></iframe> 
-                    </section>
-                                       <br><br>
-                       <section class="section_naranja txt">
-                       <iframe src="txt/apilar/Module1.txt" frameborder="0"></iframe>  -->
-                <!--     <input class="boton" type="button" value="cerrar todas las cuestiones" onClick="location.reload();">
-                      </section> -->
-                  
-                </details>
-                </section>
-                                
-
-                
-                <!-- fin practica    -->
-                
                 
                 <!-- fin practica    -->
                     
@@ -1209,13 +1032,18 @@
                     <a href="#contenedor"></a>
                 </section>
                 <!-- fin practica   -->
+                    <br>
+            <h2 class="centrar">Prácticas finales</h2>
+            <br>
+                    
                      <!--   <p class="lineas3" id="prac2b"></p> -->  <a name="prac19"></a>
-                <!-- ******************************************* inicio practica  **********************************   -->
+                <!-- ******************************************* inicio practica  ****Práctica de Paletizado********** ********************   -->
                 <section class="section_naranja">
 
                     <details class="detalles">
                         <summary class="sumario">
                             <h2 class="puntero">Práctica de Paletizado</h2>
+                               <img class="imagen alto_200px" src="imagen/practicas_paletizado.png" alt="tcp">
                         </summary>
                         <p>Realiza la simulaci&oacute;n de una &nbsp;instalaci&oacute;n de paletizado de 3 cajas.</p>
 <p><strong>Funcionamiento:</strong></p>
@@ -1235,32 +1063,168 @@
                     </details>
                 </section>
                 <!-- fin practica  -->
-                     <p class="lineas3" id="prac20"></p>  <!--  <a name="prac20"></a> -->
-                <!-- ********* inicio practica  **********************************  
-              Proyecto: Creación de una instalación virtual en Robot Studio**** -->
+                
+                
+                
+                
+                
+      <!-- ************ inicio practica  *****SMART COMPONENT, Paletizado yogures 2026 *****  -->            
+                       
+                 <section class="section_naranja">
+                    <details class="detalles">
+                        <summary class="sumario">
+                                 <h2 class="puntero">SMART COMPONENT, Paletizado yogures 2026 </h2>
+                                  <img class="imagen alto_200px" src="imagen/practicas_paletizado_yogures.png" alt="tcp">
+                                  
+                                    <img class="imagen alto_200px" src="imagen/practicas_paletizado_yogures1.png" alt="tcp">
+                            
+                                  
+                        </summary>   
+                        <h3 class="azul_negrita">EJEMPLO1</h3>    
+                       
+                       <p>Ponemos el selector en <strong>ON</strong>.</p> <p> El robot recoge un yogur, lo transporta, vuelve a recoger otro y lo coloca encima del anterior. Repite este proceso sucesivamente mientras el selector permanezca en <strong>ON</strong>. </p> <p>Al poner el selector en <strong>OFF</strong>, el robot se detiene en su posición inicial.</p> <p> Cuando volvamos a poner el selector en <strong>ON</strong>, el robot reiniciará el proceso y comenzará a apilar los yogures desde cero. </p>
+                       
+                       
+                      
+                           	
+                       
+                       
+                       
+                
+                        <a href="https://youtu.be/6z3whpAv7xo?si=JTF6AObRkGxqt5pV" target="_blank">Paletizado yogures Real</a> <br>
+             
+                     <iframe width="560" height="315" src="https://www.youtube.com/embed/6z3whpAv7xo?si=JTF6AObRkGxqt5pV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                     <H3 class="azul_negrita">PALET</H3>
+                    
+                            <a class="fondo_verde" href="../soluciones/packANGgo/palet_sin_programacion" download="palet.rspag"> Descarga el pack and go</a>
+                            <H3>FUNCIONAMIENTO</H3>
+                    <p>Se activa la luz verde. DO_0 a 0</p>
+
+<p>Aparece el siguiente mensaje en la FlexPendant solicitando que escribas un número entre 1 y 3, indicando cuántos yogures quieres apilar.</p>
+
+<p>Si el número introducido no está entre 1 y 3, aparece en la FlexPendant el siguiente mensaje de error durante 2 segundos:</p>
+<p><em>"El número no está entre 1 y 3"</em></p>
+<p>Después del mensaje, vuelve a preguntar cuántos yogures quieres apilar.</p>
+
+<p>Si el número introducido está entre 1 y 3, la luz se pone roja (DO_0 a 1)y el robot apila la cantidad de yogures solicitada.</p>
+
+<p>Al terminar, el robot vuelve a la posición inicial y el ciclo se repite.</p>
+
+                     
+                     
+                      <a href="https://youtu.be/8zvL0Rn9qX8?si=zz0LqYJdp8qc28AK" target="_blank">Paletizado yogures RobotStudio</a> <br>
+                     <iframe width="560" height="315" src="https://www.youtube.com/embed/8zvL0Rn9qX8?si=zz0LqYJdp8qc28AK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                     <h3> SMARTCOMPONENT</h3>
+                     <P>LÓGICA DE LA ESTACIÓN</P>
+                     
+        <img class="imagen" src="imagen/PALETlogicaestacion.png" alt="Smart component apilar"><br>
+                     <p>Baliza</p>
+                      <img class="imagen" src="imagen/PALETbaliza.png" alt="Smart component apilar"><br>
+                       
+                          <p>Yogures</p>
+                      <img class="imagen" src="imagen/PALETyogures.png" alt="Smart component apilar"><br>
+                       
+                      
+                     
+                     
+                   <div>
+                              <br>
+                              <br>
+                              <script language="javascript=" type="text/javascript" src="../index_files/acceder.js"></script>
+                        </div> 
+                        
+                        
+                        
+                 
+                                                            
+                                         
+                                 
+                  
+                </details>
+                </section>
+                                
+
+                
+                <!-- fin practica    -->
+                
+
+                
+                
+                
+                <a name="prac16"></a>
+                <!-- ******************************************* inicio practica  **********************************   -->
+               
+
+
+
                 <section class="section_naranja">
                     <details class="detalles">
                         <summary class="sumario">
-                            <h2 class="puntero"> Proyecto: Creación de una instalación virtual en Robot Studio</h2>
-                        </summary>
-
-                        <br>
-                        Se valorará : <br>
-
-                        La utilización de dos robot. <br>
-                        Utilización de nuevos componentes. <br>
-
-                        Ayuda: <br>
-                        Se ha creado un espacio colaborativo en Block de notas de clase. <br>
-                        con la publicación un enlace a un video para crear una cinta transportadora <br>
-
-                        <a href="https://www.youtube.com/watch?app=desktop&v=AqIVLxeobC0 " target="_blank">Video ejemplo</a> <br>
-                        <br>
-                        <br><a href="#contenedor">INICIO</a>
-                    </details>
+                                 <h2 class="puntero">SMART COMPONENT, Paletizado Cajas 2026</h2>
+                                 <img class="imagen alto_200px" src="imagen/practicas_paletizado2026.png" alt="Smart component apilar"><br>
+                        </summary>       
+                       
+                         <a href="https://youtu.be/7UJ4pjRyKaY?si=c89fA9o91hMF4ZJW" target="_blank">Paletizado cajas 2026</a> <br>
+                       <iframe width="560" height="315" src="https://www.youtube.com/embed/7UJ4pjRyKaY?si=c89fA9o91hMF4ZJW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                       
+                       
+                       
+                       
+                       
+                 
+                     <br>
+                  
+                     al poner en marcha
+                     la baliza se pone en verde
+                     con la baliza en verde puedo colocar una caja ( en la simulación pulsar sobre caja)
+                     pasado 3 segundos de que la baliza este verde el robot se pone en marcha y se dirige hacia la caja, 
+                     si hay caja se activa el vacuostato y la coloca a la derecha
+                     va a origen la baliza se pone en verde y podemos sacar otra caja pasado 3 segundos va a buscar la caja y la pone encima de la anterior
+                     se repite el proceso con una tercera caja
+                     la 4 caja la colaca al lado
+                     la 5 y la 6 encima de la caja
+                      y la 7 caja la coloca en la posición inicial
+                      
+                      si quitamos marcha el robot se queda parado en posicion de inicio
+                      si al buscar caja no hay el robot vuelve a posicion de inicio, pone la baliza en verde y vuelve a buscar la caja, si la encuentra la coloca en la primera posicion
+                      
+                    
+                    
+                   <!--  
+                          <img class="imagen" src="imagen/tem_apilar01a.png" alt="Smart component apilar"><br>
+                           <p>En colisión hay una distacia de 66mm que es la altura del vaso, osea la distancia del tcp de la ventosa a la base del cilindro. con distancias inferiores no se activaba</p>
+                       <img class="imagen" src="imagen/tem_apilar02.png" alt="Smart component apilar"><br>
+                        
+                           <img class="imagen" src="imagen/tem_apilar03.png" alt="Smart component apilar"><br>
+                           
+                          <section class="section_naranja txt centrar">
+                            <a class="fondo_verde" href="packANGgo/apilar_yogur.rspag" download="apilar_yogur.rspag"> Descarga el programa</a>
+                           
+                            <iframe src="txt/apilar/CalibData.txt" frameborder="0"></iframe> 
+                    </section>
+                                       <br><br>
+                       <section class="section_naranja txt">
+                       <iframe src="txt/apilar/Module1.txt" frameborder="0"></iframe>  -->
+                <!--     <input class="boton" type="button" value="cerrar todas las cuestiones" onClick="location.reload();">
+                      </section> -->
+                  
+                </details>
                 </section>
-              
-                <!-- fin practica   -->
+                                
+
+                
+                <!-- fin practica    -->
+                                
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                   
                     
                 
                 <br><a href="#contenedor">INICIO</a>
@@ -1274,11 +1238,13 @@
                 </h2>
 <ul class="lista0"> 
                <li> <a href="#prac1">Colocación de objetos en robotstido.</a> </li>
-      <li>  <a href="#prac10a"> 4 taladros en un cubo 2024</a> </li>
+  
               <li>  <a href="#prac2">Crea un herramienta</a> </li>
-              <li>  <a href="#pracWO2025">Caja 2025</a> </li>
+             
               <li>  <a href="#prac2a">Crea un WorkObject 2024</a> </li>
              <li>   <a href="#prac2b"> WObj y sistemas de coordenadas 2024</a> </li>
+                 <li>  <a href="#prac10a"> 4 taladros en un cubo 2024</a> </li>
+              <li>  <a href="#pracWO2025">Caja 2025</a> </li>
              <li>   <a href="#prac3">Trayectoria</a> </li>
               <li>  <a href="#prac4">Trayectoria con flexPendant</a> </li>
               <li>  <a href="#prac5">RAPID</a></li>
@@ -1293,12 +1259,16 @@
              <li>   <a href="#prac12">Cargar un programa RAPID en IRB120</a></li>
              <li>   <a href="#prac13">Trayectorias</a> </li>
              <li>   <a href="#prac14">Instrucción FOR y WHILE</a> </li>
-             <li>   <a href="#prac15">Smart componentPaletizado yogures 2026 </a> </li>
-             <li>   <a href="#prac16">Smart component Paletizado Cajas 20026</a></li>
+           
            <li>     <a href="#prac17">esquema eléctrico de entradas y salidas APILAR</a></li>
             <li>    <a href="#prac18">OFFS</a></li>
+            <br>
+            <h2>Prácticas finales</h2>
+            <br>
             <li>    <a href="#prac19">Práctica de Paletizado</a></li>
-            <li>    <a href="#prac20">Proyecto: Creación de una instalación virtual en Robot Studio</a> </li>
+              <li>   <a href="#prac15">Smart componentPaletizado yogures 2026 </a> </li>
+             <li>   <a href="#prac16">Smart component Paletizado Cajas 20026</a></li>
+           
 
             
 </ul>

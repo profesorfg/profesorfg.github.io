@@ -509,6 +509,11 @@ width: min(1500px, 100%);
     max-height: 230px;
 }
 
+
+.alto_200px{
+    max-height: 200px;
+}
+
 .max-height_50px{
     max-height: 50px;
 }
