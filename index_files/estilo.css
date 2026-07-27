@@ -498,23 +498,25 @@ width: min(1500px, 100%);
  
 
 
+.imagen-ancho-medio{
+    max-width: 1000px;
+}
 
 
-
-.max_ancho200px{
+.imagen-ancho200{
     max-width: 200px;
 }
 
-.max-height_230px{
+.imagen-alto230{
     max-height: 230px;
 }
 
 
-.alto_200px{
+.imagen-alto200{
     max-height: 200px;
 }
 
-.max-height_50px{
+.imagen-alto50{
     max-height: 50px;
 }
 

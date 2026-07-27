@@ -27,8 +27,11 @@
         </header>
         <main>
 
-             <h1> IMPRESIÓN 3D</h1>
-          
+
+
+
+            <h1> IMPRESIÓN 3D</h1>
+
             <article class="flex_wrap articulo fondo_azul">
                 <!-- Por ejemplo: -->
                 <div class="card card_icono">
@@ -36,22 +39,22 @@
                         <img alt="impresion 3D" src="imagenes/motor_contruccion molde.jpg">Impresión 3D
                     </a>
                 </div>
-                
-                     <!-- Por ejemplo:-->
-                                     <div class="card card_icono">
-                                         <a href="freecad.html">
-                     
-                        <img src="imagenes/iconoFreecad.png" alt="Capturas"> Freecad </a>
-                                     </div> 
 
-             <!--   Por ejemplo: -->
+                <!-- Por ejemplo:-->
+                <div class="card card_icono">
+                    <a href="freecad.html">
+
+                        <img src="imagenes/iconoFreecad.png" alt="Capturas"> Freecad </a>
+                </div>
+
+                <!--   Por ejemplo: -->
                 <div class="card card_icono">
                     <a href="../webenlaces/E_impresion3D.html">
                         <img alt="Enlaces" src="../webenlaces/imagenes/enlace1.jpeg">Enlaces
                     </a>
                 </div> -->
-                
-        <!-- 
+
+                <!-- 
                 Por ejemplo:
                 <div class="card card_icono">
                     <a href="minimanuales.html">
@@ -62,155 +65,419 @@
                 </div> -->
 
             </article>
-            
-               
-               
-               
-            
+
+
+
+
+
+
+            <!--   --------esta pagina esta organizada en articulo y dentro de articulos seccions -------------------------------------------------------- -->
+
+
+
+            <h2 class="centrar">ESBOZOS </h2>
+
+            <article class="articulo article_flex_contenedor1">
+
+
+                <!-- ***************ETIQUETA 1  **********QUE ES UN ROBOT************************ -->
+                <details class="detallescard">
+                    <summary class="sumario">
+                        <h3 class="puntero">Mostrar y ocultar cotas <img class="imagen-alto50" src="imagenes/esbozos-mostra-ocultar-cotas.png" alt="cotas"></h3>
+                    </summary>
+                    <img class="imagen-ancho-medio" src="imagenes/esbozos-mostra-ocultar-cotas.png" alt="cotas"><br>
+                    <img class="imagen-ancho-medio" src="imagenes/esbozos-ocultar-cotas-sketcher1.png" alt="cotas"><br>
+                    <img class="imagen-ancho-medio" src="imagenes/esbozos-mostrar-ocultar-cotas-sketcher2.png" alt="cotas"><br>
+
+                    <input class="boton" type="button" value="cerrar todas las cuestiones" onClick="location.reload();">
+                </details>
+
+
+
+                <details class="detallescard">
+                    <summary class="sumario">
+                        <h3 class="puntero">Fijar las cotas <img class="imagen-alto50" src="imagenes/esbozo-fijar-cotas.png" alt="cotas"></h3>
+                    </summary>
+                    <p>La <strong>restricci&oacute;n de Bloque</strong> en Sketcher es una de esas funciones que parece simple, pero tiene un prop&oacute;sito muy espec&iacute;fico y potente. Te lo explico de forma directa y &uacute;til para tu flujo de trabajo.</p>
+                    <p><br></p>
+                    <h1>🔒 &iquest;Qu&eacute; hace la restricci&oacute;n <strong>Block</strong> en Sketcher?</h1>
+                    <p>La restricci&oacute;n <strong>Bloquea</strong> una geometr&iacute;a para que <strong>no pueda moverse, rotar ni cambiar de tama&ntilde;o</strong> dentro del sketch.</p>
+                    <p>Es decir:</p>
+                    <blockquote>
+                        <p><strong>Congela completamente la posici&oacute;n y forma de un elemento.</strong></p>
+                    </blockquote>
+                    <p>Funciona como un &ldquo;candado&rdquo; param&eacute;trico.</p>
+                    <p><br></p>
+                    <h1>🟦 &iquest;Qu&eacute; elementos puedes bloquear?</h1>
+                    <ul role="list">
+                        <li>
+                            <p>L&iacute;neas</p>
+                        </li>
+                        <li>
+                            <p>Puntos</p>
+                        </li>
+                        <li>
+                            <p>C&iacute;rculos</p>
+                        </li>
+                        <li>
+                            <p>Arcos</p>
+                        </li>
+                        <li>
+                            <p>Polil&iacute;neas</p>
+                        </li>
+                    </ul>
+                    <p>Cuando aplicas <strong>Block</strong>, FreeCAD ya no permite:</p>
+                    <ul role="list">
+                        <li>
+                            <p>Mover el elemento</p>
+                        </li>
+                        <li>
+                            <p>Cambiar su longitud</p>
+                        </li>
+                        <li>
+                            <p>Cambiar su orientaci&oacute;n</p>
+                        </li>
+                        <li>
+                            <p>Alterar su radio (si es c&iacute;rculo/arco)</p>
+                        </li>
+                    </ul>
+                    <p><br></p>
+                    <h1>🎯 &iquest;Para qu&eacute; sirve realmente?</h1>
+                    <h3>✔ 1. Evitar que una geometr&iacute;a se desplace mientras aplicas otras restricciones</h3>
+                    <p>Muy &uacute;til cuando un sketch es grande y complejo.</p>
+                    <h3>✔ 2. Fijar geometr&iacute;a importada</h3>
+                    <p>Por ejemplo, si traes un DXF o STEP y quieres que una parte quede inm&oacute;vil.</p>
+                    <h3>✔ 3. Mantener un &ldquo;marco&rdquo; o referencia</h3>
+                    <p>Puedes bloquear un borde o eje para que todo lo dem&aacute;s se ajuste respecto a &eacute;l.</p>
+                    <h3>✔ 4. Sustituir restricciones redundantes</h3>
+                    <p>En vez de poner 4 restricciones para fijar una l&iacute;nea, aplicas <strong>Block</strong> y listo.</p>
+                    <p><br></p>
+                    <h1>⚠ Importante: cu&aacute;ndo NO usar Block</h1>
+                    <ul role="list">
+                        <li>
+                            <p><strong>No lo uses en geometr&iacute;a que debe ser param&eacute;trica.</strong>&nbsp; Si bloqueas una l&iacute;nea que luego quieres acotar, FreeCAD te dar&aacute; conflicto.</p>
+                        </li>
+                        <li>
+                            <p><strong>No lo uses para definir la forma del sketch.</strong>&nbsp; Es una herramienta de control, no de dise&ntilde;o.</p>
+                        </li>
+                        <li>
+                            <p><strong>Puede causar sobre‑restricci&oacute;n si ya hay cotas aplicadas.</strong></p>
+                        </li>
+                    </ul>
+                    <img class="imagen-ancho-medio" src="imagenes/esbozo-fijar-cotas.png" alt="cotas">
+                    <img class="imagen-ancho-medio" src="imagenes/esbozo-fijar-bloqueo.png" alt="cotas"><br>
+
+
+                    <input class="boton" type="button" value="cerrar todas las cuestiones" onClick="location.reload();">
+                </details>
+
+
+
+
+                <details class="detallescard">
+                    <summary class="sumario">
+                        <h3 class="puntero">Alinear vista del sketcher <img class="imagen-alto50" src="imagenes/esbozo-alinear-vista.png" alt="cotas"></h3>
+                    </summary>
+                    <img class="imagen-ancho-medio" src="imagenes/esbozo-alinear-vista.png" alt="cotas"><br>
+
+
+                    <input class="boton" type="button" value="cerrar todas las cuestiones" onClick="location.reload();">
+                </details>
+
+
+                <details class="detallescard">
+                    <summary class="sumario">
+                        <h3 class="puntero">Rejilla <img class="imagen-alto50" src="imagenes/esbozo-rejilla.png" alt="cotas"></h3>
+                    </summary>
+                    <img class="imagen-ancho-medio" src="imagenes/esbozo-rejilla.png" alt="cotas"><br>
+
+
+                    <input class="boton" type="button" value="cerrar todas las cuestiones" onClick="location.reload();">
+                </details>
+
+
+
+
+
+
+            </article>
+
+
+
+
+
+            <!--    ////////**********************VIDEO TUTORIALES**************////// -->
+            <article class="articulo">
+                <h2 class="centrar">VIDEO TUTORIALES </h2>
+
+
                 
-              <!--   ---------------------------------------------------------------- -->
 
-          <article class="article_flex_contenedor1">
-
- 
-
-            
-    
-  <!--    ********************************************************************** -->  
-          
-
-           
+                <!--  <article class="article_flex_contenedor1"> -->
+                <section class="section_naranja enlaces">
 
 
-  
-                
-                
-                  <!--    *****************300 * 200  * ********************************************* -->              <section class="section_naranja">
-                    <a href="https://www.freecad.org/index.php?lang=es_ES" target="_blank">
-                        <img alt="freecad SVG" title="freecad" src="imagenes/enl_freecad_freecad.png">
-                        <h3>FREECAD</h3>
-                    </a>
-                </section>
-
-                <section class="section_naranja">
-                   
+                    <!--    ***************Freecad************************* -->
+                    <div class="card card_vertical">
+                        <a href="https://www.freecad.org/index.php?lang=es_ES" target="_blank">
+                            <img alt="freecad SVG" title="Descarga freecad" src="imagenes/enl_freecad_freecad.png">
+                            <h3>Descarga FREECAD</h3>
+                        </a>
+                    </div>
                     
-                    <a href=" https://www.youtube.com/watch?v=HNRFjTuoyYo&list=LL&index=2&t=258s" target="_blank">
-                        <img alt="freecad binders" title="freecad" src="imagenes/enl_freecad_binders.png">
-                        <h3>
-                            Binders y elementos auxiliares
-                        </h3>
-                    </a>
-                </section>
-  <!--    ********************************************************************** -->  
-                <section class="section_naranja">
-                    <a href="https://www.youtube.com/watch?v=hxg8UIJI3VI&list=LL&index=13" target="_blank">
-                        <img alt="freecad SVG" title="freecad" src="imagenes/enl_freecad_svg1.png">
-                        <h3>Importar SVG</h3>
-                    </a>
-                </section>
-                
-       <!--    ********************************************************************** -->             
-                  <section class="section_naranja">
-                    <a href="https://www.youtube.com/watch?v=iuAQdwnlWlY&list=LL&index=12" target="_blank">
-                        <img alt="freecad SVG" title="freecad" src="imagenes/enl_freecad_svg2.png">
-                        <h3>Importar SVG</h3>
-                    </a>
-                </section>
-
-       <!--    *****************300 * 200  * ********************************************* -->              <section class="section_naranja">
-                    <a href="https://www.youtube.com/watch?v=p2yDGlv5wI0&list=LL&index=14&t=146s" target="_blank">
-                        <img alt="freecad SVG" title="freecad" src="imagenes/enl_freecad_ensamblaje.png">
-                        <h3>Ensamblaje</h3>
-                    </a>
-                </section>
-
-       <!--    *****************300 * 200  * ********************************************* -->  
-
-  <!--    *****************300 * 200  * ********************************************* -->              <section class="section_naranja">
-                    <a href="https://www.youtube.com/watch?v=u1-C8qKPmiY&list=LL&index=14" target="_blank">
-                        <img alt="freecad SVG" title="freecad" src="imagenes/enl_freecad_aujero.png">
-                        <h3>Agujero en la cara curva</h3>
-                    </a>
-                </section>
-
-       
-             <!--    *****************300 * 200  * ********************************************* -->              <section class="section_naranja">
-                    <a href="https://www.youtube.com/watch?v=Fw8K5z7lKME&list=LL&index=14" target="_blank">
-                        <img alt="freecad SVG" title="freecad" src="imagenes/enl_freecad_cambiar_plano.png">
-                        <h3>Como cambiar un Sketch a otro plano</h3>
-                    </a>
-                </section>
-
-       <!--    *****************300 * 200  * ********************************************* --> 
-           
-             <!--    *****************300 * 200  * ********************************************* -->              <section class="section_naranja">
-                    <a href="https://www.youtube.com/watch?v=Ue_H32z5YLU&list=WL&index=1" target="_blank">
-                        <img alt="freecad SVG" title="freecad" src="imagenes/enl_freecad_planos_referencia.png">
-                        <h3>Plano de referencia normal a una arista</h3>
-                    </a>
-                </section>
-                 <!--    *****************300 * 200  * ********************************************* -->              <section class="section_naranja">
-                    <a href="https://www.youtube.com/watch?v=NVwrt9QaW4A&list=WL&index=5" target="_blank">
-                        <img alt="freecad SVG" title="freecad" src="imagenes/enl_freecad_MangoJelly Solutions for FreeCAD.png">
-                        <h3>MangoJelly Solutions for FreeCAD</h3>
-                    </a>
-                </section>
-              
-           <!--    *****************300 * 200  ********************************************** -->              <section class="section_naranja">
-                    <a href="https://www.youtube.com/watch?v=fwmc3NHxeLo&list=WL&index=9&t=12s" target="_blank">
-                        <img alt="freecad SVG" title="freecad" src="imagenes/enl_freecad_plano referencia 3 puntos.png">
-                        <h3>plano referencia 3 puntos  tato3D</h3>
-                    </a>
-                </section>
-                    </article>
-                
-            
+                      <!--    **************Caracteristicas Freecad1.1************************ -->
+                    <div class="card card_vertical">
+                        <a href="https://www.youtube.com/watch?v=mSwvnZ1jsXg&list=WL&index=10" target="_blank">
+                            <img alt="freecad SVG" title="Caracteristicas freecad1.1" src="imagenes/enl_freecad_Caracteristicas.png">
+                            <h3>Caracteristicas Freecad1.1</h3>
+                        </a>
+                    </div>
                     
-                   
-                   <h2 class="centrar">OBIJUAN</h2>
+                       <!--    ************plano de referencia******************************** -->
+                    <div class="card card_vertical">
+                        <a href="https://www.youtube.com/watch?v=fwmc3NHxeLo&list=WL&index=9&t=12s" target="_blank">
+                            <img alt="freecad SVG" title="freecad" src="imagenes/enl_freecad_plano referencia 3 puntos.png">
+                            <h3>plano referencia 3 puntos</h3>
+                        </a>
+                    </div>
+                        <!--    **********Texto***************************** -->
+                    <div class="card card_vertical">
+                        <a href="https://www.youtube.com/watch?v=IwcT72R06ok&list=LL&index=7&t=221s" target="_blank">
+                            <img alt="freecad SVG" title="Texto" src="imagenes/enl_freecad_texto.png">
+                            <h3>Escribir en caras</h3>
+                        </a>
+                    </div>
+                    
+                     <!--    **********clonar***************************** -->
+                    <div class="card card_vertical">
+                        <a href="https://www.youtube.com/watch?v=zIdfeErl3ZI&list=LL&index=8&t=11s" target="_blank">
+                            <img alt="freecad SVG" title="Clone" src="imagenes/enl_freecad_clonar.png">
+                            <h3>Clonar</h3>
+                        </a>
+                    </div>
+                    <!--    ********** Binders y elementos auxiliares*************** -->
+                    <div class="card card_vertical">
+
+
+                        <a href=" https://www.youtube.com/watch?v=HNRFjTuoyYo&list=LL&index=2&t=258s" target="_blank">
+                            <img alt="freecad binders" title="freecad" src="imagenes/enl_freecad_binders.png">
+                            <h3>
+                                Binders y elementos auxiliares
+                            </h3>
+                        </a>
+                    </div>
+                    
+                     <!--    **********Enlazador de subformas*************** -->
+                    <div class="card card_vertical">
+
+
+                        <a href=" https://www.youtube.com/watch?v=01Yzz5fd_b4&list=WL&index=18" target="_blank">
+                            <img alt="freecad binders" title="freecad" src="imagenes/enl_freecad_binders1.png">
+                            <h3>
+                               Enlazador de subformas
+                            </h3>
+                        </a>
+                    </div>
+                                        <!--    *****************Subformas******************* -->
+                    <div class="card card_vertical">
+                        <a href="https://www.youtube.com/watch?v=NVwrt9QaW4A&list=WL&index=5" target="_blank">
+                            <img alt="freecad SVG" title="blinders" src="imagenes/enl_freecad_MangoJelly Solutions for FreeCAD.png">
+                            <h3>Enlazador de subformas1</h3>
+                        </a>
+                    </div>
+
+                    <!--    ************************************************** -->
+                    <div class="card card_vertical">
+                        <a href="https://www.youtube.com/watch?v=hxg8UIJI3VI&list=LL&index=13" target="_blank">
+                            <img alt="freecad SVG" title="freecad" src="imagenes/enl_freecad_svg1.png">
+                            <h3>Importar SVG</h3>
+                        </a>
+                    </div>
+
+                    <!--    ********************************************************************** -->
+                    <div class="card card_vertical">
+                        <a href="https://www.youtube.com/watch?v=iuAQdwnlWlY&list=LL&index=12" target="_blank">
+                            <img alt="freecad SVG" title="freecad" src="imagenes/enl_freecad_svg2.png">
+                            <h3>Importar SVG</h3>
+                        </a>
+                    </div>
+
+                  
+                    <!--    ****************aujero en curva****************************************** -->
+                    <div class="card card_vertical">
+                        <a href="https://www.youtube.com/watch?v=u1-C8qKPmiY&list=LL&index=14" target="_blank">
+                            <img alt="freecad SVG" title="freecad" src="imagenes/enl_freecad_aujero.png">
+                            <h3>Agujero en la cara curva</h3>
+                        </a>
+                    </div>
+
+
+                    <!--    *****************300 * 200  * ***************** -->
+                    <div class="card card_vertical">
+                        <a href="https://www.youtube.com/watch?v=Fw8K5z7lKME&list=LL&index=14" target="_blank">
+                            <img alt="freecad SVG" title="freecad" src="imagenes/enl_freecad_cambiar_plano.png">
+                            <h3>Como cambiar un Sketch a otro plano</h3>
+                        </a>
+                    </div>
+
+
+                    <!--    ****************plano de refencia******************** -->
+                    <div class="card card_vertical">
+                        <a href="https://www.youtube.com/watch?v=Ue_H32z5YLU&list=WL&index=1" target="_blank">
+                            <img alt="freecad SVG" title="freecad" src="imagenes/enl_freecad_planos_referencia.png">
+                            <h3>Plano de referencia normal a una arista</h3>
+                        </a>
+                    </div>
+                      <!--    ***************Tuberias******************* -->
+                    <div class="card card_vertical">
+                        <a href="https://www.youtube.com/watch?v=VBiWj6k2ZaM&list=WL&index=14" target="_blank">
+                            <img alt="freecad SVG" title="freecad" src="imagenes/enl_freecad_tuberias.png">
+                            <h3>Tuberias</h3>
+                        </a>
+                    </div>
+
+                 
+                    
+                    
+                    <!--    **************Bisagra******************************* -->
+                    <div class="card card_vertical">
+                        <a href="https://www.youtube.com/watch?v=dmAUBl4weGo&list=WL&index=14" target="_blank">
+                            <img alt="freecad SVG" title="freecad" src="imagenes/enl_freecad_bisagra.png">
+                            <h3>Bisagra</h3>
+                        </a>
+                    </div>
+                     <!--    **************Bisagra1******************************* -->
+                    <div class="card card_vertical">
+                        <a href="https://www.youtube.com/watch?v=NXy9fE8iOTk&list=WL&index=13" target="_blank">
+                            <img alt="freecad SVG" title="freecad" src="imagenes/enl_freecad_bisagra1.png">
+                            <h3>Bisagra1</h3>
+                        </a>
+                    </div>
+                 <!--    ***********Ensamblaje************************ -->
+                    <div class="card card_vertical">
+                        <a href="https://www.youtube.com/watch?v=p2yDGlv5wI0&list=LL&index=14&t=146s" target="_blank">
+                            <img alt="freecad SVG" title="freecad" src="imagenes/enl_freecad_ensamblaje.png">
+                            <h3>Ensamblaje</h3>
+                        </a>
+                    </div>
+                   <!--    ***********Ensamblaje1************************** -->
+                    <div class="card card_vertical">
+                        <a href="https://https://www.youtube.com/watch?v=qVp4GX_z110&list=WL&index=12" target="_blank">
+                            <img alt="freecad SVG" title="Assembly" src="imagenes/enl_freecad_ensamblaje1.png">
+                            <h3>Ensamblaje1</h3>
+                        </a>
+                    </div>
+                 
+                  
+                      <!--    ***********Ensamblaje2************************** -->
+                    <div class="card card_vertical">
+                        <a href="https://www.youtube.com/watch?v=rArHPG77Mmc&list=WL&index=8" target="_blank">
+                            <img alt="freecad SVG" title="Assembly" src="imagenes/enl_freecad_ensamblaje2.png">
+                            <h3>Ensamblaje2</h3>
+                        </a>
+                    </div>
+                      <!--    ***********Ensamblaje3************************** -->
+                    <div class="card card_vertical">
+                        <a href="https://www.youtube.com/watch?v=VvK37wrYCew&list=LL&index=7" target="_blank">
+                            <img alt="freecad SVG" title="Assembly" src="imagenes/enl_freecad_ensamblaje3.png">
+                            <h3>Ensamblaje3</h3>
+                        </a>
+                    </div>
+                   <!--    **********Cortar solidos************************ -->
+                    <div class="card card_vertical">
+                        <a href="https://www.youtube.com/watch?v=x0zhLrjiZ7o&list=LL&index=3&t=60s" target="_blank">
+                            <img alt="Split" title="Split" src="imagenes/enl_freecad_cortar.png">
+                            <h3>Cortar solidos</h3>
+                        </a>
+                    </div>
+                    
+                      <!--    **********Cortar solidos1************************ -->
+                    <div class="card card_vertical">
+                        <a href="https://www.youtube.com/watch?v=UsxeiCsG0V8&list=LL&index=1" target="_blank">
+                            <img alt="Split" title="Split" src="imagenes/enl_freecad_cortar1.png">
+                            <h3>Cortar solidos1</h3>
+                        </a>
+                    </div>
+                     
+                     
+                           
+                      <!--    **********Cortar solidos2************************ -->
+                    <div class="card card_vertical">
+                        <a href="https://www.youtube.com/watch?v=SHxC79enoUw&list=LL&index=4" target="_blank">
+                            <img alt="Slice" title="Slice" src="imagenes/enl_freecad_cortar2.png">
+                            <h3>Cortar solidos2</h3>
+                        </a>
+                    </div>
+                       <!--    **********Roscas************************ -->
+                    <div class="card card_vertical">
+                        <a href="https://www.youtube.com/watch?v=YZo1gELeHPE&list=LL&index=3&t=9s" target="_blank">
+                            <img alt="Roscas" title="Roscas" src="imagenes/enl_freecad_roscas.png">
+                            <h3>Roscas</h3>
+                        </a>
+                    </div>
+            
+                     
+                     
+                     
+                     
+                      
+                       
+                        
+                         
+                          
+                            </section>
+            </article>
+
+            <!--    ************fin de video tutoriales***************** -->
+
+
+
+            <h2 class="centrar">OBIJUAN</h2>
             <article class="article_flex_contenedor1">
-                             <!--    *****************300 * 200  ********************************************** -->   
-                       <section class="section_naranja">
+                <!--    *****************300 * 200  ********************************************** -->
+                <section class="section_naranja">
                     <a href="http://www.iearobotics.com/wiki/index.php?title=Dise%C3%B1o_de_piezas_con_Freecad" target="_blank">
                         <img alt="freecad SVG" title="freecad" src="imagenes/enl_freecad_WIKI DEL CURSO I FREECAD.png">
                         <h3>WIKI DEL CURSO I FREECAD</h3>
                         <a href="http://www.iearobotics.com/wiki/index.php?title=Tutorial_Freecad._Temporada_2" target="_blank">
-                       
-                        <h3>WIKI DEL CURSO II FREECAD</h3>
+
+                            <h3>WIKI DEL CURSO II FREECAD</h3>
+                        </a>
                     </a>
-                    </a>
-                </section> 
-                     
-                      <!--    *****************300 * 200  ********************************************** -->              <section class="section_naranja">
+                </section>
+
+                <!--    *****************300 * 200  ********************************************** -->
+                <section class="section_naranja">
                     <a href="https://www.youtube.com/watch?v=2_DbFzFV9D4&list=PLmnz0JqIMEzWQV-3ce9tVB_LFH9a91YHf" target="_blank">
                         <img alt="freecad SVG" title="freecad" src="imagenes/enl_freecad_YOUTUBE DEL CURSO I FREECAD.png">
                         <h3>YOUTUBE DEL CURSO I FREECAD</h3>
                     </a>
-                </section> 
-                    
-                    
-                    
-                    
-                     <!--    *****************300 * 200  ********************************************** -->              <section class="section_naranja">
+                </section>
+
+
+
+
+                <!--    *****************300 * 200  ********************************************** -->
+                <section class="section_naranja">
                     <a href="https://www.youtube.com/watch?v=tvevj-esu_E" target="_blank">
                         <img alt="freecad SVG" title="freecad" src="imagenes/enl_freecad_YOUTUBE DEL CURSO II FREECAD.png">
                         <h3>YOUTUBE DEL CURSO II FREECAD</h3>
                     </a>
-                </section> 
-                   
-                   
-                   
-                   
-                   
-                   
-                   
-                   
-                   
-                   
-                   
-                   
+                </section>
+
+
+
+
+
+
+
+
+
+
             </article>
+
+
+
         </main>
 
 
@@ -221,7 +488,7 @@
         </aside>
 
         <footer>
-            <br> 
+            <br>
             <a href="https://www.youtube.com/watch?v=Z0OOhi-yHDM">El viejo, el niño y el burro.</a>
 
         </footer>
