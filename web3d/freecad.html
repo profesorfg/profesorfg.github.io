@@ -71,19 +71,20 @@
 
 
 
-            <!--   --------esta pagina esta organizada en articulo y dentro de articulos seccions -------------------------------------------------------- -->
-
-
-
+   <!--   ---------------------------------------------------------------------------
+                       ESBOZOS
+               esta pagina esta organizada en articulo y dentro de articulos seccions  
+      -------------------------------------------------------------------------   -->
+           
             <h2 class="centrar">ESBOZOS </h2>
 
             <article class="articulo article_flex_contenedor1">
 
 
-                <!-- ***************ETIQUETA 1  **********QUE ES UN ROBOT************************ -->
+             <!--   -------    Mostrar y ocultar cotas   -------------------------------- -->
                 <details class="detallescard">
                     <summary class="sumario">
-                        <h3 class="puntero">Mostrar y ocultar cotas <img class="imagen-alto50" src="imagenes/esbozos-mostra-ocultar-cotas.png" alt="cotas"></h3>
+                        <h3 class="puntero">Mostrar y ocultar cotas </h3>
                     </summary>
                     <img class="imagen-ancho-medio" src="imagenes/esbozos-mostra-ocultar-cotas.png" alt="cotas"><br>
                     <img class="imagen-ancho-medio" src="imagenes/esbozos-ocultar-cotas-sketcher1.png" alt="cotas"><br>
@@ -93,7 +94,8 @@
                 </details>
 
 
-
+  <!--   -------    Fijar las cotas -------------------------------- -->
+               
                 <details class="detallescard">
                     <summary class="sumario">
                         <h3 class="puntero">Fijar las cotas <img class="imagen-alto50" src="imagenes/esbozo-fijar-cotas.png" alt="cotas"></h3>
@@ -172,7 +174,7 @@
                 </details>
 
 
-
+  <!--   -------  Alinear vista del sketcher -------------------------------- -->
 
                 <details class="detallescard">
                     <summary class="sumario">
@@ -183,7 +185,131 @@
 
                     <input class="boton" type="button" value="cerrar todas las cuestiones" onClick="location.reload();">
                 </details>
+                
+                
+  <!--   -------    IMPORTAR SVG -------------------------------- -->
 
+                <details class="detallescard">
+                    <summary class="sumario">
+                        <h3 class="puntero">Importar SVG </h3>
+                    </summary>
+                    <p>Dibujamos o importamos una imagaen svg en inksacape, la colocamos en el vetice superior izquierdo de la hoja y la guardamos</p>
+                    <img class="imagen-ancho-medio" src="imagenes/esbozo-svg01.png" alt="svg"><br>
+
+<p>Abrimos un nuevo dibujo en FREECAD, y importamos nuestro SVG como geometria, por cada figura cerrada nos genera un path, en nuestro caso se han generado dos path, </p>
+                   
+                   
+                   
+                    <img class="imagen-ancho-medio" src="imagenes/esbozo-svg02.png" alt="svg"><br>
+                    
+    <p>Desde el banco de trabajo DRAFT selecciono todos los path y los convierto en sketch, se puede borrar los path creados en la importación, pues a partir de ahora trabajaremos con el sketch</p>             
+                    
+     <img class="imagen-ancho-medio" src="imagenes/esbozo-svg03.png" alt="svg"><br>                <p>Podemos validar el sketch para corregir fallos</p>
+                   
+                    <img class="imagen-ancho-medio" src="imagenes/esbozo-svg04.png" alt="svg"><br>
+                    validación desde el menú
+                     <img class="imagen-ancho-medio" src="imagenes/esbozo-svg04a.png" alt="svg"><br>
+                     <p>Puedo hacer una restricción rápida del sketch</p>
+                    <img class="imagen-ancho-medio" src="imagenes/esbozo-svg05.png" alt="svg"><br>  
+                     <p>Coloco el map mode del sketch donde creo oportuno, en el ejemplo se ha puesto en el plano xy de mi cuerpo</p>
+                      <img class="imagen-ancho-medio" src="imagenes/esbozo-svg06.png" alt="svg"> 
+                      <img class="imagen-ancho-medio" src="imagenes/esbozo-svg06a.png" alt="svg">                     
+                       <img class="imagen-ancho-medio" src="imagenes/esbozo-svg06b.png" alt="svg"> 
+<br><br>
+                     
+                     <p>Arrastro el sketch dentro de mi cuerpo</p>
+                                           <img class="imagen-ancho-medio" src="imagenes/esbozo-svg07.png" alt="svg">
+                                            <img class="imagen-ancho-medio" src="imagenes/esbozo-svg08.png" alt="svg"><br><br>
+
+                     
+                    <input class="boton" type="button" value="cerrar todas las cuestiones" onClick="location.reload();">
+                </details>               
+                
+                
+                
+  <!--   -------    Calcar una imagen -------------------------------- -->
+
+                <details class="detallescard">
+                    <summary class="sumario">
+                        <h3 class="puntero">Calcar una imagen</h3>
+                    </summary>
+                    <p>Dispongo de una imagen proyectada sobre un plano, y la quiero utilizar como plantilla para realizar sobre ella un sketch.</p>
+                    <p>Importo la imagen a freecad, con un doble click sobre el nombre de la imagen importada</p>
+                    <img class="imagen-ancho-medio" src="imagenes/esbozo-calibra00.png" alt="calcar una imagen"><br>
+<p>Conociendo una media real de la imagen la puedo redimensionar a escala 1:1 pulsando en redimensionar, hago click en la figura sobre la medida que conozco y pongo el valor</p>
+                    <p>Desde este menú tambien puedo regular la transparencia, ya solo quede abrir un sketch y dibujar la pieza sobre la imagen </p>
+<img class="imagen-ancho-medio" src="imagenes/esbozo-calibra01.png" alt="calcar una imagen">
+                    <input class="boton" type="button" value="cerrar todas las cuestiones" onClick="location.reload();">
+                </details>
+
+
+      
+   <!--   -------    Dependencia de medidas-------------------------------- -->
+
+                <details class="detallescard">
+                    <summary class="sumario">
+                        <h3 class="puntero">Dependencia de cotas </h3>
+                    </summary>
+                    <p>Cuando en un sketch tengo una medida principal y quiero que otras cotas dependan de ese valor principal puedo realizar de varias formas</p>
+                  
+                    <details>
+                    <summary>
+                    <h2 class="amarillo_negrita">Nombrando la cota</h2></summary>
+                    <p>En el sketch acoto la media principal y la pongo un nombre</p>
+                    <img class="imagen-ancho-medio" src="imagenes/esbozo-medidas00.png" alt="cotas"><br>
+                    <p>En la medida dependiente, al acotarla hago click sobre fx y relleno la formula haciendo referencia a mi media principal</p>
+                     <img class="imagen-ancho-medio" src="imagenes/esbozo-medidas01.png" alt="cotas"><br>
+                     <p>Ya esta acotada. si cambio la medida principal cambia la medida dependiente</p>
+                     
+                      <img class="imagen-ancho-medio" src="imagenes/esbozo-medidas02.png" alt="cotas"><br>
+                    
+                    </details>
+                    
+                          <details>
+                    <summary>                   
+
+                        <h2 class="amarillo_negrita">Creando una serie de variables</h2></summary>
+                    
+ <img class="imagen-ancho-medio" src="imagenes/esbozo-medidas10.png" alt="cotas"><br>
+                    </details>
+                   
+                   
+                   
+                        <details>
+                            <summary> <h2 class="amarillo_negrita">Hoja de calculo</h2></summary></details>
+                    <input class="boton" type="button" value="cerrar todas las cuestiones" onClick="location.reload();">
+                </details>
+
+
+
+            
+                              
+    
+                
+                                        
+                
+  <!--   -------    REJILLA -------------------------------- -->
+
+                <details class="detallescard">
+                    <summary class="sumario">
+                        <h3 class="puntero">Rejilla </h3>
+                    </summary>
+                    <img class="imagen-ancho-medio" src="imagenes/esbozo-rejilla.png" alt="cotas"><br>
+
+
+                    <input class="boton" type="button" value="cerrar todas las cuestiones" onClick="location.reload();">
+                </details>
+
+
+
+
+
+
+
+
+
+
+ <!--   -------    REJILLA --------------------------------
 
                 <details class="detallescard">
                     <summary class="sumario">
@@ -194,6 +320,14 @@
 
                     <input class="boton" type="button" value="cerrar todas las cuestiones" onClick="location.reload();">
                 </details>
+
+ -->
+
+
+
+
+
+
 
 
 
@@ -278,7 +412,7 @@
                             </h3>
                         </a>
                     </div>
-                                        <!--    *****************Subformas******************* -->
+               <!--    *****************Subformas******************* -->
                     <div class="card card_vertical">
                         <a href="https://www.youtube.com/watch?v=NVwrt9QaW4A&list=WL&index=5" target="_blank">
                             <img alt="freecad SVG" title="blinders" src="imagenes/enl_freecad_MangoJelly Solutions for FreeCAD.png">
@@ -286,7 +420,7 @@
                         </a>
                     </div>
 
-                    <!--    ************************************************** -->
+                    <!--    **********Importar SVG*********************** -->
                     <div class="card card_vertical">
                         <a href="https://www.youtube.com/watch?v=hxg8UIJI3VI&list=LL&index=13" target="_blank">
                             <img alt="freecad SVG" title="freecad" src="imagenes/enl_freecad_svg1.png">
@@ -297,8 +431,8 @@
                     <!--    ********************************************************************** -->
                     <div class="card card_vertical">
                         <a href="https://www.youtube.com/watch?v=iuAQdwnlWlY&list=LL&index=12" target="_blank">
-                            <img alt="freecad SVG" title="freecad" src="imagenes/enl_freecad_svg2.png">
-                            <h3>Importar SVG</h3>
+                            <img alt="freecad SVG" title="freecad" src="imagenes/enlace.jpeg">
+                            <h3>--------------</h3>
                         </a>
                     </div>
 
