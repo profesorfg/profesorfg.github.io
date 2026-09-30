@@ -551,8 +551,10 @@ width: min(1500px, 100%);
 .detalles{
 }
 
+
 .detalles[open] {
   background: #ddd; 
+
 }
 
 .detallescard{
@@ -570,6 +572,19 @@ width: min(1500px, 100%);
     border-radius: 8px;
     border-color: greenyellow;
 }
+details.detallescard[open] h3 {
+
+color: greenyellow;
+
+}
+
+details.detallescard[open] h2 {
+
+color: burlywood;
+background: none;
+
+}
+
 
 
 .sumario{

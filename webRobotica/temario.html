@@ -945,46 +945,61 @@ ENDMODULE
                 <!-- **************ROBOT STUDIO ********ROBOT STUDIO************************** -->
                 <details class="detallescard">
                     <summary class="sumario">
-                        <h2 class="puntero">ROBOT STUDIO</h2>
+                        <h2 class="puntero">ROBOT STUDIO PRIMEROS PASOS</h2>
                     </summary>
-                    <ul>
-                        <li> Descargar robotstudio de la web</li>
-                        <li> Descargar licencia para 90 dias</li>
-                        <ul class="conpunto">
-                            <li>Solicitar licencia de un servidor. Archivo-> Opciones -> licencias-> "asistente"->licencias de red-> deseo especificar un servidor de licencias de red-> poner la Ip del servidor de licencias</li>
-                            <li>Retirar la licencia. Opciones -> licencias-> "asistente"->licencias de red->Deseo retira o devolver una clave de licencia flotante</li>
-                            <li> Se retira por un máximo de 90 días </li>
-                            <li>Renovación: primero hay que devolver la licencia activa o caducada y volver a solicitar y retirar</li>
+                    <h3>Descarga de RobotStudio</h3>
+            <p>Si has recibido la invitación de la licencia de robot studio, dispones los enlaces para darte de alta en la página de abb, una vez tengas tu usuario y contraseña de abb, acepta la invitación para la licencia educacional y descarga la versión de robotstudio</p>
+                <p>Al abrir RobotStudio logeate con tu usuario y contraseña</p>   
+                       <br>
+                       <p>Si todavia no has recibido la invitación puedes descargar la versión de RobotStudio desde la web de ABB para lo que solicita que te crees una cuenta con una dirección de correo y contraseña.</p>
+                       <p>Una vez descargado puede utilizar RobotStudio con una licencia gratuita durante un mes.</p>
+                          <img class="imagen"src="imagen/tem-robotstudio-licencias.png" alt="robotstudio"><br>
+                      
 
 
-
-                        </ul>
-                        <ul class="conpunto">Servidor de licencias
-                            <li>Conectar el ordenador a la red de los alumnos, Abrir el servidor de licencias, si esta en máquina virtual (seleccionar adaptador puente,nombre:intel(R) etherner connection (14)S 1219 v modo promiscuo permitir todo, tic en cable conectado), ver dirección ip del servidor de licencias</li>
-                        </ul>
-                        <li> Descarcarga la controladoras RobotWare 6.16.01 en Robot Studio</li>
-                        <li> Abrir una estacion vacia</li>
+                       <h3>Inciar un proyecto</h3>
+                        <p> La primera vez que abres RS debe de Descargarte una controladora para tu estación.</p>
+                       <p> Nuestra estación tendre un brazo robotico IRB120 y con una controladora IRC5 con un firmware RobotWare 6.16.01 en Robot Studio</p>
+                          <img class="imagen"src="imagen/tem-robotstudio-controladora.png" alt="robotstudio"><br>
+                        <p> Abrir una estacion vacia</p>
+                    <p>Añade a tu programa RS desde complementos la controladora    </p>
+                       <br>
+                       <p>Abre un proyecto de una instalación vacía</p>
                         <ul class="conpunto">
                             <li>Insertar Robot IRB 120</li>
                             <li>Insertar una controladora (Observar la parte inferior se pone en verde:controladora perfectamente instalada y funcionando en automatico)</li>
                             <li>Insertar la herramienta my tool</li>
-                            <li>Conectar la herramienta al robot (ejemplo arrastrando la herramienta al robot o mediante el menú contextual de la herramienta)</li>
+                            <li>Conectar la herramienta al robot (desde el menú de la derechaejemplo arrastrando la herramienta al robot o mediante el menú contextual de la herramienta)</li>
                         </ul>
-                        <li>Vistas de robot estudio</li>
-                        <ul class="conpunto">
-                            <li>Con el ratón</li>
-                            <li>Menú contextual sobre la estación</li>
+                        
+                        <h3>Áreas de robotstudio </h3>
+                  <img class="imagen"src="imagen/temario-robotstudio-interface.png" alt="robotstudio"><br>
+                             <h3>Moverse por robot estudio</h3>
+                           <p>Observa la parte inferior derecha, y veras las indicaciones para cambiar la visualización con el ratón</p>
+                            <p>Para cambiar la visualización tambien puede utilizar el menú contextual que aparece al pinchar clic derecho sobre el entorno de trabajo </p>
+                             <ul class="conpunto">
+                            <li>Ver todo</li>
+                            <li>
+Seleccionar un punto en el entorno e trabajo y ver centro.</li>
+                       <li>Orientación. Ver las distintas vista de la representación</li>
                         </ul>
-                        <li> Hacer visible e invisible el brazo robótico desde el menú contextual</li>
-                        <li>Mover y girar el brazo robotico </li>
+                        <p>Una tercera opción desde el menú del entorno de trabajo</p>
+                        
+                        <img class="imagen"src="imagen/temario-robotstudio-visualizacion.png" alt="robotstudio"><br>
+
+                        <h3>Acciones básicas a realizar</h3>
+                        
+                        <p> Hacer visible e invisible un objeto desde el menú contextual</p>
+                        <h3>Mover y girar objetos </h3>
                         <ul class="conpunto">
                             <li>con el ratón, seleccionado pestaña posición inicial -> mano alzada -> mover</li>
                             <li>Desde el menu contextual del brazo robótico posición-> fijar posición</li>
                             <li>con el ratón, seleccionado pestaña posición inicial -> mano alzada -> girar</li>
-                            <li>Desde el menu contextual del brazo robótico posición-> girar</li>
+                            <li>En el área menú de arbol, Desde el menu contextual del brazo robótico "Click derecho sobre IRB120" posición-> girar</li>
                         </ul>
-                        <li>mover los ejes del brazo robótico con el ratón</li>
-
+                        <img class="imagen" src="imagen/tem-robotstudio-posicion1.png" alt="guardar en robotStudio">
+                        <h3>Mover los ejes del brazo robótico con el ratón</h3>
+      <ul class="conpunto">
                         <li>Mover linealmenta el brazo robotica con el ratón</li>
                         <li>Reorientar mytool con el ratón seleccionado mytool y en la pestaña posción inicial -> mano alzada -> girar</li>
                         <li>Mover los ejes desde el menú contextual del robot</li>
@@ -994,19 +1009,20 @@ ENDMODULE
                     </ul>
                     <input class="boton" type="button" value="cerrar todas las cuestiones" onClick="location.reload();">
                 </details>
-                <!-- ***************ETIQUETA 2 ********************************** -->
+                <!-- *****************CREACIÓN Y GUARDADO DE ARCHIVOS********************* -->
                 <details class="detallescard">
                     <summary class="sumario">
                         <h2 class="puntero">CREACIÓN Y GUARDADO DE ARCHIVOS</h2>
                     </summary>
-                    <ul>
-                        <li> Creación desde estación vacia: Los archivos del proyecto se distribuyen en carpetas de robotstudio </li>
-                        <li>Creacion desde proyeccto: Los archivos quedan guardados en la carpeta proyecto</li>
+               
+                        <p> Creación desde estación vacia: Los archivos del proyecto se distribuyen en carpetas de robotstudio </p>
+                        <p>Creacion desde proyeccto: Los archivos quedan guardados en la carpeta proyecto</p>
+                          <br><img class="imagen" src="imagen/tem-robotstudio-abrir.png" alt="guardar en robotStudio">
 
-                        <li>Para exportar un proyecto de un ordenador a otro de debe de realizar desde archivo-> compartir -> un pack and go </li>
-                        <li>Para importar un proyecto de un ordenador a otro de debe de realizar desde archivo-> compartir -> un unpack and work </li>
+                        <p>Para exportar un proyecto de un ordenador a otro de debe de realizar desde archivo-> compartir -> un pack and go </p>
+                        <p>Para importar un proyecto de un ordenador a otro de debe de realizar desde archivo-> compartir -> un unpack and work </p>
 
-                    </ul>
+      
 
 
                     <h2 class="puntero">Crear un proyecto vs. crear una estación</h2>
@@ -1050,57 +1066,92 @@ ENDMODULE
                     <input class="boton" type="button" value="cerrar todas las cuestiones" onClick="location.reload();">
                 </details>
 
-                <!-- ***************ETIQUETA 3 ****MODELADO****************************** -->
+                <!-- ****************MODELADO****************************** -->
                 <details class="detallescard">
                     <summary class="sumario">
-                        <h2 class="puntero">MODELADO</h2>
+                        <h2 class="puntero">MODELADO y CREACIÓN DE UNA HERRAMIENTA</h2>
                     </summary>
-                    <ul>
-                        <li> Dibujar una mesa: cubo </li>
-                        <li>Cambiar origen del sistema de coordenadas del cubo. Seleccionar el objeto, aparece una nueva pestaña modificar, posiciòn -> fijar origen local</li>
-                        <li> Dibujar un vaso dos cilindros de forma que al aplicar la operación restar que una pieza con la forma de Vaso</li>
-                        <li>Aplicar comportamiento fisico a la mesa: estático </li>
-                        <li>Aplicar comportamiento físico al vado: dinámico</li>
-                        <li> Colocar el vaso elevado sobre la mesa</li>
-                        <li>Activar simulación:</li>
+                   
+                    
+                        
+                       
+                        
+                      
+                        <h3>Creación de una pieza y Origen local</h3>
+                        <p>El origen local del cubo se genera al crear la pieza y su colocación respecto a los ejes "mundo", el <strong>origen local</strong> de la pieza lo situamos con punto de esquina y orientación </p>
+                        <p></p>   <img class="imagen" src="imagen/tem-modelado-crear_tetraedro.png" alt="modelado">
+                        <p>una vez creada la pieza se puede cambiar el origen local</p>
+                            <p>Cambiar origen del sistema de coordenadas del cubo. Seleccionar el objeto, aparece una nueva pestaña modificar, posiciòn -> fijar origen local</p>
+                           <img class="imagen" src="imagen/tem-modelado-cambiar%20origen_local.png" alt="modelado">
+                           <h3>Mover una figura</h3>
+                           <p>Puedo mover una figura seleccionando en el menú contextual de inicio y modelado <span>"Mover y Rotar</span></p>
+                           <p>otra forma mas precisa, es seleccionado la figura, click botón derecho y fijar posción. Colocando el origen local de la figura en el punto</p>
+                            <img class="imagen" src="imagen/tem-modelado-cambiar posición.png" alt="modelado">
+                           
+                           <h3>Crear un figura mediante resta de dos cuerpos</h3>
+                        <p> Dibujar un vaso dos cilindros de forma que al aplicar la operación restar que una pieza con la forma de Vaso</p>
+                            <img class="imagen" src="imagen/tem-modelado-resta.png" alt="modelado">
+                            <h3>Comportamiento físico.</h3>
+                            <p>Para una buena simulación hay que dar compartamiento fisico a las herramientas y fuguras de la estación</p>
+                    <p>La pieza que no se va a mover, Aplicar con el menú contextual al hacer click sobre al plieza con el botón derecho. fisica->comportamiento->Anclado, ejemplo a la mesa </p>
+                   <p>Las piezas que se van a mover, ejemplo el vaso, fisca->comportamiento <span>Dinamica</span></p>
+                       <p>A la herramienta, ejemplo a mytool, comportamiento cinemática</p>
+                       <h3>Simulación</h3>
+                        <p> Colocar el vaso elevado sobre la mesa y 
+                     Activar simulación:</p>
                         <ul class="conpunto">
-                            <li> Manteneractiva desde el menú simulación-> configuración simulación -> ciclo continuo </li>
+                            <li> Mantener activa desde el menú simulación-> configuración simulación -> ciclo continuo </li>
                             <li> Mover el robot en simulación: pestaña controlador; Modo de funcionamiento-> ponerlo en manual, el contralodor pasa de ver a amarillo </li>
 
                         </ul>
                         <li>Obervamos que al activar la simulación el vaso cae sobre la mesa</li>
-                        <li>Poner comportamiento fisico al mytool cinematico,</li>
-                        <li>Tirar el vaso moviendo el brazo robótico,desde el menú contextual mediante ejes y mediante movimiento lineales</li>
-                    </ul>
-                    <li>Guardar en biblioteca los objetos creados. Desde el menú contextual del objeto, guardar en biblioteca. Se guarda en la carpeta components de mi proyecto, con extensión rslib </li>
-                    <li>Abrir un archivo nuevo e importar biblioteca:</li>
+                   
+                     <h3>Guardar en bibliteca</h3>
+                <p>Las piezas y la herramientas creadas se pueden guardar en la libreria del proyecto, (solo sera accesible desde el proyecto) o en la libreria de robot estudio, y sera accesible para cualquier proyecto.</p>
+                    <p>Guardar en biblioteca los objetos creados. Desde el menú contextual del objeto, guardar en biblioteca. Se guarda en la carpeta components de mi proyecto, con extensión rslib </p>
+                     <img class="imagen" src="imagen/tem-modelado-guardar_biblioteca.png" alt="modelado">
+                    
+                    <p>Actividad propuesta</p>
+                    <p>Guarda una pieza creada en la bibilioteca del proyecto y en la biblioteca de robotstudio, importa la pieza en el proyecto actual y Abrir un archivo nuevo e importar biblioteca:</p>
                     <ul class="conpunto">
                         <li>pestaña posición inicial;importar biblioteca-> buscar biblioteca (buscar la ubicación donde se guardo el objeto)</li>
                         <li>Copiar los objetos de proyecto anterior a la carpeta de proyecto actual, ahora accedo a los objetos, desde biblioteca del proyecto </li>
                         <li>En ubicaciones puede ver la ruta donde se guardan la geometrias. Si guardo los objetos rslib en la carpeta de misdocumentos/robotstudio/libreries; Puedo acceder a los objetos desde biblioteca del ususario</li>
                     </ul>
-                    <h3 class="amarillo_negrita">Modificar origen local de un objeto</h3>
-                    <p> Al crear un cubo, le damos sus dimensiones (longitud X,anchura Y y alto Z) lo colocamos respecto al sistema de coordenas mundo, con punto de esquina y orientación. de la posición donde lo colocamos respecto de mundo va a depender el sistema de coordenadas del objeto <strong>"origen local del objeto"</strong></p>
-                    <img class="imagen" src="imagen/migas_modelado.png" alt="modelado">
-                    <p>El sistema de coordenadas del objeto nos va servir para para situar el objeto, como para identificar sus puntos caracteristico.
-
-                    <p>Si quiero modificar el origen del objeto, menú contextual del objecto ->modificar-> Establecer origen local</p>
-                    <img class="imagen" src="imagen/migas_modelado1.png" alt="modelado">
+                    
+                       <img class="imagen" src="imagen/tem-modelado-importar-bibliteca.png" alt="modelado">
+                    <h3>Crear una herramienta</h3>
+                 <p>Creamos una pieza con las opciones, con las partes que necesite, uno y resto los cuerpos, hasta obtener la pieza que yo quiero convertir en herramienta </p>
+                 <p>Coloco y oriento el origen local en el punto de pieza donde quiero insertarla al robot</p>
+                 <p>Desplazo la pieza haciendo coincidir el origen local con el sistema de coordenadas mundo, con esto me aseguro la colocación del punto de inserción</p>
+                 <p>Antes de crear una herramienta se recomiendo hacerla una copia, para utilizarla en caso de cometer un error al crear la herramienta</p>
+                 <p>Desde menú de modelado, click en crear herramienta, la puedo poner nombre, utilizo la pieza ya existente que habia creado y la pongo un peso </p>
+                    <img class="imagen" src="imagen/tem-modelado-herramienta1.png" alt="modelado">
+                 <p>Pasando a la pantalla siguiente</p>
+                    <p>añado el tcp de la herramienta</p>
+                    <p>Lo puedo hacer desde utilizado los coordenadas y orientación o activando "ajustar objetos</p>
+                    <p>mediante al flecha añado los tcp de mi herramienta</p>
+                     <img class="imagen" src="imagen/tem-modelado-herramienta2.png" alt="modelado">
+                     <p>A la hora de simular si la herramienta o pieza creada crean un choque donde no hay material, prueba a recrear grafico</p>
+                     <img class="imagen" src="imagen/tem-modelado-choque.png" alt="modelado">
+                     <p>Propuesta de ejercicio crea una herramienta con dos TCP</p>
+                     <p>Mueve el robot a un mismo punto con el tcp de una herramienta y con el tcp de la otra herramienta.</p>
 
                     <input class="boton" type="button" value="cerrar todas las cuestiones" onClick="location.reload();">
                 </details>
 
-                <!-- ***************ETIQUETA 4 ***********PUNTOS Y TRAYECTORIAS SIMULACION*********************** -->
+                <!-- ***********PUNTOS Y TRAYECTORIAS SIMULACION*********************** -->
                 <details class="detallescard">
                     <summary class="sumario">
                         <h2 class="puntero">PUNTOS, TRAYECTORIAS y SIMULACIÓN</h2>
                     </summary>
                     <h2>Creación de puntos</h2>
-                    <ul class="conpunto">
+                
 
-                        <li> Trasladar a posición inicial el brazo robótico </li>
-                        <li>Crear el punto de posición inicial "home": posición inicial -> programación de trayectorias- > <strong> programar posición</strong></li>
-
+                        <p> Trasladar a posición inicial el brazo robótico </p>
+                    
+                            <img class="imagen"src="imagen/tem-puntos-posicion_inicial.png" alt="robotstudio">
+<p> Crear el punto de posición inicial "home": posición inicial -> programación de trayectorias- > <strong> programar posición</strong></p>
                         <h3 class="amarillo_negrita"> Ver el punto creado</h3>
                         <li> Cambiar de la pestaña de diseño donde veiamos el robot, mytools, objetos modelados a la pestaña trayectorias y puntos
                             Seleccionamos el robot -> objetos de trabajo y puntos -> wobobj0-> target 10</li>
@@ -1133,7 +1184,7 @@ ENDMODULE
                             <li>Modificar la orientación a mano. Menu contextual del punto->modificar posición -> fijar posición</li>
                             <li>Se puede duplicar un punto y añadirle un offset</li>
                         </ul>
-                    </ul>
+                
 
                     <h2>Creación de un punto a mano alzada</h2>
                     <p>Desde la pantalla diseño ->mano alzada-> mover y rotar.</p>
