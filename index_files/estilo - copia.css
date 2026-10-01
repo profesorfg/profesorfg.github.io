@@ -1,4 +1,13 @@
- * {	/*elinina todos los margenes a todo alinea todos los li al borde*/
+/*titulos*/
+/* ---    ORGANIZACION: CONTENEDOR, MAIN ASIDE LATERAL FOOTER--ASIDE SECTION      -------*/
+/* para paginas de imagenes o videos*/
+/*   ----------------------  particularidades   colores flex ancho--------------------*/
+/* ----------------------------- listas-  ul------------*/
+/* ----------------------- imagenes  ------------------------------------------475*/
+/* ------------------  details----------------------------*/
+/*   MEDIA SCREEN  --------------------------para el movil -----------------------  1195*/  
+
+* {	/*elinina todos los margenes a todo alinea todos los li al borde*/
 			margin:0px;
             padding:0px;
 			}	
@@ -389,9 +398,11 @@ width: min(1500px, 100%);
 .centrar{  text-align: center;}
 .derecha{text-align: end;}
 
-/* -----------------------clases particulares ------------------------------------------*/
+/* -----------------------clases particulares ----letras fuentes fondos background --------------------------------------*/
 
-
+.lineas3 {
+    scroll-margin-top: 7em;
+}
 
 .fondo_azul {
       background: #347f;
@@ -399,6 +410,11 @@ width: min(1500px, 100%);
 
 .azul_negrita {
     color: #00f;
+    font-weight: bold;
+}
+
+.amarillo_negrita {
+    color: #ff0;
     font-weight: bold;
 }
 .fondo_verde{
@@ -433,7 +449,7 @@ width: min(1500px, 100%);
 
     
 }
-
+/* ----------------------------- listas-  ul------------*/
 .conpunto{
     list-style: circle;
     padding-left:50px;
@@ -482,15 +498,26 @@ width: min(1500px, 100%);
  
 
 
+.imagen-ancho-medio{
+    max-width: 1000px;
+}
 
 
-
-.max_ancho200px{
+.imagen-ancho200{
     max-width: 200px;
 }
 
 .imagen-alto230{
     max-height: 230px;
+}
+
+
+.imagen-alto200{
+    max-height: 200px;
+}
+
+.imagen-alto50{
+    max-height: 50px;
 }
 
 
@@ -524,8 +551,10 @@ width: min(1500px, 100%);
 .detalles{
 }
 
+
 .detalles[open] {
   background: #ddd; 
+
 }
 
 .detallescard{
@@ -543,6 +572,22 @@ width: min(1500px, 100%);
     border-radius: 8px;
     border-color: greenyellow;
 }
+
+
+details.detallescard[open] h2 {
+
+color: burlywood;
+background: none;
+
+}
+
+details.detallescard[open] h3 {
+
+color: greenyellow;
+
+}
+
+details.detallescard[open] h4 {color: yellow;}
 
 
 .sumario{
@@ -563,7 +608,7 @@ width: min(1500px, 100%);
  
 
 
-/* ------------------  ver mas  ----------------------------*/
+/* ------------------  ver mas  ------------------utilizado en logo-practicas----------*/
   .flex_wrap_vermas {
 
     display: flex;
@@ -600,35 +645,35 @@ width: min(1500px, 100%);
 
 /*-------------------------  videos  ------------------------------------------*/
 
-.videos-youtube {
-    /* explicado en Emprinnos como poner e insertar videos en html */
+/* .videos-youtube {
+    explicado en Emprinnos como poner e insertar videos en html
     position: relative;
-    /* para que se pueda colocar dentro position absoluta ??*/
+    para que se pueda colocar dentro position absoluta ??
     padding-bottom: 56.25%;
-    /*crea un div con un ratio de 16/9 */
+    crea un div con un ratio de 16/9
     overflow: hidden;
-    /* oculto lo que se salga del div*/
+    oculto lo que se salga del div
     height: 0%;
-    /* lo he puesto porque me aparecio en gpt*/
+    lo he puesto porque me aparecio en gpt
 
 
 
 }
 
 .videos-youtube iframe {
-    /* los videos que esten dentro dentro de esta clase*/
+    los videos que esten dentro dentro de esta clase
     position: absolute;
-    /* no ocupa espacio, por lor que se pondra encima del paddin del div padre*/
+    no ocupa espacio, por lor que se pondra encima del paddin del div padre
     top: 0;
-    /* coloco en la parte superior del padre*/
+    coloco en la parte superior del padre
     left: 0;
-    /* coloca a la izquierda del padre*/
+    coloca a la izquierda del padre
     width: 100%;
-    /* ocupa el 100% del ancho del padre y por el ratio del padre el 100% del ancho*/
+    ocupa el 100% del ancho del padre y por el ratio del padre el 100% del ancho
     height: 100%;
-    /*no lo puse y me quedo una mierda de altura*/
+    no lo puse y me quedo una mierda de altura
 }
-
+ */
 
 /* video en la pagina de renovables y va bien para tener dos videos en una fila */
 
@@ -664,8 +709,27 @@ width: min(1500px, 100%);
     height: 100%;
     /* Puedes ajustar la altura según tus necesidades */
 }
+.video-robotica_3filas {
+    
+     margin: 0px;
+    padding: 0;
+    width: 30%;
+    min-width: 350px;
+  
+    text-align: center;
+   
+ 
+}
 
+.robotica iframe{
+    height: 380px; 
+  
+  }
 
+.robotica_vertical iframe{
+    height: 500px; 
+  
+  }
 
 /* ------------------------- TXT  programa----------------------- */
 .txt iframe{
@@ -673,6 +737,14 @@ width: min(1500px, 100%);
     width: 100%;
     height:700px;
 }
+
+.txt_pequeno iframe{
+ overflow: auto;
+    width: 100%;
+    height:100px;
+}
+
+
 
 /*  ------------------------  ENLACES  -----------------------------*/
 .boton {

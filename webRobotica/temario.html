@@ -1054,7 +1054,7 @@ Seleccionar un punto en el entorno e trabajo y ver centro.</li>
 
 
 
-                    <br><img class="imagen" src="imagen/migas_guardar.png" alt="guardar en robotStudio">
+                    <br><img src="imagen/migas_guardar.png" alt="guardar en robotStudio">
 
 
 
@@ -1066,7 +1066,8 @@ Seleccionar un punto en el entorno e trabajo y ver centro.</li>
                     <input class="boton" type="button" value="cerrar todas las cuestiones" onClick="location.reload();">
                 </details>
 
-                <!-- ****************MODELADO****************************** -->
+                <!-- ***********MODELADO y CREACION DE UNA HERRAMIENTA ***************** -->
+                
                 <details class="detallescard">
                     <summary class="sumario">
                         <h2 class="puntero">MODELADO y CREACIÓN DE UNA HERRAMIENTA</h2>
@@ -1079,18 +1080,18 @@ Seleccionar un punto en el entorno e trabajo y ver centro.</li>
                       
                         <h3>Creación de una pieza y Origen local</h3>
                         <p>El origen local del cubo se genera al crear la pieza y su colocación respecto a los ejes "mundo", el <strong>origen local</strong> de la pieza lo situamos con punto de esquina y orientación </p>
-                        <p></p>   <img class="imagen" src="imagen/tem-modelado-crear_tetraedro.png" alt="modelado">
+                        <p></p>   <img src="imagen/tem-modelado-crear_tetraedro.png" alt="modelado">
                         <p>una vez creada la pieza se puede cambiar el origen local</p>
                             <p>Cambiar origen del sistema de coordenadas del cubo. Seleccionar el objeto, aparece una nueva pestaña modificar, posiciòn -> fijar origen local</p>
-                           <img class="imagen" src="imagen/tem-modelado-cambiar%20origen_local.png" alt="modelado">
+                           <img src="imagen/tem-modelado-cambiar%20origen_local.png" alt="modelado">
                            <h3>Mover una figura</h3>
                            <p>Puedo mover una figura seleccionando en el menú contextual de inicio y modelado <span>"Mover y Rotar</span></p>
                            <p>otra forma mas precisa, es seleccionado la figura, click botón derecho y fijar posción. Colocando el origen local de la figura en el punto</p>
-                            <img class="imagen" src="imagen/tem-modelado-cambiar posición.png" alt="modelado">
+                            <img src="imagen/tem-modelado-cambiar posición.png" alt="modelado">
                            
                            <h3>Crear un figura mediante resta de dos cuerpos</h3>
                         <p> Dibujar un vaso dos cilindros de forma que al aplicar la operación restar que una pieza con la forma de Vaso</p>
-                            <img class="imagen" src="imagen/tem-modelado-resta.png" alt="modelado">
+                            <img  src="imagen/tem-modelado-resta.png" alt="modelado">
                             <h3>Comportamiento físico.</h3>
                             <p>Para una buena simulación hay que dar compartamiento fisico a las herramientas y fuguras de la estación</p>
                     <p>La pieza que no se va a mover, Aplicar con el menú contextual al hacer click sobre al plieza con el botón derecho. fisica->comportamiento->Anclado, ejemplo a la mesa </p>
@@ -1109,7 +1110,7 @@ Seleccionar un punto en el entorno e trabajo y ver centro.</li>
                      <h3>Guardar en bibliteca</h3>
                 <p>Las piezas y la herramientas creadas se pueden guardar en la libreria del proyecto, (solo sera accesible desde el proyecto) o en la libreria de robot estudio, y sera accesible para cualquier proyecto.</p>
                     <p>Guardar en biblioteca los objetos creados. Desde el menú contextual del objeto, guardar en biblioteca. Se guarda en la carpeta components de mi proyecto, con extensión rslib </p>
-                     <img class="imagen" src="imagen/tem-modelado-guardar_biblioteca.png" alt="modelado">
+                     <img src="imagen/tem-modelado-guardar_biblioteca.png" alt="modelado">
                     
                     <p>Actividad propuesta</p>
                     <p>Guarda una pieza creada en la bibilioteca del proyecto y en la biblioteca de robotstudio, importa la pieza en el proyecto actual y Abrir un archivo nuevo e importar biblioteca:</p>
@@ -1119,23 +1120,74 @@ Seleccionar un punto en el entorno e trabajo y ver centro.</li>
                         <li>En ubicaciones puede ver la ruta donde se guardan la geometrias. Si guardo los objetos rslib en la carpeta de misdocumentos/robotstudio/libreries; Puedo acceder a los objetos desde biblioteca del ususario</li>
                     </ul>
                     
-                       <img class="imagen" src="imagen/tem-modelado-importar-bibliteca.png" alt="modelado">
+                       <img src="imagen/tem-modelado-importar-bibliteca.png" alt="modelado">
                     <h3>Crear una herramienta</h3>
                  <p>Creamos una pieza con las opciones, con las partes que necesite, uno y resto los cuerpos, hasta obtener la pieza que yo quiero convertir en herramienta </p>
                  <p>Coloco y oriento el origen local en el punto de pieza donde quiero insertarla al robot</p>
                  <p>Desplazo la pieza haciendo coincidir el origen local con el sistema de coordenadas mundo, con esto me aseguro la colocación del punto de inserción</p>
                  <p>Antes de crear una herramienta se recomiendo hacerla una copia, para utilizarla en caso de cometer un error al crear la herramienta</p>
                  <p>Desde menú de modelado, click en crear herramienta, la puedo poner nombre, utilizo la pieza ya existente que habia creado y la pongo un peso </p>
-                    <img class="imagen" src="imagen/tem-modelado-herramienta1.png" alt="modelado">
+                    <img src="imagen/tem-modelado-herramienta1.png" alt="modelado">
                  <p>Pasando a la pantalla siguiente</p>
                     <p>añado el tcp de la herramienta</p>
                     <p>Lo puedo hacer desde utilizado los coordenadas y orientación o activando "ajustar objetos</p>
                     <p>mediante al flecha añado los tcp de mi herramienta</p>
-                     <img class="imagen" src="imagen/tem-modelado-herramienta2.png" alt="modelado">
+                     <img  src="imagen/tem-modelado-herramienta2.png" alt="modelado">
+                     
+                     
+                     <h3>Recrear gráfico</h3>
                      <p>A la hora de simular si la herramienta o pieza creada crean un choque donde no hay material, prueba a recrear grafico</p>
-                     <img class="imagen" src="imagen/tem-modelado-choque.png" alt="modelado">
-                     <p>Propuesta de ejercicio crea una herramienta con dos TCP</p>
+                     <img src="imagen/tem-modelado-choque.png" alt="modelado">
+                     <h3> crea una herramienta con dos TCP</h3>
+                   
+                      <p>Desde modelado se dibuja una herramienta, ejemplo un cono con diametro 30 y altura 100 </p>
+                    <p>Desde la pestaña modelado, -> crear una herramienta.</p>
+                    <p>Se pone el peso de la herramienta 100gr, se selecciona utilizar herramienta ya existente, siguiente desde el sistema de coordenadas wobj0 se selecciona el punto TCP y se la da un nombre</p>
+                    <p>Crear una herramineta con dos TCP</p>
+                    <p>Crear una herramienta con TCP con orientación distinta al sistema de coordenas wobj0</p>
+                    <p>observar los parametros herramienta mytool, colocar en el robot en punto según un tcp u otro</p>
+                     
                      <p>Mueve el robot a un mismo punto con el tcp de una herramienta y con el tcp de la otra herramienta.</p>
+                     
+                     <h3>Creación de herramientas con programas externos</h3>
+                     
+                     <p>Crear el dibujo con un software de diseño 3D ejemplo "freecad" que es un software potente, libre y gratuito.
+                     <p>El formato sat es ideal para trabajar con robotstudio, pero freecad no puede eportarlo directamente.</p> 
+                     <p>Para convertirlo desde freecad lo expotramos step y con abviewer convertilo en sat y asi robotstudio detectaba la geometría activando ajustar objetos</p>
+
+  <p>otra opción, dibujar con freecad y convertirlo a gltf, con este formato robotstudio también detecta geometría, funciona bien y no tengo que realizar tantas conversiones.</p>
+
+  <p>
+    un vez tengo la pieza en formato <strong>"flgt"</strong> la guardo en documentos/robotstudio/geometry<br>
+    <p>la importo desde modelado/importar geometría</p>
+   <p>Y ya puedo trabajar con ella o incluso la puedo convertir en herramienta</p> 
+   <p>Haciendo click en los siguientes dibujos puedo descargarme dos herramientas, palet1 y palet2, creadas con freecad, impresas en 3D. En formato sat o  flgt para utilizarlas en robotstudio y convertirlas en herramienta </p> 
+   <p>nota en palet2 para la creación del TCP le he puesto un ángulo de 90-38 en Y</p>
+   <p>
+    <a href="https://drive.google.com/file/d/11aA8PUJnkrVA5bZq-qV9UhPtdBLo8b9z/view?usp=sharing">
+    <img class="imagen-alto50" src="imagen/tem-modelado-palet1.png" alt="palet">sat   .
+  </a>
+   
+  <a href="https://drive.google.com/file/d/1Hah9QWvTrL3TKkHxcF2nBU0d4cyGIt2X/view?usp=sharing">
+    <img class="imagen-alto50"src="imagen/tem-modelado-palet2.png" alt="palet2">gltf   .
+  </a>
+  <a href="https://drive.google.com/file/d/1g8UyfirePsBWidZz6Cu2IBuMGRDh9Um4/view?usp=sharing">
+    <img class="imagen-alto50" src="imagen/tem-modelado-palet2.png" alt="palet2">sat    .
+  </a>
+  
+  </p>
+    <img  src="imagen/tem-modelado-mytool_TCP.png" alt="palet2">
+   <p>Una vez creada la herramienta, la guardo en la biblioteca </p>
+    <p>la puedo encontrar en <strong>documento/robotstudio/proyect/nombredelproyecto/components</strong></p>
+   <p> si la quiero utilizar en otros proyectos la copio a  <strong>documento/robotstudio/libreries</strong> <br>
+                    creo un proyecto nuevo, <strong>inicio/importar biblioteca/biblioteca de usuario/palet2</strong></p>
+
+                     
+                     
+                     
+                     
+                     
+                     
 
                     <input class="boton" type="button" value="cerrar todas las cuestiones" onClick="location.reload();">
                 </details>
@@ -1150,7 +1202,7 @@ Seleccionar un punto en el entorno e trabajo y ver centro.</li>
 
                         <p> Trasladar a posición inicial el brazo robótico </p>
                     
-                            <img class="imagen"src="imagen/tem-puntos-posicion_inicial.png" alt="robotstudio">
+                            <img src="imagen/tem-puntos-posicion_inicial.png" alt="robotstudio">
 <p> Crear el punto de posición inicial "home": posición inicial -> programación de trayectorias- > <strong> programar posición</strong></p>
                         <h3 class="amarillo_negrita"> Ver el punto creado</h3>
                         <li> Cambiar de la pestaña de diseño donde veiamos el robot, mytools, objetos modelados a la pestaña trayectorias y puntos
@@ -1161,10 +1213,10 @@ Seleccionar un punto en el entorno e trabajo y ver centro.</li>
                             <li>Modificar el punto utilizando sistemas de coordenadas local ( el tcp)</li>
 
                         </ul>
-                        <h3 class="amarillo_negrita"> <strong>Duplicar un punto</strong> moverle un offset</h3>
+                        <h3> <strong>Duplicar un punto</strong> moverle un offset</h3>
                         <p> Desde pestaña "trayectorias y puntos" desde el menú contextual del puntos -> dupliacar punto, y le añadimos el offset</p>
 
-                        <h3 class="amarillo_negrita">Opción PUNTO</h3>
+                        <h3>Opción PUNTO</h3>
                         <p>En la pestaña posición inicial, programación y trayectorias
                             -> crear punto</p>
                         <p>Se pone la posción del punto y la orientación del eje de coordenadas</p>
@@ -1175,7 +1227,7 @@ Seleccionar un punto en el entorno e trabajo y ver centro.</li>
                         <li><strong> ver robot en posición</strong> en cada uno de los puntos, utilizado el menu contextual del punto -> ver robot en posicion</li>
                         <li> Desde el menú contextual del punto-> seleccionar <strong> ver herramienta en posición</strong></li>
 
-                        <h3 class="amarillo_negrita"> Ejercicio creacion de punto</h3>
+                        <h3> Ejercicio creacion de punto</h3>
                         <li>Crear un punto, pestaña posición inicial->programación de trayectorias-> punto, Poner las coordenas x,y,z respecto el sistemas de coordenas de la estación wobj0-> añadir-> se pueden crear mas puntos-> se termina pulsar en crear. Apareceran los puntos en el wobj0</li>
                         <li>Seleccionar un punto y pulsar en ver <strong>ver robot en posición, si el robot no puede llegar a esa posición puede ser: por que el robot no llega al punto o por la orientación </strong></li>
 
@@ -1226,34 +1278,34 @@ Seleccionar un punto en el entorno e trabajo y ver centro.</li>
                     </summary>
                     <br>
 
-                    <h3 class="puntero">Crear una colisión </h3>
+                    <h3>Crear una colisión </h3>
 
                     <li> Simulación--> crear colision</li>
                     <li> aparecen dos carpertas</li>
                     <li> llevar a una carpeta my tool y a la otra el objeto de colision.</li>
 
-                    <h3 class="puntero">Grabación de
+                    <h3>Grabación de
                         vídeo</h3>
 
                     <br>
-                    <img class="imagen" src="imagen/m_manuales_video_extensiones.png" alt="video"><br>
+                    <img src="imagen/m_manuales_video_extensiones.png" alt="video"><br>
                     <br>
                     Se puede grabar una animación del funcionamiento en distintos
                     formatos, exe, glb o rsstnv. Nos permite cambiar el punto vista,
                     hacer Zoom etc sin tener Robotstudio. <br>
                     <br>
                     Se pueden grabar vídeos en formato mp4 <br>
-                    <img class="imagen" src="imagen/m_manuales_video_parar.png" alt="video"><br>
+                    <img src="imagen/m_manuales_video_parar.png" alt="video"><br>
                     <br>
                     Puedo grabar una simulación, al dar play a la simulación. <br>
                     Al pulsar grabar aplicación, se pone a grabar hasta que pulsemos
                     parar <br>
                     Al pulsar grabar graficos, graba los graficos hasta pulsar paro <br>
                     <br>
-                    <h3 class="puntero">Ocultar una trayectoria</h3>
+                    <h3>Ocultar una trayectoria</h3>
                     <p>Desde la pantalla posición inicial, en la pestaña trayectorias y puntos, vamos a una ruta creada, abrimos su menu contextual en ver-> deseleccionamos visible <strong>VER</strong></p>
                     <br>
-                    <h3 class="puntero">Selección de puntos programa posición</h3>
+                    <h3>Selección de puntos programa posición</h3>
 
                     <p>Otra forma de selecionar puntos es moviendo el robot desde la vista de diseño "menu -> contextual del robor -> movimiento ejes del mecanismo o movimiento lineal del mecanismos" a la posición deseada y clickcar en programar posición </p>
                     <p>Esto es lento e impreciso desde robot studio, desde el robot real es una práctica muy habitual.</p>
@@ -1269,16 +1321,11 @@ Seleccionar un punto en el entorno e trabajo y ver centro.</li>
                 <!-- ***************ETIQUETA TCP y WORKOBJECT**********************************       -->
                 <details class="detallescard">
                     <summary class="sumario">
-                        <h2 class="puntero">TCP Y WORKOBJECTS</h2>
+                        <h2 class="puntero"> WORKOBJECTS</h2>
                     </summary>
 
 
-                    <p>Desde modelado se dibuja una herramienta, ejemplo un cono con diametro 30 y altura 100 </p>
-                    <p>Desde la pestaña modelado, -> crear una herramienta.</p>
-                    <p>Se pone el peso de la herramienta 100gr, se selecciona utilizar herramienta ya existente, siguiente desde el sistema de coordenadas wobj0 se selecciona el punto TCP y se la da un nombre</p>
-                    <p>Crear una herramineta con dos TCP</p>
-                    <p>Crear una herramienta con TCP con orientación distinta al sistema de coordenas wobj0</p>
-                    <p>observar los parametros herramienta mytool, colocar en el robot en punto según un tcp u otro</p>
+                   
 
 
                     <h2>Workobjects</h2>
@@ -1291,11 +1338,11 @@ Seleccionar un punto en el entorno e trabajo y ver centro.</li>
                         referenciados a el también se mueven</p>
 
                     <p>Desde la pantalla posición inicial, programación de trayectorias seleccionamos otros->Crear objetos de trabajo. en la pantalla de la izquierda le podemos dar un nombre y las coordenadas de usuario </p>
-                    <img class="imagen" src="imagen/migas_wo1.png" alt="workobject">
-                    <img class="imagen" src="imagen/migas_wo2.png" alt="workobject">
-                    <img class="imagen" src="imagen/migas_wo3.png" alt="workobject">
+                    <img  src="imagen/migas_wo1.png" alt="workobject">
+                    <img  src="imagen/migas_wo2.png" alt="workobject">
+                    <img  src="imagen/migas_wo3.png" alt="workobject">
                     <p>Si quiero crear los puntos repecto al nuevo sistemas de coordenadas selecciono en la pantalla posición inicial, parametros. El workobject creado</p>
-                    <img class="imagen" src="imagen/migas_wo4.png" alt="workobject">
+                    <img  src="imagen/migas_wo4.png" alt="workobject">
                     <p>Todos los puntos que estan referenciados a ese workobject, se desplazaran moviendo el workobject. </p>
                     <p>Para mover el workobject botón, accedemos al menú contextual -> fijar posción, puedo cambiar el origen y el angulo del sistema de coordenadas.</p>
 
@@ -1314,9 +1361,9 @@ Seleccionar un punto en el entorno e trabajo y ver centro.</li>
                     <p>Desde el menú simulación ya hemos visto que podemos poner en marcha el robot, </p>
                     <p>La simulación ejecuta el programa RAPID, que es el programa que transferimos al robot real</p>
                     <p>En robot studio hay dos entornos de trabajo <strong>LA ESTACIÓN</strong> y <strong>RAPID</strong></p>
-                    <h3 class="amarillo_negrita">ESTACIÓN</h3>
+                    <h3>ESTACIÓN</h3>
                     <p>El entorno ESTACION es entorno de ayuda para la programación del robot sin conocimientos de rapid, donde hemos visto su posibilidades, creación de objetos desde el área de modelado, creación de puntos, trayectorias, herramientas, mover el robot linealmente o por ejes,mover el robot a lo largo de una trayectoria...</p>
-                    <h3 class="amarillo_negrita">RAPID</h3>
+                    <h3>RAPID</h3>
                     <p>En el entorno RAPID es la creación del programa para transferirlo al robot. El programa rapid se puede crear directamente en este entorno o lo podemos crear a partir del entorno de la estación y SINCRONIZAMOS con rapid. Al hacer esta operación nos aparece en rapid el programa creado</p>
                     <p>En la pantalla rapid, en la pestaña controlador, dentro de robot podemos encontrar la opción rapid</p>
                     <p>El programa rapid esta compuesto por modulo de programa y modulo de sistema, nosotros vamos a trabajar solo con el módulo programa</p>
@@ -1329,12 +1376,12 @@ Seleccionar un punto en el entorno e trabajo y ver centro.</li>
                     <p>El proceso principal main y desde este se llama a programas secundarios</p>
                     <p>Por defecto los proceso secundarios se nombra con path pero pueden tener cualquier nombre</p>
 
-                    <h3 class="amarillo_negrita">Sincronizar</h3>
+                    <h3>Sincronizar</h3>
 
                     <li>Se puede crear un programación desde la estación y SINCRONIZON CON RAPID y me crea mi programa en RAPID</li>
                     <li>Se puede modificar el programa en RAPID y sincronizo con la ESTACIÓN y se modifica el programa creado desde la estación</li>
 
-                    <h3 class="amarillo_negrita">Simulación</h3>
+                    <h3>Simulación</h3>
                     <p>Desde la pantalla simulación se simula siempre el programa en RAPID, osea que si hago una modificación desde la estación y no sincronizo con rapid, me simulara el programa sin modificaciones</p>
                     <p>En la pantalla simulación, configurar ->configurar simulación</p>
                     <li>Seleccionando el robor IRB120 puedo configurar la simulación para un ciclo o para ciclo continuos</li>
@@ -1343,7 +1390,7 @@ Seleccionar un punto en el entorno e trabajo y ver centro.</li>
 
                     <p>Para mejorar la simulación se puede ocultar la trayectoria creadas y activar el rastreo TCP en la pantalla simulación, monitor<strong>Rastreo TCP</strong></p>
 
-                    <h3 class="amarillo_negrita">Ejercicio demostrativo</h3>
+                    <h3>Ejercicio demostrativo</h3>
                     <p>Creo un proyecto con un robot y caja, creo una trayectoria del home a dos vertices de la caja, creo un workobject que coincida con la base de coordenadas de la caja,creo una nueva trayectoria que vaya a los mismo vertices de la caja, creo una nueva trayectoria main, incluyo las dos trayectorias dentro de main. </p>
                     <p>Simulo el programa con seguimiento TCP</p>
                     <p>Modifico la posición de la caja y la del workobject y vuelvo a simular.</p>
@@ -1363,7 +1410,7 @@ Seleccionar un punto en el entorno e trabajo y ver centro.</li>
 
                     <p>En la pantalla controlador, sección "herramientas del controlador" ->flexpendant -> IRC 5 flexPendant</p>
                     <p>Desplegando el menu en las tres rayas, podemos ver las 12 pantallas existentes, si hago click en una se vera en la pantalla de la flexpendant. Puedo abrir un maximo de 6 pantallas</p>
-                    <h3 class="amarillo-negrita">Pantalla jogging</h3>
+                    <h3>Pantalla jogging</h3>
 
                     <p>Desde esta pantalla puedo mover el Robot manualmente.</p>
                     <p>Pasamos el robot a manual, el modo controlado pasa de verde a amarillo</p>
@@ -1381,14 +1428,14 @@ Seleccionar un punto en el entorno e trabajo y ver centro.</li>
                     <p>Con aling podemos alinear el TCP de la herramienta con respecto mundo</p>
                     <p>En la pantalla jogging podemos cambiar las referecncias del workobject y tool, si se han creado objetos de trabajo o TCP</p>
                     <p>Tambien podemos elegir el sistemas de coordenadas de referencia</p>
-                    <img class="imagen" src="imagen/temario-flexpendant.png" alt="flexpendant"><br>
+                    <img src="imagen/temario-flexpendant.png" alt="flexpendant"><br>
                     <h3 class="amarillo-negrita">Pantalla Configuración</h3>
                     <p>Puedo cambiar el idioma del la flexpendant</p>
                     <p>Mas adelante aprenderemos a configurar la señales de entrada y salida</p>
                     <p>Configurar las 4 teclas de accion rapida superiores en la opción <strong>Progkeys</strong></p>
 
-                    <h3 class="amarillo-negrita">Production windows o ventana de producción</h3>
-                    <img class="imagen" src="imagen/temario-flexpendant1.png" alt="flexpendant">
+                    <h3>Production windows o ventana de producción</h3>
+                    <img src="imagen/temario-flexpendant1.png" alt="flexpendant">
                     <p>Desde esta pantalla puedo cargar un programa RAPID. debo de tener una carpeta que incluya el archivo pgf, el rapid y el calib data</p>
                     <p>load program</p>
                     <p>En la parte superior donde pone open, vemos en la carpeta que nos encontramos</p>

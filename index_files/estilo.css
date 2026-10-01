@@ -5,15 +5,18 @@
 /* ----------------------------- listas-  ul------------*/
 /* ----------------------- imagenes  ------------------------------------------475*/
 /* ------------------  details----------------------------*/
-/*   MEDIA SCREEN  --------------------------para el movil -----------------------  1195*/  
+/*   MEDIA SCREEN  --------------------------para el movil -----------------------  1195*/
 
-* {	/*elinina todos los margenes a todo alinea todos los li al borde*/
-			margin:0px;
-            padding:0px;
-			}	
-   ul {
-				list-style:none;  /*quita el formato de punto y guiones de inicio de la lista */
-			} 
+* {
+    /*elinina todos los margenes a todo alinea todos los li al borde*/
+    margin: 0px;
+    padding: 0px;
+}
+
+ul {
+    list-style: none;
+    /*quita el formato de punto y guiones de inicio de la lista */
+}
 
 
 
@@ -34,7 +37,7 @@ h1 {
     padding: 0 4px;
     border-radius: 20px;
     text-align: center;
-    margin:0 20px;
+    margin: 0 20px;
     overflow: hidden;
 }
 
@@ -109,8 +112,8 @@ P {
 
 
 
- #contenedor2 {
-   
+#contenedor2 {
+
     background-color: #e3d5bc;
     display: grid;
     grid-template-columns: 1fr;
@@ -202,7 +205,7 @@ main {
     box-sizing: border-box;
     grid-area: main;
 
-  
+
 
 
 }
@@ -210,7 +213,7 @@ main {
 .articulo {
     background-image: url(../imagenes/fondo.gif);
     background-color: #e3c6c6;
-    margin:0 2%;
+    margin: 0 2%;
 
 
     padding: 10px;
@@ -293,39 +296,40 @@ footer a {
 
 }
 
-.article_curso{
-  background-color: #8a8;
-max-width: 800px;
+.article_curso {
+    background-color: #8a8;
+    max-width: 800px;
     border-radius: 20px;
-    border: 2px solid orange;  
-    padding:30px;
+    border: 2px solid orange;
+    padding: 30px;
     margin: auto;
     margin-bottom: 30px;
-    
+
 }
 
-.article_curso h2{
+.article_curso h2 {
     font-size: 2em;
-       text-align: center;
+    text-align: center;
     padding-bottom: 10px;
-  
+
 }
 
 .article_curso_enlaces {
-     padding: 10%;
-    
+    padding: 10%;
+
 }
-.article_curso_enlaces a{
-    color:#6d4f13;
+
+.article_curso_enlaces a {
+    color: #6d4f13;
     font-size: 1.5em;
     font-weight: 600;
     text-decoration: none;
-   
+
 }
 
 
 
- 
+
 
 
 
@@ -351,34 +355,37 @@ max-width: 800px;
     flex: 1 0 auto;
     margin: 0 10px;
     text-align: center;
- /*   border: 2px solid green; borrame*/
+    /*   border: 2px solid green; borrame*/
 
 }
 
 
 .flex10auto_center img {
-    max-height: 250px;  
-    max-width: 100%; /*añadida por una foto de 3d reductora*/
-  
-} 
+    max-height: 250px;
+    max-width: 100%;
+    /*añadida por una foto de 3d reductora*/
+
+}
 
 
 
 .flex11auto_center {
-    flex: 1 1 180px; /* el div tiene una anchura minima de  Xpx cuando llega a esa hace un wrap  la div ocupan de X px al total de ancho y todos se reducen en la misma proporcion */
+    flex: 1 1 180px;
+    /* el div tiene una anchura minima de  Xpx cuando llega a esa hace un wrap  la div ocupan de X px al total de ancho y todos se reducen en la misma proporcion */
 
     text-align: center;
-  /*  border: 2px solid red;  borrame*/
-   
+    /*  border: 2px solid red;  borrame*/
+
 
 }
 
 .flex11400px {
-    flex: 1 1 400px; /* el div tiene una anchura minima de  Xpx cuando llega a esa hace un wrap  la div ocupan de X px al total de ancho y todos se reducen en la misma proporcion */
+    flex: 1 1 400px;
+    /* el div tiene una anchura minima de  Xpx cuando llega a esa hace un wrap  la div ocupan de X px al total de ancho y todos se reducen en la misma proporcion */
 
     text-align: center;
-  /* border: 2px solid gray; borrame*/
-   
+    /* border: 2px solid gray; borrame*/
+
 
 }
 
@@ -386,17 +393,23 @@ max-width: 800px;
 
 
 
-.padding_{
+.padding_ {
     padding: 2%;
 }
 
-.width_ajustable{
-width: min(1500px, 100%);
+.width_ajustable {
+    width: min(1500px, 100%);
     margin: auto;
- 
+
 }
-.centrar{  text-align: center;}
-.derecha{text-align: end;}
+
+.centrar {
+    text-align: center;
+}
+
+.derecha {
+    text-align: end;
+}
 
 /* -----------------------clases particulares ----letras fuentes fondos background --------------------------------------*/
 
@@ -405,7 +418,7 @@ width: min(1500px, 100%);
 }
 
 .fondo_azul {
-      background: #347f;
+    background: #347f;
 }
 
 .azul_negrita {
@@ -417,16 +430,19 @@ width: min(1500px, 100%);
     color: #ff0;
     font-weight: bold;
 }
-.fondo_verde{
+
+.fondo_verde {
     background: #0d0;
     padding: 10px;
-  
+
 }
-.fondo_verde:hover{
-     background: #ada;
+
+.fondo_verde:hover {
+    background: #ada;
 }
-.fondo_contenedor{
-     background-color: #edb;
+
+.fondo_contenedor {
+    background-color: #edb;
 }
 
 .ancho30 {
@@ -435,38 +451,41 @@ width: min(1500px, 100%);
 }
 
 
-.lateral_impresora3d{
-  
-    background:linear-gradient(to right,#447f, #4479, #447f);
+.lateral_impresora3d {
 
-   text-align: center;
+    background: linear-gradient(to right, #447f, #4479, #447f);
+
+    text-align: center;
     padding-top: 40px;
 }
 
-.lateral_impresora3d img{
-   max-width: 100%;
+.lateral_impresora3d img {
+    max-width: 100%;
     border-radius: 20px;
 
-    
+
 }
+
 /* ----------------------------- listas-  ul------------*/
-.conpunto{
+.conpunto {
     list-style: circle;
-    padding-left:50px;
+    padding-left: 50px;
 }
+
 /* ----------------------------- listas-  remarcar alternativamente------------*/
 /*---  https://developer.mozilla.org/es/docs/Web/CSS/:nth-child------------------*/
 /* ------------------------------------------------------------------------------*/
 
 
-.lista0 li:nth-child(odd){/*odd impares   even par*/
-	background: #bfbfbf;
-	
+.lista0 li:nth-child(odd) {
+    /*odd impares   even par*/
+    background: #bfbfbf;
+
 }
 
-.marcar_impares a:nth-child(even){
-    	background: #bbb;
-    
+.marcar_impares a:nth-child(even) {
+    background: #bbb;
+
 }
 
 
@@ -475,9 +494,9 @@ width: min(1500px, 100%);
 /* ----------------------- imagenes  ------------------------------------------*/
 .div_imagen {
     background-color: rgb(220, 220, 220);
- text-align: center;
+    text-align: center;
     border-radius: 20px;
-  overflow: hidden;
+    overflow: hidden;
     /*  border: 2px solid red; pruebas*/
 }
 
@@ -488,42 +507,43 @@ width: min(1500px, 100%);
     height: auto;
 
 }
+
 .imagen1 {
     max-width: 100%;
     height: auto;
-  padding-top: 20px;
+    padding-top: 20px;
     padding-bottom: 15px;
 
 }
- 
 
 
-.imagen-ancho-medio{
+
+.imagen-ancho-medio {
     max-width: 1000px;
 }
 
 
-.imagen-ancho200{
+.imagen-ancho200 {
     max-width: 200px;
 }
 
-.imagen-alto230{
+.imagen-alto230 {
     max-height: 230px;
 }
 
 
-.imagen-alto200{
+.imagen-alto200 {
     max-height: 200px;
 }
 
-.imagen-alto50{
+.imagen-alto50 {
     max-height: 50px;
 }
 
 
-.overflow_auto{
-   overflow:auto; 
-    
+.overflow_auto {
+    overflow: auto;
+
 }
 
 
@@ -548,97 +568,116 @@ width: min(1500px, 100%);
 /*  https://www.silocreativo.com/details-summary-elementos-desplegables-ocultos-html/  */
 
 /* ------------------  details----------------------------*/
-.detalles{
-}
+.detalles {}
 
 
 .detalles[open] {
-  background: #ddd; 
+    background: #ddd;
 
 }
 
-.detallescard{
+.detallescard {
     max-width: 300px;
-   /*  min-height: 200px;    */
+    /*  min-height: 200px;    */
     margin: 5px;
 }
 
 .detallescard[open] {
- 
+
     max-width: 100%;
-     background: #222; 
-    color:white;
+    background: #222;
+    color: white;
     padding: 30px;
     border-radius: 8px;
     border-color: greenyellow;
 }
-details.detallescard[open] h3 {
 
-color: greenyellow;
 
-}
 
 details.detallescard[open] h2 {
+    color: burlywood;
+    background: none;
+}
 
-color: burlywood;
-background: none;
+details.detallescard[open] h3 {
+    color: greenyellow;
+}
 
+details.detallescard[open] h4 {
+    color: yellow;
+}
+
+details.detallescard[open] img:not(.imagen, .imagen-alto50){ /* el siguiente estilo afecta a todas las imagenes dentro del details abierto con clase detallescard menos a las imagenes que tienen clase imagen*/
+  
+  
+  width: 100vw;        /* Ocupa todo el ancho visible de la ventana */
+    max-width: 100%;
+  max-height: 600px;   /* Límite de altura */
+  height: auto;        /* Mantiene proporción */
+  object-fit: contain; /* Evita deformación o recortes */
+  display: block;      /* Evita espacios extra si la imagen es inline */
 }
 
 
 
-.sumario{
-      list-style: none;
-    
+
+
+
+
+.sumario {
+    list-style: none;
+
 }
 
-.puntero{
-      cursor: pointer;
-      background: #bbb;
-     padding: 4px;
-     border-radius: 8px;
+.puntero {
+    cursor: pointer;
+    background: #bbb;
+    padding: 4px;
+    border-radius: 8px;
 }
 
 
 
 
- 
+
 
 
 /* ------------------  ver mas  ------------------utilizado en logo-practicas----------*/
-  .flex_wrap_vermas {
+.flex_wrap_vermas {
 
     display: flex;
     flex-wrap: wrap-reverse;
     border-radius: 20px;
-    gap:20px;
+    gap: 20px;
     justify-content: center;
 
 }
-        .vermas_texto{
-           
-           /* width: 70%;*/
-            flex:4 2 500px;
-        
-        }  
-        
-        .vermas_imagen{
-            flex:1 0 200px;
-            text-align: center;
-            
-           
-        }   
-        
-        .vermas_imagen img{
-        max-height: 300px;
-         max-width: 200px;
-     }
-       .flex-item {
+
+.vermas_texto {
+
+    /* width: 70%;*/
+    flex: 4 2 500px;
+
+}
+
+.vermas_imagen {
+    flex: 1 0 200px;
+    text-align: center;
+
+
+}
+
+.vermas_imagen img {
+    max-height: 300px;
+    max-width: 200px;
+}
+
+.flex-item {
     flex: 1 0 auto;
     margin: 0 10px;
     text-align: center;
 
-} 
+}
 
 /*-------------------------  videos  ------------------------------------------*/
 
@@ -696,49 +735,52 @@ background: none;
     /* poner detras de video containerpara que me pise el width*/
     width: 30%;
 }
-.video-container1{
-     width: 45%;
+
+.video-container1 {
+    width: 45%;
     min-width: 400px;
- aspect-ratio:16/9;
+    aspect-ratio: 16/9;
 }
+
 .video-container1 iframe {
     width: 100%;
     height: 100%;
     /* Puedes ajustar la altura según tus necesidades */
 }
+
 .video-robotica_3filas {
-    
-     margin: 0px;
+
+    margin: 0px;
     padding: 0;
     width: 30%;
     min-width: 350px;
-  
+
     text-align: center;
-   
- 
+
+
 }
 
-.robotica iframe{
-    height: 380px; 
-  
-  }
+.robotica iframe {
+    height: 380px;
 
-.robotica_vertical iframe{
-    height: 500px; 
-  
-  }
+}
+
+.robotica_vertical iframe {
+    height: 500px;
+
+}
 
 /* ------------------------- TXT  programa----------------------- */
-.txt iframe{
- overflow: auto;
+.txt iframe {
+    overflow: auto;
     width: 100%;
-    height:700px;
+    height: 700px;
 }
 
-.txt_pequeno iframe{
- overflow: auto;
+.txt_pequeno iframe {
+    overflow: auto;
     width: 100%;
-    height:100px;
+    height: 100px;
 }
 
 
@@ -1028,72 +1070,95 @@ background: none;
 /*--------------------               MENÚ PRINCIPAL  ------------------------*/
 /*---------------------------------------------------------------------------*/
 
-.siborronofunciona {}/* Si borro esto se me va el menu y no se porque antes habia instrucciones generales que he pasado al inicio del css, sera porque no puede empezsr por media*/
- 
- @media not screen and (max-width: 720px){   
-      .menu {
-          width: 100%;
-          height: 50px;
-         
-          padding: 20px 10%;
-          
-          background-image: url(../imagenes/cabezera1.jpg)}	
-			.menu > li {   /*li directos se refiere al primer nivel*/      				
-			float:left;
-               
-		/*	box-shadow: 2px 2px 1px 1px #fff; /*sombreado*/
-			}
- 	.menu li a {    /*actua sobre todos los elementos de la clase menu  y los selectores a que esten dentro del li*/
+.siborronofunciona {}
 
-				
-				background-color:rgba(59,93,148,1);;
-				color:#fff;     /*color texto*/
-				text-decoration:none;/*elimina el subrayado de los enlaces*/
-				padding:10px 12px; /*10 pixles de altura y 10 pixel largo*/
-				display:block;
-				width: 90px;/*tamanño del bloque*/
-				height: 30px;
-				box-shadow: 2px 2px 1px 1px #0062ff; /*sombreado*/				
-				border: solid 1px #fff;/*borde en blanco*/
-				text-align: center;
-				border-radius: 5px;
-                margin: 1px;
-                
-			}
-			
-			.menu li a:hover { /*actua sobre todos los elementos al pasar el raton*/
-				color:#CF3;
-				background-color:#603;
-				
-			}
-     
-     
+/* Si borro esto se me va el menu y no se porque antes habia instrucciones generales que he pasado al inicio del css, sera porque no puede empezsr por media*/
 
-			
-			.menu li ul { /* a todos los submenus */
-				display:none;/*todos los submenus desaparecen del segundo nivel en adelante*/
-				position:absolute; /*con respeto al menu */
-				min-width:140px;
-			}
-			
-			.menu li:hover > ul {/* al menu de segundo nivel al pasar el raton se vuelve visible al recuperar la propiedad display:block que antes tenia display:none*/
-				display:block;
-			}
-			
-			.menu li ul li { /* los li derech que esten dentro de ul que esten dentro de li, osea para los submenus*/
-				position:relative; /* lo pone para poder poner los submenus al lado*/
-			}
-			
-			.menu li ul li ul {/* al tener posicion relativa los podemos desplazar -140 pix a la derecha*/				
-				right:-115px; /*este se aplica a todos los submenus*/
-				top:0px;
-			}   
-    
-  }
-    
+@media not screen and (max-width: 720px) {
+    .menu {
+        width: 100%;
+        height: 50px;
+
+        padding: 20px 10%;
+
+        background-image: url(../imagenes/cabezera1.jpg)
+    }
+
+    .menu > li {
+        /*li directos se refiere al primer nivel*/
+        float: left;
+
+        /*	box-shadow: 2px 2px 1px 1px #fff; /*sombreado*/
+    }
+
+    .menu li a {
+        /*actua sobre todos los elementos de la clase menu  y los selectores a que esten dentro del li*/
+
+
+        background-color: rgba(59, 93, 148, 1);
+        ;
+        color: #fff;
+        /*color texto*/
+        text-decoration: none;
+        /*elimina el subrayado de los enlaces*/
+        padding: 10px 12px;
+        /*10 pixles de altura y 10 pixel largo*/
+        display: block;
+        width: 90px;
+        /*tamanño del bloque*/
+        height: 30px;
+        box-shadow: 2px 2px 1px 1px #0062ff;
+        /*sombreado*/
+        border: solid 1px #fff;
+        /*borde en blanco*/
+        text-align: center;
+        border-radius: 5px;
+        margin: 1px;
+
+    }
+
+    .menu li a:hover {
+        /*actua sobre todos los elementos al pasar el raton*/
+        color: #CF3;
+        background-color: #603;
+
+    }
+
+
+
+
+    .menu li ul {
+        /* a todos los submenus */
+        display: none;
+        /*todos los submenus desaparecen del segundo nivel en adelante*/
+        position: absolute;
+        /*con respeto al menu */
+        min-width: 140px;
+    }
+
+    .menu li:hover > ul {
+        /* al menu de segundo nivel al pasar el raton se vuelve visible al recuperar la propiedad display:block que antes tenia display:none*/
+        display: block;
+    }
+
+    .menu li ul li {
+        /* los li derech que esten dentro de ul que esten dentro de li, osea para los submenus*/
+        position: relative;
+        /* lo pone para poder poner los submenus al lado*/
+    }
+
+    .menu li ul li ul {
+        /* al tener posicion relativa los podemos desplazar -140 pix a la derecha*/
+        right: -115px;
+        /*este se aplica a todos los submenus*/
+        top: 0px;
+    }
+
+}
+
 /*ELEMENTOS RESPONSIVOS -----------------------------------------------------------*/
 
-.icon__menu{
+.icon__menu {
     font-size: 26px;
     color: white;
     cursor: pointer;
@@ -1101,104 +1166,121 @@ background: none;
     height: 100%;
     display: none;
     margin-left: 50px;
-   
-   
+
+
 }
 
-#label__check{
-   /* width: 26px;*/
-    width:100%;
+#label__check {
+    /* width: 26px;*/
+    width: 100%;
     height: 100%;
-    background-attachment:fixed;
+    background-attachment: fixed;
     background-image: url(../imagenes/cabezera.jpg);
-     
-   
+
+
 }
-    
-#check__menu{
+
+#check__menu {
     display: none;
 }
-    
-/*   MEDIA SCREEN  --------------------------para el movil -----------------------  */    
-  @media screen and (max-width: 720px){      
-    
-    .header__superior{
+
+/*   MEDIA SCREEN  --------------------------para el movil -----------------------  */
+@media screen and (max-width: 720px) {
+
+    .header__superior {
         padding: 10px;
     }
-			
-  /*  .menu{background-color: black;}	*/	
-      .menu {background-image: url(../imagenes/cabezera.jpg)}	
-	.menu >  li {   /*li directos se refiere al primer nivel*/      				
-			display: flex;
-             opacity: 0;
-              visibility: hidden;
-                height: 0px;
-            }
-    
-    .menu >  li ul li {   /*li directos se refiere al segundo  nivel*/      				
-			display: flex;
-        flex-direction: row;
- 			}
-  			.menu li  a {    /*actua sobre todos los elementos de la clase menu  y los selectores a que esten dentro del li*/
 
-				
-				background-color:rgba(59,93,148,1);
-				color:#fff;     /*color texto*/
-				text-decoration:none;/*elimina el subrayado de los enlaces*/
-				padding:10px 12px; /*10 pixles de altura y 10 pixel largo*/
-				display:block;
-              
-				width: 90px;/*tamanño del bloque*/
-				height: 30px;
-								
-				border: solid 1px #fff;/*borde en blanco*/
-				text-align: center;
-				border-radius: 5px;
-                margin: 1px;
-                
-			}
-			
-			.menu li a:hover { /* propiedades al pasar el raton*/
-				color:#CF3;
-				background-color:#603;
-				
-			}
-    
-    	.menu li ul {
-				display:none;/*todos los submenus desaparecen*/
-			/*	position:absolute; con respeto al menu
+    /*  .menu{background-color: black;}	*/
+    .menu {
+        background-image: url(../imagenes/cabezera.jpg)
+    }
+
+    .menu > li {
+        /*li directos se refiere al primer nivel*/
+        display: flex;
+        opacity: 0;
+        visibility: hidden;
+        height: 0px;
+    }
+
+    .menu > li ul li {
+        /*li directos se refiere al segundo  nivel*/
+        display: flex;
+        flex-direction: row;
+    }
+
+    .menu li a {
+        /*actua sobre todos los elementos de la clase menu  y los selectores a que esten dentro del li*/
+
+
+        background-color: rgba(59, 93, 148, 1);
+        color: #fff;
+        /*color texto*/
+        text-decoration: none;
+        /*elimina el subrayado de los enlaces*/
+        padding: 10px 12px;
+        /*10 pixles de altura y 10 pixel largo*/
+        display: block;
+
+        width: 90px;
+        /*tamanño del bloque*/
+        height: 30px;
+
+        border: solid 1px #fff;
+        /*borde en blanco*/
+        text-align: center;
+        border-radius: 5px;
+        margin: 1px;
+
+    }
+
+    .menu li a:hover {
+        /* propiedades al pasar el raton*/
+        color: #CF3;
+        background-color: #603;
+
+    }
+
+    .menu li ul {
+        display: none;
+        /*todos los submenus desaparecen*/
+        /*	position:absolute; con respeto al menu
 				min-width:140px; */
-			}
-    
-    
-    	.menu li:hover > ul{/* los li de menu al pasar el raton que sean directos de ul (esto lo dicho pero no le entiendo) aparecen el menu*/
-				display: flex;
-                  flex-direction: column;
-            
-            left: 120px;
-			}
-    
-    .menu li ul li:hover > ul{/* los li de menu al pasar el raton que sean directos de ul (esto lo dicho pero no le entiendo) aparecen el menu*/
-     display:block;
-        top:50px;
-				 left: 80px;
-             }        
-        #label__check{
+    }
+
+
+    .menu li:hover > ul {
+        /* los li de menu al pasar el raton que sean directos de ul (esto lo dicho pero no le entiendo) aparecen el menu*/
+        display: flex;
+        flex-direction: column;
+
+        left: 120px;
+    }
+
+    .menu li ul li:hover > ul {
+        /* los li de menu al pasar el raton que sean directos de ul (esto lo dicho pero no le entiendo) aparecen el menu*/
+        display: block;
+        top: 50px;
+        left: 80px;
+    }
+
+    #label__check {
         display: block;
     }
 
-    .icon__menu{
+    .icon__menu {
         display: flex;
     }
 
-    #check__menu:checked ~ .menu > li{
-   
-       height: 50px;
+    #check__menu:checked ~ .menu > li {
+
+        height: 50px;
         visibility: visible;
         opacity: 1;
     }
 }
-		
+
 -----------------------------------------------------------------------------*/
 /*--------------------       FIN   MENÚ PRINCIPAL  ------------------------*/
 /*---------------------------------------------------------------------------*/
