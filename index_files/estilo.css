@@ -521,7 +521,9 @@ footer a {
 .imagen-ancho-medio {
     max-width: 1000px;
 }
-
+.imagen-ancho500 {
+    max-width: 500px;
+}
 
 .imagen-ancho200 {
     max-width: 200px;
@@ -607,7 +609,7 @@ details.detallescard[open] h4 {
     color: yellow;
 }
 
-details.detallescard[open] img:not(.imagen, .imagen-alto50){ /* el siguiente estilo afecta a todas las imagenes dentro del details abierto con clase detallescard menos a las imagenes que tienen clase imagen*/
+details.detallescard[open] img:not(.imagen, .imagen-ancho200, .imagen-ancho500){ /* el siguiente estilo afecta a todas las imagenes dentro del details abierto con clase detallescard menos a las imagenes que tienen clase imagen*/
   
   
   width: 100vw;        /* Ocupa todo el ancho visible de la ventana */

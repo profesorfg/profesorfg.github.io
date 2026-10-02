@@ -1152,30 +1152,52 @@ Seleccionar un punto en el entorno e trabajo y ver centro.</li>
                      <h3>Creación de herramientas con programas externos</h3>
                      
                      <p>Crear el dibujo con un software de diseño 3D ejemplo "freecad" que es un software potente, libre y gratuito.
-                     <p>El formato sat es ideal para trabajar con robotstudio, pero freecad no puede eportarlo directamente.</p> 
-                     <p>Para convertirlo desde freecad lo expotramos step y con abviewer convertilo en sat y asi robotstudio detectaba la geometría activando ajustar objetos</p>
+                     <p>El formato sat es ideal para trabajar con robotstudio, pero freecad no puede exportarlo directamente.</p> 
+                     <p>Los formatos que puede exportar freecad para que                    Robotstudio detecte la geometría activando ajustar objetos son  <strong>"STEP"</strong> y  <strong>"STEP"</strong></p>
 
-  <p>otra opción, dibujar con freecad y convertirlo a gltf, con este formato robotstudio también detecta geometría, funciona bien y no tengo que realizar tantas conversiones.</p>
+  <p>Si queremos el formato sat, con un programa externo ejemplo ABviewer, se puede convertir desde step a sat</p>
 
   <p>
-    un vez tengo la pieza en formato <strong>"flgt"</strong> la guardo en documentos/robotstudio/geometry<br>
-    <p>la importo desde modelado/importar geometría</p>
+    un vez tengo la pieza en formato la guardo en documentos/robotstudio/geometry<br>
+    <p>la importo desde modelado/importar geometría/usuario</p>
    <p>Y ya puedo trabajar con ella o incluso la puedo convertir en herramienta</p> 
-   <p>Haciendo click en los siguientes dibujos puedo descargarme dos herramientas, palet1 y palet2, creadas con freecad, impresas en 3D. En formato sat o  flgt para utilizarlas en robotstudio y convertirlas en herramienta </p> 
-   <p>nota en palet2 para la creación del TCP le he puesto un ángulo de 90-38 en Y</p>
-   <p>
-    <a href="https://drive.google.com/file/d/11aA8PUJnkrVA5bZq-qV9UhPtdBLo8b9z/view?usp=sharing">
-    <img class="imagen-alto50" src="imagen/tem-modelado-palet1.png" alt="palet">sat   .
+   <p>Haciendo click en los siguientes dibujos puedo descargar tres herramientas:punta,(myTool reducido un 0.75) palet1 y palet2, creadas con freecad, impresas en 3D. En formato <strong>"STEP"</strong> para utilizarlas en robotstudio y convertirlas en herramienta </p> 
+   
+   
+   <p> <a href="https://drive.google.com/file/d/1jfIm--p8ReiiYYCidzw9MkdaibL7w8G-/view?usp=sharing">
+    <img class="imagen-ancho200" src="imagen/tem-modelado-punta.jpg" alt="palet">punta   .
+  </a>
+
+    <a href="https://drive.google.com/file/d/1UdOuKVguxfInLeiZG0F8gaacywYGMli7/view?usp=sharing">
+    <img class="imagen-ancho200" src="imagen/tem-modelado-palet1.jpg" alt="palet">palet1   .
   </a>
    
-  <a href="https://drive.google.com/file/d/1Hah9QWvTrL3TKkHxcF2nBU0d4cyGIt2X/view?usp=sharing">
-    <img class="imagen-alto50"src="imagen/tem-modelado-palet2.png" alt="palet2">gltf   .
+  <a href="https://drive.google.com/file/d/1qv13-1UzZFRmAsWAY-M99cq_EOh1teKV/view?usp=sharing">
+    <img class="imagen-ancho200"src="imagen/tem-modelado-palet2.png" alt="palet2">palet2 .
   </a>
-  <a href="https://drive.google.com/file/d/1g8UyfirePsBWidZz6Cu2IBuMGRDh9Um4/view?usp=sharing">
-    <img class="imagen-alto50" src="imagen/tem-modelado-palet2.png" alt="palet2">sat    .
+                    </p>
+ <h4>TCP</h4>
+ <p>
+  <img class="imagen-ancho500" src="imagen/tem-modelado-punta_TCP.png" alt="punta">
+
+   <img class="imagen-ancho500" src="imagen/tem-modelado-palet1_TCP.png" alt="palet1">
+    
+    <img class="imagen-ancho500"  src="imagen/tem-modelado-palet2_TCP.png" alt="palet2"></p>
+    
+    <h4>Herramientas en formato rslib</h4>
+  <p> <a href="https://drive.google.com/file/d/1VPXXsgKQQOAHEE3SpqEwSBoAs7CngTkV/view?usp=sharing">
+    <img class="imagen-ancho500" src="imagen/tem-modelado-punta.jpg" alt="palet">Punta   .
   </a>
+   
+    <a href="https://drive.google.com/file/d/1LrwiWAGuxKebMb7yWh4S6W-SX4F86Hsl/view?usp=sharing">
+    <img class="imagen-ancho200" src="imagen/tem-modelado-palet1.jpg" alt="palet">palet1   .
+  </a>
+   
+  <a href="https://drive.google.com/file/d/10Cp5ARSiPetaJVYPM4msXQ1uWmJfqAsF/view?usp=sharing">
+    <img class="imagen-ancho200"src="imagen/tem-modelado-palet2.png" alt="palet2">palet2 .
+      </a></p>
   
-  </p>
+
     <img  src="imagen/tem-modelado-mytool_TCP.png" alt="palet2">
    <p>Una vez creada la herramienta, la guardo en la biblioteca </p>
     <p>la puedo encontrar en <strong>documento/robotstudio/proyect/nombredelproyecto/components</strong></p>
