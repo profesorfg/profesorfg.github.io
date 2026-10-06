@@ -292,7 +292,7 @@
                 
          
             
-                  <!-- **   </article>*************ETIQUETA 1  **********QUE ES UN ROBOT************************ -->
+                  <!-- **************QUE ES UN ROBOT****************** -->
                 <details class="detallescard">
                     <summary class="sumario">
                         <h2 class="puntero"> Características de un Robot Industrial</h2>
@@ -745,7 +745,7 @@
                 </details>
                 
                 
-                    <!-- **   </article>*************ETIQUETA 1  **********QUE ES UN ROBOT************************ -->
+                    <!-- *******Lenguaje RAPID de ABB********************* -->
                 <details class="detallescard">
                     <summary class="sumario">
                         <h2 class="puntero"> Lenguaje RAPID de ABB</h2>
@@ -936,13 +936,7 @@ ENDMODULE
 
 
 
-
-
-
-
-
-
-                <!-- **************ROBOT STUDIO ********ROBOT STUDIO************************** -->
+                <!-- *****************ROBOT STUDIO************************** -->
                 <details class="detallescard">
                     <summary class="sumario">
                         <h2 class="puntero">ROBOT STUDIO PRIMEROS PASOS</h2>
@@ -1009,42 +1003,42 @@ Seleccionar un punto en el entorno e trabajo y ver centro.</li>
                     </ul>
                     <input class="boton" type="button" value="cerrar todas las cuestiones" onClick="location.reload();">
                 </details>
+                
+                
+                                <!-- ********************************* -->
+
                 <!-- *****************CREACIÓN Y GUARDADO DE ARCHIVOS********************* -->
+                                
+                                <!-- ********************************* -->
+
                 <details class="detallescard">
                     <summary class="sumario">
                         <h2 class="puntero">CREACIÓN Y GUARDADO DE ARCHIVOS</h2>
                     </summary>
-               
+                 <h3>Crear o abrir un proyecto.</h3>
                         <p> Creación desde estación vacia: Los archivos del proyecto se distribuyen en carpetas de robotstudio </p>
-                        <p>Creacion desde proyeccto: Los archivos quedan guardados en la carpeta proyecto</p>
+                    <p>Creacion desde proyecto: Los archivos quedan guardados en la carpeta proyecto, por defecto se encuentra en <strong>documentos->robotstudio->projects  </strong></p>
                           <br><img class="imagen" src="imagen/tem-robotstudio-abrir.png" alt="guardar en robotStudio">
-
-                        <p>Para exportar un proyecto de un ordenador a otro de debe de realizar desde archivo-> compartir -> un pack and go </p>
-                        <p>Para importar un proyecto de un ordenador a otro de debe de realizar desde archivo-> compartir -> un unpack and work </p>
+<p>Al crear un proyecto nuevo o una estación nueva puedo incluir el robot y la contraloadora directamente, seleccionando "incluir robot y controladora virtual"</p>
+                    <p>Si no lo selecciono, se deben de añadir despues desde el menú principal inicio-></p>
+                    <li>Controlador virtual. Para añadir el controlador</li>
+                    <li>Biblioteca ABB. Para añadir el brazo rbotico</li>
+                    <li>Importar biblioteca. para añadir herramientas y otros objetos.</li>
+                    <p>Para abrir un proyecto ya existente en mi ordenador, utilizo la opción abrir</p> 
 
       
 
 
-                    <h2 class="puntero">Crear un proyecto vs. crear una estación</h2>
-
-
-
-
-                    <p>En RobotStudio, hay una diferencia importante entre crear un proyecto y crear una estación:</p>
-                    <ul class="conpunto">
-                        <li><strong>Crear una estación</strong> crea un archivo en robotsudio/Stations con extensión rsstn y los archivos que necesita el proyecto, rapid, archivos backup, controlador... Robotstudio los distribuye en sus carpetas </li>
-                        <li><strong>Crear un proyecto</strong> crea un carpteta en robotstudio/projects con el nombre del proyecto donde guarda los archivos que necesita el proyecto, y el archivo principal tiene extensión rsproj. El proyecto se puede crear sin controladores y añadir el robot y luego el controlador o si seleccionamos incluir "un robot y un controlador" se abrira con estos elementos.
-                            <br>
-                            En versiones de robotstudio antiguas la opción se llamaba soluciones y se guardaba en la carpteta solutions,
-                        </li>
-                    </ul>
+                    
                     <br>En resumen<strong> se recominenda</strong> la opción <strong>crear un proyecto</strong>
                     <br>
-                    <h2>Exportar un proyecto</h2>
-                    Para <srtong>Exportar un proyecto</srtong> <br>archivo->compartir->pack and go<br>y crea una archivo con extensión rspag <br> para importalo a otro robotstudio <br>archivo->compartir->Unpack and work
-                    <br><br>
+                    <h3>Exportar un proyecto</h3>
+                    Para <srtong>Exportar un proyecto</srtong> <br>archivo->compartir->pack and go<br>y crea una archivo con extensión rspag <br>
+                    <h3>Importar un proyecto </h3>
+                    archivo->compartir->Unpack and work
+                    <p>Me pide información de donde se va a guardar y el robotware con el que se ha hecho<br>
 
-                    <h2>Guardar un proyecto vs. Guardar una estación</h2>
+                    <h3>    Guardar un proyecto vs. Guardar una estación </h3>
                     <p>En RobotStudio, hay una diferencia importante entre guardar un proyecto y guardar una estación:</p>
                     <ul class="conpunto">
                         <li><strong>Guardar un proyecto</strong>: Cuando guardas un proyecto, estás guardando todos los archivos y configuraciones relacionados con tu trabajo en RobotStudio. Esto incluye los programas de robot, las configuraciones de herramientas, las trayectorias, los objetos 3D, y cualquier otro recurso que hayas utilizado en tu proyecto. Guardar un proyecto te permite mantener todo organizado y fácil de acceder para futuras modificaciones o revisiones.</li>
@@ -1213,67 +1207,109 @@ Seleccionar un punto en el entorno e trabajo y ver centro.</li>
 
                     <input class="boton" type="button" value="cerrar todas las cuestiones" onClick="location.reload();">
                 </details>
-
+                            <!-- ********************************* -->
                 <!-- ***********PUNTOS Y TRAYECTORIAS SIMULACION*********************** -->
+                            <!-- ********************************* -->
                 <details class="detallescard">
                     <summary class="sumario">
-                        <h2 class="puntero">PUNTOS, TRAYECTORIAS y SIMULACIÓN</h2>
+                        <h2 class="puntero">PUNTOS, TRAYECTORIAS</h2>
                     </summary>
-                    <h2>Creación de puntos</h2>
-                
-
-                        <p> Trasladar a posición inicial el brazo robótico </p>
                     
-                            <img src="imagen/tem-puntos-posicion_inicial.png" alt="robotstudio">
-<p> Crear el punto de posición inicial "home": posición inicial -> programación de trayectorias- > <strong> programar posición</strong></p>
-                        <h3 class="amarillo_negrita"> Ver el punto creado</h3>
-                        <li> Cambiar de la pestaña de diseño donde veiamos el robot, mytools, objetos modelados a la pestaña trayectorias y puntos
-                            Seleccionamos el robot -> objetos de trabajo y puntos -> wobobj0-> target 10</li>
-                        <li>desde el menú contextual del punto podemos ver y <strong>modificar su posición</strong> fijar posición </li>
-                        <ul class="conpunto">
-                            <li>Modificar el punto utilizando sistemas de referencia mundo</li>
-                            <li>Modificar el punto utilizando sistemas de coordenadas local ( el tcp)</li>
-
-                        </ul>
-                        <h3> <strong>Duplicar un punto</strong> moverle un offset</h3>
-                        <p> Desde pestaña "trayectorias y puntos" desde el menú contextual del puntos -> dupliacar punto, y le añadimos el offset</p>
-
-                        <h3>Opción PUNTO</h3>
-                        <p>En la pestaña posición inicial, programación y trayectorias
+                    
+                    <h2>PUNTOS</h2>
+                    <h3>Creación de puntos</h3>
+                    
+                <p>Existen varias opciones para la creación de puntos.</p>
+<h4>Opción: Programar posición</h4>
+                    <p>Traslada el brazo con la herramienta a la posción deseada. <br>Observa que en el area de la cinta-> parametros, esta selecionada la herramienta.</p>
+                    <p>Click en programar posición.</p>
+                   <p>     Se crea un punto con referencia al sistema de coordenadas de la base del robot, que lo podemos ver en el area de vista de arbol->trayectorias y puntos</p>
+                     <p>
+                            Seleccionamos el robot -> objetos de trabajo y puntos -> wobobj0-> target 10</p>
+                    <p>desde el menú contextual del punto podemos ver y <strong>modificar su posición</strong> </p>
+                    
+                    <h4>Opción: PUNTO</h4>
+                        <p>En la pestaña del menú principal-> posición inicial->programación y trayectorias
                             -> crear punto</p>
                         <p>Se pone la posción del punto y la orientación del eje de coordenadas</p>
-                        <p>Si no modifico la orientación y activo al opción ver herramienta en posición, veo como se coloca y el robot no puede llegar a esa posición, activO ver robot en posición y vemos que el robot no se mueve.</p>
-
-
-
-                        <li><strong> ver robot en posición</strong> en cada uno de los puntos, utilizado el menu contextual del punto -> ver robot en posicion</li>
-                        <li> Desde el menú contextual del punto-> seleccionar <strong> ver herramienta en posición</strong></li>
-
-                        <h3> Ejercicio creacion de punto</h3>
-                        <li>Crear un punto, pestaña posición inicial->programación de trayectorias-> punto, Poner las coordenas x,y,z respecto el sistemas de coordenas de la estación wobj0-> añadir-> se pueden crear mas puntos-> se termina pulsar en crear. Apareceran los puntos en el wobj0</li>
-                        <li>Seleccionar un punto y pulsar en ver <strong>ver robot en posición, si el robot no puede llegar a esa posición puede ser: por que el robot no llega al punto o por la orientación </strong></li>
-
-                        <ul class="conpunto">
-                            <li>Se puede copiar la orientación de un punto ya creado, copiar posción-> orientación relativa-> mundo.</li>
-                            <li>Modificar la orientación a mano. Menu contextual del punto->modificar posición -> fijar posición</li>
-                            <li>Se puede duplicar un punto y añadirle un offset</li>
-                        </ul>
-                
-
-                    <h2>Creación de un punto a mano alzada</h2>
+                        <p>Si no modifico la orientación y activo al opción ver herramienta en posición, veo como se coloca y el robot no puede llegar a esa posición, activo ver robot en posición y vemos que el robot no se mueve.</p>
+                    
+                     <h4>Opción: Creación de un punto a mano alzada</h4>
                     <p>Desde la pantalla diseño ->mano alzada-> mover y rotar.</p>
 
                     <p>Selecciono mytool, y muevo mytool del robot, con solo seleccionado del menú de acceso rapido AJUSTAR A OBJETOS, el robot se movera a los puntos mas significativos de la estación de una manera rapida</p>
-                    <h2>Para que el robot quede alineado respecto el sistema de coordenadas </h2>
+           
+                  <h3>Copiar un punto</h3>
+                            <li>Se puede copiar la orientación de un punto ya creado, copiar posción-> orientación relativa-> mundo.</li>
+                            <li>Modificar la orientación a mano. Menu contextual del punto->modificar posición -> fijar posición</li>
+
+               
+                        <h3> Duplicar un punto</h3> 
+                        <p>crea en el mismo sitio o desplazarte un offset</p>
+                    
+                
+                        <h3> Trasladar el brazo robótico a su posición inicial  </h3>
+                    <p>La posición del brazo robotico, que tenemos al incorporar el brazo a la estación, la utilizaremos como posición inicial o Home en muchos de nuestros proyectos.</p>
+                    <p>Para llegar a ella la forma mas rapida, en vista arbol, abrimos el menú contextual del brazo y trasladar a posición -> posición inicial</p>
+                            <img src="imagen/tem-puntos-posicion_inicial.png" alt="robotstudio">
+
+                     
+                      
+                      
+
+                        
+
+
+
+
+                      
+
+     
+               
+               
+                
+
+                   
+                    <h3>Alinear el TCP respecto el sistema de coordenadas </h3>
+                    
+                    
+                    
                     <p>desde Diseño, menú contextual del robot -> <strong>Alinear TCP</strong></p>
-                    <h2> Creacción de una ruta a partir de los puntos</h2>
-                    <li>Crear un programa: Ruta-> trayectoria vacia-> añadir puntos al path, podemos cambiar el nombre de path por main </li>
+                  
+                    
+                    
+                    
+                    <h2>TRAYECTORIAS</h2>
+                    
+                    <h3>Crear una trayectoria</h3>
+                    <p>En menú cinta de posicion inicial. click en Ruta-> trayectoria vacia
+                        <p>Se crea una trayetoria en el menú despegable, en la pestaña trayecotria y puntos con el nombre path 10, </p>
+                    <p>Las trayectorias en rapid van a pasar a llamarse PROCESOS, Siempre debe de haber  un proceso principal con el nombre de main, desde el proceso main se puede llamar a otros proceso o trayectorias.</p>
+                    <p>Cambiar el nombre al proceso path_10 por main. </p>
+                    <p>Añadir puntos al path, arrastrando los puntos a la trayecotria </p>
                     <li>Observar el tipo de movimiento, velocidad y precisión</li>
 
-                    <h3 class="amarillo_negrita">Ejercicio</h3>
-                    <p>Crea dos caminos Path 10 y path 20, despues crea un nuevo camino sin recorrido, cambialo de nombre a main, y arrastra los path a al main. </p>
-                    <h2>Simulación</h2>
+                    <h5>Ejercicio</h5>
+                    <p>Crea dos caminos Path 10 y path 20 con tres puntos cada uno, despues crea un nuevo camino sin recorrido, cambialo de nombre a main, y arrastra los path a al main. </p>
+                    
+                    
+                    <h3>Moverse a lo largo de la trayectoria</h3>
                     <p>La forma mas facil de simulación el recorrido, es desde el menú contextual del camino -> mover a largo de la trayectoria</p>
+                    <h3>MoveL</h3>
+                    <p>Crear un moviento lineal</p>
+                    <h3>MoveJ</h3>
+                     <p>Crear un moviento de ejes</p>
+                 <h3>Modificar una instrución, modificar velocidad y zona</h3>
+                    <p>Ya hemos visto que al incluir una instrucción de moviento podemos modificar, se incluye la velocidad, precisión z.</p>
+                    <p>Si queremos modificar estos valores lo podemos hacer desde el menú contextual de la instrucción.MODIFICAR INSTRUCCION</p>
+                    <h3>Editar instrucción</h3>
+                    <p></p>
+                    <h3>Modificar intrucción</h3>
+                    <p>Desde Aqui podemos modificar un moveL por MoveJ e viveversa</p>
+                    <h3>Crear un movimiento circular</h3>
+                    <h3>Crear una instruccion de espera </h3>
+                    <p> desde el menu contextual de una instruccion. insertar instrucción de acción. en plantilla de instrucciones elegimos WaitTime.En argumentos de instrucción, doble click en time, rellenar el recuadro de la derecha con el tiempo de espera en segundos.Pulsar crear y colocar la instrucción donde deseamos</p>
+                    <h3>Realizar una simulación </h3>
                     <p>Otra forma es desde la pantalla simulación, para eso debemos de sincorinzar con rapid, (se vera mas adelante). </p>
                     <p>Esta forma de simulación me permite grabar videos</p>
                     <li>Configuración de simulación-></li>
@@ -1288,8 +1324,11 @@ Seleccionar un punto en el entorno e trabajo y ver centro.</li>
                     <li>Una vez creada la trayectoria para simularla debo de <strong>SINCRONIZAR CON RAPID</strong></li>
                     <li>En simulación pulsamos al play y vemos la simulación</li>
 
+                        <li><strong> ver robot en posición</strong> en cada uno de los puntos, utilizado el menu contextual del punto -> ver robot en posicion</li>
+                        <li> Desde el menú contextual del punto-> seleccionar <strong> ver herramienta en posición</strong></li>
 
                     <input class="boton" type="button" value="cerrar todas las cuestiones" onClick="location.reload();">
+                         
                 </details>
 
 
@@ -1347,28 +1386,62 @@ Seleccionar un punto en el entorno e trabajo y ver centro.</li>
                     </summary>
 
 
-                   
-
-
-                    <h2>Workobjects</h2>
+                  
 
                     <p>El workobject tarea por defecto es la base del robot que coincide con el de la estación, si muevo el robot y quiero que los puntos siguan referenciados a la base de robot debo de contestar a la pregunta ¿Desea mover la base de coordenadas de la tarea? si</p>
-                    <p>workobject</p>
+                    <h3>Crear un workobject</h3>
 
-                    <p>Vamos a crear una nueva base de coordenadas " workobject" referida a un objeto.</p>
-                    <p>Si el objeto (su base de coordenadas) se mueve, los puntos
+                    <p>Vamos a crear una nueva base de coordenadas " workobject" </p>
+                    <p>Si el workobject (base de coordenadas) se mueve, los puntos
                         referenciados a el también se mueven</p>
 
-                    <p>Desde la pantalla posición inicial, programación de trayectorias seleccionamos otros->Crear objetos de trabajo. en la pantalla de la izquierda le podemos dar un nombre y las coordenadas de usuario </p>
+                    <p>Desde la pestaña del menú principal: posición inicial, en el menú cinta: programación de trayectorias, seleccionamos otros->Crear objetos de trabajo. </p>
                     <img  src="imagen/migas_wo1.png" alt="workobject">
+                    <br>
+                    <p>En la pantalla de la izquierda le podemos dar un nombre y las coordenadas de usuario </p>
                     <img  src="imagen/migas_wo2.png" alt="workobject">
                     <img  src="imagen/migas_wo3.png" alt="workobject">
                     <p>Si quiero crear los puntos repecto al nuevo sistemas de coordenadas selecciono en la pantalla posición inicial, parametros. El workobject creado</p>
                     <img  src="imagen/migas_wo4.png" alt="workobject">
                     <p>Todos los puntos que estan referenciados a ese workobject, se desplazaran moviendo el workobject. </p>
-                    <p>Para mover el workobject botón, accedemos al menú contextual -> fijar posción, puedo cambiar el origen y el angulo del sistema de coordenadas.</p>
+                    <h3>Mover un workobject</h3>
+                    <p>Para mover el workobject botón, accedemos al menú contextual -> fijar posición, 
+                        puedo cambiar el origen y el angulo del sistema de coordenadas.</p>
+<h3>Crear el punto asociado a un workobject</h3>
+<h4>Con la opción: Crear punto</h4>
+<p>Si creamos el punto desde el menú cinta punto->crear punto </p>
+<p>Debemos de tener en cuenta</p>
+<ul><li>
+    El workobject seleccionado en el objeto de trabajo
+</li>
+<li>La herramienta seleccionada</li>
+</ul>
+<p>Al crear el punto si selecciona la referencia respecto al objeto de trabajo: me crea las coordenadas respecto el workobject del usuario</p>
+<p>Si la referencia  selecciono mundo, me crea el punto respecto al wobj0, (el sistema de coordenadas de la base del robot)</p>
+<h4>Con la opción: Programar posición</h4>
+<p>En el objeto de trabajo seleccionamos el workobject con el que queremos trabajar, llevamos el robot a la posición donde queremos guardar el punto, pulsamos programar posición y se nos guarda el punto con las coordenadas y orientación respecto al sistema de coordenadas "workobject" creado </p>
+ <p>Podemos sincronizar con rapid, ir a ver el programa en rapid y observar que en CalibData estan los datos de sistema de coordenas creado. 
+    En Module1 podemos ver las coordenadas del punto creado y su orientación respecto el workobject
+ </p>
 
-                    <input class="boton" type="button" value="cerrar todas las cuestiones" onClick="location.reload();">
+<h3>Mover un punto de un workobject a otro</h3>
+<p>Al arrastrar un punto desde un workobject a otro, nos pide si queremos reposicionarlo o no</p>
+<li>No: El punto recalcula sus coordenadas para mantener su posición en el espacio</li>
+<li>
+    Si: El punto mantiene su valores, y se recalcula en el espacio respecto el nuevo sistema de coordenadas
+</li>
+
+<h3>Asociar un objeto a un workobject</h3>
+<p>Unas de las ventajas que tiene asociar los puntos a un workobject, lo podemos ver en el siguiente ejemplo:</p>
+<p>Creamos varios puntos de soldadura de la carroreceria de un coche, si cambiamos la posición de la carroceria, solo tenemos
+    que cambiar la posición del workobject de la nueva posición de la carroceria y no tener que recalcular todos los puntos
+</p>
+<p>Mediante visión artificial o sensores puedo identificar donde poner el sistema de coordenadas de un objeto, ejemplo una carroceria</p>
+<p>En la estación de robotstudio me permite asociar un workobject a un objeto. Cuando mueve el objeto se mueve el workobject</p>
+<h3>Asociar un workobject a un objeto</h3>
+<p>En el menú arbol de trayectorias y puntos, en el menú contextual del workobject-> conectar a. Y seleccionar el objeto al que quiero unir el workobject
+     </p>
+<input class="boton" type="button" value="cerrar todas las cuestiones" onClick="location.reload();">
                 </details>
 
 

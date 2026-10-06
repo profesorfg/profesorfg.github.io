@@ -601,12 +601,20 @@ details.detallescard[open] h2 {
     background: none;
 }
 
+
+
 details.detallescard[open] h3 {
-    color: greenyellow;
+    color: yellow;
+    font-size: 20px;
 }
 
 details.detallescard[open] h4 {
-    color: yellow;
+    color: greenyellow;
+}
+
+
+details.detallescard[open] h5 {
+    color: green;
 }
 
 details.detallescard[open] img:not(.imagen, .imagen-ancho200, .imagen-ancho500){ /* el siguiente estilo afecta a todas las imagenes dentro del details abierto con clase detallescard menos a las imagenes que tienen clase imagen*/
