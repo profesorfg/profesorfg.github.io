@@ -569,7 +569,7 @@ footer a {
 
 /*  https://www.silocreativo.com/details-summary-elementos-desplegables-ocultos-html/  */
 
-/* ------------------  details----------------------------*/
+
 .detalles {}
 
 
@@ -577,6 +577,8 @@ footer a {
     background: #ddd;
 
 }
+
+/* -----------------detallescard[open]--------------------------*/
 
 .detallescard {
     max-width: 300px;
@@ -646,10 +648,45 @@ details.detallescard[open] img:not(.imagen, .imagen-ancho200, .imagen-ancho500){
     border-radius: 8px;
 }
 
+/* ------------------------- AGRANDAR---------------------------- AGRANDAR---------------------------- AGRANDAR---------------------------- AGRANDAR----------*/
+.agrandar {
+    background-color: rgb(220, 220, 220);
+
+    border-radius: 20px;
+    border: 2px solid orange;
+    padding: 10px;
+      margin: 4px;
+
+}
+
+
+details.agrandar h2{
+ cursor: pointer;
+    background: #bbb;
+    padding: 4px;
+    border-radius: 8px;  
+  
+
+}
+ 
+
+details.agrandar summary {
+    list-style: none;
+
+}
 
 
 
 
+details.agrandar img{
+    max-width: 300px;
+    max-height: 300px; 
+}
+details.agrandar[open] img{
+     max-width: 100%;     
+  max-height: 100%; 
+    
+}
 
 
 /* ------------------  ver mas  ------------------utilizado en logo-practicas----------*/

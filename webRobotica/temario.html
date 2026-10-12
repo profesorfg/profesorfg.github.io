@@ -593,10 +593,10 @@
                 
                 
                 
-                <!-- **   </article>*************ETIQUETA 1  **********QUE ES UN ROBOT************************ -->
+                <!-- **   </article>************Lenguajes de Programación en Robots Industriales********************* -->
                 <details class="detallescard">
                     <summary class="sumario">
-                        <h2 class="puntero"> Lenguajes de Programación en Robots Industriales</h2>
+                        <h2 class="puntero"> </h2>
                     </summary>
                 
                     
@@ -810,7 +810,7 @@ ENDMODULE
                 </details>
                 
                 
-                    <!-- **   </article>*************ETIQUETA 1  **********QUE ES UN ROBOT************************ -->
+                    <!-- **   </article>*************Modos de Funcionamiento del Robot Industrial******************** -->
                 <details class="detallescard">
                     <summary class="sumario">
                         <h2 class="puntero"> Modos de Funcionamiento del Robot Industrial</h2>
@@ -875,7 +875,7 @@ ENDMODULE
                 
                 
                 
-                <!-- **   </article>*************ETIQUETA 1  **********QUE ES UN ROBOT************************ -->
+                <!-- **   </article>***************************** -->
                 <details class="detallescard">
                     <summary class="sumario">
                         <h2 class="puntero"> *****</h2>
@@ -1197,16 +1197,12 @@ Seleccionar un punto en el entorno e trabajo y ver centro.</li>
     <p>la puedo encontrar en <strong>documento/robotstudio/proyect/nombredelproyecto/components</strong></p>
    <p> si la quiero utilizar en otros proyectos la copio a  <strong>documento/robotstudio/libreries</strong> <br>
                     creo un proyecto nuevo, <strong>inicio/importar biblioteca/biblioteca de usuario/palet2</strong></p>
-
-                     
-                     
-                     
-                     
-                     
-                     
+   
 
                     <input class="boton" type="button" value="cerrar todas las cuestiones" onClick="location.reload();">
                 </details>
+
+
                             <!-- ********************************* -->
                 <!-- ***********PUNTOS Y TRAYECTORIAS SIMULACION*********************** -->
                             <!-- ********************************* -->
@@ -1253,31 +1249,12 @@ Seleccionar un punto en el entorno e trabajo y ver centro.</li>
                     <p>Para llegar a ella la forma mas rapida, en vista arbol, abrimos el menú contextual del brazo y trasladar a posición -> posición inicial</p>
                             <img src="imagen/tem-puntos-posicion_inicial.png" alt="robotstudio">
 
-                     
-                      
-                      
-
-                        
-
-
-
-
-                      
-
-     
-               
-               
-                
-
                    
                     <h3>Alinear el TCP respecto el sistema de coordenadas </h3>
-                    
-                    
-                    
+
                     <p>desde Diseño, menú contextual del robot -> <strong>Alinear TCP</strong></p>
                   
-                    
-                    
+   
                     
                     <h2>TRAYECTORIAS</h2>
                     
@@ -1333,6 +1310,7 @@ Seleccionar un punto en el entorno e trabajo y ver centro.</li>
 
 
                 <!-- ***************CREACION COLISIÓN Y GRABAR VIDEO**********PUNTOS Y TRAYECTORIAS*********************** -->
+
                 <details class="detallescard">
                     <summary class="sumario">
                         <h2 class="puntero">CREACION COLISIÓN Y GRABAR VIDEO</h2>
@@ -1348,13 +1326,9 @@ Seleccionar un punto en el entorno e trabajo y ver centro.</li>
                     <h3>Grabación de
                         vídeo</h3>
 
+                    
                     <br>
-                    <img src="imagen/m_manuales_video_extensiones.png" alt="video"><br>
-                    <br>
-                    Se puede grabar una animación del funcionamiento en distintos
-                    formatos, exe, glb o rsstnv. Nos permite cambiar el punto vista,
-                    hacer Zoom etc sin tener Robotstudio. <br>
-                    <br>
+                  
                     Se pueden grabar vídeos en formato mp4 <br>
                     <img src="imagen/m_manuales_video_parar.png" alt="video"><br>
                     <br>
@@ -1363,14 +1337,32 @@ Seleccionar un punto en el entorno e trabajo y ver centro.</li>
                     parar <br>
                     Al pulsar grabar graficos, graba los graficos hasta pulsar paro <br>
                     <br>
-                    <h3>Ocultar una trayectoria</h3>
-                    <p>Desde la pantalla posición inicial, en la pestaña trayectorias y puntos, vamos a una ruta creada, abrimos su menu contextual en ver-> deseleccionamos visible <strong>VER</strong></p>
+                    <p>Click en la flecha del icono ver grabación, podemos configurar donde queremos guardar la grabación</p>
+                  
+                   
+                    <h3>Exportar visor</h3>
                     <br>
-                    <h3>Selección de puntos programa posición</h3>
+                    <img src="imagen/m_manuales_video_extensiones.png" alt="video"><br>
+                    <p>En area cintas de la pestaña simulación, tenemos la opción exportar visor, elegiremos el formato exe.
+                    </p>
+                    <p>Nos crea un visor donde popdemos ver el funcionamiento del robot y a diferencia del un video puedo modificar los angulos de la camara y realizar zoom</p>
+                    <p>nota: a la hora de entregar un visor, TEAMS no deja subir archivos exe, por lo que cambiamos a extensión a ese.</p>
 
-                    <p>Otra forma de selecionar puntos es moviendo el robot desde la vista de diseño "menu -> contextual del robor -> movimiento ejes del mecanismo o movimiento lineal del mecanismos" a la posición deseada y clickcar en programar posición </p>
-                    <p>Esto es lento e impreciso desde robot studio, desde el robot real es una práctica muy habitual.</p>
-                    <p>Hay una opción en robot studio rapida, que consiste en mover el robot a mano alzada, selecionando mover y rotar y activando las herramientas de selección colocamos el robot en la posición exacta de una forma rapida</p>
+                    <h3>Ocultar trayectorias y puntos</h3>
+                    <p>Para una mejor Grabación, vamos a ocultar los puntos y trayectorias.</p>
+                    <p>Desde el área cinta del menú inicial, en la sección gráficos pinchamos en el "ojo" mostra/ocultar, y deseleccionamos
+                       <li>Todas las posiciones/bases de coordenadas</li> 
+                       <li>Todas las trayectorias</li> 
+                    </p>
+                    <p>Si Todas las posiciones/bases de coordenadas ya estaba deselecioanada y siguen apareciendo puntos, la volvemos a selecionar y deselecionar, y desaparecen los puntos y las bases de coordeandas</p>
+                   
+                   <p>Otra opción para ocultar trayectorias</p>
+                    <p>Desde el área cinta de posición inicial, en el área vista de arbol, trayectorias y puntos, vamos a una ruta creada, abrimos su menu contextual en ver-> deseleccionamos visible <strong>VER</strong></p>
+                    <br>
+                    <h3>Rastreo del TCP</h3>
+                   <p>En el area cinta del menú simulación, en la zona monitor, click en rastreo tcp</p>
+                   <p>En la vista arbol selecciono el rastreo y eligo un color</p>
+
 
                     <input class="boton" type="button" value="cerrar todas las cuestiones" onClick="location.reload();">
                 </details>
