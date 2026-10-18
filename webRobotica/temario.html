@@ -1453,16 +1453,30 @@ Seleccionar un punto en el entorno e trabajo y ver centro.</li>
                     <h3>RAPID</h3>
                     <p>En el entorno RAPID es la creación del programa para transferirlo al robot. El programa rapid se puede crear directamente en este entorno o lo podemos crear a partir del entorno de la estación y SINCRONIZAMOS con rapid. Al hacer esta operación nos aparece en rapid el programa creado</p>
                     <p>En la pantalla rapid, en la pestaña controlador, dentro de robot podemos encontrar la opción rapid</p>
+                    <h4>PROGRAMA RAPID</h4>
                     <p>El programa rapid esta compuesto por modulo de programa y modulo de sistema, nosotros vamos a trabajar solo con el módulo programa</p>
+                    <img  src="imagen/tem_rapid-01.png" alt="workobject">
                     <p>En el modulo programa esta compuesto por dos archivos</p>
+                    <h4>Calib data</h4>
                     <li>Calib data: donde encontramos los valores de los workobject, herramientas creadas</li>
-                    <li>Module1 donde se almacena el programa</li>
-
                     <h4>Module 1</h4>
+                     <img  src="imagen/tem_rapid-module1.png" alt="rapid">
+                    <li>Module1 donde se almacena el programa</li>
+<p>el modulo empieza con la instrucción module y el nombre del modulo</p>
+                  <p>y termina con la instrucción endmodule</p>
+                   
                     <p>En la estructura de modulo 1 vemos primero la definición de los puntos </p>
+                    <p>Despues esta compuesto por <strong>PROCESOS</strong></p>
+                    <p>Los procesos empiezan por la instrucción PROC y el nombre del proceso y () y terminan con la instrucción ENDPROC</p>
                     <p>El proceso principal main y desde este se llama a programas secundarios</p>
                     <p>Por defecto los proceso secundarios se nombra con path pero pueden tener cualquier nombre</p>
-
+ <img  src="imagen/tem_flex_produccion.png" alt="rapid">
+                   <p>En esta imagen podemos ver en la flexpendant las pestaña para acceder al</p>
+                   <ul>
+                   <li>PROGRAMA->Tareas y programas</li>
+                   <li>MODULES -> los módulos, CalibData, module1...</li>
+                   <li>ROUTINES-> Procesos</li>
+                   </ul>
                     <h3>Sincronizar</h3>
 
                     <li>Se puede crear un programación desde la estación y SINCRONIZON CON RAPID y me crea mi programa en RAPID</li>
@@ -1487,7 +1501,8 @@ Seleccionar un punto en el entorno e trabajo y ver centro.</li>
 
 
                 <!-- ----------------*********fin etiqueta **********************************     -->
-
+ <!-- ***************ETIQUETA flexpendant**********************************    -->
+                <!-- ***************ETIQUETA flexpendant**********************************    -->
                 <!-- ***************ETIQUETA flexpendant**********************************    -->
                 <details class="detallescard">
                     <summary class="sumario">
@@ -1496,34 +1511,87 @@ Seleccionar un punto en el entorno e trabajo y ver centro.</li>
 
 
                     <p>En la pantalla controlador, sección "herramientas del controlador" ->flexpendant -> IRC 5 flexPendant</p>
+                    <h3>Ventanas y funcionamiento manual</h3>
                     <p>Desplegando el menu en las tres rayas, podemos ver las 12 pantallas existentes, si hago click en una se vera en la pantalla de la flexpendant. Puedo abrir un maximo de 6 pantallas</p>
-                    <h3>Pantalla jogging</h3>
-
-                    <p>Desde esta pantalla puedo mover el Robot manualmente.</p>
-                    <p>Pasamos el robot a manual, el modo controlado pasa de verde a amarillo</p>
-                    <p>Accionamos el pulsador hombre muerto, pulsado son enable, que pasara a color verde y guard stop pasa Motors ejes 1,2 y 3</p>
-                    <p>Haciendo click en motion mode puedo cambiar para </p>
-                    <li> mover los ejes 4,5 y 6</li>
+                       <img src="imagen/tem_flex-inicio.png" alt="flexpendant"><br>
+                    <p>Podemos ver las ventanas que vamos a utilizar este curso</p>
+                    <p>Se pueden abrir un máximo de 6 ventanas</p>
+                    <p>Remarcado con fondo amarillo, podemos ver los accionamientos para poner el robot en forma manual y pulsador de hombre muerto, y visualizar el estado de los motores. </p>
+                    <p>Para poder mover el robot y realizar muchas acciones desde la flexpendand, el robot debe de estar en manual, la velocidad máxima que puede alcanzar el robot en manual es 200 mm/s</p>
+                    <h3>Movimiento</h3>
+                     <img src="imagen/tem_flex-movimiento01.png" alt="flexpendant"><br>
+                     <h4>Formas de mover el robot</h4>
+                    <p>Remarcado en rojo, tenemos las opciones de movimiento ejes, lineal, reorientación, selección de herramienta y workobject</p>
+                       <li> mover los ejes 1,2 y 3</li>
+                      <li> mover los ejes 4,5 y 6</li>
                     <li>Cambiar a movimiento lineal</li>
                     <li>Cambiar a movimiento de reorientación</li>
+                    <li>Seleccionar la herramienta de trabajo</li>
+                    <li>Seleccionar el objeto de trabajo</li>
+                    <br>
+                    <p>Con el jostick podemos mover el robot, remarcado en verde vemos las ayuda para realizar el movimiento y la posición alcanzada</p>
+                    <h4>Velocidad de movimiento. INCREMENTOS</h4>
                     <p>En incrementos podemos controlar la velocidad. small velocidad lenta, large velocidad rapida, none sin limitación</p>
                     <p>Pulsado en la tres rayas (encima del play stop, podemos cambiar el modo de velociada de ninguno al preseleccionado</p>
-                    <p>Subiendo al siguiente pulsador podemos cambiar cambiar rapidamente a movimiento ejes, 123 y pulsando otra vez 456</p>
-                    <p>La siguiente es para pasar de movimiento lineal y reorientación</p>
+                   
+                 <h4>IR A</h4>
 
                     <p>GO TO podemos ir a un punto del programa</p>
+                    <p>click en IR A</p>
+                    <p>Seleccionar el punto y con el pulsador de hombre muerto pulsado, mantener clickado IR A</p>
+                    <h4>ALINEAR</h4>
                     <p>Con aling podemos alinear el TCP de la herramienta con respecto mundo</p>
-                    <p>En la pantalla jogging podemos cambiar las referecncias del workobject y tool, si se han creado objetos de trabajo o TCP</p>
-                    <p>Tambien podemos elegir el sistemas de coordenadas de referencia</p>
-                    <img src="imagen/temario-flexpendant.png" alt="flexpendant"><br>
-                    <h3 class="amarillo-negrita">Pantalla Configuración</h3>
-                    <p>Puedo cambiar el idioma del la flexpendant</p>
-                    <p>Mas adelante aprenderemos a configurar la señales de entrada y salida</p>
+                   <p>Se alinea los ejes de herramienta con respecto el workobject, los ejes se alinean sin tener en cuenta si los ejes son X, Y o Z</p>
+                 
+                  <h3>Datos programa</h3>
+                     <img src="imagen/tem_flex-datos.png" alt="flexpendant">
+                  
+               <p>En la ventana datos programa podemos ver los datos utilizados en el programa</p>
+                 <p>Click en ver, vemos todos los datos que utiliza robotstudio, </p>
+                 <p>robtarget se almacenan y se pueden crear los puntos utilizados en el programa.</p>
+                 <p>Los puntos se crean según la herramienta y el workobject (objeto de trabajo) seleccionado en la pantalla movimiento</p>
+                 <p>Al crear el punto, le asignamos 
+                 <img src="imagen/tem_flex-datos1.png" alt="flexpendant">
+                 <p>En la imagen observamos que el punto se guarda en el modulos calib data, porque todavia no se ha creado el modulo module1, que es donde se guarda los puntos del programa</p>
+                 <p>Debemos de mover estos puntos al module1 cuando se cree</p>
+                 <p>O debiamos de haber creado el module1 y despues guardar los puntos en ese módulo</p>
+                 <h3>Cambio de idioma</h3>
+                 <p>En la ventana panel de control, podemos cambiar el idioma de la flexpendant</p>
+                 <h4>Desde robot estudio</h4>
+                 <p>El idioma tambien se puede cambiar accediendo a la configuración del controlador cuando le incorporamos a la estación</p>
+                 <p>O en el area cinta del  controlador, en la zona controlador virtual, con el icóno RW, cambiar opciones. Accedemos a la configuración del controlador como el cambio de idioma</p>
+                 <p>Desde el panel de control mas adelante aprenderemos a configurar la señales de entrada y salida</p>
                     <p>Configurar las 4 teclas de accion rapida superiores en la opción <strong>Progkeys</strong></p>
-
-                    <h3>Production windows o ventana de producción</h3>
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+               <h3>Editor de programa</h3>
+                   	<p>Crear un programa y puntos</p>
+               
+ <h3>Production windows o ventana de producción</h3>
                     <img src="imagen/temario-flexpendant1.png" alt="flexpendant">
-                    <p>Desde esta pantalla puedo cargar un programa RAPID. debo de tener una carpeta que incluya el archivo pgf, el rapid y el calib data</p>
+                    
+                    
+                     <img src="imagen/tem_flex-VEditor.png" alt="flexpendant">
+                      <img src="imagen/tem_flex-VEditor_anadir.png" alt="flexpendant">
+                      <img src="imagen/tem_flex-VEditor_editar.png" alt="flexpendant">
+                      <img src="imagen/tem_flex-VEditor_depurar.png" alt="flexpendant">
+                      <img src="imagen/tem_flex-VEditor_GestionProgramas.png" alt="flexpendant">
+                    
+                    
+                    
+                    
+                    
+                   
+                    
+                    
+                    
+                    <p>Desde esta ventana puedo <strong>CARGAR y GUARDAR</strong> un programa RAPID. debo de tener una carpeta que incluya el archivo pgf, el rapid y el calib data</p>
                     <p>load program</p>
                     <p>En la parte superior donde pone open, vemos en la carpeta que nos encontramos</p>
                     <p>Pinchando en el icono flecha, subimos carpetas hasta llegar al usb</p>
@@ -1531,20 +1599,17 @@ Seleccionar un punto en el entorno e trabajo y ver centro.</li>
                     <p>Asi navegamos por las distintas carpetas, hasta llegar al archivo donde tengo guardado el programa y pincho en el archivo pgf y cargo el programa en la controladora</p>
                     <p>Para poner el marcha programa debo de llevar el pp a main y pulso play</p>
                     <p>Con las teclas derecha e izquierda, ejecuto el programa paso a paso</p>
-                    <!--
-                        <!--
-                        <!--
-                        <br>
-                         <a href="libreria/Cubo_medidas.svg" target="_blank"> Coordenadas de la trayectoria </a>
-                        <a href="libreria/Cubo_Fabio.zip" download> Importamos la caja de fabio</a>
-                        <a href="https://youtu.be/FwL-7gO1Imk" target="_blank">Funcionamiento de la práctica</a>
-                        <div class=videos-youtube>
-                            <iframe src="https://www.youtube.com/embed/x2DC2GD8Ogo?si=5EJCcfxeXKwCkBEx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                        </div> -->
-                    <p></p>
+                 
+                   <h3>Ventana producción</h3>
+                      <img src="imagen/tem_flex-VProduccion.png" alt="flexpendant">
+                       <img src="imagen/tem_flex-VProduccion_CargarPrograma.png" alt="flexpendant">
+                       
+                           <h3>acceso rapido ROB_1</h3>
 
-
-
+<p>Ver en migas de pan, Velocidad en modo autonático,
+Un solo ciclo o ciclo continuo.
+Distintas formas de ejecutar Paso a Paso,
+Incrementos</p>
 
 
 
