@@ -961,9 +961,16 @@ ENDMODULE
                        <p>Abre un proyecto de una instalación vacía</p>
                         <ul class="conpunto">
                             <li>Insertar Robot IRB 120</li>
-                            <li>Insertar una controladora (Observar la parte inferior se pone en verde:controladora perfectamente instalada y funcionando en automatico)</li>
+                            <li>Insertar una controladora, desde diseño (Observar la parte inferior se pone en verde:controladora perfectamente instalada y funcionando en automatico)</li>
                             <li>Insertar la herramienta my tool</li>
                             <li>Conectar la herramienta al robot (desde el menú de la derechaejemplo arrastrando la herramienta al robot o mediante el menú contextual de la herramienta)</li>
+                        </ul>
+                        <ul>
+                            <li>Si insertamos primero la controladora desde nuevo controlador, esta acción nos pide luego añadir el robot</li>
+                        </ul>
+                        
+                        <ul>
+                            <li>Si al abrir el nuevo proyecto selecciono incluir robot y controladora, al crear el proyecto me inserta el robot y la controladora directamente, con esta acción no me permite acceder a la opciones del controlador en la instalación, para cambiar las opciones de controlador, desde el area cinta del controlador, controlador virtual en el icono con RW cambiar opciones. Cuidado con esta opción si se va a trabajar con la flexpendant</li>
                         </ul>
                         
                         <h3>Áreas de robotstudio </h3>
@@ -1605,11 +1612,48 @@ Seleccionar un punto en el entorno e trabajo y ver centro.</li>
                        <img src="imagen/tem_flex-VProduccion_CargarPrograma.png" alt="flexpendant">
                        
                            <h3>acceso rapido ROB_1</h3>
+                           
+                           <h4>Parametros</h4>
+                    
+                        <br>
+                        <img class="imagen" src="imagen/m_manuales_flex_referencias.png" alt="Referencias flexpendant"><br>
+                        <br>
+                         <h4> Incrementos, Velocidad lenta del Robot</h4>
+                       
+                        <br>Cuando el robot se mueve de forma manual y pulsamos en la flexpendant la tecla de incrementos, el robot se mueve lentamente, para mejorar la precisión y esa velocidad lenta depende del incremento seleccionado. <br>
+                        <img class="imagen" src="imagen/m_manuales_flex_incrementos.png" alt="incrementos flexpendant"><br>
+                        <br>
+                        <img class="imagen" src="imagen/m_manuales_flex_incrementos1.png" alt="incrementos flexpendant"><br>
+                           
+                            <h4>Un solo ciclo o ciclo continuo</h4>
+                    
+                        <img class="imagen" src="imagen/m_manuales_flex_ciclos.png" alt="ciclos flexpendant"><br>
+                        <br>
+ <h4>Distintas formas
+                                de ejecutar Paso a Paso</h2>
+                       
+                        <br>
+                        <img class="imagen" src="imagen/m_manuales_flex_paso.png" alt="Paso a paso flexpendant"><br>
+                        <br>
 
-<p>Ver en migas de pan, Velocidad en modo autonático,
-Un solo ciclo o ciclo continuo.
-Distintas formas de ejecutar Paso a Paso,
-Incrementos</p>
+ <h4>Velocidad en modo automático</h4>
+                     
+                        <p>La velocidad máxima del brazo robotico IRB120 es de 2000 mm/s</p>
+                        <p>La velocidad máxima en modo manual es de 200mm/s</p>
+                        <p>Otra forma de fucionar es en modo manual sin limitación de velocidad, por lo que la velocidad máxima sea la alcanzada en modo automático.</p>
+                        <p>La velocidad en modo automática puede llegar a ser muy elevada, lo que provoca grandes inercias, que pueden romper el soporte del robot, antes de poner en marcha el robot a las velocidades programas, se pueden selecionar porcentajes de velocidad programada para observar el comportamiento del robot y de la estructura. y subir este porcentaje medida que comprbamos la instalación hasta el 100% </p>
+                        <br>
+                        <img class="imagen" src="imagen/m_manuales_flex_velocidad_manual.png" alt="Velocidad modo manual"><br>
+                        <br>
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1634,31 +1678,53 @@ Incrementos</p>
 
                 <!-- ***************ETIQUETA  crear una herramienta y un workobject  
             *********************************    -->
+            
+                      
+                  
                 <details class="detallescard">
                     <summary class="sumario">
                         <h2 class="puntero">Crear un tcp y un workobject con la flexpendant</h2>
                     </summary>
+                    <h3>Crear una herramienta con flexpendant</h3>
+                    <a href="https://www.youtube.com/watch?v=xsIP6KnbfCc"  target="_blank">Crear una herramienta con flexpendant</a>
+                    <P>Vamos a crear una herramienta desde la flexpendant</P>
+                  <p>Desde la pantalla datos de programa, seleccionamos tooldata, click en mostrar datos->nuevo, le ponemos un nombre y la guardamos en el archivo CalibData
+                   </p>
+               
 
-                    <div class=videos-youtube>
-                        <iframe src="https://www.youtube.com/watch?v=xsIP6KnbfCc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                        Crear una herramienta
-                    </div>
-
-                    <div class=videos-youtube>
-                        <iframe src="https://www.youtube.com/watch?v=XYiNFtOI4Jk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                        Crear un workobject
-                    </div>
-
-                    <!--
-                        <!--
-                        <!--
-                        <br>
-                         <a href="libreria/Cubo_medidas.svg" target="_blank"> Coordenadas de la trayectoria </a>
-                        <a href="libreria/Cubo_Fabio.zip" download> Importamos la caja de fabio</a>
-                        <a href="https://youtu.be/FwL-7gO1Imk" target="_blank">Funcionamiento de la práctica</a>
-                        <div class=videos-youtube>
-                            <iframe src="https://www.youtube.com/embed/x2DC2GD8Ogo?si=5EJCcfxeXKwCkBEx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                        </div> -->
+                     <img src="imagen/tem_tcp-con_flex01.png" alt="TCP con flexpendant">
+                     <p>doble click sobre la herramienta creada accemos a los datos, le ponemos una masa</p>
+                        <img src="imagen/tem_tcp-con_flex02.png" alt="TCP con flexpendant">
+                        <p>y opcionalmente un centro de gravedad</p>
+                           <img src="imagen/tem_tcp-con_flex03.png" alt="TCP con flexpendant">
+                           <p>Volvemos a seleccionar la herramienta y desde definir obtengo el TCP de la herramienta</p>
+                           <p>Para ello debo de tener un punto fijo en el espacio, una esquina, una punta...</p>
+                           <p>Coloco el robot en ese punto y los guardo, "modificar posició"</p>
+                           <p>Retiro robot y vuelvo al mismo punto con otra orientación</p>
+                           <p>Repito el proceso con al menos 4 puntos, si lo hago con mas puntos mejor precisión</p>
+                           <p>Por ultimo no da la flexpendant el valor del TCP con el error</p>
+                              <img src="imagen/tem_tcp-con_flex04.png" alt="TCP con flexpendant">
+                 
+                    
+<h3>  Crear un workobject</h3>
+               <a href="https://www.youtube.com/watch?v=XYiNFtOI4Jk"  target="_blank">Crear una Workobject con flexpendant</a>  
+               <p>Vamos a crear un workobject a partir de 3 puntos, X1, X2 y Y1</p>
+               <p>De X1 y X2 me difinen el eje x y  la dirección positiva</p>
+               <p>Y1 me defien el eje Y, como una recta perpendicular a la rectaX1-X2, y la dirección positiva queda definida por la colación del punto respecto a la recta X1-X2</p>
+               <p>El cruce de los ejes X e Y definen el origen</p>
+               <p>el eje z sera perpendicular al plano XY.</p>
+               <p>Desde la pantalla datos de programa, seleccionamos wobjdata, click en mostrar datos->nuevo, le ponemos un nombre, y luego le editamos, click en definir.</p>
+               
+               <img src="imagen/tem_workobject-con_flex01.png" alt="workobject con flexpendant">
+               <p>Elegimos el método de tres puntos</p>
+               <img src="imagen/tem_workobject-con_flex02.png" alt="workobject con flexpendant">
+               <p>Ejemplo de un Workobject creado desde la estación</p>
+                 <img src="imagen/tem_workobject-con_flex03.png" alt="workobject con flexpendant">  
+                 <p>Workobject creado desde la flexpendand con la misma orientación que el original</p>   
+          <img src="imagen/tem_workobject-con_flex04.png" alt="workobject con flexpendant">
+          <p>Creado desde la flexpendant con orientación distanta al original, lo que provoca que la colocación de la herramienta no sea accesible desde el Robot</p>
+          <img src="imagen/tem_workobject-con_flex05.png" alt="workobject con flexpendant">
+                   
                     <p></p>
 
 

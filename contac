@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>TALLER DE IMPRESION</title>
+
+    <link href="index_files/estilo.css" rel="stylesheet" type="text/css">
+     <link rel="icon" type="image/png" sizes="16x16" href="imagenes/mi_icono.png">
+    <script src="index_files/menu.js"></script>
+     <noscript>
+            <link href="index_files/estilosSinScript.css" rel="stylesheet">
+        </noscript>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta content="profesorfg" name="author">
+    <meta content="automatizacion industrial" name="description">
+    <meta name="keywords" content="automatas electricidad">
+    <meta charset="UTF-8">
+</head>
+
+<body>
+<header>
+   <!--  MENU -->
+      DIBUJAR CON FREECAD,  PIEZAS,  IMPRIPRIR TUS DIBUJOS
+</header>
+<main>
+<h1>PAGINA EN CONTRUCCIÓN</h1>
+
+<img src="paginaenconstruccion.webp" alt="pagina en construccion">
+</main>
+<!-- pie de página -->
+<footer>Conocenos. Somos una organización para compartir el conocimiento de una manera libre a traves de internet, para unirte a nosotros envia un email a comparte_conocimiento@comparte.es</footer>
+
+    </body>
+
+</html>

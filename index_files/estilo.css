@@ -6,7 +6,7 @@
 /* ----------------------- imagenes  ------------------------------------------475*/
 /* ------------------  details----------------------------*/
 /*   MEDIA SCREEN  --------------------------para el movil -----------------------  1195*/
-
+/* article {background-color:#FF000080; Se mostrará rojo semitransparente} */
 * {
     /*elinina todos los margenes a todo alinea todos los li al borde*/
     margin: 0px;

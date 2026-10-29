@@ -57,7 +57,7 @@
             </article>
             <br>
             <article class="articulo">
-                 <a name="prac5"></a>
+                <a name="prac5"></a>
                 <!--  ********** inicio practica  ***MODELO********* 
                 <section class="section_naranja">
                     <details class="detalles">
@@ -79,22 +79,23 @@
                     </details>
                 </section>  -->
                 <!--   fin practica -->
-                
-                
-                
-                
-                
-                
-                
-                
-                
-            
 
-                <!-- *************** inicio practica  ********************************** -->
-                <section class="section_naranja"> <a name="prac1"></a>
+
+
+
+
+
+
+
+
+
+                <!-- *************** Desparece el
+                                menú derecha ***************************** -->
+                <section class="section_naranja">
+                   <p class="lineas3" id="mozTocId742047"></p> 
                     <details class="detalles">
                         <summary class="sumario">
-                            <h2 class="puntero"><a id="mozTocId742047" class="mozTocH2"></a>Desparece el
+                            <h2 class="puntero">Desparece el
                                 menú derecha</h2>
                         </summary>
                         <p>Si me desaparece un menú y no se reinstalarlo, siempre se puede
@@ -107,8 +108,168 @@
                     </details>
                 </section>
                 <!-- fin practica  -->
-                <!--   ******************************************* inicio practica  **********************************-->
-                <section class="section_naranja"> <a name="prac2"></a>
+
+
+
+
+
+
+                <!-- ***************Cambio de idioma de la controladora: distintas formas y sus consecuencias******************************* -->
+            
+ <p class="lineas3" id="CambioIdioma"></p> 
+                <section class="section_naranja">
+                    <details class="detalles">
+                        <summary class="sumario">
+
+
+
+
+
+
+
+
+
+
+                            <h2 class="puntero">Cambio de idioma de la controladora: distintas formas y sus consecuencias</h2>
+                        </summary>
+                        <p>
+                            La mejor opción es crear una estación vacía, incorporar el robot y la controladora desde el diseño y, antes de comenzar a trabajar, modificar las opciones necesarias, incluido el idioma.
+                        </p>
+
+                        <p>
+                            Si la estación ya se ha abierto con el idioma en inglés y posteriormente se cambia el idioma, existen varias opciones que generan diferentes consecuencias en RobotStudio. Por ejemplo, si el cambio se realiza desde el área de cinta del controlador, en la sección <strong>Controlador virtual → Opciones RW del controlador</strong>, pueden producirse efectos no deseados, como la eliminación de los módulos de programa RAPID.
+                        </p>
+
+                        <p>
+                            La mejor alternativa para cambiar el idioma una vez creado el programa es realizar la operación desde la FlexPendant.
+                        </p>
+
+                        <p>
+                            Al cambiar el idioma desde la FlexPendant, puede aparecer una pantalla gris. Las posibles soluciones son:
+                        </p>
+
+                        <ul>
+                            <li>Apagar y encender la FlexPendant.</li>
+                            <li>Realizar un reinicio en caliente.</li>
+                        </ul>
+
+                        <p>
+                            Si el cambio de idioma se realiza desde la estación, el programa de la estación se conserva, pero se eliminan <strong>todos los módulos de programa RAPID</strong>.
+                        </p>
+
+                        <p>
+                            A continuación se describe un estudio de las consecuencias observadas según el método utilizado:
+                        </p>
+
+                        <h3>A) Cambio de idioma desde las opciones RW del controlador</h3>
+
+                        <p>
+                            Tengo un programa cargado y cambio el idioma desde el área de cinta del controlador, en la sección <strong>Controlador virtual → Icono RW → Opciones del controlador</strong>. El sistema indica que va a reiniciarse y, tras el reinicio, se eliminan todos los módulos de programa.
+                        </p>
+
+                        <p>
+                            En este caso no tenía sincronizado RAPID con la estación. Al volver a arrancar la FlexPendant, en la ventana de producción, la opción <strong>PP to Main</strong> aparece deshabilitada y únicamente está disponible la ventana de producción.
+                        </p>
+
+                        <p>
+                            Voy a cargar un programa RAPID y observo que el sistema se encuentra en <strong>Paro protegido</strong>. Tras pulsar <strong>Enable</strong>, los motores pasan a estado <strong>Motors On</strong>. El editor de programas también muestra un estado correcto.
+                        </p>
+
+                        <p>
+                            El programa no funciona correctamente porque el robot adopta una posición errónea, aunque este problema está controlado. El programa RAPID es correcto y puedo seguir añadiendo instrucciones.
+                        </p>
+
+                        <p>
+                            Esta forma de trabajo puede considerarse controlada.
+                        </p>
+
+                        <h3>B) Cambio de idioma con sincronización previa con la estación</h3>
+
+                        <p>
+                            Tengo un programa cargado desde la FlexPendant. Desde la ventana de producción, sincronizo con la estación utilizando el área de cinta del menú Inicio. Inicialmente no selecciona ningún elemento, por lo que selecciono todo y realizo la sincronización.
+                        </p>
+
+                        <p>
+                            Posteriormente cambio el idioma desde el área de cinta del controlador. Como resultado, se elimina todo el contenido RAPID, pero el programa permanece almacenado en la estación.
+                        </p>
+
+                        <p>
+                            Gracias a ello, puedo sincronizar de nuevo con RAPID y recuperar el programa. Al abrir la ventana de producción de la FlexPendant y ejecutar <strong>PP to Main</strong>, compruebo que el programa vuelve a estar cargado en la tarea correspondiente.
+                        </p>
+
+                        <h3>C) Cambio de idioma y creación de un nuevo programa desde la FlexPendant</h3>
+
+                        <p>
+                            Tengo un programa cargado y cambio el idioma desde <strong>Controlador virtual → Icono RW → Opciones del controlador</strong>. Tras el reinicio, se eliminan todos los módulos de programa.
+                        </p>
+
+                        <p>
+                            Desde la FlexPendant, al acceder al editor de programas, el sistema indica que no existe ningún programa creado. Creo un programa nuevo denominado <strong>MainModule</strong>, pero observo que no dispongo ni de la herramienta ni de los WorkObjects (WO).
+                        </p>
+
+                        <p>
+                            Al sincronizar con la estación, si esta contiene un programa, se elimina el módulo <strong>Main</strong>, pero se mantiene el <strong>Proceso 10</strong>. Además, no desaparecen ni los WorkObjects ni la herramienta.
+                        </p>
+
+                        <p>
+                            Si vuelvo a sincronizar con RAPID, se crea el módulo <strong>CalibData</strong> y también <strong>Module1</strong>. En este último aparece el <strong>Proceso 10</strong> sin el módulo <strong>Main</strong>, y las líneas muestran errores debido a la desaparición de la herramienta utilizada en las instrucciones de movimiento.
+                        </p>
+
+                        <h3>Conclusión</h3>
+
+                        <p>
+                            La opción más recomendable es crear la estación, añadir la controladora y configurar el idioma antes de comenzar a programar. De esta forma se evitan todos los problemas descritos anteriormente y se puede trabajar desde el principio con la controladora en español.
+                        </p>
+
+
+
+
+                        <a href="#contenedor">INICIO</a>
+                    </details>
+                </section>
+                <!-- fin practica  -->
+
+
+
+
+
+
+
+                <!-- *************** Ubicacion programa tareas  ********************************** -->
+                <section class="section_naranja">
+                     <p class="lineas3" id="prac1"></p> 
+                    <details class="detalles">
+                        <summary class="sumario">
+                            <h2 class="puntero"><a id="ubicacion" class="mozTocH2"></a>Ubicacion programa tareas</h2>
+                        </summary>
+
+                        <img class="imagen" src="imagen/migas-ubicacion_programa_tareas.png" alt="Ubicacion programa tareas"><br>
+
+                        <br>
+                        <p>La ubicación de los programas guardados en RAPID desde el area cinta de RAPID, sección controlador, guarda programa.</p>
+                        <img class="imagen" src="imagen/migas-ubicacion_programa_rapid0.png" alt="Ubicacion programa tareas"><br>
+                        <br>
+                        <br>
+
+                        <img class="imagen" src="imagen/migas-ubicacion_programa_rapid.png" alt="Ubicacion programa tareas"><br>
+                        <a href="#contenedor">INICIO</a>
+                    </details>
+                </section>
+                <!-- fin practica  -->
+
+
+
+
+
+
+
+
+
+
+                <!--   ******************Completar una
+                                coordenadas con selección gráfica***************************-->
+                <section class="section_naranja"> 
+                     <p class="lineas3" id="prac2"></p> 
                     <details class="detalles">
                         <summary class="sumario">
                             <h2 class="puntero"><a id="mozTocId921120" class="mozTocH2"></a>Completar una
@@ -123,27 +284,13 @@
                     </details>
                 </section>
                 <!--   fin practica --> <a name="prac3"></a>
-                <!--           ******************************************* inicio practica  **********************************  -->
+                <a name="prac4"></a>
+                <!-- ********************** Calibración  ********************-->
                 <section class="section_naranja">
+                     <p class="lineas3" id="mozTocId623462"></p> 
                     <details class="detalles">
                         <summary class="sumario">
-                            <h2 class="puntero"><a id="mozTocId135468" class="mozTocH2"></a>Tener en cuenta
-                                al crear una herramienta</h2>
-                        </summary>
-                        <p> Al Crear una herramienta debo de seleccionar "existente" sino
-                            me crea una herramienta según criterio de robotstudio teniendo
-                            en cuenta los datos aportados (tcp, orientacion...)</p>
-                        <br>
-
-                        <a href="#contenedor">INICIO</a>
-                    </details>
-                </section>
-                <!--  fin practica --> <a name="prac4"></a>
-                <!--         ******************************************* inicio practica  **********************************-->
-                <section class="section_naranja">
-                    <details class="detalles">
-                        <summary class="sumario">
-                            <h2 class="puntero"><a id="mozTocId623462" class="mozTocH2"></a>Calibración</h2>
+                            <h2 class="puntero">Calibración</h2>
                         </summary>
                         <p>Si el motor no esta calibrado no se puede mover el motor
                             linealmente ni con reorientación.</p>
@@ -164,52 +311,61 @@
                         <a href="#contenedor">INICIO</a>
                     </details>
                 </section>
-                <!--  fin practica --> 
-               <a name="pract6a"></a>
-                <!--  ******************************************* inicio practica  ******eEXTENSIONES DE GEOMETRIA    **************************** -->
+                <!--  fin practica -->
+             
+                <!--  ************eEXTENSIONES DE GEOMETRIA    ***************** -->
                 <section class="section_naranja">
+                  <p class="lineas3" id="extension_geometria"></p> 
                     <details class="detalles">
                         <summary class="sumario">
-                            <h2 class="puntero"><a id="mozTocId215135" class="mozTocH2"></a>Extensiones
+                            <h2 class="puntero">Extensiones
                                 geometría</h2>
                         </summary>
                         <br>
-                       
+
                         <img class="imagen" src="imagen/m_manuales_extensiones_geometria.png" alt="tcp"><br>
                         <br>
-                         <img class="imagen" src="imagen/m_manuales_extensiones_geometia.png" alt="tcp"><br>
+                        <img class="imagen" src="imagen/m_manuales_extensiones_geometia.png" alt="tcp"><br>
                         <br>
                         Se puede crear un objeto con un programa externo en los siguientes
                         formartos y se pueden incluir en la biblioteca de robotstudio<br>
                         <br>Un formato que funciona muy bien es el .SAT, la piezas dibujadas en este formato, robotstudio es capaz de indentificar los puntos de la geometria.
-                        <br>Una pieza dibujada con freecad, se puede exportar a STL que roborstudio reconoce, pero no puede acceder a los puntos de geometria, (centros, esquinas, puntos medios). Se aconseja exportar a formato STEP y con un programa externo convertirlo a SAT.
+                        <p>Una pieza dibujada con freecad, se puede exportar a STEP en este formato robotstudio reconoce los puntos de geometria.</p>
+                        <p>Tambien se puede exportar a STL, este formato lo reconoce RobotStudio pero no puede acceder a los puntos de geometria, (centros, esquinas, puntos medios). </p>
+                        .
+
+                        <img class="imagen" src="imagen/migas-extension_geometria.png" alt="tcp"><br>
+
+                        de STEP y con un programa externo convertirlo a SAT, si se prefiere trabajar en este formato.
+
+
                         <a href="#contenedor">INICIO</a>
                     </details>
                 </section>
 
                 <!--    fin practica-->
-                
-                
-                 <!--  ******************************************* inicio practica  *****  coordenas tcp    **************************** -->
+
+
+                <!--  *************Coordenadas TCP de myTool y STL********************* -->
                 <section class="section_naranja">
+                      <p class="lineas3" id="tcpmytool"></p> 
                     <details class="detalles">
                         <summary class="sumario">
-                            <h2 class="puntero"><a id="tcpmytool" class="mozTocH2"></a>Coordenadas TCP de myTool y STL
-                                </h2>
+                            <h2 class="puntero">Coordenadas TCP de myTool y STL</h2>
                         </summary>
                         <br>
-                       
+
                         <img class="imagen" src="imagen/migas_tcpmytool.png" alt="tcp"><br>
                         <br>
-                      <br>
+                        <br>
                         <P>Para conocer las coordenadas del TCP de mytool</P>
                         <li>Inserto myTool en una estación</li>
                         <li>Con el menú contextual de la herramienta mytool -> desconecto de la biblioteca</li>
                         <li>Despliego todos los componentes de la herramienta y copio la posición relativa y orientación de mytool</li>
-                          <img class="imagen" src="imagen/migas_tcpmytool0.png" alt="tcp"><br>
+                        <img class="imagen" src="imagen/migas_tcpmytool0.png" alt="tcp"><br>
                         <li>Creo un punto y copio la posición y orientacion</li>
                         <li>Desde fijar posición del punto, veo la posición y orientación</li>
-                          <img class="imagen" src="imagen/migas_tcpmytool1.png" alt="tcp"><br>
+                        <img class="imagen" src="imagen/migas_tcpmytool1.png" alt="tcp"><br>
                         <p>Para exportar my tool a stl, seleccionamos Spintec Tool y exportamos geometria a STL</p>
                         <a href="#contenedor">INICIO</a>
                     </details>
@@ -217,27 +373,30 @@
 
                 <!--    fin practica-->
 
-               
-                <!--  *********** inicio practica  *****Trayectoria Curva*****************  -->
+
+                <!--  ************************Trayectoria Curva*****************  -->
                 <section class="section_naranja">
+                      <p class="lineas3" id="trayeCurva"></p> 
                     <details class="detalles">
                         <summary class="sumario">
-                            <h2 class="puntero"><a id="trayeCurva" ></a>Crear una trayectoria curva</h2>
+                            <h2 class="puntero">Crear una trayectoria curva</h2>
                         </summary>
                         <br>
                         <img class="imagen" src="imagen/pract_caja_ConvertiraMovimientoCiruclar.png" alt="video"><br>En la ruta, selecciona el punto intermedio y el final, menú contextual modificar la instrucción a movimiento circular
                         <br>
-                       
+
                         <a href="#contenedor">INICIO</a>
                     </details>
-                </section> 
-                <!--   fin practica --> 
-               
-               
-               
-               
-                <!--  ******************************************* inicio practica  ********************************** -->
+                </section>
+                <!--   fin practica -->
+
+
+
+
+                <!--  *************Guardar programa Rapid******************* -->
                 <section class="section_naranja">
+                                            <p class="lineas3" id="prac6a"></p> 
+
                     <details class="detalles">
                         <summary class="sumario">
                             <h2 class="puntero">Guardar programa Rapid</h2>
@@ -258,12 +417,13 @@
                 <!--    fin practica-->
 
                 <a name="prac7"></a>
-                <!--    ****************************************** inicio practica  ********************************** -->
+                <!--    ****************Mostrar envolvente de trabajo******************** -->
                 <section class="section_naranja">
+                                            <p class="lineas3" id="mozTocId959962"></p> 
+
                     <details class="detalles">
                         <summary class="sumario">
-                            <h2 class="puntero"><a id="mozTocId959962" class="mozTocH2"></a>Mostrar
-                                envolvente de trabajo</h2>
+                            <h2 class="puntero">Mostrar envolvente de trabajo</h2>
                         </summary>
                         <br>
                         <img class="imagen" src="imagen/m_manuales_envolvente1.png" alt="Envolvente"><br>
@@ -273,11 +433,12 @@
                     </details>
                 </section>
                 <!--    fin practica --> <a name="prac8"></a>
-                <!--   ******************************************* inicio practica  ********************************** -->
+                <!--   ********Borrar coordenadas creadas con una herramienta que luego borro********** -->
                 <section class="section_naranja">
+                     <p class="lineas3" id="mozTocId439326"></p> 
                     <details class="detalles">
                         <summary class="sumario">
-                            <h2 class="puntero"><a id="mozTocId439326" class="mozTocH2"></a>Borrar
+                            <h2 class="puntero">Borrar
                                 coordenadas creadas con una herramienta que luego borro</h2>
                         </summary>
                         <img class="imagen" src="imagen/m_manuales_quitar_coordenadas.png" alt="Envolvente"><br>
@@ -287,11 +448,13 @@
                     </details>
                 </section>
                 <!--  fin practica --> <a name="prac9"></a>
-                <!--  ******************************************* inicio practica  ********************************** -->
+                <!--  **********Flexpendant, que
+                                hacer despues de un paro protegido **************** -->
                 <section class="section_naranja">
+                     <p class="lineas3" id="mozTocId9001"></p> 
                     <details class="detalles">
                         <summary class="sumario">
-                            <h2 class="puntero"><a id="mozTocId9001" class="mozTocH2"></a>Flexpendant, que
+                            <h2 class="puntero">Flexpendant, que
                                 hacer despues de un paro protegido </h2>
                         </summary>
                         <img class="imagen" src="imagen/m_manuales_flex_paro_protegido.png" alt="RAPID"><br>
@@ -315,11 +478,12 @@
                 <!--   fin practica -->
 
                 <a name="prac9"></a>
-                <!--  ******************************************* inicio practica  ********************************** -->
+                <!--  **********************Ir a... Alinear************************ -->
                 <section class="section_naranja">
+                     <p class="lineas3" id="mozTocId9001"></p> 
                     <details class="detalles">
                         <summary class="sumario">
-                            <h2 class="puntero"><a id="mozTocId9001" class="mozTocH2"></a>Ir a... Alinear </h2>
+                            <h2 class="puntero">Ir a... Alinear </h2>
                         </summary>
                         <img class="imagen" src="imagen/m_manuales_flex_movimiento.png" alt="flex movimiento"><br>
                         <br>
@@ -339,86 +503,15 @@
 
 
 
-                <a name="prac10"></a>
-                <!--  ******************************************* inicio practica  ********************************** -->
-                <section class="section_naranja">
-                    <details class="detalles">
-                        <summary class="sumario">
-                            <h2 class="puntero"><a id="mozTocId152372" class="mozTocH2"></a>Velocidad en modo automático</h2>
-                        </summary>
-                        <p>La velocidad máxima del brazo robotico IRB120 es de 2000 mm/s</p>
-                        <p>La velocidad máxima en modo manual es de 200mm/s</p>
-                        <p>Otra forma de fucionar es en modo manual sin limitación de velocidad, por lo que la velocidad máxima sea la alcanzada en modo automático.</p>
-                        <p>La velocidad en modo automática puede llegar a ser muy elevada, lo que provoca grandes inercias, que pueden romper el soporte del robot, antes de poner en marcha el robot a las velocidades programas, se pueden selecionar porcentajes de velocidad programada para observar el comportamiento del robot y de la estructura. y subir este porcentaje medida que comprbamos la instalación hasta el 100% </p>
-                        <br>
-                        <img class="imagen" src="imagen/m_manuales_flex_velocidad_manual.png" alt="Velocidad modo manual"><br>
-                        <br>
-                        <a href="#contenedor">INICIO</a>
-                    </details>
-                </section>
-                <!--     fin practica --> <a name="prac11"></a>
-                <!--    ******************************************* inicio practica  ********************************** -->
-                <section class="section_naranja">
-                    <details class="detalles">
-                        <summary class="sumario">
-                            <h2 class="puntero"><a id="mozTocId581629" class="mozTocH2"></a>Un solo ciclo o
-                                ciclo continuo</h2>
-                        </summary>
-                        <img class="imagen" src="imagen/m_manuales_flex_ciclos.png" alt="ciclos flexpendant"><br>
-                        <br>
-                        <a href="#contenedor">INICIO</a>
-                    </details>
-                </section>
-                <!--  fin practica --> <a name="prac12"></a>
-                <!--  ******************************************* inicio practica  **********************************   -->
-                <section class="section_naranja">
-                    <details class="detalles">
-                        <summary class="sumario">
-                            <h2 class="puntero"><a id="mozTocId875743" class="mozTocH2"></a>Distintas formas
-                                de ejecutar Paso a Paso</h2>
-                        </summary>
-                        <br>
-                        <img class="imagen" src="imagen/m_manuales_flex_paso.png" alt="Paso a paso flexpendant"><br>
-                        <br>
-                        <br>
-                        <a href="#contenedor">INICIO</a>
-                    </details>
-                </section>
-                <!--  fin practica --> <a name="prac13"></a>
-                <!--   ******************************************* inicio practica  ********************************** -->
-                <section class="section_naranja">
-                    <details class="detalles">
-                        <summary class="sumario">
-                            <h2 class="puntero"><a id="mozTocId904213" class="mozTocH2"></a> Incrementos, Velocidad lenta del Robot</h2>
-                        </summary>
-                        <br>Cuando el robot se mueve de forma manual y pulsamos en la flexpendant la tecla de incrementos, el robot se mueve lentamente, para mejorar la precisión y esa velocidad lenta depende del incremento seleccionado. <br>
-                        <img class="imagen" src="imagen/m_manuales_flex_incrementos.png" alt="incrementos flexpendant"><br>
-                        <br>
-                        <img class="imagen" src="imagen/m_manuales_flex_incrementos1.png" alt="incrementos flexpendant"><br>
 
-                        <a href="#contenedor">INICIO</a>
-                    </details>
-                </section>
-                <!--   fin practica --> <a name="prac14"></a>
-                <!--   ******************************************* inicio practica  ********************************** -->
+
+           
+                <!--   ****************************Singularidad********************** -->
                 <section class="section_naranja">
+                         <p class="lineas3" id="mozTocId668641"></p> 
                     <details class="detalles">
                         <summary class="sumario">
-                            <h2 class="puntero"><a id="mozTocId771383" class="mozTocH2"></a>Referencias</h2>
-                        </summary>
-                        <br>
-                        <img class="imagen" src="imagen/m_manuales_flex_referencias.png" alt="Referencias flexpendant"><br>
-                        <br>
-                        <a href="#contenedor">INICIO</a>
-                        <section class="section_naranja"> <input class="boton" value="cerrar todas las cuestiones" onclick="location.reload();" type="button"> </section>
-                    </details>
-                </section>
-                <!--  fin practica --> <a name="prac15"></a>
-                <!--   ******************************************* inicio practica  ********************************** -->
-                <section class="section_naranja">
-                    <details class="detalles">
-                        <summary class="sumario">
-                            <h2 class="puntero"><a id="mozTocId668641" class="mozTocH2"></a>Singularidad</h2>
+                            <h2 class="puntero">Singularidad</h2>
                         </summary>
                         * Al mover el robot linealmente con referencia a la base se puede
                         producir una singularidad<br>
@@ -429,12 +522,14 @@
                         <section class="section_naranja"> <input class="boton" value="cerrar todas las cuestiones" onclick="location.reload();" type="button"> </section>
                     </details>
                 </section>
-                <!--  fin practica --> <a name="prac16"></a>
-                <!--    ******************************************* inicio practica  ********************************** -->
+                <!--  fin practica --> 
+                <!--    **************Detalle de
+                                visualización sistemas de coordenadas flexpendant**************** -->
                 <section class="section_naranja">
+                       <p class="lineas3" id="mozTocId363842"></p> 
                     <details class="detalles">
                         <summary class="sumario">
-                            <h2 class="puntero"><a id="mozTocId363842" class="mozTocH2"></a>Detalle de
+                            <h2 class="puntero">Detalle de
                                 visualización sistemas de coordenadas flexpendant</h2>
                         </summary>
                         <br>
@@ -448,57 +543,10 @@
                         <a href="#contenedor">INICIO</a>
                     </details>
                 </section>
-                <!--  fin practica --> <a name="prac18"></a>
-                <!--     ******************************************* inicio practica  ********************************** 
+                <!--  fin practica --> 
+                <!--     **********************Ventana del operador************* -->
                 <section class="section_naranja">
-                    <details class="detalles">
-                        <summary class="sumario">
-                            <h2 class="puntero">Crear un proyecto vs. crear una estación</h2>
-                        </summary>
-
-
-
-                        <p>En RobotStudio, hay una diferencia importante entre crear un proyecto y crear una estación:</p>
-                        <ul>
-                            <li><strong>Crear una estación</strong> crea un archivo en robotsudio/Stations con extensión rsstn y los archivos que necesita el proyecto, rapid, archivos backup, controlador... Robotstudio los distribuye en sus carpetas </li>
-                            <li><strong>Crear un proyecto</strong> crea un carpteta en robotstudio/projects con el nombre del proyecto donde guarda los archivos que necesita el proyecto, y el archivo principal tiene extensión rsproj. El proyecto se puede crear sin controladores y añadir el robot y luego el controlador o si seleccionamos incluir "un robot y un controlador" se abrira con estos elementos.
-                                <br>
-                                En versiones de robotstudio antiguas la opción se llamaba soluciones y se guardaba en la carpteta solutions,
-                            </li>
-                        </ul>    
-                            <br>En resumen<strong> se recominenda</strong> la opción <strong>crear un proyecto</strong>
-                            <br>
-                            <h2>Exportar un proyecto</h2>
-                           Para <srtong>Exportar un proyecto</srtong> <br>archivo->compartir->pack and go<br>y crea una archivo con extensión rspag <br> para importalo a otro robotstudio <br>archivo->compartir->Unpack and work
-                            <br><br>
-
-                            <h2>Guardar un proyecto vs. Guardar una estación</h2>
-                            <p>En RobotStudio, hay una diferencia importante entre guardar un proyecto y guardar una estación:</p>
-                            <ul>
-                                <li><strong>Guardar un proyecto</strong>: Cuando guardas un proyecto, estás guardando todos los archivos y configuraciones relacionados con tu trabajo en RobotStudio. Esto incluye los programas de robot, las configuraciones de herramientas, las trayectorias, los objetos 3D, y cualquier otro recurso que hayas utilizado en tu proyecto. Guardar un proyecto te permite mantener todo organizado y fácil de acceder para futuras modificaciones o revisiones.</li>
-                                <li><strong>Guardar una estación</strong>: Guardar una estación, por otro lado, se refiere a guardar el estado actual de la simulación en RobotStudio. Esto incluye la posición y configuración de los robots, las piezas y los equipos en el entorno de simulación. Guardar una estación es útil para capturar un momento específico en tu simulación, lo que te permite volver a ese punto exacto más adelante si necesitas revisar o continuar tu trabajo desde allí.</li>
-                            </ul>
-                            <p>En resumen, guardar un proyecto es más amplio y abarca todos los recursos y configuraciones de tu trabajo, mientras que guardar una estación se enfoca en el estado actual de la simulación.</p>
-
-
-                        
-                        <br><img class="imagen" src="imagen/migas_guardar.png" alt="guardar en robotStudio">
-
-
-
-
-
-
-                        <br><a href="#contenedor">INICIO</a><br>
-                        <input class="boton" value="cerrar todas las cuestiones" onclick="location.reload();" type="button">
-                    </details>
-                </section>
-                
-                -->
-                
-                <!--  fin practica --> <a name="prac19"></a>
-                <!--     ******************************************* inicio practica  ********************************** -->
-                <section class="section_naranja">
+                     <p class="lineas3" id="prac19"></p> 
                     <details class="detalles">
                         <summary class="sumario">
                             <h2 class="puntero">Ventana del operador</h2>
@@ -513,53 +561,54 @@
 
 
                     </details>
-                </section> -->
+                </section> 
                 <!--   fin practica -->
 
+<a href="#mozTocId2608">Subir a inicio de la página</a>
 
-
-                <a href="#contenedor">INICIO</a>
             </article>
 
 
         </main>
         <!--   *************************************************************************   -->
         <aside>
-            <!--  <a href="#menuimagencabecera">INICIO</a> <br>-->
+           
             <section class="section_naranja">
-                <h2><a id="mozTocId2608" class="mozTocH2"></a> MIGAS DE PAN </h2>
+                <h2><a id="mozTocId2608" ></a> MIGAS DE PAN </h2>
 
                 <ul class="lista0">
                     <li><a href="#mozTocId742047">Desparece el menú
                             derecha</a></li>
+                    <li><a href="#CambioIdioma">
+
+                            Cambio de idioma de la controladora: distintas formas y sus consecuencias </a></li>
+
+                    <li><a href="#ubicacion">Ubicación programa tareas</a></li>
+
                     <li><a href="#mozTocId921120">Completar una coordenadas con
                             selección gráfica</a></li>
-                    <li><a href="#mozTocId135468">Tener en cuenta al crear una
-                            herramienta</a></li>
+
 
                     <li><a href="#mozTocId623462">Calibración</a></li>
-                 <!--    <li><a href="#mozTocId912968">Grabación de vídeo</a></li> -->
-                    <li><a href="#mozTocId215135">Extensiones geometría</a></li>
-                    
+                    <!--    <li><a href="#mozTocId912968">Grabación de vídeo</a></li> -->
+                    <li><a href="#extension_geometria">Extensiones geometría</a></li>
+
                     <li><a href="#tcpmytool">MyTool, su TCP y crear un STL</a></li>
                     <li><a href="#trayeCurva">Crear una trayectoria curva</a></li>
-                    
+
                     <li><a href="#pract6a">Guardar programa RAPID</a></li>
                     <li><a href="#mozTocId959962">Mostrar envolvente de trabajo</a></li>
                     <li><a href="#mozTocId439326">Borrar coordenadas creadas con una
                             herramienta que luego borro</a></li>
                     <li><a href="#mozTocId9001">Flexpendant, que hacer despues de un
                             paro protegido</a></li>
-                    <li><a href="#mozTocId152372">Velocidad en modo autonático</a></li>
-                    <li><a href="#mozTocId581629">Un solo ciclo o ciclo continuo</a></li>
-                    <li><a href="#mozTocId875743">Distintas formas de ejecutar Paso
-                            a Paso</a></li>
-                    <li><a href="#mozTocId904213">Incrementos</a></li>
-                    <li><a href="#mozTocId771383">Referencias</a></li>
+
+
+
                     <li><a href="#mozTocId668641">Singularidad</a></li>
                     <li><a href="#mozTocId363842">Detalle de visualización sistemas
                             de coordenadas flexpendant</a></li>
-                   <!--  <li><a href="#prac18">Crear un proyecto vs. crear una estación</a></li> -->
+                    <!--  <li><a href="#prac18">Crear un proyecto vs. crear una estación</a></li> -->
                     <li><a href="#prac19">Ventana del operador</a></li>
                 </ul>
 
