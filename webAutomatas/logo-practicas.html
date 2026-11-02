@@ -116,11 +116,189 @@
 
             </article>
             
+               <!--  ------------------     otra práctica  ----------------------------- -->
+            <br>
+            <article class="articulo">
+                <h2>Linea Embotelladora</h2>
+                <section class="section_naranja">
+
+                     <div class="flex_wrap_vermas">
+                        <div class="vermas_texto">
+
+
+                           <p><strong>Entradas y salidas:</strong></p>
+<ul>
+    <li>I1: Pulsador 1 de marcha</li>
+    <li>I2: Sensor detector de botellas</li>
+    <li>I3: Pulsador 2 de marcha</li>
+    <li>I4: Pulsador 3 de marcha</li>
+    <li>Q1: LED verde</li>
+    <li>Q2: LED rojo</li>
+    <li>Q3: Cinta avanza</li>
+    <li>Q4: Cinta retrocede</li>
+</ul>
+
+
+                        </div>
+                     
+                           <div class="vermas_imagen"> <img  alt="dos motores" src="imag_logo/pract-embotelladora.png">
+
+                        </div>
+                    </div>
+                   <details name="info">
+                        <summary> </summary>
+
+                       
+                       <h2>1. Control de parada por llenado de cajas de 10 botellas</h2>
+
+<p>
+Al pulsar el pulsador conectado a I1, el motor se pone en marcha (Q3). Cuando una botella pasa por el sensor conectado a I2, se contabiliza una botella.
+</p>
+
+<ul>
+    <li>Si el número de botellas está entre 1 y 7, permanece encendido el LED verde (Q1).</li>
+    <li>Si el número de botellas está entre 8 y 9, el LED verde parpadea con una frecuencia de 0,5 segundos.</li>
+    <li>
+        Cuando se alcanzan 10 botellas, se enciende el LED rojo (Q2), la cinta se detiene y es necesario volver a pulsar el pulsador para reiniciar el ciclo.
+    </li>
+    <li>Si durante el funcionamiento se pulsa I1, no sucede nada</li>
+</ul>
+
+<h2>2. Reinicio automático tras alcanzar 10 botellas</h2>
+
+<p>
+<p>
+Al pulsar el pulsador conectado a I1, el motor se pone en marcha (Q3). Cuando una botella pasa por el sensor conectado a I2, se contabiliza una botella.
+</p>
+
+<ul>Si el contador esta:
+    <li>Entre 1 y 7 botellas permanece encendido el LED verde (Q1).</li>
+    <li>Entre 8 y 9 botellas el LED verde parpadea con una frecuencia de 0,5 segundos.</li>
+    <li>
+        Al llegar a 10 botellas, se enciende el LED rojo (Q2), la cinta se detiene durante 3 segundos y, transcurrido ese tiempo, el LED rojo se apaga, el contador vuelve a cero y esperamos a volver a pulsar I1 para repetir el ciclo.
+    </li>
+</ul>
+
+<h2>3. Arranque con pulsación mantenida</h2>
+
+<p>
+Para poner en marcha la cinta es necesario mantener pulsado I1 durante 3 segundos.
+</p>
+
+<p>
+Una vez en funcionamiento:
+</p>
+
+<ul>
+    <li>Se enciende el LED verde.</li>
+    <li>Después de 10 segundos de funcionamiento, la cinta se detiene automáticamente.</li>
+    <li>El LED verde se apaga.</li>
+</ul>
+
+<h2>4. Conteo y descuento de botellas</h2>
+
+<ul>
+    <li>Al pulsar I1, la cinta avanza y cada detección en el sensor incrementa el contador de botellas.</li>
+    <li>Al pulsar I3, la cinta retrocede y cada detección en el sensor decrementa el contador de botellas.</li>
+    <li>
+        Cuando el contador alcanza 10 botellas, la cinta se detiene y queda a la espera de una nueva pulsación en I1 para reiniciar el conteo.
+    </li>
+</ul>
+
+<p>
+<strong>Nota:</strong> Los pulsadores son de tipo momentáneo y no permanecen pulsados durante el funcionamiento.
+</p>
+
+<h2>5. Arranque mediante pulsación simultánea</h2>
+
+<p>
+Para poner en marcha la cinta deben pulsarse simultáneamente los pulsadores I1 e I3.
+</p>
+
+<p>
+Se considera simultánea cuando el segundo pulsador se acciona antes de transcurridos 0,5 segundos desde la pulsación del primero o viceversa.
+</p>
+
+<ul>
+    <li>La cinta se pone en marcha.</li>
+    <li>Cuenta 5 botellas y se detiene automáticamente, la pantalla del LOGO! y el LED pasarán a color rojo.</li>
+    <li>Pulsar I4 para apagar el led rojo y la pantalla del LOGO y quedar a la espera de volver a pulsar los dos pulsadores I1 e I3 simultaneamente</li>
+    <li>El número de botellas contabilizadas debe mostrarse en la pantalla del LOGO!.</li>
+    
+</ul>
+
+<h2>6. Selección previa de cantidad de botellas</h2>
+
+<p>
+Mediante los pulsadores I1 e I3 se selecciona el número de botellas que se desea contar. Este valor debe mostrarse en la pantalla del LOGO!.
+
+</p>
+<p>Pulsaciones sobre I1 aumenta el numero de botellas a contar, sobre I3 disminuye</p>
+  <div class="div_imagen">
+                            <img class="imagen imagen-ancho500" alt="esquema potencia de dos motores" src="imag_logo/pract-botonera.png">
+                           
+
+                        </div>
+<p>
+Al pulsar I4:
+</p>
+
+<ul>
+    <li>La cinta se pone en marcha.</li>
+    <li>
+        El LED verde parpadea con un ciclo de:
+        <ul>
+            <li>0,5 s encendido.</li>
+            <li>0,25 s apagado.</li>
+        </ul>
+    </li>
+    <li>Los pulsadores I1 e I3 permanecen inhabilitados.</li>
+    <li>El contador de botellas aparece en una segunda línea de la pantalla del LOGO! indicando el numero de botellas contadas.</li>
+    <li>
+      <br>
+       <br>
+        Cuando el contador alcanza el valor programado:     <br>
+        <ul>
+            <li>La cinta se detiene.</li>
+            <li>El LED se apaga.</li>
+            <li>La pantalla del LOGO! parpadea en rojo.</li>
+            <li>Después de 5 segundos la pantalla se apaga.</li>
+            <li>El contador de botellas vuelve a cero.</li>
+        </ul>
+    </li>
+</ul>
+                       
+                       
+                       
+                       
+                       
+                      
+
+                    </details>
+                </section>
+            </article>
             
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+         
+    <!--  ------------------------    OTRA PRÁCTIA  ---------------------- -->          
             <br>
             <a class="ancla" name="garaje-variador-logo"></a>
           
-    <!--  ------------------------    OTRA PRÁCTIA  ---------------------- -->
+  
             <article class="articulo">
                 <h2> Puerta de garaje</h2>
 
